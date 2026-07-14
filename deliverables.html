@@ -47,6 +47,12 @@ th{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:u
 td{border-bottom:1px solid var(--hair);padding:.5rem;vertical-align:top}
 model-viewer{width:100%;aspect-ratio:1/1;background:var(--sand2);border:1px solid var(--hair)}
 footer{padding:2.5rem 0 3.5rem;color:var(--mute);font-size:.84rem}
+details.inf{margin-top:.6rem;border:1px dashed var(--hair);background:var(--sand2);border-radius:3px}
+details.inf summary{cursor:pointer;font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tdeep);padding:.45rem .6rem;user-select:none}
+details.inf[open] summary{border-bottom:1px dashed var(--hair)}
+details.inf p{font-size:.8rem;color:var(--soft);line-height:1.55;padding:.35rem .7rem}
+details.inf p:last-child{padding-bottom:.6rem}
+details.inf strong{color:var(--ink)}
 </style>
 </head>
 <body>
@@ -67,6 +73,16 @@ footer{padding:2.5rem 0 3.5rem;color:var(--mute);font-size:.84rem}
 <div class="nl-sub" id="nl-sub">loading the park&hellip;</div>
 <script>
 (function(){
+  /* self-heal: retry any image that fails (transient CDN errors) up to 2x */
+  document.addEventListener('error',function(e){
+    var im=e.target;
+    if(!im||im.tagName!=='IMG'||im.closest('#nload'))return;
+    var n=+(im.dataset.retry||0);
+    if(n>=2)return;
+    im.dataset.retry=n+1;
+    var src=im.src.replace(/([?&])r=\d+(&|$)/,'$1').replace(/[?&]$/,'');
+    setTimeout(function(){im.src=src+(src.indexOf('?')<0?'?':'&')+'r='+(n+1)},1500*(n+1));
+  },true);
   var ov=document.getElementById('nload'),fill=document.getElementById('nl-fill'),
       pct=document.getElementById('nl-pct'),sub=document.getElementById('nl-sub'),
       finished=false,t0=Date.now();
@@ -115,6 +131,7 @@ footer{padding:2.5rem 0 3.5rem;color:var(--mute);font-size:.84rem}
 
 
 
+
 <nav><div class="wrap">
 <span class="logo-nabta" style="font-size:1.05rem"><img class="logo-img" src="assets/brand/nabta-logo-dark.png" alt="nabta wellness park" onerror="this.outerHTML='nabta<span class=spark>✦</span>'"></span>
 <a href="index.html">Overview</a>
@@ -139,7 +156,7 @@ footer{padding:2.5rem 0 3.5rem;color:var(--mute);font-size:.84rem}
 <tr><td>№12 High-quality visualizations · №13 day &amp; night pairs</td><td>Images</td><td>✅</td><td>80 room renders + geometry-faithful aerial hero day/dusk pair rendered from the surveyed-parcel plan (<a href="map.html#plan-sec">on the Design page</a>)</td><td>Optional: re-render heroes from the 3D scene reconstruction once splat training is done</td></tr>
 <tr><td>№15 One-minute concept animation</td><td>Video</td><td>✅⚠️</td><td>56s film with location titles, streaming + QR</td><td>Voiceover/music; export per portal size limits</td></tr>
 <tr><td>№16 Additional supporting materials</td><td>Any</td><td>✅</td><td>Interactive map, 3D asset library, verification evidence, satellite study</td><td>—</td></tr>
-<tr><td>Commercial &amp; Service Facilities Map</td><td>Plan</td><td>✅</td><td>Included in D·08</td><td>Re-plot on true parcel geometry</td></tr>
+<tr><td>Commercial &amp; Service Facilities Map</td><td>Plan</td><td>✅</td><td>Included in D·08 — plotted on the surveyed 16-vertex parcel from the CAD geometry (café, kiosks, restrooms, prayer room, service yard, gates, water points)</td><td>—</td></tr>
 <tr><td>Presentation boards</td><td>Print/PDF</td><td>⚠️</td><td>A3 sheets are board-ready content</td><td>Compose board layouts at required size once portal specifies</td></tr>
 <tr><td>Team details — names, disciplines, roles, Emirates ID (residents), passport photos, Team Leader</td><td>Portal form</td><td>❌</td><td>—</td><td><strong>Only the team can provide these</strong></td></tr>
 <tr><td>Portal registration + upload</td><td>UAE PASS</td><td>❌</td><td>—</td><td>Register; <strong>verify the "submissions closed" banner vs the 15 Aug deadline first</strong></td></tr>
@@ -266,14 +283,44 @@ PACKS.map(([no,t,cov,sc,pdf,sheet])=>`<tr><td style="font-family:var(--mono);col
 <td><a class="btn" href="deliverables/d-${no}.html">Detail page</a><a class="btn" href="pdfs/${pdf}" target="_blank">A4 PDF</a><a class="btn" href="https://rpi:rpi@mac.waleeds.world/30r4z8me/Nabta-Competition-Presentation-A3.pdf#page=${sheet}" target="_blank">Deck sheet ${sheet}</a></td></tr>`).join('')+'</tbody></table>';
 
 const REPOS=[
-["nabta-shade-sim","assets/poc/shade_heatmap.png","NOAA solar geometry — 91.6% loop shade at 3pm Jun 21 (validates the 92% claim)"],
-["nabta-visitor-abm","assets/poc/occupancy_heatmap.png","Persona ABM — 385 peak of 1,800 daily visits; event-day overload branch"],
-["nabta-loop-optimizer","assets/poc/before_after.png","Genetic algorithm — 31.8% vs 18.3% random shade placement (1.7×)"],
-["nabta-water-budget","assets/poc/demand_vs_baseline.png","Hargreaves ET₀ on Dubai normals — 56.8% saving (41% claim conservative)"],
-["nabta-park-vision","assets/mlviz/room-08/02-pointcloud-a.png","Video → depth/flow/point-cloud CV toolkit, 11 committed examples"],
-["nabta-earth-obs","assets/earthobs/truecolor_site.png","Real satellite study of the actual site — vegetation, solar, heat and wind driving the concept iteration"]];
-document.getElementById('repos').innerHTML=REPOS.map(([r,img,d])=>
+["nabta-shade-sim","assets/poc/shade_heatmap.png","NOAA solar geometry — 91.6% loop shade at 3pm Jun 21 (validates the 92% claim)",
+ {what:"A sun-and-shadow simulation of the park.",
+  shows:"How much of the 858 m walking loop sits in shade at every hour of the day on 21 June — the harshest sun of the year. Dark blue = almost fully shaded. The bottom line: at 3pm, 91.6% of the loop is shaded, which is where our \"~92% shaded\" claim comes from.",
+  how:"A small Python program computes the real position of the sun over Dubai (using standard NOAA astronomy formulas), then casts shadows from every pergola and tree canopy onto the path and measures the shaded share, hour by hour.",
+  repro:"Open the GitHub link, read the README, and run one command (python shade_sim.py). It regenerates this exact chart from scratch on any laptop — no paid software or data needed."}],
+["nabta-visitor-abm","assets/poc/occupancy_heatmap.png","Persona ABM — 385 peak of 1,800 daily visits; event-day overload branch",
+ {what:"A crowd simulation — 1,800 virtual daily visitors with realistic habits.",
+  shows:"When and where people are in the park across a summer day and a winter day. Each virtual visitor (parents with kids, joggers, seniors, teens…) arrives, moves and leaves on its own schedule. Peak simultaneous occupancy comes out at ~385 people, which sized the plazas, restrooms and café.",
+  how:"An agent-based model in Python: each visitor is a small program with preferences (time of day, favorite rooms, visit length) drawn from published park-use patterns; the model counts who is where every 10 minutes.",
+  repro:"Open the GitHub link and run python abm.py per the README — it re-simulates the full day and redraws these heatmaps. Change the visitor mix in the config to test other scenarios."}],
+["nabta-loop-optimizer","assets/poc/before_after.png","Genetic algorithm — 31.8% vs 18.3% random shade placement (1.7×)",
+ {what:"A computer search for the best places to put shade structures.",
+  shows:"Left: 24 shade elements dropped at random shade 18.3% of the loop. Right: the same 24 elements placed by the optimizer shade 31.8% — 1.7× more shade from exactly the same budget. This is the proof that AI placement beats guesswork.",
+  how:"A genetic algorithm in Python: it tries thousands of arrangements, keeps the best ones, \"breeds\" them, and repeats until the shade score stops improving — the same sun model as nabta-shade-sim scores every arrangement.",
+  repro:"Open the GitHub link and run python optimize.py — it re-runs the search (a few minutes) and redraws the before/after picture. The random seed is fixed so you get the same 31.8%."}],
+["nabta-water-budget","assets/poc/demand_vs_baseline.png","Hargreaves ET₀ on Dubai normals — 56.8% saving (41% claim conservative)",
+ {what:"The park's irrigation water math, month by month.",
+  shows:"Grey bars: what a conventional all-grass park of this size would drink. Blue bars: the nabta planting (native trees, drip irrigation, lawn only at the event space). Total saving computes to 56.8% — so the 41% we claim in the documents is deliberately conservative.",
+  how:"Standard agronomy formulas (Hargreaves ET₀ — the method the UN FAO uses) applied to Dubai's official monthly climate normals, multiplied by each planting type's area and water coefficient.",
+  repro:"Open the GitHub link and run python water_budget.py — it recomputes every month from the climate table in the repo and redraws this chart. All inputs are in one editable CSV."}],
+["nabta-park-vision","assets/mlviz/room-08/02-pointcloud-a.png","Video → depth/flow/point-cloud CV toolkit, 11 committed examples",
+ {what:"A computer-vision toolkit that turns ordinary video of the park into 3D data.",
+  shows:"This picture is a point cloud — thousands of 3D points recovered from a plain video clip of the wadi garden. The same toolkit makes depth maps (how far everything is) and motion trails. It's how the concept footage becomes measurable 3D scenes.",
+  how:"Python + OpenCV + a depth-estimation neural network: the scripts read a video, estimate depth per frame, track camera motion, and project pixels into 3D space.",
+  repro:"Open the GitHub link — 11 worked examples are committed with their input clips. Run python examples/pointcloud.py <video> on any footage to make your own."}],
+["nabta-earth-obs","assets/earthobs/truecolor_site.png","Real satellite study of the actual site — vegetation, solar, heat and wind driving the concept iteration",
+ {what:"A study of the real Al Safa 2 site using actual satellite and climate data — not assumptions.",
+  shows:"True-colour Sentinel-2 satellite imagery of the actual park block, its measured vegetation index (already the greenest block within 600 m), plus the site's real wind rose (prevailing WNW breeze) and solar patterns. These measurements drove the loop's orientation — variant C scored best against the real sun and wind.",
+  how:"Python scripts download free, public data: ESA Sentinel-2 imagery (10 m resolution) via the Earth Search catalogue and NASA POWER climate records for these exact coordinates, then compute the indices and plots.",
+  repro:"Open the GitHub link and run the scripts in order per the README — they fetch the same public data live (no account needed) and regenerate every figure."}]];
+document.getElementById('repos').innerHTML=REPOS.map(([r,img,d,inf])=>
 `<div class="card" style="padding:.8rem"><img class="th" src="${img}" style="aspect-ratio:16/10;object-fit:cover"><span class="cap"><strong>${r}</strong> — ${d}</span>
+<details class="inf"><summary>ⓘ What is this? (plain English)</summary>
+<p><strong>What it is.</strong> ${inf.what}</p>
+<p><strong>What it shows.</strong> ${inf.shows}</p>
+<p><strong>How it was made.</strong> ${inf.how}</p>
+<p><strong>Reproduce it yourself.</strong> ${inf.repro}</p>
+</details>
 <a class="btn solid" style="margin-top:.5rem" href="https://github.com/Majboor/${r}" target="_blank">GitHub ↗</a></div>`).join('');
 </script>
 </body>

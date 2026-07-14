@@ -111,6 +111,16 @@ footer{padding:2.5rem 0 3.5rem;color:var(--mute);font-size:.85rem}
 <div class="nl-sub" id="nl-sub">loading the park&hellip;</div>
 <script>
 (function(){
+  /* self-heal: retry any image that fails (transient CDN errors) up to 2x */
+  document.addEventListener('error',function(e){
+    var im=e.target;
+    if(!im||im.tagName!=='IMG'||im.closest('#nload'))return;
+    var n=+(im.dataset.retry||0);
+    if(n>=2)return;
+    im.dataset.retry=n+1;
+    var src=im.src.replace(/([?&])r=\d+(&|$)/,'$1').replace(/[?&]$/,'');
+    setTimeout(function(){im.src=src+(src.indexOf('?')<0?'?':'&')+'r='+(n+1)},1500*(n+1));
+  },true);
   var ov=document.getElementById('nload'),fill=document.getElementById('nl-fill'),
       pct=document.getElementById('nl-pct'),sub=document.getElementById('nl-sub'),
       finished=false,t0=Date.now();
@@ -156,6 +166,7 @@ footer{padding:2.5rem 0 3.5rem;color:var(--mute);font-size:.85rem}
 })();
 </script>
 </div>
+
 
 
 
