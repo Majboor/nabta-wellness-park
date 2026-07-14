@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>nabta wellness park — Project Whiteboard</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+<style>
+html,body{height:100%;margin:0;background:#F5EFE2}
+#bar{position:fixed;top:0;left:0;right:0;z-index:50;height:46px;display:flex;align-items:center;gap:1.2rem;padding:0 1.1rem;background:rgba(245,239,226,.95);border-bottom:1px solid #D8CCAF;backdrop-filter:blur(6px)}
+#bar .logo{font-family:Comfortaa,sans-serif;font-weight:700;color:#22301F;font-size:1rem}
+#bar .logo span{color:#8FCB9B}
+#bar a{font-family:"IBM Plex Mono",monospace;font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:#4A5644;text-decoration:none}
+#bar a:hover{color:#9C4525}
+#bar .note{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:.6rem;color:#7A8272;letter-spacing:.08em}
+#app{position:absolute;inset:46px 0 0 0}
+#fallback{display:none;position:absolute;inset:46px 0 0 0;align-items:center;justify-content:center;flex-direction:column;gap:1rem;font-family:"IBM Plex Mono",monospace;color:#4A5644;font-size:.8rem;text-align:center;padding:2rem}
+</style>
+<script>window.EXCALIDRAW_ASSET_PATH="https://unpkg.com/@excalidraw/excalidraw@0.17.6/dist/";</script>
+<script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@excalidraw/excalidraw@0.17.6/dist/excalidraw.production.min.js"></script>
+</head>
+<body>
+<div id="bar">
+  <span class="logo">nabta<span>&#10022;</span></span>
+  <a href="index.html">&larr; Overview</a>
+  <a href="deliverables.html">Submission</a>
+  <a href="nabta-board.excalidraw" download>&#8595; download .excalidraw</a>
+  <span class="note">READ-ONLY VIEW &middot; PAN: DRAG &middot; ZOOM: SCROLL / PINCH</span>
+</div>
+<div id="app"></div>
+<div id="fallback">
+  <div>The interactive whiteboard needs a network connection (Excalidraw viewer loads from CDN).</div>
+  <div><a href="nabta-board.excalidraw" download style="color:#9C4525">Download nabta-board.excalidraw</a> and import it at excalidraw.com instead.</div>
+</div>
+<script>
+(function(){
+  function fail(){document.getElementById('fallback').style.display='flex'}
+  if(!window.React||!window.ReactDOM||!window.ExcalidrawLib){fail();return}
+  fetch('nabta-board.excalidraw')
+    .then(function(r){if(!r.ok)throw 0;return r.json()})
+    .then(function(data){
+      var initial={
+        elements:data.elements||[],
+        files:data.files||undefined,
+        appState:{viewBackgroundColor:(data.appState&&data.appState.viewBackgroundColor)||'#FBF7EC',theme:'light'},
+        scrollToContent:true
+      };
+      var el=React.createElement(ExcalidrawLib.Excalidraw,{initialData:initial,viewModeEnabled:true,UIOptions:{canvasActions:{export:false,loadScene:false,saveToActiveFile:false}}});
+      ReactDOM.createRoot(document.getElementById('app')).render(el);
+    })
+    .catch(fail);
+})();
+</script>
+</body>
+</html>

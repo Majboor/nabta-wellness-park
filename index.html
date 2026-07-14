@@ -52,6 +52,66 @@ footer{padding:2.5rem 0 3.5rem;color:var(--mute);font-size:.84rem}
 </style>
 </head>
 <body>
+<div id="nload">
+<style>
+#nload{position:fixed;inset:0;z-index:99999;background:#F5EFE2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.1rem;transition:opacity .5s ease}
+#nload.done{opacity:0;pointer-events:none}
+#nload .nl-mark{font-family:"Comfortaa","Instrument Sans",sans-serif;font-weight:700;font-size:1.7rem;color:#22301F}
+#nload .nl-mark .sp{color:#8FCB9B}
+#nload .nl-sub{font-family:"IBM Plex Mono",monospace;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:#7A8272}
+#nload .nl-bar{width:230px;height:3px;background:#E7DCC3;border-radius:2px;overflow:hidden}
+#nload .nl-bar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,#7CC98F,#7BC6DD);transition:width .25s ease}
+#nload .nl-pct{font-family:"IBM Plex Mono",monospace;font-size:.68rem;color:#4A5644}
+</style>
+<img src="assets/brand/nabta-logo-dark.png" alt="" style="height:40px" onerror="this.outerHTML='<div class=nl-mark>nabta<span class=sp>&#10022;</span></div>'">
+<div class="nl-bar"><i id="nl-fill"></i></div>
+<div class="nl-pct" id="nl-pct">0%</div>
+<div class="nl-sub" id="nl-sub">loading the park&hellip;</div>
+<script>
+(function(){
+  var ov=document.getElementById('nload'),fill=document.getElementById('nl-fill'),
+      pct=document.getElementById('nl-pct'),sub=document.getElementById('nl-sub'),
+      finished=false,t0=Date.now();
+  function frac(){
+    var imgs=Array.prototype.slice.call(document.images).filter(function(im){return im.src&&!im.closest('#nload')});
+    if(!imgs.length)return 1;
+    var done=imgs.filter(function(im){return im.complete}).length;
+    return done/imgs.length;
+  }
+  function tick(){
+    if(finished)return;
+    var f=frac(),elapsed=Date.now()-t0;
+    var shown=Math.min(f,0.15+elapsed/12000*0.85);   /* ease in even if cache-instant */
+    shown=Math.max(shown,Math.min(elapsed/1200,0.15));
+    fill.style.width=(shown*100).toFixed(0)+'%';pct.textContent=(shown*100).toFixed(0)+'%';
+    if((f>=1&&elapsed>700&&document.readyState==='complete')||elapsed>12000){finish();return}
+    requestAnimationFrame(tick);
+  }
+  function finish(){
+    if(finished)return;finished=true;
+    fill.style.width='100%';pct.textContent='100%';
+    setTimeout(function(){ov.classList.add('done');setTimeout(function(){ov.remove();warm()},550)},200);
+  }
+  function warm(){ /* Design page: pre-fetch the 3D library into browser cache */
+    try{
+      var urls=[];
+      var IT=(typeof ITEMS!=='undefined')?ITEMS:null,MD=(typeof MEDIA!=='undefined')?MEDIA:null;
+      if(IT)IT.forEach(function(it){if(it.glb)urls.push(it.glb)});
+      if(MD)Object.keys(MD).forEach(function(k){var g=MD[k]&&MD[k].glb;if(g)urls.push(g)});
+      if(!urls.length)return;
+      var i=0;
+      (function next(){
+        if(i>=urls.length)return;
+        fetch(urls[i++],{priority:'low'}).catch(function(){}).finally(function(){setTimeout(next,150)});
+      })();
+    }catch(e){}
+  }
+  window.addEventListener('load',function(){setTimeout(function(){if(!finished&&frac()>=1)finish()},750)});
+  requestAnimationFrame(tick);
+})();
+</script>
+</div>
+
 <nav><div class="wrap">
 <span class="logo-nabta" style="font-size:1.05rem"><img class="logo-img" src="assets/brand/nabta-logo-dark.png" alt="nabta wellness park" onerror="this.outerHTML='nabta<span class=spark>✦</span>'"></span>
 <a class="on" href="index.html">Overview</a>
@@ -84,7 +144,7 @@ footer{padding:2.5rem 0 3.5rem;color:var(--mute);font-size:.84rem}
 <img src="assets/masterplan.png" alt="Illustrative masterplan">
 <div class="bd"><h3>Design</h3><p>The real site map, the clickable masterplan with all ten garden rooms, 90 renders with motion footage, ML visual studies and the live 3D asset library.</p><span class="go">Open the design pages →</span></div></a>
 <a class="bigcard" href="deliverables.html">
-<img src="assets/frames/room-01/thumb-aerial.jpg" alt="Entry plaza render" onerror="this.src='assets/masterplan.png'">
+<img src="assets/frames/hero-true-day.png" alt="Aerial hero view of the park at golden hour" onerror="this.src='assets/masterplan.png'">
 <div class="bd"><h3>Submission</h3><p>The submission checklist (required · have · needed), AED 35M cost plan, sustainability case, all 16 official deliverables as designed PDFs, the one-minute film and the verification evidence.</p><span class="go">Open the submission hub →</span></div></a>
 <a class="bigcard" href="aipark-challenge.html">
 <img src="assets/frames/room-08/thumb-aerial.jpg" alt="Wadi garden render" onerror="this.src='assets/masterplan.png'">
@@ -97,7 +157,6 @@ footer{padding:2.5rem 0 3.5rem;color:var(--mute);font-size:.84rem}
 <div class="todo">
 <div class="row"><span class="who">Team only</span><span><strong>Team details for the portal</strong> — names, disciplines, roles, Emirates IDs (residents), passport photos, and a named Team Leader.</span></div>
 <div class="row"><span class="who">Team only</span><span><strong>Portal registration via UAE PASS</strong> — register on aipark.dm.gov.ae and verify the "submissions closed" banner against the 15 Aug deadline.</span></div>
-<div class="row warn"><span class="who">5 min in AutoCAD</span><span><strong>CAD set: one resave</strong> — the full set (dimensioned plan, sections A-A/B-B, gateway elevation, title blocks) is done as DXF on the official base; open it in AutoCAD and Save As .dwg if the portal insists on .dwg.</span></div>
 <div class="row warn"><span class="who">Decision</span><span><strong>Film voiceover &amp; music</strong> — the 56-second cut is ready; decide on narration/soundtrack, then export per portal size limits.</span></div>
 <div class="row warn"><span class="who">By 5 Aug</span><span><strong>Clarification questions</strong> — the drafted Q&amp;A list (formats, board sizes, banner) must go to the portal before 5 Aug 2026.</span></div>
 </div>

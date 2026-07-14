@@ -94,6 +94,66 @@ footer{padding:2.5rem 0 3.5rem;color:var(--mute);font-size:.85rem}
 </style>
 </head>
 <body>
+<div id="nload">
+<style>
+#nload{position:fixed;inset:0;z-index:99999;background:#F5EFE2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.1rem;transition:opacity .5s ease}
+#nload.done{opacity:0;pointer-events:none}
+#nload .nl-mark{font-family:"Comfortaa","Instrument Sans",sans-serif;font-weight:700;font-size:1.7rem;color:#22301F}
+#nload .nl-mark .sp{color:#8FCB9B}
+#nload .nl-sub{font-family:"IBM Plex Mono",monospace;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:#7A8272}
+#nload .nl-bar{width:230px;height:3px;background:#E7DCC3;border-radius:2px;overflow:hidden}
+#nload .nl-bar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,#7CC98F,#7BC6DD);transition:width .25s ease}
+#nload .nl-pct{font-family:"IBM Plex Mono",monospace;font-size:.68rem;color:#4A5644}
+</style>
+<img src="assets/brand/nabta-logo-dark.png" alt="" style="height:40px" onerror="this.outerHTML='<div class=nl-mark>nabta<span class=sp>&#10022;</span></div>'">
+<div class="nl-bar"><i id="nl-fill"></i></div>
+<div class="nl-pct" id="nl-pct">0%</div>
+<div class="nl-sub" id="nl-sub">loading the park&hellip;</div>
+<script>
+(function(){
+  var ov=document.getElementById('nload'),fill=document.getElementById('nl-fill'),
+      pct=document.getElementById('nl-pct'),sub=document.getElementById('nl-sub'),
+      finished=false,t0=Date.now();
+  function frac(){
+    var imgs=Array.prototype.slice.call(document.images).filter(function(im){return im.src&&!im.closest('#nload')});
+    if(!imgs.length)return 1;
+    var done=imgs.filter(function(im){return im.complete}).length;
+    return done/imgs.length;
+  }
+  function tick(){
+    if(finished)return;
+    var f=frac(),elapsed=Date.now()-t0;
+    var shown=Math.min(f,0.15+elapsed/12000*0.85);   /* ease in even if cache-instant */
+    shown=Math.max(shown,Math.min(elapsed/1200,0.15));
+    fill.style.width=(shown*100).toFixed(0)+'%';pct.textContent=(shown*100).toFixed(0)+'%';
+    if((f>=1&&elapsed>700&&document.readyState==='complete')||elapsed>12000){finish();return}
+    requestAnimationFrame(tick);
+  }
+  function finish(){
+    if(finished)return;finished=true;
+    fill.style.width='100%';pct.textContent='100%';
+    setTimeout(function(){ov.classList.add('done');setTimeout(function(){ov.remove();warm()},550)},200);
+  }
+  function warm(){ /* Design page: pre-fetch the 3D library into browser cache */
+    try{
+      var urls=[];
+      var IT=(typeof ITEMS!=='undefined')?ITEMS:null,MD=(typeof MEDIA!=='undefined')?MEDIA:null;
+      if(IT)IT.forEach(function(it){if(it.glb)urls.push(it.glb)});
+      if(MD)Object.keys(MD).forEach(function(k){var g=MD[k]&&MD[k].glb;if(g)urls.push(g)});
+      if(!urls.length)return;
+      var i=0;
+      (function next(){
+        if(i>=urls.length)return;
+        fetch(urls[i++],{priority:'low'}).catch(function(){}).finally(function(){setTimeout(next,150)});
+      })();
+    }catch(e){}
+  }
+  window.addEventListener('load',function(){setTimeout(function(){if(!finished&&frac()>=1)finish()},750)});
+  requestAnimationFrame(tick);
+})();
+</script>
+</div>
+
 <nav><div class="wrap">
 <span class="logo-nabta" style="font-size:1.05rem"><img src="assets/brand/nabta-logo-dark.png" alt="nabta wellness park" style="height:30px;display:block" onerror="this.outerHTML='nabta<span class=&quot;spark&quot;>✦</span>&nbsp;<span class=&quot;sub&quot;>wellness park</span>'"></span>
 <a href="index.html">Overview</a>
@@ -127,9 +187,20 @@ footer{padding:2.5rem 0 3.5rem;color:var(--mute);font-size:.85rem}
   <img id="paint-img" src="assets/masterplan.png" alt="nabta illustrative masterplan">
   <div id="markers"></div>
   <div id="info-card"></div>
-  <span class="paint-note">AL SAFA 2 PARK · SURVEYED PARCEL 15,001 M² (AS-BUILT DWG: 16-VERTEX, ~120 × 178 M, GRID ≈47° FROM N) · ILLUSTRATIVE PLAN ON EARLIER 98 × 152 M ESTIMATE — RE-PLOT PENDING</span>
+  <span class="paint-note">AL SAFA 2 PARK · PAINTED ON THE SURVEYED PARCEL — 15,001 M², 16-VERTEX, ~120 × 178 M (OFFICIAL AS-BUILT DWG) · ILLUSTRATIVE RENDERING OF THE CAD V5 GEOMETRY</span>
 </div>
 <div class="room-list" id="room-list"></div>
+</div>
+
+<div class="grid" style="grid-template-columns:1fr 1fr;margin-top:1.6rem">
+<figure style="margin:0;background:var(--paper);border:1px solid var(--hair);padding:.6rem">
+  <img src="assets/frames/hero-true-day.png" alt="Aerial hero view — golden hour, layout faithful to the surveyed plan" style="width:100%;display:block;border:1px solid var(--hair)" loading="lazy">
+  <figcaption style="font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;color:var(--soft);padding-top:.5rem;line-height:1.5">HERO VIEW · GOLDEN HOUR — OBLIQUE AERIAL RENDERED FROM THE SURVEYED-PARCEL PLAN ABOVE (LAYOUT-FAITHFUL CONCEPT RENDER)</figcaption>
+</figure>
+<figure style="margin:0;background:var(--paper);border:1px solid var(--hair);padding:.6rem">
+  <img src="assets/frames/hero-true-dusk.png" alt="Aerial hero view — dusk, adaptive path lighting" style="width:100%;display:block;border:1px solid var(--hair)" loading="lazy">
+  <figcaption style="font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;color:var(--soft);padding-top:.5rem;line-height:1.5">HERO VIEW · DUSK — SAME CAMERA, 2700K DARK-SKY PATH LIGHTING TRACING THE 858 M LOOP (MATCHED DAY/NIGHT PAIR, №13)</figcaption>
+</figure>
 </div>
 
 <div id="gal-head"><span class="sec-num">M·3</span><span id="gal-title">Select a room</span></div>
@@ -156,9 +227,10 @@ footer{padding:2.5rem 0 3.5rem;color:var(--mute);font-size:.85rem}
 </div>
 <div style="background:var(--paper);border:1px solid var(--hair);padding:1rem">
   <img src="cad/nabta-v5-all.png" alt="nabta preliminary CAD set v5 — sheets S-01 plan, S-02 sections, S-03 elevation" style="width:100%;border:1px solid var(--hair);background:#252B33;display:block">
-  <p style="font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--soft);margin:.7rem 0 .6rem;line-height:1.5">NABTA PRELIMINARY CAD SET V5 — S-01 DIMENSIONED PLAN · S-02 SECTIONS A-A / B-B · S-03 GATEWAY ELEVATION · TITLE BLOCKS, METERS, LAYERED, ON THE OFFICIAL BASE. DXF R2010 OPENS NATIVELY IN AUTOCAD (SAVE AS .DWG THERE IF THE PORTAL REQUIRES IT)</p>
-  <a class="btn solid" href="cad/nabta-preliminary.dxf" download>⬇ nabta .dxf</a>
-  <a class="btn" href="cad/nabta-s01-plan.png" target="_blank" style="margin-left:.4rem">S-01 ↗</a>
+  <p style="font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--soft);margin:.7rem 0 .6rem;line-height:1.5">NABTA PRELIMINARY CAD SET V5 — S-01 DIMENSIONED PLAN · S-02 SECTIONS A-A / B-B · S-03 GATEWAY ELEVATION · TITLE BLOCKS, METERS, LAYERED, ON THE OFFICIAL BASE · DWG (AUTOCAD 2013) + DXF R2010</p>
+  <a class="btn solid" href="cad/nabta-preliminary.dwg" download>⬇ nabta .dwg</a>
+  <a class="btn" href="cad/nabta-preliminary.dxf" download style="margin-left:.4rem">⬇ .dxf</a>
+  <a class="btn" href="cad/nabta-s01-plan.png" target="_blank" style="margin-left:.4rem;margin-top:.4rem">S-01 ↗</a>
   <a class="btn" href="cad/nabta-s02-sections.png" target="_blank" style="margin-left:.4rem">S-02 ↗</a>
   <a class="btn" href="cad/nabta-s03-elevation.png" target="_blank" style="margin-left:.4rem">S-03 ↗</a>
 </div>
@@ -228,10 +300,10 @@ const MLVIZ={"01": ["assets/mlviz/room-01/01-depth.png", "assets/mlviz/room-01/0
 const ITEMS=[{"name": "Cafe Kiosk", "img": "assets/items/cafe-kiosk.png", "glb": "assets/3d/items/cafe-kiosk.glb"}, {"name": "Drinking Fountain", "img": "assets/items/drinking-fountain.png", "glb": "assets/3d/items/drinking-fountain.glb"}, {"name": "Fitness Rig", "img": "assets/items/fitness-rig.png", "glb": "assets/3d/items/fitness-rig.glb"}, {"name": "Gateway Pergola", "img": "assets/items/gateway-pergola.png", "glb": "assets/3d/items/gateway-pergola.glb"}, {"name": "Kiosk Cart", "img": "assets/items/kiosk-cart.png", "glb": "assets/3d/items/kiosk-cart.glb"}, {"name": "Majlis Ring", "img": "assets/items/majlis-ring.png", "glb": "assets/3d/items/majlis-ring.glb"}, {"name": "Play Carousel", "img": "assets/items/play-carousel.png", "glb": "assets/3d/items/play-carousel.glb"}, {"name": "Room 01 Bike Canopy", "img": "assets/items/room-01-bike-canopy.png", "glb": "assets/3d/items/room-01-bike-canopy.glb"}, {"name": "Room 01 Gate Totem", "img": "assets/items/room-01-gate-totem.png", "glb": "assets/3d/items/room-01-gate-totem.glb"}, {"name": "Room 02 Lantern Cluster", "img": "assets/items/room-02-lantern-cluster.png", "glb": "assets/3d/items/room-02-lantern-cluster.glb"}, {"name": "Room 02 Water Bowl", "img": "assets/items/room-02-water-bowl.png", "glb": "assets/3d/items/room-02-water-bowl.glb"}, {"name": "Room 03 Picnic Deck", "img": "assets/items/room-03-picnic-deck.png", "glb": "assets/3d/items/room-03-picnic-deck.glb"}, {"name": "Room 03 Stage Shell", "img": "assets/items/room-03-stage-shell.png", "glb": "assets/3d/items/room-03-stage-shell.glb"}, {"name": "Room 04 Net Dome", "img": "assets/items/room-04-net-dome.png", "glb": "assets/3d/items/room-04-net-dome.glb"}, {"name": "Room 04 Slide Tower", "img": "assets/items/room-04-slide-tower.png", "glb": "assets/3d/items/room-04-slide-tower.glb"}, {"name": "Room 05 Hoop Unit", "img": "assets/items/room-05-hoop-unit.png", "glb": "assets/3d/items/room-05-hoop-unit.glb"}, {"name": "Room 05 Parkour Blocks", "img": "assets/items/room-05-parkour-blocks.png", "glb": "assets/3d/items/room-05-parkour-blocks.glb"}, {"name": "Room 06 Balance Beams", "img": "assets/items/room-06-balance-beams.png", "glb": "assets/3d/items/room-06-balance-beams.glb"}, {"name": "Room 06 Stretch Pod", "img": "assets/items/room-06-stretch-pod.png", "glb": "assets/3d/items/room-06-stretch-pod.glb"}, {"name": "Room 07 Majlis Pad", "img": "assets/items/room-07-majlis-pad.png", "glb": "assets/3d/items/room-07-majlis-pad.glb"}, {"name": "Room 07 Picnic Set", "img": "assets/items/room-07-picnic-set.png", "glb": "assets/3d/items/room-07-picnic-set.glb"}, {"name": "Room 08 Boardwalk", "img": "assets/items/room-08-boardwalk.png", "glb": "assets/3d/items/room-08-boardwalk.glb"}, {"name": "Room 08 Stepping Stones", "img": "assets/items/room-08-stepping-stones.png", "glb": "assets/3d/items/room-08-stepping-stones.glb"}, {"name": "Room 09 Cocoon Bench", "img": "assets/items/room-09-cocoon-bench.png", "glb": "assets/3d/items/room-09-cocoon-bench.glb"}, {"name": "Room 09 Reflection Basin", "img": "assets/items/room-09-reflection-basin.png", "glb": "assets/3d/items/room-09-reflection-basin.glb"}, {"name": "Room 10 Parasol Set", "img": "assets/items/room-10-parasol-set.png", "glb": "assets/3d/items/room-10-parasol-set.glb"}, {"name": "Room 10 Planter Bar", "img": "assets/items/room-10-planter-bar.png", "glb": "assets/3d/items/room-10-planter-bar.glb"}, {"name": "Shade Bench", "img": "assets/items/shade-bench.png", "glb": "assets/3d/items/shade-bench.glb"}, {"name": "Wadi Bridge", "img": "assets/items/wadi-bridge.png", "glb": "assets/3d/items/wadi-bridge.glb"}, {"name": "Wayfinding Totem", "img": "assets/items/wayfinding-totem.png", "glb": "assets/3d/items/wayfinding-totem.glb"}];
 const POS={"01":[520,368],"02":[400,300],"03":[262,342],"04":[168,300],"05":[108,220],"06":[196,152],"07":[330,96],"08":[300,240],"09":[120,96],"10":[470,400]};
 // coded markers positioned on the painted masterplan (% of image), labels drawn in code
-const PAINT={"01":[48,91,"Entry Plaza & Gateway",20],"02":[48,77,"Community Majlis Plaza",22],
-"03":[50,19,"Event Lawn",26],"04":[80,17,"Inclusive Play Dune",22],"05":[82,48,"Teen Active Zone",18],
-"06":[79,66,"Fitness Grove",18],"07":[22,61,"Picnic Groves",24],"08":[45,55,"Sensory Wadi Garden",24],
-"09":[21,14,"Quiet Contemplation Garden",22],"10":[78,87,"Café Terrace",18]};
+const PAINT={"01":[43,88,"Entry Plaza & Gateway",13],"02":[47,80,"Community Majlis Plaza",16],
+"03":[53,35,"Event Lawn",30],"04":[74,16,"Inclusive Play Dune",18],"05":[77,52,"Teen Active Zone",15],
+"06":[75,69,"Fitness Grove",12],"07":[24,54,"Picnic Groves",16],"08":[47,64,"Sensory Wadi Garden",15],
+"09":[56,10,"Quiet Contemplation Garden",15],"10":[73,86,"Café Terrace",12]};
 const INFO={
 "01":{why:"<b>Why here:</b> the parcel's street edge (per the official as-built plan) — arrival, drop-off and the school-run all land here; the school walking route and the mosque path (mosque 260 m north) both pass this corner, so the front door meets the neighborhood where it already moves.",has:"gateway pergola · sparkle-inlaid paving · drop-off + ~40 bays · 30 shaded bike racks · loop start"},
 "02":{why:"<b>Why here:</b> dead-center on the loop's waist — equal walk from every entrance, so the community's gathering heart is never more than 300 m away. Hearing-loop equipped.",has:"majlis seat ring · grand ghaf canopy · central water bowl · evening lanterns"},

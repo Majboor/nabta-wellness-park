@@ -50,6 +50,66 @@ footer{padding:2.5rem 0 3.5rem;color:var(--mute);font-size:.84rem}
 </style>
 </head>
 <body>
+<div id="nload">
+<style>
+#nload{position:fixed;inset:0;z-index:99999;background:#F5EFE2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.1rem;transition:opacity .5s ease}
+#nload.done{opacity:0;pointer-events:none}
+#nload .nl-mark{font-family:"Comfortaa","Instrument Sans",sans-serif;font-weight:700;font-size:1.7rem;color:#22301F}
+#nload .nl-mark .sp{color:#8FCB9B}
+#nload .nl-sub{font-family:"IBM Plex Mono",monospace;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:#7A8272}
+#nload .nl-bar{width:230px;height:3px;background:#E7DCC3;border-radius:2px;overflow:hidden}
+#nload .nl-bar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,#7CC98F,#7BC6DD);transition:width .25s ease}
+#nload .nl-pct{font-family:"IBM Plex Mono",monospace;font-size:.68rem;color:#4A5644}
+</style>
+<img src="assets/brand/nabta-logo-dark.png" alt="" style="height:40px" onerror="this.outerHTML='<div class=nl-mark>nabta<span class=sp>&#10022;</span></div>'">
+<div class="nl-bar"><i id="nl-fill"></i></div>
+<div class="nl-pct" id="nl-pct">0%</div>
+<div class="nl-sub" id="nl-sub">loading the park&hellip;</div>
+<script>
+(function(){
+  var ov=document.getElementById('nload'),fill=document.getElementById('nl-fill'),
+      pct=document.getElementById('nl-pct'),sub=document.getElementById('nl-sub'),
+      finished=false,t0=Date.now();
+  function frac(){
+    var imgs=Array.prototype.slice.call(document.images).filter(function(im){return im.src&&!im.closest('#nload')});
+    if(!imgs.length)return 1;
+    var done=imgs.filter(function(im){return im.complete}).length;
+    return done/imgs.length;
+  }
+  function tick(){
+    if(finished)return;
+    var f=frac(),elapsed=Date.now()-t0;
+    var shown=Math.min(f,0.15+elapsed/12000*0.85);   /* ease in even if cache-instant */
+    shown=Math.max(shown,Math.min(elapsed/1200,0.15));
+    fill.style.width=(shown*100).toFixed(0)+'%';pct.textContent=(shown*100).toFixed(0)+'%';
+    if((f>=1&&elapsed>700&&document.readyState==='complete')||elapsed>12000){finish();return}
+    requestAnimationFrame(tick);
+  }
+  function finish(){
+    if(finished)return;finished=true;
+    fill.style.width='100%';pct.textContent='100%';
+    setTimeout(function(){ov.classList.add('done');setTimeout(function(){ov.remove();warm()},550)},200);
+  }
+  function warm(){ /* Design page: pre-fetch the 3D library into browser cache */
+    try{
+      var urls=[];
+      var IT=(typeof ITEMS!=='undefined')?ITEMS:null,MD=(typeof MEDIA!=='undefined')?MEDIA:null;
+      if(IT)IT.forEach(function(it){if(it.glb)urls.push(it.glb)});
+      if(MD)Object.keys(MD).forEach(function(k){var g=MD[k]&&MD[k].glb;if(g)urls.push(g)});
+      if(!urls.length)return;
+      var i=0;
+      (function next(){
+        if(i>=urls.length)return;
+        fetch(urls[i++],{priority:'low'}).catch(function(){}).finally(function(){setTimeout(next,150)});
+      })();
+    }catch(e){}
+  }
+  window.addEventListener('load',function(){setTimeout(function(){if(!finished&&frac()>=1)finish()},750)});
+  requestAnimationFrame(tick);
+})();
+</script>
+</div>
+
 <nav><div class="wrap">
 <span class="logo-nabta" style="font-size:1.05rem"><img class="logo-img" src="assets/brand/nabta-logo-dark.png" alt="nabta wellness park" onerror="this.outerHTML='nabta<span class=spark>✦</span>'"></span>
 <a href="index.html">Overview</a>
@@ -70,8 +130,8 @@ footer{padding:2.5rem 0 3.5rem;color:var(--mute);font-size:.84rem}
 <thead><tr><th>Required item</th><th>Format</th><th>Status</th><th>What exists</th><th>What's still needed</th></tr></thead>
 <tbody>
 <tr><td>№01–09, №14 — reports, analyses, strategies, presentation</td><td>PDF</td><td>✅</td><td>11 designed A4 PDFs + 22-sheet A3 presentation</td><td>Final proofread; optional Arabic versions</td></tr>
-<tr><td>№10 Concept diagrams &amp; drawings · №11 Sections &amp; elevations</td><td><strong>CAD/BIM</strong></td><td>✅⚠️</td><td>Full CAD set v5 on the official as-built base: dimensioned plan (S-01), concept sections A-A/B-B (S-02), gateway elevation (S-03), title blocks — DXF R2010 + drawing register (D·09) — <a href="map.html#cad-sec">previews &amp; downloads</a></td><td>Open the DXF in AutoCAD and Save As .dwg if the portal requires .dwg (local converter corrupts DWGs, so we ship the clean DXF); refine levels/details to taste</td></tr>
-<tr><td>№12 High-quality visualizations · №13 day &amp; night pairs</td><td>Images</td><td>✅⚠️</td><td>80 renders incl. matched day/night pairs of the same views</td><td>Rebuild hero views from a geo-accurate 3D model for final</td></tr>
+<tr><td>№10 Concept diagrams &amp; drawings · №11 Sections &amp; elevations</td><td><strong>CAD/BIM</strong></td><td>✅</td><td>Full CAD set v5 on the official as-built base: dimensioned plan (S-01), concept sections A-A/B-B (S-02), gateway elevation (S-03), title blocks — <strong>DWG (AutoCAD 2013) + DXF R2010</strong>, parse-verified — <a href="map.html#cad-sec">previews &amp; downloads</a></td><td>Optional: refine levels/details before final submission</td></tr>
+<tr><td>№12 High-quality visualizations · №13 day &amp; night pairs</td><td>Images</td><td>✅</td><td>80 room renders + geometry-faithful aerial hero day/dusk pair rendered from the surveyed-parcel plan (<a href="map.html#plan-sec">on the Design page</a>)</td><td>Optional: re-render heroes from the 3D scene reconstruction once splat training is done</td></tr>
 <tr><td>№15 One-minute concept animation</td><td>Video</td><td>✅⚠️</td><td>56s film with location titles, streaming + QR</td><td>Voiceover/music; export per portal size limits</td></tr>
 <tr><td>№16 Additional supporting materials</td><td>Any</td><td>✅</td><td>Interactive map, 3D asset library, verification evidence, satellite study</td><td>—</td></tr>
 <tr><td>Commercial &amp; Service Facilities Map</td><td>Plan</td><td>✅</td><td>Included in D·08</td><td>Re-plot on true parcel geometry</td></tr>
@@ -165,7 +225,16 @@ footer{padding:2.5rem 0 3.5rem;color:var(--mute);font-size:.84rem}
 <p style="margin-top:.8rem">
 <a class="btn solid" href="map.html">Open the Design page ↗</a>
 <a class="btn" href="aipark-challenge.html">Competition field guide ↗</a>
-<a class="btn" href="nabta-board.excalidraw" download>Excalidraw board ↓</a>
+</p>
+</div></section>
+
+<section><div class="wrap">
+<h2><span class="sec-num">H·9</span>Project whiteboard — asked vs delivered</h2>
+<p class="lede">The full project mind-map, live and pannable: everything the competition asked on one side, everything delivered on the other, with embedded images. Read-only here; download the .excalidraw to edit at excalidraw.com.</p>
+<iframe src="board.html" loading="lazy" style="width:100%;height:560px;border:1px solid var(--hair);background:var(--paper);margin-top:1rem" title="nabta project whiteboard"></iframe>
+<p style="margin-top:.8rem">
+<a class="btn solid" href="board.html" target="_blank">Open whiteboard full-screen ↗</a>
+<a class="btn" href="nabta-board.excalidraw" download>Download .excalidraw ↓</a>
 </p>
 </div></section>
 
