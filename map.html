@@ -114,19 +114,22 @@ footer{padding:2.5rem 0 3.5rem;color:var(--mute);font-size:.85rem}
   var ov=document.getElementById('nload'),fill=document.getElementById('nl-fill'),
       pct=document.getElementById('nl-pct'),sub=document.getElementById('nl-sub'),
       finished=false,t0=Date.now();
-  function frac(){
+  function stats(){
     var imgs=Array.prototype.slice.call(document.images).filter(function(im){return im.src&&!im.closest('#nload')});
-    if(!imgs.length)return 1;
+    imgs.forEach(function(im){if(im.loading==='lazy')im.loading='eager'});  /* force lazy imgs to start now */
     var done=imgs.filter(function(im){return im.complete}).length;
-    return done/imgs.length;
+    return {total:imgs.length,done:done,f:imgs.length?done/imgs.length:1};
   }
   function tick(){
     if(finished)return;
-    var f=frac(),elapsed=Date.now()-t0;
-    var shown=Math.min(f,0.15+elapsed/12000*0.85);   /* ease in even if cache-instant */
-    shown=Math.max(shown,Math.min(elapsed/1200,0.15));
+    var s2=stats(),elapsed=Date.now()-t0;
+    var shown=s2.f;
+    if(document.readyState!=='complete')shown=Math.min(shown,0.96); /* DOM (and late-injected imgs) not final yet */
+    shown=Math.max(shown,Math.min(elapsed/1500,0.06));              /* tiny ramp so it never looks frozen */
     fill.style.width=(shown*100).toFixed(0)+'%';pct.textContent=(shown*100).toFixed(0)+'%';
-    if((f>=1&&elapsed>700&&document.readyState==='complete')||elapsed>12000){finish();return}
+    if(s2.total)sub.textContent='loading the park… '+s2.done+' / '+s2.total+' assets';
+    var ready=s2.f>=1&&document.readyState==='complete'&&(!document.fonts||document.fonts.status==='loaded'||elapsed>6000);
+    if((ready&&elapsed>800)||elapsed>60000){finish();return}
     requestAnimationFrame(tick);
   }
   function finish(){
@@ -148,11 +151,13 @@ footer{padding:2.5rem 0 3.5rem;color:var(--mute);font-size:.85rem}
       })();
     }catch(e){}
   }
-  window.addEventListener('load',function(){setTimeout(function(){if(!finished&&frac()>=1)finish()},750)});
+  window.addEventListener('load',function(){setTimeout(function(){if(!finished&&stats().f>=1)finish()},900)});
   requestAnimationFrame(tick);
 })();
 </script>
 </div>
+
+
 
 <nav><div class="wrap">
 <span class="logo-nabta" style="font-size:1.05rem"><img src="assets/brand/nabta-logo-dark.png" alt="nabta wellness park" style="height:30px;display:block" onerror="this.outerHTML='nabta<span class=&quot;spark&quot;>✦</span>&nbsp;<span class=&quot;sub&quot;>wellness park</span>'"></span>
