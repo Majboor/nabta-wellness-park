@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <!-- Fitness Grove, year 5: full ghaf canopy, deep shade, thick lawns -->
+  <defs>
+    <linearGradient id="e3-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5EFE2"/>
+      <stop offset="1" stop-color="#E7DCC3"/>
+    </linearGradient>
+    <pattern id="e3-stipple" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="7" r="1.3" fill="#22301F" opacity="0.10"/>
+      <circle cx="17" cy="18" r="1.1" fill="#22301F" opacity="0.08"/>
+    </pattern>
+    <pattern id="e3-grass" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="6" r="1.6" fill="#2F6B4A" opacity="0.22"/>
+      <circle cx="15" cy="16" r="1.3" fill="#7CC98F" opacity="0.2"/>
+    </pattern>
+    <g id="e3-sparkle">
+      <path d="M0,-11 L2.6,-2.6 L11,0 L2.6,2.6 L0,11 L-2.6,2.6 L-11,0 L-2.6,-2.6 Z" fill="#F5EFE2"/>
+    </g>
+  </defs>
+
+  <rect width="1280" height="470" fill="url(#e3-sky)"/>
+  <circle cx="1060" cy="120" r="55" fill="#F5EFE2" opacity="0.85"/>
+
+  <!-- distant loop treeline, mature -->
+  <path d="M0,420 C200,382 440,404 680,378 C920,354 1120,392 1280,368 L1280,470 L0,470 Z" fill="#A9C6A0" opacity="0.6"/>
+  <path d="M0,442 C260,418 560,436 860,414 C1020,404 1160,424 1280,410 L1280,475 L0,475 Z" fill="#2F6B4A" opacity="0.4"/>
+
+  <!-- ground -->
+  <rect y="450" width="1280" height="270" fill="#E7DCC3"/>
+  <rect y="450" width="1280" height="270" fill="url(#e3-stipple)"/>
+
+  <!-- loop path band -->
+  <path d="M-20,478 C320,460 720,470 1300,452 L1300,500 C760,520 320,508 -20,526 Z" fill="#CFC0A0"/>
+  <path d="M-20,500 C400,482 820,492 1300,474" fill="none" stroke="#F5EFE2" stroke-width="3.5" stroke-dasharray="14 20" opacity="0.7"/>
+
+  <!-- lush lawn pockets -->
+  <path d="M0,540 C160,518 340,530 470,562 C330,606 140,618 0,602 Z" fill="#A9C6A0" opacity="0.95"/>
+  <path d="M0,540 C160,518 340,530 470,562 C330,606 140,618 0,602 Z" fill="url(#e3-grass)"/>
+  <path d="M900,528 C1050,510 1190,520 1280,512 L1280,610 C1120,618 970,586 900,556 Z" fill="#A9C6A0" opacity="0.9"/>
+  <path d="M900,528 C1050,510 1190,520 1280,512 L1280,610 C1120,618 970,586 900,556 Z" fill="url(#e3-grass)"/>
+
+  <!-- deep dappled shade -->
+  <g fill="#22301F" opacity="0.12">
+    <ellipse cx="240" cy="640" rx="180" ry="30"/>
+    <ellipse cx="640" cy="600" rx="200" ry="30"/>
+    <ellipse cx="1060" cy="650" rx="170" ry="28"/>
+  </g>
+
+  <!-- four ghaf trees: mature spreading crowns -->
+  <g stroke="#22301F" fill="none" stroke-linecap="round">
+    <path d="M170,470 C160,340 138,230 112,140 M170,470 C182,360 208,270 230,200" stroke-width="20"/>
+    <path d="M520,462 C514,350 500,250 488,170 M520,462 C528,370 545,290 560,230" stroke-width="15"/>
+    <path d="M760,458 C766,360 780,270 792,200" stroke-width="12"/>
+    <path d="M1080,468 C1090,340 1112,230 1134,140 M1080,468 C1070,360 1046,270 1028,190" stroke-width="21"/>
+  </g>
+  <g>
+    <circle cx="140" cy="120" r="105" fill="#2F6B4A" opacity="0.88"/>
+    <circle cx="240" cy="150" r="80" fill="#A9C6A0" opacity="0.7"/>
+    <circle cx="90" cy="190" r="60" fill="#A9C6A0" opacity="0.55"/>
+    <circle cx="180" cy="80" r="55" fill="#7CC98F" opacity="0.3"/>
+    <circle cx="510" cy="140" r="88" fill="#2F6B4A" opacity="0.85"/>
+    <circle cx="590" cy="180" r="62" fill="#A9C6A0" opacity="0.65"/>
+    <circle cx="460" cy="200" r="50" fill="#A9C6A0" opacity="0.5"/>
+    <circle cx="790" cy="180" r="72" fill="#2F6B4A" opacity="0.82"/>
+    <circle cx="850" cy="220" r="52" fill="#A9C6A0" opacity="0.6"/>
+    <circle cx="1110" cy="110" r="100" fill="#2F6B4A" opacity="0.88"/>
+    <circle cx="1020" cy="160" r="72" fill="#A9C6A0" opacity="0.7"/>
+    <circle cx="1190" cy="180" r="60" fill="#A9C6A0" opacity="0.55"/>
+    <circle cx="1080" cy="60" r="50" fill="#7CC98F" opacity="0.3"/>
+  </g>
+
+  <!-- pull-up rig -->
+  <g>
+    <rect x="330" y="300" width="14" height="290" rx="4" fill="#22301F"/>
+    <rect x="470" y="300" width="14" height="290" rx="4" fill="#22301F"/>
+    <rect x="322" y="292" width="170" height="12" rx="5" fill="#22301F"/>
+    <rect x="342" y="304" width="130" height="9" rx="4" fill="#C05A32"/>
+    <ellipse cx="405" cy="596" rx="90" ry="11" fill="#22301F" opacity="0.14"/>
+    <!-- athlete hanging -->
+    <g fill="#22301F">
+      <circle cx="404" cy="348" r="12"/>
+      <path d="M394,358 c-2,22 0,44 6,62 l-10,58 10,3 12,-54 7,54 10,-2 -6,-62 c5,-20 6,-42 3,-59 z"/>
+      <path d="M392,312 l4,38 7,3 2,-36 z"/>
+      <path d="M420,312 l-2,38 -7,3 -3,-36 z"/>
+    </g>
+  </g>
+
+  <!-- parallel bars -->
+  <g>
+    <rect x="790" y="480" width="11" height="112" rx="4" fill="#22301F"/>
+    <rect x="920" y="480" width="11" height="112" rx="4" fill="#22301F"/>
+    <rect x="782" y="472" width="72" height="9" rx="4" fill="#C05A32"/>
+    <rect x="868" y="472" width="72" height="9" rx="4" fill="#C05A32"/>
+    <ellipse cx="860" cy="596" rx="85" ry="10" fill="#22301F" opacity="0.13"/>
+    <!-- athlete in support hold -->
+    <g fill="#22301F">
+      <circle cx="861" cy="440" r="11"/>
+      <path d="M852,449 c-3,16 -1,32 3,45 l-8,44 9,2 9,-40 7,40 9,-2 -6,-46 c3,-13 4,-28 1,-43 z"/>
+      <path d="M849,453 l-22,16 3,7 23,-13 z"/>
+      <path d="M874,453 l24,14 -3,7 -25,-11 z"/>
+    </g>
+  </g>
+
+  <!-- fountain -->
+  <g>
+    <rect x="626" y="472" width="28" height="54" rx="7" fill="#22301F"/>
+    <ellipse cx="640" cy="472" rx="20" ry="8" fill="#4E8FA8"/>
+    <path d="M640,467 C637,458 643,453 640,446" stroke="#7BC6DD" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- pergola gateway at far right -->
+  <g>
+    <rect x="1196" y="330" width="12" height="180" fill="#22301F"/>
+    <rect x="1268" y="330" width="12" height="180" fill="#22301F"/>
+    <g fill="#C05A32">
+      <rect x="1186" y="324" width="104" height="8" rx="3"/>
+      <rect x="1190" y="342" width="96" height="7" rx="3"/>
+      <rect x="1194" y="359" width="88" height="7" rx="3"/>
+    </g>
+  </g>
+
+  <!-- people: stretcher on lawn, jogger on loop, walker -->
+  <g fill="#22301F">
+    <circle cx="200" cy="560" r="9"/>
+    <path d="M192,567 c-14,8 -26,13 -44,15 l2,9 c20,-1 36,-6 50,-15 l28,13 22,-4 -2,-8 -20,2 -22,-11 z"/>
+    <circle cx="1010" cy="466" r="8"/>
+    <path d="M1003,473 c-2,12 0,22 6,30 l-14,20 7,5 14,-19 8,20 8,-3 -8,-24 c4,-9 4,-19 1,-29 z"/>
+    <circle cx="580" cy="470" r="7"/>
+    <path d="M574,476 c-2,11 0,21 4,28 l-4,32 8,1 4,-28 6,28 8,-1 -5,-33 c3,-9 3,-18 1,-27 z"/>
+  </g>
+
+  <use href="#e3-sparkle" transform="translate(640,442) scale(0.5)" opacity="0.95"/>
+  <use href="#e3-sparkle" transform="translate(940,90) scale(0.7)" opacity="0.75"/>
+  <use href="#e3-sparkle" transform="translate(320,70) scale(0.55)" opacity="0.7"/>
+</svg>

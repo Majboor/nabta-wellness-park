@@ -1,0 +1,62 @@
+{
+  "room": "08",
+  "title": "Sensory Wadi Garden",
+  "frames": [
+    {
+      "file": "aerial.svg",
+      "code": "R08-A",
+      "title": "Aerial — The Wadi Threads the Loop",
+      "caption": "From above, the planted bioswale snakes across the whole park, threading the shaded figure-eight loop and stitched by three terracotta bridges.",
+      "videogen_prompt": "Photorealistic aerial drone shot slowly descending over a desert wellness park in Dubai at golden hour, a blue-green planted wadi snaking through ghaf trees and a shaded figure-eight path, terracotta bridges crossing the water. Warm, serene, cinematic."
+    },
+    {
+      "file": "approach.svg",
+      "code": "R08-B",
+      "title": "Approach — Terracotta Bridge",
+      "caption": "The path arrives at a low terracotta arc over the wadi; a child points at the water while an elder rests on a bench under the pergola slats.",
+      "videogen_prompt": "Photorealistic steadicam walking shot approaching a terracotta arched footbridge over a planted desert bioswale, late afternoon sun, reeds and boulders at the banks, a child pointing at dragonflies over the water. Warm, gentle, inviting mood."
+    },
+    {
+      "file": "walkthrough.svg",
+      "code": "R08-C",
+      "title": "Walkthrough — Along the Bank",
+      "caption": "On the loop path the water runs alongside; terracotta pergola slats rake shade stripes across the gravel while reeds and desert grasses brush the edge.",
+      "videogen_prompt": "Photorealistic first-person walking shot along a shaded bank path beside a flowing desert wadi, terracotta pergola slats casting rhythmic shadow stripes, reeds swaying, an elder seated on a bench, mid-morning light. Calm, tactile, meditative."
+    },
+    {
+      "file": "flythrough.svg",
+      "code": "R08-D",
+      "title": "Flythrough — Skimming the Wadi",
+      "caption": "A low drone skims the water surface down the channel, banks of reeds and boulders rushing past, a terracotta bridge arcing overhead ahead.",
+      "videogen_prompt": "Photorealistic FPV drone shot skimming fast and low over a narrow planted wadi channel, water rippling below, reeds and boulders whipping past, flying under a terracotta arched bridge, golden hour backlight. Exhilarating yet smooth."
+    },
+    {
+      "file": "evolution-1.svg",
+      "code": "R08-E1",
+      "title": "Evolution — Opening Day",
+      "caption": "Year zero: the channel is freshly cut and gravel-edged, young reeds just planted, saplings staked, the first condensate-fed water finding its way.",
+      "videogen_prompt": "Photorealistic locked-off wide shot of a newly built desert bioswale on opening day, fresh gravel banks, sparse young reeds, staked ghaf saplings, a thin ribbon of clear water, bright midday desert light. Hopeful, pristine, expectant."
+    },
+    {
+      "file": "evolution-2.svg",
+      "code": "R08-E2",
+      "title": "Evolution — Year Two",
+      "caption": "Year two: reed stands establish, ground covers creep over the gravel, first vines climb the pergola and the first dragonfly arrives.",
+      "videogen_prompt": "Photorealistic locked-off wide timelapse frame of the same desert bioswale two years on, reeds thickening, green ground cover knitting over gravel banks, vines starting up the terracotta pergola, soft midday light. Quietly flourishing."
+    },
+    {
+      "file": "evolution-3.svg",
+      "code": "R08-E3",
+      "title": "Evolution — Year Five, Lush",
+      "caption": "Year five: the wadi is a lush green seam — broad ghaf canopies, dense tall reeds, vine-draped pergola and dragonflies over the shaded water.",
+      "videogen_prompt": "Photorealistic locked-off wide shot of a mature lush desert bioswale five years after planting, dense tall reeds, broad shading ghaf canopies, vine-draped pergola, dragonflies glinting over green-reflecting water, warm midday light. Abundant, alive, restorative."
+    },
+    {
+      "file": "night.svg",
+      "code": "R08-N",
+      "title": "Night — Moonlit Water, Warm Lights",
+      "caption": "The same bank path after dark: moonlight silvers the wadi, low bollards pool warm light on the gravel, and the pergola slats turn to dark lacework.",
+      "videogen_prompt": "Photorealistic slow dolly shot along a wadi bank path at night, full moon reflecting a silver trail on dark water, warm low bollard lights pooling on the gravel path, reed silhouettes, an elder resting on a bench. Hushed, safe, magical."
+    }
+  ]
+}

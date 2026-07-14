@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <pattern id="stipD" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="5" r="1.2" fill="#22301F" opacity="0.07"/>
+      <circle cx="12" cy="13" r="1" fill="#22301F" opacity="0.05"/>
+    </pattern>
+    <linearGradient id="skyD" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5EFE2"/>
+      <stop offset="1" stop-color="#E7DCC3"/>
+    </linearGradient>
+    <g id="sparkD">
+      <path d="M0,-9 L2.2,-2.2 L9,0 L2.2,2.2 L0,9 L-2.2,2.2 L-9,0 L-2.2,-2.2 Z"/>
+    </g>
+    <g id="obliqueTree">
+      <ellipse cx="14" cy="10" rx="40" ry="15" fill="#22301F" opacity="0.14"/>
+      <path d="M0,6 L2,-16" stroke="#22301F" stroke-width="4" stroke-linecap="round"/>
+      <ellipse cx="0" cy="-28" rx="38" ry="20" fill="#2F6B4A" opacity="0.88"/>
+      <ellipse cx="-10" cy="-36" rx="24" ry="12" fill="#A9C6A0" opacity="0.75"/>
+    </g>
+    <g id="obTable">
+      <rect x="-20" y="-8" width="40" height="16" rx="4" fill="#C05A32" transform="skewX(-12)"/>
+      <rect x="-26" y="-16" width="34" height="6" rx="3" fill="#F5EFE2" transform="skewX(-12)"/>
+      <rect x="-10" y="12" width="34" height="6" rx="3" fill="#F5EFE2" transform="skewX(-12)"/>
+    </g>
+    <g id="dotD"><circle r="4" fill="#22301F"/></g>
+  </defs>
+
+  <!-- sky band with heat haze -->
+  <rect width="1280" height="200" fill="url(#skyD)"/>
+  <ellipse cx="640" cy="196" rx="760" ry="40" fill="#F5EFE2" opacity="0.7"/>
+
+  <!-- tilted ground plane -->
+  <path d="M0,190 L1280,160 L1280,720 L0,720 Z" fill="#E7DCC3"/>
+
+  <!-- distant park fabric: pergola line and bioswale -->
+  <path d="M0,214 C300,196 700,220 1280,186" fill="none" stroke="#C05A32" stroke-width="8" opacity="0.5"/>
+  <g stroke="#C05A32" stroke-width="3" opacity="0.45">
+    <line x1="120" y1="204" x2="120" y2="216"/><line x1="180" y1="202" x2="180" y2="214"/>
+    <line x1="240" y1="202" x2="240" y2="214"/><line x1="300" y1="200" x2="300" y2="212"/>
+    <line x1="860" y1="206" x2="860" y2="218"/><line x1="920" y1="204" x2="920" y2="216"/>
+    <line x1="980" y1="202" x2="980" y2="214"/><line x1="1040" y1="200" x2="1040" y2="212"/>
+  </g>
+  <path d="M0,248 C340,228 760,258 1280,222" fill="none" stroke="#4E8FA8" stroke-width="9" opacity="0.6"/>
+  <path d="M0,248 C340,228 760,258 1280,222" fill="none" stroke="#A9C6A0" stroke-width="20" opacity="0.35"/>
+
+  <!-- lawn sweep between groves -->
+  <path d="M0,330 C360,290 820,360 1280,300 L1280,600 C860,660 420,580 0,650 Z" fill="#A9C6A0" opacity="0.5"/>
+  <path d="M120,420 C460,380 880,450 1280,392 L1280,520 C880,570 460,500 60,552 Z" fill="#A9C6A0" opacity="0.35"/>
+
+  <!-- figure-eight loop seen obliquely -->
+  <path d="M-40,560 C240,470 420,620 660,540 C900,462 1060,610 1320,500" fill="none" stroke="#22301F" stroke-width="44" opacity="0.07"/>
+  <path d="M-40,552 C240,462 420,612 660,532 C900,454 1060,602 1320,492" fill="none" stroke="#CFC0A0" stroke-width="36"/>
+  <path d="M200,300 C420,272 700,318 980,278" fill="none" stroke="#CFC0A0" stroke-width="16" opacity="0.9"/>
+  <!-- connector spurs -->
+  <g fill="none" stroke="#CFC0A0" stroke-width="12">
+    <path d="M330,520 C350,460 340,420 360,380"/>
+    <path d="M760,512 C780,460 800,420 820,386"/>
+    <path d="M1050,540 C1080,480 1090,440 1110,404"/>
+  </g>
+
+  <!-- grove pockets receding in perspective -->
+  <!-- near grove (left) -->
+  <g transform="translate(340,392)">
+    <ellipse rx="120" ry="42" fill="#F5EFE2" opacity="0.75"/>
+    <ellipse rx="120" ry="42" fill="none" stroke="#2F6B4A" stroke-width="10" opacity="0.5"/>
+    <use href="#obTable" transform="translate(-30,4) scale(1.1)"/>
+    <use href="#obliqueTree" transform="translate(-86,-18) scale(1.1)"/>
+    <use href="#obliqueTree" transform="translate(60,-30)"/>
+    <use href="#obliqueTree" transform="translate(96,10) scale(0.85)"/>
+    <use href="#dotD" transform="translate(16,16)"/>
+    <use href="#dotD" transform="translate(28,20)"/>
+  </g>
+  <!-- near grove (right, majlis) -->
+  <g transform="translate(830,398)">
+    <ellipse rx="112" ry="40" fill="#F5EFE2" opacity="0.75"/>
+    <ellipse rx="112" ry="40" fill="none" stroke="#2F6B4A" stroke-width="10" opacity="0.5"/>
+    <ellipse cx="-6" cy="6" rx="38" ry="15" fill="#C05A32" opacity="0.55"/>
+    <circle cx="-22" cy="0" r="6" fill="#F5EFE2"/>
+    <circle cx="10" cy="12" r="6" fill="#F5EFE2"/>
+    <circle cx="12" cy="-4" r="6" fill="#F5EFE2"/>
+    <use href="#obliqueTree" transform="translate(-70,-24) scale(0.95)"/>
+    <use href="#obliqueTree" transform="translate(74,-16) scale(1.05)"/>
+    <use href="#dotD" transform="translate(-4,2)"/>
+    <use href="#dotD" transform="translate(-16,10) scale(0.8)"/>
+  </g>
+  <!-- far groves -->
+  <g transform="translate(560,286) scale(0.62)" opacity="0.95">
+    <ellipse rx="110" ry="38" fill="#F5EFE2" opacity="0.7"/>
+    <use href="#obTable" transform="translate(0,2)"/>
+    <use href="#obliqueTree" transform="translate(-66,-20)"/>
+    <use href="#obliqueTree" transform="translate(66,-14) scale(0.9)"/>
+  </g>
+  <g transform="translate(1120,300) scale(0.6)" opacity="0.95">
+    <ellipse rx="110" ry="38" fill="#F5EFE2" opacity="0.7"/>
+    <use href="#obliqueTree" transform="translate(-50,-18)"/>
+    <use href="#obliqueTree" transform="translate(46,-24) scale(0.9)"/>
+    <use href="#obTable" transform="translate(8,6)"/>
+  </g>
+  <g transform="translate(140,300) scale(0.55)" opacity="0.9">
+    <ellipse rx="110" ry="38" fill="#F5EFE2" opacity="0.7"/>
+    <use href="#obliqueTree" transform="translate(-40,-20)"/>
+    <use href="#obliqueTree" transform="translate(52,-16)"/>
+  </g>
+
+  <!-- foreground canopy edge sweeping under the drone -->
+  <g>
+    <ellipse cx="180" cy="700" rx="260" ry="90" fill="#2F6B4A" opacity="0.9"/>
+    <ellipse cx="560" cy="730" rx="300" ry="90" fill="#2F6B4A" opacity="0.85"/>
+    <ellipse cx="1060" cy="710" rx="320" ry="100" fill="#2F6B4A" opacity="0.9"/>
+    <ellipse cx="360" cy="700" rx="180" ry="55" fill="#A9C6A0" opacity="0.55"/>
+    <ellipse cx="880" cy="716" rx="200" ry="60" fill="#A9C6A0" opacity="0.5"/>
+  </g>
+
+  <!-- walkers on the loop -->
+  <use href="#dotD" transform="translate(520,556)"/>
+  <use href="#dotD" transform="translate(534,560)"/>
+  <use href="#dotD" transform="translate(960,520) scale(0.9)"/>
+  <use href="#dotD" transform="translate(240,510) scale(0.9)"/>
+
+  <!-- sparkles -->
+  <use href="#sparkD" transform="translate(180,96)" fill="#7CC98F" opacity="0.9"/>
+  <use href="#sparkD" transform="translate(1080,80) scale(0.8)" fill="#7BC6DD" opacity="0.9"/>
+  <use href="#sparkD" transform="translate(660,140) scale(0.6)" fill="#F5EFE2"/>
+  <use href="#sparkD" transform="translate(430,470) scale(0.6)" fill="#7CC98F" opacity="0.8"/>
+
+  <!-- texture + warm wash -->
+  <rect width="1280" height="720" fill="url(#stipD)"/>
+  <rect width="1280" height="720" fill="#C05A32" opacity="0.04"/>
+</svg>

@@ -1,0 +1,62 @@
+{
+  "room": "03",
+  "title": "Event Lawn",
+  "frames": [
+    {
+      "file": "aerial.svg",
+      "code": "R03-A",
+      "title": "The Green Heart from Above",
+      "caption": "High establishing view of the 2,000 sqm bowl-shaped Event Lawn nested in the eastern cell of the Living Shade Loop, ringed by ghaf groves, terracotta pergolas, kiosk pads and the wadi bioswale.",
+      "videogen_prompt": "Photorealistic aerial drone shot slowly descending over a bowl-shaped event lawn inside a figure-eight shaded park loop in Dubai at golden hour, ghaf tree groves and terracotta pergolas edging the green, warm desert light, serene and expansive mood."
+    },
+    {
+      "file": "approach.svg",
+      "code": "R03-B",
+      "title": "Arriving Under the Slats",
+      "caption": "Eye-level approach along the shaded loop: terracotta pergola slats rake bands of shadow across the path as it opens onto the sunlit lawn, a kiosk cart waiting at the rim.",
+      "videogen_prompt": "Photorealistic steadicam walking shot gliding beneath a terracotta-slat pergola along a sandy park path, slatted shadows sweeping the ground, revealing a bright green event lawn ahead, late morning desert light, inviting and calm."
+    },
+    {
+      "file": "walkthrough.svg",
+      "code": "R03-C",
+      "title": "A Morning on the Lawn",
+      "caption": "On the lawn among the regulars: a yoga row on mats, families on picnic blankets, kids chasing a kite, kiosk carts trading at the rim under the ghaf edge canopy.",
+      "videogen_prompt": "Photorealistic slow dolly move across a busy park lawn in soft morning light, passing a yoga class on mats, families on picnic blankets and children running with a kite, shallow depth of field, warm and communal mood."
+    },
+    {
+      "file": "flythrough.svg",
+      "code": "R03-D",
+      "title": "Banking Over the Loop",
+      "caption": "Oblique drone sweep banking across the figure-eight loop and wadi bioswale toward the lawn bowl, market stalls and pergola runs flickering past below.",
+      "videogen_prompt": "Photorealistic FPV drone shot banking low over a shaded figure-eight park loop and a glinting bioswale, then sweeping across a bowl-shaped lawn dotted with market stalls and picnickers, golden afternoon light, dynamic and joyful."
+    },
+    {
+      "file": "evolution-1.svg",
+      "code": "R03-E1",
+      "title": "Opening Day",
+      "caption": "Year zero: fresh turf rolls still seaming together, staked ghaf saplings in watering basins at the rim stations, new pergola timber bare, the first visitors arriving.",
+      "videogen_prompt": "Photorealistic locked-off timelapse-style shot of a newly opened park lawn at midday, staked saplings in watering basins along a fresh path, sparse young turf with sandy patches, bright optimistic desert light, sense of beginning."
+    },
+    {
+      "file": "evolution-2.svg",
+      "code": "R03-E2",
+      "title": "Year Two",
+      "caption": "Same view, two summers on: stakes off, adolescent ghaf canopies casting their first pools of shade, vines starting up the pergola, the turf knitted and deepening.",
+      "videogen_prompt": "Photorealistic locked-off shot of the same park lawn two years on, young ghaf trees with filling canopies casting small shade pools, first vines climbing a terracotta pergola, warm late-afternoon light, quiet steady growth."
+    },
+    {
+      "file": "evolution-3.svg",
+      "code": "R03-E3",
+      "title": "Year Five",
+      "caption": "Same view at maturity: interlocking ghaf canopies close over the rim and lean into frame, vine-wrapped pergola, dappled shade drifting across a deep established sward.",
+      "videogen_prompt": "Photorealistic locked-off shot of a mature park lawn edged by a continuous ghaf canopy, dappled shade drifting over deep green grass as branches sway overhead, honeyed evening light, settled and abundant mood."
+    },
+    {
+      "file": "night.svg",
+      "code": "R03-N",
+      "title": "Cinema Night",
+      "caption": "The same lawn after dark: an outdoor cinema screen glows on the far rim, string lights swoop over blanket-seated crowds, kiosk carts flicker, ink sky salted with stars.",
+      "videogen_prompt": "Photorealistic slow push-in at night across a park lawn full of people on blankets watching a glowing outdoor cinema screen, string lights swaying overhead, food kiosks glowing at the rim under a starry sky, cosy festive mood."
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <path id="sp" d="M0 -12 C1.6 -3.2 3.2 -1.6 12 0 C3.2 1.6 1.6 3.2 0 12 C-1.6 3.2 -3.2 1.6 -12 0 C-3.2 -1.6 -1.6 -3.2 0 -12 Z"/>
+    <g id="canopy">
+      <circle cx="0" cy="0" r="26" fill="#2F6B4A"/>
+      <circle cx="-12" cy="-8" r="16" fill="#A9C6A0" fill-opacity="0.7"/>
+      <circle cx="12" cy="6" r="13" fill="#A9C6A0" fill-opacity="0.5"/>
+    </g>
+  </defs>
+
+  <!-- ground: park sand over bone city fabric -->
+  <rect width="1280" height="720" fill="#F5EFE2"/>
+  <path d="M0 0 H1280 V620 Q900 660 620 640 Q300 620 0 660 Z" fill="#E7DCC3"/>
+
+  <!-- city blocks beyond park edge (top-left haze) -->
+  <g fill="#22301F" fill-opacity="0.06">
+    <rect x="20" y="18" width="90" height="60"/>
+    <rect x="130" y="30" width="70" height="48"/>
+    <rect x="220" y="14" width="110" height="64"/>
+  </g>
+
+  <!-- wadi bioswale winding through park -->
+  <path d="M60 520 Q260 430 430 470 Q640 520 800 430 Q960 340 1120 380" fill="none" stroke="#4E8FA8" stroke-width="34" stroke-opacity="0.4" stroke-linecap="round"/>
+  <path d="M60 520 Q260 430 430 470 Q640 520 800 430 Q960 340 1120 380" fill="none" stroke="#4E8FA8" stroke-width="14" stroke-opacity="0.55" stroke-linecap="round"/>
+  <path d="M60 520 Q260 430 430 470 Q640 520 800 430 Q960 340 1120 380" fill="none" stroke="#A9C6A0" stroke-width="52" stroke-opacity="0.25" stroke-linecap="round"/>
+
+  <!-- the living shade loop: figure-eight, room 01 at SE (bottom right) -->
+  <path d="M1040 560 C900 620 700 600 560 520 C420 440 300 420 220 320 C150 230 220 130 360 130 C520 130 560 260 660 320 C780 392 940 360 1040 300 C1150 235 1210 330 1150 430 C1110 498 1090 538 1040 560 Z" fill="none" stroke="#CFC0A0" stroke-width="26" stroke-linejoin="round"/>
+  <path d="M1040 560 C900 620 700 600 560 520 C420 440 300 420 220 320 C150 230 220 130 360 130 C520 130 560 260 660 320 C780 392 940 360 1040 300 C1150 235 1210 330 1150 430 C1110 498 1090 538 1040 560 Z" fill="none" stroke="#22301F" stroke-opacity="0.12" stroke-width="2" stroke-dasharray="6 10"/>
+
+  <!-- main road along SE edge -->
+  <rect x="0" y="648" width="1280" height="72" fill="#22301F" fill-opacity="0.22"/>
+  <rect x="0" y="682" width="1280" height="3" fill="#F5EFE2" fill-opacity="0.6"/>
+  <!-- drop-off lay-by -->
+  <path d="M880 648 Q930 616 1000 616 H1140 Q1200 616 1240 648 Z" fill="#22301F" fill-opacity="0.16"/>
+  <rect x="965" y="626" width="34" height="14" rx="5" fill="#22301F" fill-opacity="0.8"/>
+  <rect x="1080" y="628" width="30" height="13" rx="5" fill="#4E8FA8" fill-opacity="0.8"/>
+
+  <!-- ROOM 01: entry plaza, SE corner -->
+  <path d="M900 470 L1180 470 L1230 616 L860 616 Z" fill="#F5EFE2"/>
+  <path d="M900 470 L1180 470 L1230 616 L860 616 Z" fill="#CFC0A0" fill-opacity="0.35"/>
+  <!-- paving joints -->
+  <g stroke="#22301F" stroke-opacity="0.1" stroke-width="1.5">
+    <path d="M905 505 H1195"/><path d="M915 540 H1207"/><path d="M928 575 H1218"/>
+    <path d="M975 470 L950 616"/><path d="M1050 470 L1045 616"/><path d="M1125 470 L1140 616"/>
+  </g>
+  <!-- nabta sparkle inlaid in paving -->
+  <use href="#sp" x="0" y="0" transform="translate(1046 545) scale(3.4)" fill="#C05A32"/>
+  <use href="#sp" transform="translate(990 520) scale(1.2)" fill="#7CC98F"/>
+  <use href="#sp" transform="translate(1108 578) scale(1.1)" fill="#7BC6DD"/>
+
+  <!-- gateway pergola: dense terracotta slats seen from above -->
+  <g transform="translate(985 588) rotate(-4)">
+    <rect x="-95" y="-26" width="190" height="52" fill="#C05A32" fill-opacity="0.25"/>
+    <g fill="#C05A32">
+      <rect x="-92" y="-24" width="8" height="48"/><rect x="-78" y="-24" width="8" height="48"/>
+      <rect x="-64" y="-24" width="8" height="48"/><rect x="-50" y="-24" width="8" height="48"/>
+      <rect x="-36" y="-24" width="8" height="48"/><rect x="-22" y="-24" width="8" height="48"/>
+      <rect x="-8" y="-24" width="8" height="48"/><rect x="6" y="-24" width="8" height="48"/>
+      <rect x="20" y="-24" width="8" height="48"/><rect x="34" y="-24" width="8" height="48"/>
+      <rect x="48" y="-24" width="8" height="48"/><rect x="62" y="-24" width="8" height="48"/>
+      <rect x="76" y="-24" width="8" height="48"/>
+    </g>
+    <rect x="-95" y="18" width="190" height="10" fill="#22301F" fill-opacity="0.18"/>
+  </g>
+
+  <!-- cafe terrace adjacent (west of plaza) -->
+  <path d="M770 505 L895 505 L880 600 L760 600 Z" fill="#E7DCC3"/>
+  <rect x="768" y="470" width="100" height="34" rx="4" fill="#C05A32" fill-opacity="0.85"/>
+  <g fill="none" stroke="#22301F" stroke-opacity="0.55" stroke-width="2">
+    <circle cx="800" cy="535" r="8"/><circle cx="840" cy="555" r="8"/><circle cx="805" cy="580" r="8"/>
+  </g>
+
+  <!-- bike racks -->
+  <g stroke="#22301F" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M1175 505 v16"/><path d="M1188 505 v16"/><path d="M1201 505 v16"/><path d="M1214 505 v16"/>
+  </g>
+
+  <!-- ghaf canopies: dense along loop, clustered at rooms -->
+  <use href="#canopy" transform="translate(870 470) scale(1.1)"/>
+  <use href="#canopy" transform="translate(1150 470) scale(0.9)"/>
+  <use href="#canopy" transform="translate(1205 540) scale(0.8)"/>
+  <use href="#canopy" transform="translate(560 520) scale(1.2)"/>
+  <use href="#canopy" transform="translate(660 570) scale(0.9)"/>
+  <use href="#canopy" transform="translate(430 470) scale(1.0)"/>
+  <use href="#canopy" transform="translate(300 400) scale(1.15)"/>
+  <use href="#canopy" transform="translate(215 300) scale(0.95)"/>
+  <use href="#canopy" transform="translate(310 150) scale(1.05)"/>
+  <use href="#canopy" transform="translate(470 140) scale(0.85)"/>
+  <use href="#canopy" transform="translate(620 280) scale(1.0)"/>
+  <use href="#canopy" transform="translate(770 400) scale(0.9)"/>
+  <use href="#canopy" transform="translate(950 340) scale(1.1)"/>
+  <use href="#canopy" transform="translate(1080 300) scale(0.9)"/>
+  <use href="#canopy" transform="translate(1165 400) scale(0.8)"/>
+  <use href="#canopy" transform="translate(120 480) scale(0.9)"/>
+  <use href="#canopy" transform="translate(700 130) scale(0.8)"/>
+
+  <!-- planting stipple -->
+  <g fill="#2F6B4A" fill-opacity="0.35">
+    <circle cx="500" cy="430" r="4"/><circle cx="520" cy="445" r="3"/><circle cx="540" cy="425" r="3.5"/>
+    <circle cx="840" cy="470" r="4"/><circle cx="860" cy="452" r="3"/><circle cx="1000" cy="410" r="3.5"/>
+    <circle cx="1020" cy="425" r="3"/><circle cx="380 " cy="330" r="3.5"/><circle cx="400" cy="315" r="3"/>
+    <circle cx="150" cy="380" r="3.5"/><circle cx="170" cy="360" r="3"/><circle cx="720" cy="470" r="3"/>
+  </g>
+  <g fill="#C05A32" fill-opacity="0.3">
+    <circle cx="930" cy="490" r="2.5"/><circle cx="948" cy="500" r="2"/><circle cx="1160" cy="590" r="2.5"/>
+    <circle cx="880" cy="530" r="2"/><circle cx="1075" cy="470" r="2.5"/>
+  </g>
+
+  <!-- people as dots along loop and plaza -->
+  <g fill="#22301F">
+    <circle cx="1035" cy="505" r="4"/><circle cx="1002" cy="560" r="4"/><circle cx="960" cy="590" r="4"/>
+    <circle cx="890" cy="560" r="4"/><circle cx="700 " cy="590" r="4"/><circle cx="565" cy="518" r="4"/>
+    <circle cx="240" cy="330" r="4"/><circle cx="660" cy="320" r="4"/><circle cx="1040" cy="300" r="4"/>
+  </g>
+
+  <!-- soft sun wash from SE -->
+  <path d="M1280 720 L1280 300 L700 720 Z" fill="#F5EFE2" fill-opacity="0.25"/>
+</svg>

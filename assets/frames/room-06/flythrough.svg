@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <linearGradient id="f-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5EFE2"/>
+      <stop offset="1" stop-color="#E7DCC3"/>
+    </linearGradient>
+    <pattern id="f-stipple" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="8" r="1.4" fill="#22301F" opacity="0.09"/>
+      <circle cx="18" cy="20" r="1.1" fill="#22301F" opacity="0.07"/>
+    </pattern>
+    <pattern id="f-grass" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="7" r="1.4" fill="#2F6B4A" opacity="0.18"/>
+      <circle cx="18" cy="19" r="1.2" fill="#7CC98F" opacity="0.16"/>
+    </pattern>
+    <g id="f-sparkle">
+      <path d="M0,-11 L2.6,-2.6 L11,0 L2.6,2.6 L0,11 L-2.6,2.6 L-11,0 L-2.6,-2.6 Z" fill="#F5EFE2"/>
+    </g>
+    <g id="f-tree">
+      <ellipse cx="14" cy="16" rx="30" ry="10" fill="#22301F" opacity="0.13"/>
+      <path d="M0,14 C-2,-6 -6,-20 -10,-32 M0,14 C3,-4 8,-18 12,-28" stroke="#22301F" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <circle cx="-10" cy="-44" r="26" fill="#2F6B4A" opacity="0.88"/>
+      <circle cx="14" cy="-38" r="20" fill="#A9C6A0" opacity="0.75"/>
+      <circle cx="0" cy="-58" r="16" fill="#7CC98F" opacity="0.3"/>
+    </g>
+  </defs>
+
+  <!-- hazy horizon -->
+  <rect width="1280" height="720" fill="url(#f-sky)"/>
+  <path d="M0,178 C240,164 520,182 800,168 C1020,158 1180,172 1280,164 L1280,120 C1000,132 700,116 420,132 C260,140 100,132 0,142 Z" fill="#A9C6A0" opacity="0.4"/>
+  <circle cx="1120" cy="86" r="46" fill="#F5EFE2" opacity="0.9"/>
+
+  <!-- park plane receding obliquely -->
+  <path d="M0,720 L1280,720 L1280,164 C1020,172 760,158 500,176 C320,188 140,176 0,190 Z" fill="#E7DCC3"/>
+  <path d="M0,720 L1280,720 L1280,164 C1020,172 760,158 500,176 C320,188 140,176 0,190 Z" fill="url(#f-stipple)"/>
+
+  <!-- wadi bioswale tracing the far side of the loop -->
+  <path d="M60,208 C300,196 560,214 820,200 C1020,190 1180,200 1280,192 L1280,214 C1140,222 980,212 830,222 C580,238 320,220 80,232 Z" fill="#4E8FA8" opacity="0.45"/>
+  <path d="M70,220 C310,206 570,226 830,210 C1030,200 1180,208 1280,202" fill="none" stroke="#7BC6DD" stroke-width="4" opacity="0.5"/>
+
+  <!-- figure-eight loop in oblique perspective: near arm wide, far arm narrow -->
+  <path d="M-60,600 C240,660 560,560 760,470 C960,382 1060,320 1180,284 C1240,266 1280,258 1320,252"
+        fill="none" stroke="#CFC0A0" stroke-width="86" stroke-linecap="round"/>
+  <path d="M-60,600 C240,660 560,560 760,470 C960,382 1060,320 1180,284 C1240,266 1280,258 1320,252"
+        fill="none" stroke="#F5EFE2" stroke-width="4" stroke-dasharray="20 26" opacity="0.65"/>
+  <!-- crossing arm of the eight -->
+  <path d="M-60,330 C200,300 480,330 700,398 C880,452 1040,470 1320,430"
+        fill="none" stroke="#CFC0A0" stroke-width="46" stroke-linecap="round" opacity="0.9"/>
+  <path d="M-60,330 C200,300 480,330 700,398 C880,452 1040,470 1320,430"
+        fill="none" stroke="#F5EFE2" stroke-width="3" stroke-dasharray="14 20" opacity="0.55"/>
+
+  <!-- lawn pockets inside the loop -->
+  <ellipse cx="430" cy="452" rx="170" ry="62" fill="#A9C6A0" opacity="0.85"/>
+  <ellipse cx="430" cy="452" rx="170" ry="62" fill="url(#f-grass)"/>
+  <ellipse cx="905" cy="330" rx="120" ry="42" fill="#A9C6A0" opacity="0.75"/>
+  <ellipse cx="905" cy="330" rx="120" ry="42" fill="url(#f-grass)"/>
+
+  <!-- terracotta pergola band along the near arm -->
+  <g transform="translate(640,560) rotate(-14)">
+    <rect x="-140" y="-8" width="280" height="52" fill="#22301F" opacity="0.12"/>
+    <g fill="#C05A32">
+      <rect x="-136" y="-14" width="272" height="8" rx="3"/>
+      <rect x="-136" y="2" width="272" height="8" rx="3"/>
+      <rect x="-136" y="18" width="272" height="8" rx="3"/>
+      <rect x="-136" y="34" width="272" height="8" rx="3"/>
+    </g>
+    <rect x="-140" y="-22" width="10" height="70" fill="#22301F"/>
+    <rect x="130" y="-22" width="10" height="70" fill="#22301F"/>
+  </g>
+
+  <!-- calisthenics frames seen from above-oblique -->
+  <g stroke="#22301F" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M330,430 L330,394 M378,430 L378,394"/>
+    <path d="M508,470 L508,428 M562,470 L562,428"/>
+    <path d="M872,346 L872,318 M908,346 L908,318"/>
+  </g>
+  <g stroke="#C05A32" stroke-width="5" stroke-linecap="round">
+    <path d="M330,394 L378,394"/>
+    <path d="M508,428 L562,428"/>
+    <path d="M872,318 L908,318"/>
+  </g>
+
+  <!-- fountain node -->
+  <circle cx="668" cy="470" r="13" fill="#E7DCC3"/>
+  <circle cx="668" cy="470" r="8" fill="#4E8FA8"/>
+  <circle cx="668" cy="470" r="3" fill="#7BC6DD"/>
+
+  <!-- ghaf trees scaling into distance -->
+  <use href="#f-tree" transform="translate(150,520) scale(1.7)"/>
+  <use href="#f-tree" transform="translate(420,570) scale(1.5)"/>
+  <use href="#f-tree" transform="translate(300,400) scale(1.15)"/>
+  <use href="#f-tree" transform="translate(620,430) scale(1.0)"/>
+  <use href="#f-tree" transform="translate(820,380) scale(0.85)"/>
+  <use href="#f-tree" transform="translate(1000,330) scale(0.7)"/>
+  <use href="#f-tree" transform="translate(1130,296) scale(0.55)"/>
+  <use href="#f-tree" transform="translate(950,450) scale(0.9)"/>
+  <use href="#f-tree" transform="translate(120,300) scale(0.8)"/>
+  <use href="#f-tree" transform="translate(560,300) scale(0.65)"/>
+  <use href="#f-tree" transform="translate(1230,260) scale(0.45)"/>
+
+  <!-- runners strung along the loop -->
+  <g fill="#22301F">
+    <ellipse cx="250" cy="618" rx="7" ry="15" transform="rotate(-20 250 618)"/>
+    <ellipse cx="700" cy="502" rx="5.5" ry="12" transform="rotate(-16 700 502)"/>
+    <ellipse cx="980" cy="378" rx="4.5" ry="10" transform="rotate(-14 980 378)"/>
+    <ellipse cx="1150" cy="298" rx="3.5" ry="8" transform="rotate(-12 1150 298)"/>
+    <ellipse cx="352" cy="402" rx="4" ry="9"/>
+    <ellipse cx="535" cy="440" rx="4.5" ry="10"/>
+    <ellipse cx="430" cy="462" rx="9" ry="4"/>
+  </g>
+
+  <!-- sparkles -->
+  <use href="#f-sparkle" transform="translate(668,470) scale(0.55)" opacity="0.95"/>
+  <use href="#f-sparkle" transform="translate(1200,110) scale(0.8)" opacity="0.8"/>
+  <use href="#f-sparkle" transform="translate(90,120) scale(0.6)" opacity="0.7"/>
+</svg>

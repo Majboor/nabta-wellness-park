@@ -1,0 +1,62 @@
+{
+  "room": "07",
+  "title": "Picnic Groves",
+  "frames": [
+    {
+      "file": "aerial.svg",
+      "code": "R07-A",
+      "title": "Aerial — Grove Constellation",
+      "caption": "Top-down view of the park's quiet north edge: five semi-private planted picnic pockets scattered across shared lawn, stitched by spur paths to the shaded figure-eight loop, with the wadi bioswale ribbon running along the northern boundary.",
+      "videogen_prompt": "Photorealistic top-down drone shot slowly descending over a desert park's picnic grove district at mid-morning, five circular planted pockets with terracotta tables and ghaf tree canopies set in soft green lawn, a sand-toned loop path curving below. Calm, sun-washed, gently rotating frame."
+    },
+    {
+      "file": "approach.svg",
+      "code": "R07-B",
+      "title": "Approach — Threshold of Shade",
+      "caption": "A spur path peels off the loop and slips between two ghaf trees into the first grove; a family with a picnic basket walks in past a terracotta drinking fountain, pergola-slat shadows raking the foreground.",
+      "videogen_prompt": "Photorealistic steadicam shot at walking height following a family with a picnic basket along a sandy path into a shaded ghaf-tree grove in a Dubai park, late morning light striping the ground through terracotta pergola slats. Warm, inviting, gentle forward push-in."
+    },
+    {
+      "file": "walkthrough.svg",
+      "code": "R07-C",
+      "title": "Walkthrough — Weekend Gathering",
+      "caption": "Inside a grove on a weekend: a family spread across a long terracotta picnic table, elders on majlis-style ground cushions with a tea tray, kids darting across the dappled lawn — BBQ-free, just clean air and deep ghaf/sidr shade.",
+      "videogen_prompt": "Photorealistic slow lateral dolly through a shaded picnic grove at midday, a multigenerational family eating at a long timber table while others recline on floor cushions over rugs, children running through patches of dappled sunlight under dense ghaf canopy. Joyful, unhurried weekend mood."
+    },
+    {
+      "file": "flythrough.svg",
+      "code": "R07-D",
+      "title": "Flythrough — Over the North Edge",
+      "caption": "Oblique drone pass skimming the grove canopies: picnic pockets receding toward the pergola line and bioswale, the figure-eight loop sweeping through the lawn with walkers dotted along it.",
+      "videogen_prompt": "Photorealistic FPV drone shot skimming low over ghaf treetops then tilting up to reveal a chain of circular picnic groves and a curving shaded loop path across a green desert park, late afternoon golden light. Smooth, gliding, cinematic reveal."
+    },
+    {
+      "file": "evolution-1.svg",
+      "code": "R07-E",
+      "title": "Evolution — Opening Day",
+      "caption": "Year zero: staked saplings stand in the exact footprints of the future canopy, drip lines glinting, umbrellas and shade sails covering the tables and majlis while families already claim the groves.",
+      "videogen_prompt": "Photorealistic locked-off wide shot of a newly opened park picnic area at bright noon, young staked ghaf saplings in fresh mulch rings, families sheltering under canvas umbrellas and shade sails at picnic tables. Optimistic, sun-bleached, brand-new feeling."
+    },
+    {
+      "file": "evolution-2.svg",
+      "code": "R07-F",
+      "title": "Evolution — Year Two",
+      "caption": "Same view, two years on: stakes removed, adolescent crowns casting the first true pools of dapple, understorey shrubs knitting together, the last drip line about to be retired.",
+      "videogen_prompt": "Photorealistic locked-off wide shot of the same park picnic grove two years after planting, young ghaf trees now head-height with small spreading crowns throwing the first dappled shade over tables and lawn, mid-morning. Quietly hopeful time-lapse feel."
+    },
+    {
+      "file": "evolution-3.svg",
+      "code": "R07-G",
+      "title": "Evolution — Year Five, Full Canopy",
+      "caption": "Same view, year five: the five crowns have knitted into one continuous dappled ceiling, lush understorey below, the umbrellas long gone — the living shade the groves were planted for.",
+      "videogen_prompt": "Photorealistic locked-off wide shot of a mature picnic grove where interlocking ghaf canopies form a continuous green ceiling, heavy dappled light shifting over families at tables and floor cushions, gentle midday breeze moving the leaves. Lush, settled, complete."
+    },
+    {
+      "file": "night.svg",
+      "code": "R07-H",
+      "title": "Night — Lantern Groves",
+      "caption": "The walkthrough scene at early evening: terracotta lanterns and string lights swagged between the trunks, the family lingering over tea in warm pools of light as the dusk sky deepens beyond the canopy.",
+      "videogen_prompt": "Photorealistic slow push-in on a picnic grove at blue hour, string lights glowing between ghaf trunks and terracotta lanterns pooling warm light over a family finishing dinner and tea on ground cushions, deep teal dusk sky behind the canopy. Intimate, magical, calm."
+    }
+  ]
+}

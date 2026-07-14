@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <linearGradient id="skyN" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22301F"/>
+      <stop offset="0.7" stop-color="#22301F"/>
+      <stop offset="1" stop-color="#4E8FA8"/>
+    </linearGradient>
+    <radialGradient id="glowN" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#F5EFE2" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#F5EFE2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowW" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#C05A32" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#C05A32" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="stipN" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="5" r="1.1" fill="#22301F" opacity="0.2"/>
+      <circle cx="11" cy="12" r="0.9" fill="#22301F" opacity="0.15"/>
+    </pattern>
+    <path id="sparkN" d="M0,-9 C0.8,-2.6 2.6,-0.8 9,0 C2.6,0.8 0.8,2.6 0,9 C-0.8,2.6 -2.6,0.8 -9,0 C-2.6,-0.8 -0.8,-2.6 0,-9 Z"/>
+  </defs>
+
+  <!-- night sky between pergola slats -->
+  <rect width="1280" height="400" fill="url(#skyN)"/>
+  <g fill="#F5EFE2">
+    <circle cx="480" cy="30" r="1.6" opacity="0.9"/>
+    <circle cx="700" cy="48" r="1.3" opacity="0.7"/>
+    <circle cx="820" cy="24" r="1.5" opacity="0.8"/>
+  </g>
+
+  <!-- view beyond: lawn and trees in night tones -->
+  <path d="M0,360 C220,336 520,330 760,346 C980,360 1160,352 1280,340 L1280,420 L0,420 Z" fill="#2F6B4A" opacity="0.6"/>
+  <path d="M0,388 C240,366 540,362 780,374 C1000,386 1180,378 1280,368 L1280,430 L0,430 Z" fill="#22301F" opacity="0.55"/>
+  <g opacity="0.85">
+    <rect x="150" y="300" width="7" height="70" rx="3" fill="#22301F"/>
+    <circle cx="153" cy="282" r="44" fill="#2F6B4A" opacity="0.7"/>
+    <circle cx="130" cy="266" r="28" fill="#22301F" opacity="0.6"/>
+  </g>
+  <g opacity="0.85">
+    <rect x="1090" y="310" width="7" height="62" rx="3" fill="#22301F"/>
+    <circle cx="1093" cy="292" r="40" fill="#2F6B4A" opacity="0.7"/>
+    <circle cx="1114" cy="276" r="26" fill="#22301F" opacity="0.6"/>
+  </g>
+  <!-- bioswale catching moonlight -->
+  <path d="M900,404 C980,396 1080,398 1160,406 C1200,410 1250,410 1280,406 L1280,424 C1180,430 1000,428 900,420 Z" fill="#4E8FA8" opacity="0.7"/>
+  <path d="M940,410 C1010,404 1100,406 1170,412" stroke="#7BC6DD" stroke-width="3" fill="none" opacity="0.8"/>
+
+  <!-- low planter wall -->
+  <rect x="0" y="418" width="1280" height="26" fill="#E7DCC3" opacity="0.35"/>
+  <line x1="0" y1="418" x2="1280" y2="418" stroke="#22301F" stroke-width="2.5" opacity="0.8"/>
+  <g fill="#2F6B4A" opacity="0.8">
+    <ellipse cx="240" cy="416" rx="26" ry="10"/>
+    <ellipse cx="640" cy="414" rx="30" ry="11"/>
+    <ellipse cx="980" cy="416" rx="24" ry="9"/>
+  </g>
+
+  <!-- terrace floor, dim -->
+  <rect y="440" width="1280" height="280" fill="#CFC0A0"/>
+  <rect y="440" width="1280" height="280" fill="#22301F" opacity="0.55"/>
+  <rect y="440" width="1280" height="280" fill="url(#stipN)"/>
+  <!-- pools of warm light on floor -->
+  <ellipse cx="180" cy="500" rx="320" ry="120" fill="url(#glowW)"/>
+  <ellipse cx="660" cy="560" rx="300" ry="110" fill="url(#glowN)" opacity="0.5"/>
+
+  <!-- kiosk counter, glowing interior -->
+  <g>
+    <path d="M0,180 L340,214 L340,470 L0,500 Z" fill="#E7DCC3" opacity="0.5"/>
+    <path d="M0,180 L340,214 L340,470 L0,500 Z" fill="#22301F" opacity="0.35"/>
+    <path d="M0,176 L346,210" stroke="#22301F" stroke-width="4" opacity="0.9" fill="none"/>
+    <!-- warm lit opening -->
+    <path d="M40,268 L300,292 L300,420 L40,406 Z" fill="#F5EFE2" opacity="0.95"/>
+    <path d="M40,268 L300,292 L300,420 L40,406 Z" fill="#C05A32" opacity="0.45"/>
+    <ellipse cx="170" cy="344" rx="220" ry="120" fill="url(#glowN)" opacity="0.7"/>
+    <path d="M28,404 L312,420 L312,438 L28,424 Z" fill="#C05A32"/>
+    <!-- barista silhouette against the glow -->
+    <g fill="#22301F">
+      <circle cx="172" cy="322" r="14"/>
+      <path d="M172,335 C192,338 199,358 199,406 L145,404 C145,357 152,338 172,335 Z"/>
+      <path d="M154,356 L128,376" stroke="#22301F" stroke-width="7" stroke-linecap="round"/>
+    </g>
+    <rect x="112" y="392" width="12" height="14" rx="2" fill="#F5EFE2"/>
+    <rect x="230" y="398" width="12" height="14" rx="2" fill="#7CC98F"/>
+  </g>
+
+  <!-- pergola overhead, dark terracotta -->
+  <g>
+    <rect x="360" y="60" width="18" height="384" fill="#C05A32"/>
+    <rect x="360" y="60" width="18" height="384" fill="#22301F" opacity="0.45"/>
+    <rect x="900" y="76" width="18" height="368" fill="#C05A32"/>
+    <rect x="900" y="76" width="18" height="368" fill="#22301F" opacity="0.45"/>
+    <path d="M0,52 L1280,86 L1280,110 L0,74 Z" fill="#C05A32"/>
+    <path d="M0,52 L1280,86 L1280,110 L0,74 Z" fill="#22301F" opacity="0.4"/>
+    <g fill="#C05A32">
+      <path d="M0,0 L1280,20 L1280,52 L0,28 Z" opacity="0.8"/>
+      <path d="M0,88 L1280,124 L1280,150 L0,112 Z" opacity="0.7"/>
+      <path d="M0,132 L1280,172 L1280,194 L0,152 Z" opacity="0.75"/>
+    </g>
+    <rect x="0" y="0" width="1280" height="200" fill="#22301F" opacity="0.35"/>
+    <!-- string lights, lit -->
+    <path d="M380,120 C540,180 720,184 900,132" stroke="#22301F" stroke-width="2" fill="none" opacity="0.8"/>
+    <g>
+      <circle cx="450" cy="146" r="12" fill="url(#glowN)"/>
+      <circle cx="530" cy="163" r="12" fill="url(#glowN)"/>
+      <circle cx="615" cy="171" r="12" fill="url(#glowN)"/>
+      <circle cx="700" cy="171" r="12" fill="url(#glowN)"/>
+      <circle cx="785" cy="162" r="12" fill="url(#glowN)"/>
+      <circle cx="862" cy="145" r="12" fill="url(#glowN)"/>
+    </g>
+    <g fill="#F5EFE2">
+      <circle cx="450" cy="146" r="4.5"/><circle cx="530" cy="163" r="4.5"/><circle cx="615" cy="171" r="4.5"/>
+      <circle cx="700" cy="171" r="4.5"/><circle cx="785" cy="162" r="4.5"/><circle cx="862" cy="145" r="4.5"/>
+    </g>
+  </g>
+
+  <!-- foreground table with couple, candle-lit -->
+  <g>
+    <ellipse cx="700" cy="560" rx="96" ry="26" fill="#E7DCC3" stroke="#22301F" stroke-width="2.5"/>
+    <ellipse cx="700" cy="560" rx="96" ry="26" fill="#C05A32" opacity="0.2"/>
+    <rect x="690" y="582" width="20" height="80" fill="#22301F"/>
+    <circle cx="700" cy="548" r="16" fill="url(#glowW)"/>
+    <circle cx="700" cy="550" r="4" fill="#F5EFE2"/>
+    <g fill="#22301F">
+      <circle cx="590" cy="470" r="20"/>
+      <path d="M590,489 C617,493 626,522 626,570 L554,570 C554,522 564,493 590,489 Z"/>
+      <path d="M617,516 L654,540" stroke="#22301F" stroke-width="9" stroke-linecap="round"/>
+      <circle cx="812" cy="464" r="20"/>
+      <path d="M812,483 C838,487 847,516 847,566 L776,566 C776,516 786,487 812,483 Z"/>
+      <path d="M786,512 L750,536" stroke="#22301F" stroke-width="9" stroke-linecap="round"/>
+    </g>
+    <rect x="652" y="534" width="16" height="19" rx="3" fill="#C05A32"/>
+    <rect x="732" y="530" width="16" height="19" rx="3" fill="#7BC6DD"/>
+  </g>
+
+  <!-- jogger with coffee, evening lap done -->
+  <g fill="#22301F">
+    <circle cx="1080" cy="470" r="15"/>
+    <path d="M1080,484 C1096,488 1100,508 1097,534 L1064,534 C1061,508 1066,488 1080,484 Z"/>
+    <path d="M1070,534 L1052,592 M1091,534 L1108,586" stroke="#22301F" stroke-width="9" stroke-linecap="round"/>
+    <path d="M1094,498 L1118,486" stroke="#22301F" stroke-width="8" stroke-linecap="round"/>
+    <rect x="1114" y="474" width="13" height="16" rx="3" fill="#C05A32"/>
+  </g>
+
+  <!-- foreground potted ghaf, silhouetted -->
+  <g>
+    <path d="M1190,640 L1266,640 L1256,720 L1200,720 Z" fill="#C05A32"/>
+    <path d="M1190,640 L1266,640 L1256,720 L1200,720 Z" fill="#22301F" opacity="0.4"/>
+    <path d="M1226,640 C1224,606 1230,586 1228,566" stroke="#22301F" stroke-width="5" fill="none"/>
+    <circle cx="1228" cy="556" r="34" fill="#2F6B4A" opacity="0.85"/>
+    <circle cx="1210" cy="542" r="22" fill="#22301F" opacity="0.6"/>
+  </g>
+
+  <!-- nabta sparkles, brighter at night -->
+  <use href="#sparkN" transform="translate(966,220) scale(1.2)" fill="#F5EFE2" opacity="0.95"/>
+  <use href="#sparkN" transform="translate(420,230) scale(0.9)" fill="#7BC6DD" opacity="0.85"/>
+  <use href="#sparkN" transform="translate(560,610) scale(0.7)" fill="#7CC98F" opacity="0.8"/>
+</svg>

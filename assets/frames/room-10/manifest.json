@@ -1,0 +1,62 @@
+{
+  "room": "10",
+  "title": "Café Terrace",
+  "frames": [
+    {
+      "file": "aerial.svg",
+      "code": "R10-A",
+      "title": "Aerial — Terrace Beside the Entry Plaza",
+      "caption": "Top-down view of the Café Terrace where the figure-eight loop closes at the entry plaza: a rammed-earth kiosk with its terracotta pergola apron, terrace tables spilling toward the path, restrooms tucked behind, the wadi bioswale and event lawn framing the scene.",
+      "videogen_prompt": "Photorealistic top-down drone shot slowly descending over a desert park café terrace beside an entry plaza in Dubai, a shaded figure-eight loop, terracotta pergolas and ghaf trees below, mid-morning golden light, calm and inviting mood."
+    },
+    {
+      "file": "approach.svg",
+      "code": "R10-B",
+      "title": "Approach — Arriving Off the Loop",
+      "caption": "Eye-level arrival from the loop path: the sand-toned rammed-earth kiosk with its striated walls, barista at the service window, deep terracotta pergola raking shade across terrace tables, ghaf trees and the event lawn beyond.",
+      "videogen_prompt": "Photorealistic steadicam shot walking along a sandy park path toward a small rammed-earth café kiosk with a terracotta pergola, a jogger carrying coffee passing by, late-morning desert light with long slat shadows, relaxed sociable mood."
+    },
+    {
+      "file": "walkthrough.svg",
+      "code": "R10-C",
+      "title": "Walkthrough — Among the Terrace Tables",
+      "caption": "On the terrace under the pergola: slatted terracotta shade overhead, a couple lingering over juice and coffee, the barista at the counter, a runner finishing a loop lap with a cup in hand, and the event lawn and bioswale glimpsed past the planter wall.",
+      "videogen_prompt": "Photorealistic slow dolly gliding between café terrace tables beneath a terracotta slat pergola, striped shadows sweeping across the floor, a couple chatting over coffee and a barista working behind the counter, warm midday desert light, easy convivial mood."
+    },
+    {
+      "file": "flythrough.svg",
+      "code": "R10-D",
+      "title": "Flythrough — Drone Over the Event Lawn",
+      "caption": "Oblique drone view sweeping from the event lawn toward the café: the loop path curling past picnickers, the kiosk and its pergola apron in three-quarter view, terrace tables dotted with guests, restrooms behind and the bioswale threading the distance.",
+      "videogen_prompt": "Photorealistic FPV drone shot skimming low over a green event lawn then rising toward a rammed-earth café kiosk with terracotta pergolas at a park entry plaza, ghaf tree canopies brushing past the lens, golden late-afternoon light, energetic uplifting mood."
+    },
+    {
+      "file": "evolution-1.svg",
+      "code": "R10-E1",
+      "title": "Evolution — Opening Day",
+      "caption": "Opening day: the kiosk, pergola and terrace are complete but the landscape is young — staked ghaf saplings, fresh mulch beds with plant plugs, a pale new lawn, and the bare terracotta pergola waiting for its vines.",
+      "videogen_prompt": "Photorealistic locked-off wide shot of a newly opened desert park café with a bare terracotta pergola and small staked saplings, first guests at terrace tables, bright clean morning light, hopeful fresh-start mood."
+    },
+    {
+      "file": "evolution-2.svg",
+      "code": "R10-E2",
+      "title": "Evolution — Year Two",
+      "caption": "Year two from the same vantage point: the ghaf trees have shed their stakes and doubled in size, planting beds are knitting together, the lawn has deepened, and the first vine is climbing a pergola post.",
+      "videogen_prompt": "Photorealistic locked-off wide shot of the same desert park café two years on, adolescent ghaf trees casting their first real shade and a young vine curling up a terracotta pergola post, warm mid-morning light, quietly maturing mood."
+    },
+    {
+      "file": "evolution-3.svg",
+      "code": "R10-E3",
+      "title": "Evolution — Year Five, Vine-Softened",
+      "caption": "Year five, identical framing: mature ghaf canopies layer over the terrace, understory planting spills toward the loop, and the terracotta pergola has softened under garlands of vine — the finish-line café fully grown into its garden.",
+      "videogen_prompt": "Photorealistic locked-off wide shot of a lush desert park café at year five, vines draping a terracotta pergola and broad ghaf canopies dappling the terrace, guests and a finishing runner in soft golden-hour light, settled abundant mood."
+    },
+    {
+      "file": "night.svg",
+      "code": "R10-N",
+      "title": "Night — Warm Glow and String Lights",
+      "caption": "The walkthrough view after dark: the kiosk counter glows warm terracotta, string lights swing between the pergola posts, a candle flickers on the couple's table, and the bioswale catches the last blue of the sky beyond the terrace.",
+      "videogen_prompt": "Photorealistic slow dolly through a café terrace at night, string lights glowing under a terracotta pergola and warm light spilling from the kiosk counter across the tables, a couple by candlelight and a runner arriving with coffee, deep blue dusk sky, intimate glowing mood."
+    }
+  ]
+}

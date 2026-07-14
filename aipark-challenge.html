@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Park Design Challenge — Field Guide & Draft Entry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,900&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F5EFE2; --paper:#FBF7EC; --sand:#E7DCC3; --sand-2:#EFE6D2;
+  --ink:#22301F; --ink-soft:#4A5644; --ink-mute:#7A8272;
+  --green:#2F6B4A; --green-chart:#2E8B57; --leaf:#A9C6A0;
+  --terra:#C05A32; --terra-deep:#9C4525; --water:#4E8FA8;
+  --hairline:#D8CCAF;
+  --serif:"Fraunces", Georgia, serif;
+  --sans:"Instrument Sans", "Helvetica Neue", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bone); color:var(--ink); font-family:var(--sans);
+  font-size:16.5px; line-height:1.62; -webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(ellipse 90% 50% at 50% -10%, rgba(169,198,160,.28), transparent 60%),
+    repeating-linear-gradient(0deg, transparent 0 47px, rgba(34,48,31,.035) 47px 48px),
+    repeating-linear-gradient(90deg, transparent 0 47px, rgba(34,48,31,.035) 47px 48px);
+}
+::selection{background:var(--terra); color:var(--bone)}
+.kicker{font-family:var(--mono); font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--terra-deep)}
+.wrap{max-width:1080px; margin:0 auto; padding:0 clamp(18px,4vw,44px)}
+a{color:var(--terra-deep)}
+
+/* ---------- nav ---------- */
+nav{position:sticky; top:0; z-index:50; background:rgba(245,239,226,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--hairline)}
+nav .wrap{display:flex; align-items:center; gap:1.4rem; height:54px; overflow-x:auto}
+nav .brand{font-family:var(--serif); font-weight:900; font-size:1.02rem; white-space:nowrap; color:var(--green)}
+nav .brand span{color:var(--terra)}
+nav a.nl{font-family:var(--mono); font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft); text-decoration:none; white-space:nowrap; padding:4px 0; border-bottom:2px solid transparent}
+nav a.nl:hover{color:var(--terra-deep); border-bottom-color:var(--terra)}
+
+/* ---------- hero ---------- */
+header{position:relative; overflow:hidden; border-bottom:1px solid var(--hairline)}
+header .wrap{padding-top:clamp(3.2rem,8vw,6rem); padding-bottom:clamp(2.6rem,6vw,4.4rem); position:relative}
+.hero-ar{position:absolute; right:-1rem; top:-2.4rem; font-family:var(--serif); font-weight:900; font-size:clamp(9rem,26vw,20rem); line-height:1; color:rgba(47,107,74,.09); pointer-events:none; user-select:none}
+h1{font-family:var(--serif); font-weight:900; font-size:clamp(2.5rem,6.2vw,4.6rem); line-height:1.02; letter-spacing:-.015em; max-width:15ch}
+h1 em{font-style:italic; font-weight:300; color:var(--green)}
+.hero-sub{margin-top:1.15rem; max-width:56ch; color:var(--ink-soft); font-size:1.06rem}
+.hero-cta{margin-top:1.5rem; display:flex; gap:.8rem; flex-wrap:wrap}
+.btn{font-family:var(--mono); font-size:.74rem; letter-spacing:.12em; text-transform:uppercase; text-decoration:none; padding:.72rem 1.15rem; border:1.5px solid var(--ink); color:var(--ink); background:transparent; transition:all .18s}
+.btn:hover{background:var(--ink); color:var(--bone)}
+.btn.solid{background:var(--terra); border-color:var(--terra); color:#fff}
+.btn.solid:hover{background:var(--terra-deep); border-color:var(--terra-deep)}
+.facts{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); border:1px solid var(--hairline); border-bottom:none; margin-top:2.6rem; background:var(--paper)}
+.fact{padding:1rem 1.1rem .9rem; border-bottom:1px solid var(--hairline); border-right:1px solid var(--hairline)}
+.fact .v{font-family:var(--serif); font-weight:600; font-size:1.5rem; line-height:1.15; color:var(--green)}
+.fact .k{font-family:var(--mono); font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-mute); margin-top:.3rem}
+
+/* ---------- sections ---------- */
+section{padding:clamp(3rem,7vw,5rem) 0; border-bottom:1px solid var(--hairline)}
+.sec-head{display:flex; align-items:baseline; gap:1.1rem; margin-bottom:2rem}
+.sec-num{font-family:var(--mono); font-size:.8rem; color:var(--terra); border:1px solid var(--terra); padding:.15rem .5rem}
+h2{font-family:var(--serif); font-weight:900; font-size:clamp(1.7rem,3.6vw,2.5rem); letter-spacing:-.01em}
+h3{font-family:var(--serif); font-weight:600; font-size:1.25rem; margin:1.8rem 0 .7rem}
+.lede{max-width:64ch; color:var(--ink-soft); font-size:1.03rem}
+.note{background:var(--sand-2); border-left:3px solid var(--terra); padding:.9rem 1.1rem; margin:1.4rem 0; font-size:.95rem}
+.note strong{color:var(--terra-deep)}
+
+/* two-stage cards */
+.stages{display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin-top:1.6rem}
+@media(max-width:760px){.stages{grid-template-columns:1fr}}
+.stage{background:var(--paper); border:1px solid var(--hairline); padding:1.5rem 1.4rem; position:relative}
+.stage::before{content:attr(data-tag); position:absolute; top:-.7rem; left:1rem; background:var(--green); color:var(--bone); font-family:var(--mono); font-size:.64rem; letter-spacing:.16em; text-transform:uppercase; padding:.22rem .6rem}
+.stage h4{font-family:var(--serif); font-size:1.2rem; font-weight:600; margin-bottom:.6rem}
+.stage ul{padding-left:1.1rem; font-size:.93rem; color:var(--ink-soft)}
+.stage li{margin:.32rem 0}
+.chips{display:flex; flex-wrap:wrap; gap:.45rem; margin:.9rem 0 0}
+.chip{font-family:var(--mono); font-size:.66rem; letter-spacing:.06em; background:var(--sand); padding:.28rem .6rem; border:1px solid var(--hairline)}
+.chip.t{background:rgba(192,90,50,.12); border-color:rgba(192,90,50,.35); color:var(--terra-deep)}
+
+/* deliverables grid */
+.dgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(235px,1fr)); gap:1px; background:var(--hairline); border:1px solid var(--hairline); margin-top:1.8rem}
+.dcell{background:var(--paper); padding:1.05rem 1rem .95rem; transition:background .15s; position:relative}
+.dcell:hover{background:var(--sand-2)}
+.dcell .no{font-family:var(--mono); font-size:.68rem; color:var(--terra); display:block; margin-bottom:.3rem}
+.dcell .t{font-weight:600; font-size:.93rem; line-height:1.3; display:block}
+.dcell .d{font-size:.8rem; color:var(--ink-mute); margin-top:.35rem; display:block; line-height:1.45}
+.dcell .fmt{position:absolute; top:.9rem; right:.85rem; font-family:var(--mono); font-size:.58rem; letter-spacing:.1em; color:var(--water); text-transform:uppercase}
+
+/* timeline */
+.timeline{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); margin-top:2rem; border-top:2px solid var(--ink); counter-reset:mile}
+.mile{padding:1.15rem .95rem 0 0; position:relative}
+.mile::before{content:""; position:absolute; top:-6px; left:0; width:10px; height:10px; background:var(--terra); border-radius:50%}
+.mile.open::before{background:var(--green)}
+.mile .d{font-family:var(--mono); font-size:.72rem; letter-spacing:.1em; color:var(--terra-deep)}
+.mile .t{font-weight:600; font-size:.9rem; margin-top:.25rem; line-height:1.35}
+
+/* eval chart */
+.chart{background:var(--paper); border:1px solid var(--hairline); padding:1.6rem 1.5rem 1.2rem; margin-top:1.8rem}
+.chart h4{font-family:var(--serif); font-size:1.1rem; font-weight:600}
+.chart .sub{font-size:.82rem; color:var(--ink-mute); margin:.15rem 0 1.3rem}
+.bar-row{display:grid; grid-template-columns:minmax(150px,240px) 1fr 52px; align-items:center; gap:.8rem; padding:.3rem 0}
+.bar-row .lbl{font-size:.86rem; line-height:1.25}
+.bar-track{height:22px; background:transparent; position:relative}
+.bar-fill{height:100%; background:var(--green-chart); border-radius:0 4px 4px 0; position:relative; min-width:6px; transition:transform .2s}
+.bar-row:hover .bar-fill{background:var(--terra)}
+.bar-row .val{font-family:var(--mono); font-size:.8rem; text-align:right; color:var(--ink)}
+.scorebands{display:flex; gap:1px; margin-top:1.6rem; border:1px solid var(--hairline)}
+.sb{flex:1; text-align:center; padding:.5rem .2rem; background:var(--sand-2); font-family:var(--mono); font-size:.62rem; letter-spacing:.06em}
+.sb b{display:block; font-size:.78rem; letter-spacing:0; font-family:var(--serif); font-weight:600}
+
+/* prizes */
+.prizes{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.2rem; margin-top:1.8rem}
+.prize{border:1px solid var(--hairline); background:var(--paper); padding:1.6rem 1.4rem; text-align:center; position:relative}
+.prize.first{border:2px solid var(--terra); background:linear-gradient(180deg, rgba(192,90,50,.06), transparent)}
+.prize .place{font-family:var(--mono); font-size:.66rem; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-mute)}
+.prize .amt{font-family:var(--serif); font-weight:900; font-size:2.2rem; color:var(--green); margin:.4rem 0 .2rem}
+.prize.first .amt{color:var(--terra-deep)}
+.prize .extra{font-size:.82rem; color:var(--ink-soft)}
+
+/* first edition */
+.firsted{display:grid; grid-template-columns:1.1fr .9fr; gap:2.4rem; align-items:start}
+@media(max-width:820px){.firsted{grid-template-columns:1fr}}
+.stamp{font-family:var(--mono); display:inline-block; transform:rotate(-3deg); border:2.5px solid var(--terra); color:var(--terra); padding:.5rem 1rem; font-size:.9rem; letter-spacing:.28em; text-transform:uppercase; margin-bottom:1.2rem}
+.jurybox{background:var(--ink); color:var(--bone); padding:1.6rem 1.5rem}
+.jurybox h4{font-family:var(--serif); font-size:1.15rem; font-weight:600; margin-bottom:.8rem; color:var(--leaf)}
+.jurybox ol{padding-left:1.2rem; font-size:.9rem}
+.jurybox li{margin:.5rem 0}
+.jurybox li::marker{color:var(--terra); font-family:var(--mono)}
+
+/* suggestions */
+.sugg{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.2rem; margin-top:1.8rem}
+.scard{background:var(--paper); border:1px solid var(--hairline); padding:1.4rem 1.3rem; position:relative; transition:transform .18s, box-shadow .18s}
+.scard:hover{transform:translateY(-3px); box-shadow:0 10px 24px -14px rgba(34,48,31,.4)}
+.scard .idx{font-family:var(--mono); font-size:.7rem; color:var(--terra)}
+.scard h4{font-family:var(--serif); font-size:1.22rem; font-weight:600; margin:.3rem 0 .5rem}
+.scard p{font-size:.9rem; color:var(--ink-soft)}
+.scard.picked{border:2px solid var(--green); background:linear-gradient(180deg, rgba(47,107,74,.07), transparent)}
+.scard.picked::after{content:"DEVELOPED BELOW ↓"; position:absolute; top:1.05rem; right:1.05rem; font-family:var(--mono); font-size:.58rem; letter-spacing:.14em; color:var(--green)}
+
+/* deliverable previews */
+.packs{margin-top:2rem}
+details.pack{background:var(--paper); border:1px solid var(--hairline); margin-bottom:.9rem}
+details.pack[open]{border-color:var(--green)}
+details.pack summary{cursor:pointer; list-style:none; display:flex; align-items:center; gap:1rem; padding:1.1rem 1.3rem; user-select:none}
+details.pack summary::-webkit-details-marker{display:none}
+.pk-no{font-family:var(--mono); font-size:.78rem; color:var(--bone); background:var(--green); padding:.3rem .55rem; white-space:nowrap}
+details.pack[open] .pk-no{background:var(--terra)}
+.pk-title{font-family:var(--serif); font-weight:600; font-size:1.12rem; flex:1; line-height:1.3}
+.pk-covers{display:flex; gap:.35rem; flex-wrap:wrap}
+.pk-covers span{font-family:var(--mono); font-size:.6rem; background:var(--sand); border:1px solid var(--hairline); padding:.2rem .45rem; white-space:nowrap}
+.pk-score{font-family:var(--mono); font-size:.62rem; letter-spacing:.06em; color:#fff; background:linear-gradient(90deg,#5FA871,#4E9DB5); padding:.24rem .5rem; white-space:nowrap; border-radius:2px}
+.pk-open{font-family:var(--mono); font-size:.62rem; letter-spacing:.06em; color:var(--terra-deep); border:1px solid var(--terra); padding:.22rem .5rem; text-decoration:none; white-space:nowrap}
+.pk-open:hover{background:var(--terra); color:#fff}
+.pk-caret{font-family:var(--mono); color:var(--terra); transition:transform .2s}
+.logo-nabta{font-family:"Comfortaa",var(--sans); font-weight:700; letter-spacing:.02em; color:var(--ink); display:inline-flex; align-items:baseline; gap:.14em}
+.logo-nabta .spark{color:#8FCB9B; font-weight:400}
+.logo-nabta .sub{font-family:"Comfortaa",var(--sans); font-weight:400; font-size:.42em; letter-spacing:.42em; color:var(--ink-soft); text-transform:lowercase}
+details.pack[open] .pk-caret{transform:rotate(90deg)}
+.pk-body{border-top:1px solid var(--hairline); padding:1.8rem clamp(1.2rem,3.5vw,2.6rem) 2.2rem; background:#FDFAF2}
+
+/* fragment content styling */
+.deliv-body{max-width:74ch; margin:0 auto}
+.deliv-body h4{font-family:var(--serif); font-weight:600; font-size:1.28rem; margin:1.7rem 0 .6rem; color:var(--green)}
+.deliv-body h4:first-child{margin-top:0}
+.deliv-body h5{font-family:var(--mono); font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:var(--terra-deep); margin:1.4rem 0 .5rem}
+.deliv-body p{margin:.6rem 0; font-size:.95rem}
+.deliv-body ul,.deliv-body ol{padding-left:1.3rem; margin:.6rem 0; font-size:.93rem}
+.deliv-body li{margin:.3rem 0}
+.deliv-body blockquote{font-family:var(--serif); font-style:italic; font-size:1.25rem; line-height:1.5; color:var(--green); border-left:3px solid var(--terra); padding:.4rem 0 .4rem 1.3rem; margin:1.5rem 0}
+.deliv-body table{width:100%; border-collapse:collapse; margin:1rem 0; font-size:.84rem}
+.deliv-body th{font-family:var(--mono); font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:var(--ink-mute); border-bottom:2px solid var(--ink); padding:.5rem .6rem .4rem}
+.deliv-body td{border-bottom:1px solid var(--hairline); padding:.55rem .6rem; vertical-align:top}
+.deliv-body tr:hover td{background:rgba(169,198,160,.14)}
+.deliv-body figure{margin:1.5rem 0; background:var(--paper); border:1px solid var(--hairline); padding:1.1rem}
+.deliv-body figcaption{font-family:var(--mono); font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-mute); margin-top:.7rem}
+.deliv-body svg{display:block; height:auto}
+.deliv-body .cols2{display:grid; grid-template-columns:1fr 1fr; gap:1.4rem}
+@media(max-width:680px){.deliv-body .cols2{grid-template-columns:1fr}}
+.deliv-body .tag{font-family:var(--mono); font-size:.64rem; letter-spacing:.08em; background:var(--sand); border:1px solid var(--hairline); padding:.16rem .5rem; display:inline-block; margin:.1rem .15rem .1rem 0}
+
+/* footer */
+footer{padding:3rem 0 4rem; color:var(--ink-mute); font-size:.85rem}
+footer .ar{font-family:var(--serif); font-weight:900; font-size:2rem; color:var(--green); margin-bottom:.6rem}
+.srcs{margin-top:.8rem; font-family:var(--mono); font-size:.72rem; line-height:2}
+
+/* reveal */
+.rv{opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease}
+.rv.in{opacity:1; transform:none}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="brand">AI PARK <span>×</span> <span class="logo-nabta" style="font-size:1rem">nabta<span class="spark">✦</span></span></span>
+    <a class="nl" href="#brief">Brief</a>
+    <a class="nl" href="#task">The Task</a>
+    <a class="nl" href="#deliv">16 Deliverables</a>
+    <a class="nl" href="#timeline">Timeline</a>
+    <a class="nl" href="#eval">Evaluation</a>
+    <a class="nl" href="#prizes">Prizes</a>
+    <a class="nl" href="#lastyear">Last Year?</a>
+    <a class="nl" href="#ideas">Ideas</a>
+    <a class="nl" href="#drafts">Draft Entry</a>
+    <a class="nl" href="map.html" style="color:var(--terra-deep)">Map &amp; Frames ↗</a>
+    <a class="nl" href="deliverables.html" style="color:var(--terra-deep)">★ Hub ↗</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="hero-ar">نبتة</div>
+    <p class="kicker">Dubai Municipality · First Edition · 2026</p>
+    <h1 style="margin-top:.8rem">AI Park <em>Design Challenge</em></h1>
+    <p class="hero-sub">The world's first AI-powered park design competition: redesign the 15,000 m² Al Safa 2 neighborhood park using artificial intelligence across the entire design process — while keeping every final decision human. This page is a complete field guide to the brief, plus the full draft entry — <span class="logo-nabta" style="font-size:1.05rem">nabta<span class="spark">✦</span>&nbsp;<span class="sub">wellness park</span></span> — with every deliverable previewable below.</p>
+    <div class="hero-cta">
+      <a class="btn solid" href="https://aipark.dm.gov.ae/ai-competition" target="_blank">Official Portal ↗</a>
+      <a class="btn" href="https://aipark.dm.gov.ae/ai-competition/Style%20Library/assets/img/Ai%20Park%20Scope%20of%20Work%20%26%20General%20Terms%20%26%20Conditions.pdf" target="_blank">Brief PDF ↗</a>
+      <a class="btn" href="#drafts">Jump to Draft Deliverables ↓</a>
+    </div>
+    <div class="facts">
+      <div class="fact"><div class="v">AED 200k</div><div class="k">Prize pool</div></div>
+      <div class="fact"><div class="v">15,000 m²</div><div class="k">Site · Al Safa 2</div></div>
+      <div class="fact"><div class="v">AED 35M</div><div class="k">Build budget cap</div></div>
+      <div class="fact"><div class="v">15 Aug 2026</div><div class="k">Submission deadline</div></div>
+      <div class="fact"><div class="v">16</div><div class="k">Required deliverables</div></div>
+      <div class="fact"><div class="v">Free</div><div class="k">Entry · UAE PASS</div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- 01 BRIEF -->
+<section id="brief">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-num">01</span><h2>What the competition is</h2></div>
+    <p class="lede rv">Launched 28 June 2026 by Dubai Municipality, the challenge invites architects, landscape designers, urban planners, students, researchers, startups and AI specialists — solo or in multidisciplinary teams — to redevelop Al Safa 2 Park into a pilot for AI-assisted public space design. AI is the <strong>method, not the product</strong>: the brief explicitly asks for AI as a design-support and decision-making tool (research, site analysis, ideation, scenario testing, visualization, evaluation), not for a park stuffed with AI gadgets. Submissions are at <strong>Concept + Preliminary Design</strong> level — no construction documentation.</p>
+    <div class="note rv"><strong>Heads-up:</strong> the official page currently shows a "submissions are now closed" banner even though the published deadline is 15 August 2026 — verify status in the portal (UAE PASS login) before investing serious effort.</div>
+    <div class="chips rv">
+      <span class="chip">Open worldwide</span><span class="chip">Individuals or teams</span><span class="chip">Arabic or English</span><span class="chip">Online submission only</span><span class="chip">Emirates ID for UAE residents</span><span class="chip t">Winning IP transfers to Dubai Municipality</span><span class="chip t">All entries: broad publication licence</span>
+    </div>
+  </div>
+</section>
+
+<!-- 02 TASK -->
+<section id="task">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-num">02</span><h2>Exactly what you must do</h2></div>
+    <p class="lede rv">One submission, two design stages, with documented AI woven through both. Everything must be feasible within the AED 35M implementation budget for the 15,000 m² site.</p>
+    <div class="stages rv">
+      <div class="stage" data-tag="Stage A">
+        <h4>Concept Design</h4>
+        <ul>
+          <li>Site understanding &amp; context analysis (physical, environmental, urban, climatic)</li>
+          <li>User &amp; community analysis — personas, needs of children, youth, families, older adults, People of Determination</li>
+          <li>Human-centered design strategy &amp; placemaking</li>
+          <li><strong>AI integration</strong>: site/user analysis, generative alternatives, scenario testing, environmental optimization</li>
+          <li>Design vision, narrative &amp; identity</li>
+          <li>Sustainability &amp; resilience framework</li>
+          <li>Concept masterplan, zoning, landscape strategy, renderings, 1-minute animation</li>
+        </ul>
+      </div>
+      <div class="stage" data-tag="Stage B">
+        <h4>Preliminary Design</h4>
+        <ul>
+          <li>Detailed masterplan, spatial hierarchy, user flows</li>
+          <li>Landscape &amp; public realm design (plazas, play, picnic, seating, shade)</li>
+          <li>Circulation &amp; accessibility: jogging track, cycling, universal access, service routes</li>
+          <li>Amenities: play areas, fitness, restrooms, wayfinding, maintenance</li>
+          <li>Sustainability &amp; environmental design (water, shade, thermal comfort)</li>
+          <li>Smart technologies &amp; AI-era operations opportunities</li>
+          <li>Feasibility: constructability within AED 35M, phasing, maintenance strategy</li>
+        </ul>
+      </div>
+    </div>
+    <h3 class="rv">The park program you must include</h3>
+    <div class="chips rv">
+      <span class="chip">~1 km jogging track</span><span class="chip">Play areas by age group</span><span class="chip">Shaded seating &amp; gathering</span><span class="chip">Lawns &amp; green areas</span><span class="chip">Community plaza + event lawn</span><span class="chip">Family picnic areas</span><span class="chip">Outdoor fitness</span><span class="chip">Universal accessibility</span><span class="chip">Restrooms &amp; fountains</span><span class="chip">Wayfinding · lighting · safety</span><span class="chip">Climate-responsive landscape</span><span class="chip">Café / kiosk (optional)</span><span class="chip">Smart park features</span>
+    </div>
+    <div class="note rv"><strong>AI evidence required:</strong> the brief asks you to show AI used in (1) site &amp; user data analysis, (2) environmental analysis — shade, heat, solar, wind, (3) concept exploration &amp; iteration, (4) parametric/generative logic where applicable, and (5) evidence of how AI informed human comfort, usability and experience.</div>
+  </div>
+</section>
+
+<!-- 03 DELIVERABLES -->
+<section id="deliv">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-num">03</span><h2>The 16 official deliverables</h2></div>
+    <p class="lede rv">From Schedule 2 &amp; 5 of the brief — every item below must be uploaded through the portal before the deadline. Late, incomplete or non-compliant submissions may not be evaluated. A Commercial &amp; Service Facilities Map and presentation boards are also required within the set.</p>
+    <div class="dgrid rv">
+      <div class="dcell"><span class="no">№ 01</span><span class="t">Executive Summary Presentation</span><span class="d">Design vision, concept &amp; key innovations in brief</span></div>
+      <div class="dcell"><span class="no">№ 02</span><span class="t">Design Narrative &amp; Concept Statement</span><span class="d">Philosophy, vision, placemaking approach</span></div>
+      <div class="dcell"><span class="no">№ 03</span><span class="t">Site Analysis &amp; Opportunities</span><span class="d">Context, constraints, environmental &amp; climatic analysis</span></div>
+      <div class="dcell"><span class="no">№ 04</span><span class="t">User &amp; Community Analysis</span><span class="d">User groups, personas, community needs</span></div>
+      <div class="dcell"><span class="no">№ 05</span><span class="t">AI Methodology Report</span><span class="d">Tools, workflows, alternatives explored, AI's role in decisions</span></div>
+      <div class="dcell"><span class="no">№ 06</span><span class="t">Concept &amp; Preliminary Masterplan</span><span class="d">Spatial organization, zoning, activity distribution</span></div>
+      <div class="dcell"><span class="no">№ 07</span><span class="t">Landscape &amp; Public Realm Plans</span><span class="d">Landscape strategy, planting, open space framework</span></div>
+      <div class="dcell"><span class="no">№ 08</span><span class="t">Accessibility &amp; Circulation Strategy</span><span class="d">Universal access, pedestrian/bike circulation, service access</span></div>
+      <div class="dcell"><span class="no">№ 09</span><span class="t">Sustainability &amp; Resilience Strategy</span><span class="d">Environmental, social &amp; economic measures</span></div>
+      <div class="dcell"><span class="no">№ 10</span><span class="t">Concept Diagrams &amp; Design Drawings</span><span class="d">Concept evolution, user journeys, analytics</span><span class="fmt">CAD/BIM</span></div>
+      <div class="dcell"><span class="no">№ 11</span><span class="t">Sections &amp; Elevations</span><span class="d">Key sections/elevations communicating the proposal</span><span class="fmt">CAD/BIM</span></div>
+      <div class="dcell"><span class="no">№ 12</span><span class="t">High-Quality Visualizations</span><span class="d">Aerial, human-scale &amp; key experiential views</span></div>
+      <div class="dcell"><span class="no">№ 13</span><span class="t">Day &amp; Night Perspectives</span><span class="d">Daytime and nighttime activation of the same park</span></div>
+      <div class="dcell"><span class="no">№ 14</span><span class="t">Full Project Presentation</span><span class="d">Analysis → concept → masterplan → visuals, per brief</span></div>
+      <div class="dcell"><span class="no">№ 15</span><span class="t">One-Minute Concept Animation</span><span class="d">Vision, user experience, key interventions; AI tools permitted</span><span class="fmt">Video</span></div>
+      <div class="dcell"><span class="no">№ 16</span><span class="t">Additional Supporting Materials</span><span class="d">Any extra drawings, models, animations needed</span></div>
+    </div>
+    <div class="note rv"><strong>Team paperwork too:</strong> full names, organizations, disciplines, roles, contact info, Emirates ID (UAE residents) and a passport-size photo for every member; one designated Team Leader.</div>
+  </div>
+</section>
+
+<!-- 04 TIMELINE -->
+<section id="timeline">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-num">04</span><h2>Timeline</h2></div>
+    <div class="timeline rv">
+      <div class="mile open"><div class="d">28 JUN 2026</div><div class="t">Challenge launched</div></div>
+      <div class="mile open"><div class="d">28 JUN 2026</div><div class="t">Registration &amp; submission portal opens</div></div>
+      <div class="mile"><div class="d">05 AUG 2026</div><div class="t">Deadline for questions &amp; clarifications</div></div>
+      <div class="mile"><div class="d">ONGOING</div><div class="t">Responses to queries published throughout</div></div>
+      <div class="mile"><div class="d">15 AUG 2026</div><div class="t">Submission deadline</div></div>
+    </div>
+    <p class="lede rv" style="margin-top:1.6rem; font-size:.92rem">After the deadline: an independent jury (architecture, urban design, landscape, AI, plus Dubai Government executive directors) shortlists entries against the evaluation matrix — then the <strong>public votes</strong> to help pick the winners.</p>
+  </div>
+</section>
+
+<!-- 05 EVALUATION -->
+<section id="eval">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-num">05</span><h2>How you're judged</h2></div>
+    <div class="chart rv" role="img" aria-label="Evaluation criteria weights: Innovation and Creativity 20%, Human-Centered Design, Sustainability and Quality of Life 20%, Integration and Effective Use of AI 20%, Feasibility and Implementation Potential 20%, Quality of Design and User Experience 15%, Quality of Presentation and Communication 5%">
+      <h4>Evaluation matrix — criterion weights</h4>
+      <p class="sub">Schedule 7 of the brief · each criterion scored 1–10 by the jury</p>
+      <div class="bar-row"><span class="lbl">Innovation &amp; Creativity</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="val">20%</span></div>
+      <div class="bar-row"><span class="lbl">Human-Centered Design, Sustainability &amp; Quality of Life</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="val">20%</span></div>
+      <div class="bar-row"><span class="lbl">Integration &amp; Effective Use of AI</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="val">20%</span></div>
+      <div class="bar-row"><span class="lbl">Feasibility &amp; Implementation Potential</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="val">20%</span></div>
+      <div class="bar-row"><span class="lbl">Quality of Design &amp; User Experience</span><div class="bar-track"><div class="bar-fill" style="width:75%"></div></div><span class="val">15%</span></div>
+      <div class="bar-row"><span class="lbl">Quality of Presentation &amp; Communication</span><div class="bar-track"><div class="bar-fill" style="width:25%"></div></div><span class="val">5%</span></div>
+      <div class="scorebands">
+        <div class="sb"><b>1–2</b>Poor</div><div class="sb"><b>3–4</b>Fair</div><div class="sb"><b>5–6</b>Good</div><div class="sb"><b>7–8</b>Very good</div><div class="sb"><b>9–10</b>Excellent</div>
+      </div>
+    </div>
+    <p class="lede rv" style="margin-top:1.4rem; font-size:.92rem">Read the weights strategically: <strong>80% of your score has nothing to do with pretty pictures.</strong> A rigorous AI methodology, genuine human-centered thinking, and a plan that credibly fits AED 35M beat a beautiful but unbuildable render.</p>
+  </div>
+</section>
+
+<!-- 06 PRIZES -->
+<section id="prizes">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-num">06</span><h2>Prizes &amp; the fine print</h2></div>
+    <div class="prizes rv">
+      <div class="prize first"><div class="place">First prize</div><div class="amt">AED 100,000</div><div class="extra">+ your design may be built as the pilot park</div></div>
+      <div class="prize"><div class="place">Second prize</div><div class="amt">AED 65,000</div><div class="extra">&nbsp;</div></div>
+      <div class="prize"><div class="place">Third prize</div><div class="amt">AED 35,000</div><div class="extra">&nbsp;</div></div>
+    </div>
+    <div class="note rv"><strong>Read before entering:</strong> winners (all three places) irrevocably assign <em>all</em> IP — concepts, drawings, renders, video, data — to Dubai Municipality, which may build, modify or license the design with no further compensation, and winners may not reuse or even publish their own design without written consent. <em>Every</em> entrant (winning or not) grants a perpetual, royalty-free, sublicensable licence to display, publish and draw inspiration from their proposal. All submitted work must be original. The jury may withhold prizes if quality standards aren't met.</div>
+  </div>
+</section>
+
+<!-- 07 LAST YEAR -->
+<section id="lastyear">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-num">07</span><h2>Who won last year?</h2></div>
+    <div class="firsted rv">
+      <div>
+        <div class="stamp">Nobody — Edition № 1</div>
+        <p class="lede">There is no "last year." This is the <strong>first edition ever</strong> — Dubai Municipality announced it on 28 June 2026 as the <em>world's first</em> AI-powered park design challenge, so there are no previous winners, no past winning boards to study, and no established jury taste to reverse-engineer.</p>
+        <p class="lede" style="margin-top:.9rem">That's a strategic gift: with no precedent anchoring expectations, the field is wide open. The closest signals of what will win are (a) the evaluation weights, (b) Dubai's Quality of Life Strategy 2033 and its push for shaded, walkable, family-centric neighborhoods, and (c) the brief's repeated insistence that AI augments — never replaces — human judgment. Entries that treat AI as a rigorous, documented design instrument rather than a render-machine will stand apart.</p>
+      </div>
+      <div class="jurybox">
+        <h4>How the winner gets picked instead</h4>
+        <ol>
+          <li>Independent jury — local &amp; international experts in architecture, urban design, landscape, technology &amp; innovation, plus Dubai Government executive directors</li>
+          <li>Scored 1–10 against the six weighted criteria</li>
+          <li>Shortlist of outstanding proposals published</li>
+          <li><strong>Public vote</strong> — residents help select the winning designs</li>
+          <li>Winner announced; first prize considered for real construction at Al Safa 2</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 SUGGESTED SUBMISSIONS -->
+<section id="ideas">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-num">08</span><h2>Suggested submission directions</h2></div>
+    <p class="lede rv">Six concept families that each give AI a real, defensible job (not just image generation) and map cleanly onto the evaluation weights. We developed № 1 into the full draft entry below.</p>
+    <div class="sugg rv">
+      <div class="scard picked"><span class="idx">IDEA 01</span><h4>«نبتة» nabta — The Living Shade Loop</h4><p>Shade is the program. A 1 km continuously shaded figure-eight loop — canopy trees + AI-form-found pergolas — becomes the park's social spine, threading ten garden rooms. AI's job: solar/UTCI/wind simulation and generative optimization of shade continuity.</p><div class="chips"><span class="chip">AI: microclimate optimization</span><span class="chip">Comfort = usage</span></div></div>
+      <div class="scard"><span class="idx">IDEA 02</span><h4>The Central Oasis</h4><p>A sunken crater garden 3–4 m below grade at the heart of the site, using thermal mass, evaporative cooling from a falaj-inspired water thread, and dense palms to create a genuinely cooler microclimate. AI's job: CFD-driven landform sculpting for cold-air pooling.</p><div class="chips"><span class="chip">AI: landform CFD</span><span class="chip">Big experiential wow</span></div></div>
+      <div class="scard"><span class="idx">IDEA 03</span><h4>Braided Wadis</h4><p>The whole park as a braided network of planted swales harvesting every drop — AC condensate, stormwater, TSE — with rooms on the "islands" between them. AI's job: hydrological simulation and generative braiding of the channel network.</p><div class="chips"><span class="chip">AI: hydrology</span><span class="chip">Water-first narrative</span></div></div>
+      <div class="scard"><span class="idx">IDEA 04</span><h4>The Productive Park</h4><p>A neighborhood food landscape: community orchard plots, date grove, teaching kitchen kiosk, harvest majlis. AI's job: crop/water yield optimization and a concession model proving self-funding maintenance — strongest possible feasibility story.</p><div class="chips"><span class="chip">AI: yield &amp; opex models</span><span class="chip">Economic sustainability</span></div></div>
+      <div class="scard"><span class="idx">IDEA 05</span><h4>The Night Garden</h4><p>Accept the climate: design the first park optimized for 6pm–midnight, Dubai's real outdoor hours. Choreographed adaptive lighting, cool-surface materials, moon garden planting, astronomy lawn. AI's job: footfall prediction and dynamic lighting-energy optimization.</p><div class="chips"><span class="chip">AI: temporal simulation</span><span class="chip">Honest to behavior</span></div></div>
+      <div class="scard"><span class="idx">IDEA 06</span><h4>The Learning Grove</h4><p>The park as an open-air classroom about its own intelligence: visible sensors, a "how this park thinks" trail, school partnerships, citizen-science planting. AI's job: the park's own transparent ops brain — and the exhibit itself. Strong civic-innovation fit.</p><div class="chips"><span class="chip">AI: transparent operations</span><span class="chip">Education &amp; identity</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 DRAFT DELIVERABLES -->
+<section id="drafts">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-num">09</span><h2>The draft entry — 16 deliverables, ten packages</h2></div>
+    <p class="lede rv">Ten deliverable packages cover all 16 official items of the entry — <strong>nabta wellness park · The Living Shade Loop</strong>. Each package was internally reviewed and scored against the six official jury criteria (strict scale — 7 means “very good”); the green chip shows its review score. Click any package to preview it, or open its dedicated page. Working drafts, not final competition documents.</p>
+    <div class="note rv"><strong>Location &amp; film-frame library:</strong> the real site is pinned at <a href="https://www.google.com/maps/search/?api=1&amp;query=25.163543,55.230825" target="_blank">Al Safa 2 Park, Jumeirah (25.163543, 55.230825)</a>, with an 80-image render library covering every garden room from every angle — walkthrough, flythrough, growth evolution and night — plus location footage and a 3D asset library. Explore it all on the <a href="map.html"><strong>interactive map ↗</strong></a>, review costs and the submission checklist on the <a href="deliverables.html"><strong>deliverables hub ↗</strong></a>.</div>
+    <h3 class="rv">Proof, not promises — 5 open-source POCs backing every AI claim</h3>
+    <div class="rv" style="background:var(--paper);border:1px solid var(--hairline);padding:1.2rem 1.4rem;margin-bottom:2rem">
+      <p style="font-size:.92rem;color:var(--ink-soft);margin-bottom:.8rem">Each AI claim in the methodology is backed by a runnable, multi-branch GitHub repo with real math, real data and honest results (asset-heavy READMEs with generated plots):</p>
+      <ul style="font-size:.9rem;color:var(--ink-soft);padding-left:1.2rem">
+        <li><a href="https://github.com/Majboor/nabta-shade-sim" target="_blank"><strong>nabta-shade-sim</strong></a> — NOAA solar geometry: <strong>91.6% loop shade at 3pm Jun 21</strong> (validates the 92% claim; winter 40.6% stated honestly)</li>
+        <li><a href="https://github.com/Majboor/nabta-visitor-abm" target="_blank"><strong>nabta-visitor-abm</strong></a> — persona agent simulation: 385 peak simultaneous visitors of 1,800/day; event-day stress branch exposes Event Lawn overload at 3,000</li>
+        <li><a href="https://github.com/Majboor/nabta-loop-optimizer" target="_blank"><strong>nabta-loop-optimizer</strong></a> — vectorized GA: optimized shade placement beats random baseline 31.8% vs 18.3% (1.7×) in 4s; multiobjective water-penalty branch</li>
+        <li><a href="https://github.com/Majboor/nabta-water-budget" target="_blank"><strong>nabta-water-budget</strong></a> — Hargreaves–Samani ET₀ on Dubai airport normals: computed 56.8% saving (the entry's 41% claim is conservative); +2°C 2050 branch</li>
+        <li><a href="https://github.com/Majboor/nabta-park-vision" target="_blank"><strong>nabta-park-vision</strong></a> — the video→depth/flow/point-cloud toolkit used on the real generated footage, 11 example outputs committed</li>
+      </ul>
+    </div>
+    <h3 class="rv">Submission format — what the portal accepts, and what we built for each</h3>
+    <div class="rv" style="background:var(--paper);border:1px solid var(--hairline);padding:1.2rem 1.4rem;margin-bottom:2rem">
+      <p style="font-size:.92rem;color:var(--ink-soft);margin-bottom:.8rem">Per the official brief: everything is <strong>uploaded electronically through the challenge portal</strong> (UAE PASS login; e-mail submissions are not accepted), in Arabic or English. Documents as PDFs, drawings in CAD/BIM, renderings as images, and a one-minute <strong>video</strong> for the concept animation.</p>
+      <div class="deliv-body" style="max-width:none">
+      <table>
+        <thead><tr><th>Format the portal expects</th><th>Official deliverables</th><th>Produced in this package</th></tr></thead>
+        <tbody>
+          <tr><td>PDF documents &amp; presentations</td><td>№01–09, №14</td><td>11 designed A4 PDFs (<em>pdfs/Nabta-00…10</em>)</td></tr>
+          <tr><td>Presentation boards / plan sheets</td><td>Boards, plans</td><td>A3 <em>Nabta-Landscape-Package</em> (14 sheets, survey-sheet title blocks)</td></tr>
+          <tr><td>Renderings &amp; images</td><td>№12, №13</td><td>80 photoreal renders incl. day/night pairs (<em>assets/frames/</em> + map.html gallery)</td></tr>
+          <tr><td>Video — one-minute animation</td><td>№15</td><td><em>Nabta-One-Minute-Concept-Animation.mp4</em> — dawn-to-night sequence through all ten rooms</td></tr>
+          <tr><td>CAD / BIM drawings</td><td>№10, №11</td><td>Drawing register + dimensioned sections drafted (D·09); to be exported from CAD before submitting — the one format that can't be auto-generated here</td></tr>
+          <tr><td>Team details</td><td>Registration</td><td>Names, disciplines, roles, Emirates ID (residents), passport photos — entered in the portal form</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+    <div class="packs rv">
+
+      <details class="pack" open>
+        <summary><span class="pk-no">PKG 01</span><span class="pk-title">Executive Summary &amp; Full Presentation Outline</span><span class="pk-covers"><span>№01</span><span>№14</span></span><span class="pk-score">review 7.9/10</span><a class="pk-open" href="deliverables/d-01.html" onclick="event.stopPropagation()">page ↗</a><span class="pk-caret">▶</span></summary>
+        <div class="pk-body"><div class="deliv-body">
+  <h4>«نبتة» NABTA — Wellness Park</h4>
+  <p><span class="tag">Concept: The Living Shade Loop</span> <span class="tag">Deliverable 1 · Executive Summary</span> <span class="tag">Al Safa 2 · 15,000 m² · AED 35M</span></p>
+
+  <h5>Vision</h5>
+  <blockquote>
+    <p><strong>A park where comfort makes healthy habits possible.</strong> Nabta ("sprout") reimagines Al Safa 2 as a wellness park organized around a continuous 1.0 km shaded loop — part canopy forest, part AI-form-found pergola — comfortable enough to walk, jog and gather from morning school-runs to midnight strolls, eleven months a year. The loop threads ten "garden rooms," so a 15,000 m² neighborhood park behaves like a much larger one: every lap moves the body through plaza, play, fitness, picnic groves, a sensory wadi garden and quiet restoration. AI shaped every decision — from where shadows fall in August to where a seven-year-old runs at 5pm — while our design team made every call.</p>
+  </blockquote>
+
+  <h5>Five Key Innovations</h5>
+  <ol>
+    <li><strong>The Living Shade Loop as health infrastructure.</strong> The 1.0 km walking-jogging track is the park's climatic spine: ghaf, sidr and date-palm canopies alternate with 14 parametric pergola segments form-found against hourly solar simulation — <strong>92% of the loop shaded at 3pm in summer</strong>, cutting perceived temperature by <strong>4.5°C (UTCI)</strong> so daily movement stays safe and habitual.</li>
+    <li><strong>Agents before architecture.</strong> An agent-based simulation of 1,200 synthetic residents (six AI-assisted personas: toddler families, teens, joggers, seniors, domestic workers, event visitors) stress-tested circulation, desire lines and peak crowding — and projected <strong>~1,800 daily visits</strong> — before a single path was drawn.</li>
+    <li><strong>Generative masterplanning, human-judged.</strong> 43 masterplan variants were scored on shade continuity, walkability, sightline safety and irrigation demand; the team shortlisted three and hybridized the final scheme in design workshops, documenting every override.</li>
+    <li><strong>The Wadi Water Loop.</strong> A bioswale garden harvests AC condensate from adjacent buildings plus TSE supply, feeding soil-moisture-driven irrigation of a 100% native palette of <strong>~450 trees</strong> — <strong>41% less irrigation water</strong> than a conventional lawn-based park of equal size.</li>
+    <li><strong>A park that measures wellbeing.</strong> Anonymous footfall counters, UTCI comfort sensors, adaptive lighting and irrigation telemetry feed a public dashboard reporting active-minutes on the loop, comfort hours per day and water saved — giving Dubai Municipality auditable health and sustainability KPIs, not just maintenance data.</li>
+  </ol>
+
+  <h5>Headline Metrics</h5>
+  <div class="cols2">
+    <div>
+      <ul>
+        <li><strong>92%</strong> of the 1.0 km loop shaded at 3pm, summer (vs 31% baseline)</li>
+        <li><strong>−4.5°C</strong> perceived temperature (UTCI) along the loop vs the existing park</li>
+        <li><strong>41%</strong> reduction in irrigation water vs a conventional lawn-based park</li>
+        <li><strong>100%</strong> of primary routes step-free, tactile-guided, ≤1:21 gradient</li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li><strong>~1,800</strong> daily visits projected (agent simulation); <strong>ten</strong> garden rooms, play zoned 2–5, 6–12, 13–17</li>
+        <li><strong>~450</strong> native trees (ghaf, sidr, date palm); 78% softscape canopy at year 10</li>
+        <li><strong>18-hour</strong> activation day; dawn fitness to evening family strolls under adaptive lighting</li>
+        <li><strong>AED 33.6M</strong> cost plan — 4% contingency inside the AED 35M cap</li>
+      </ul>
+    </div>
+  </div>
+
+  <figure>
+    <svg viewBox="0 0 640 210" width="100%" role="img" aria-label="Diagram of the shade loop threading ten garden rooms">
+      <rect x="8" y="8" width="624" height="194" rx="14" fill="#E7DCC3"/>
+      <ellipse cx="320" cy="105" rx="245" ry="70" fill="none" stroke="#CFC0A0" stroke-width="16"/>
+      <ellipse cx="320" cy="105" rx="245" ry="70" fill="none" stroke="#2F6B4A" stroke-width="4" stroke-dasharray="26 10"/>
+      <path d="M210 150 q60 24 150 6 q60 -12 90 -40" fill="none" stroke="#4E8FA8" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="90" cy="105" r="22" fill="#C05A32"/>
+      <circle cx="200" cy="52" r="20" fill="#A9C6A0"/>
+      <circle cx="330" cy="40" r="20" fill="#A9C6A0"/>
+      <circle cx="455" cy="55" r="20" fill="#A9C6A0"/>
+      <circle cx="548" cy="105" r="22" fill="#2F6B4A"/>
+      <circle cx="450" cy="158" r="20" fill="#A9C6A0"/>
+      <circle cx="320" cy="172" r="20" fill="#A9C6A0"/>
+      <circle cx="195" cy="160" r="20" fill="#A9C6A0"/>
+      <text x="90" y="109" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Entry</text>
+      <text x="200" y="56" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Majlis</text>
+      <text x="330" y="44" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Lawn</text>
+      <text x="455" y="59" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Play</text>
+      <text x="548" y="109" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Fitness</text>
+      <text x="450" y="162" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Picnic</text>
+      <text x="320" y="176" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Wadi</text>
+      <text x="195" y="164" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Quiet</text>
+      <text x="320" y="100" text-anchor="middle" fill="#22301F" font-size="13" font-family="inherit">1.0 km Living Shade Loop</text>
+      <text x="320" y="118" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">92% shaded at 3pm · wadi bioswale beneath</text>
+    </svg>
+    <figcaption>Concept diagram: the shaded loop threads the garden rooms; the wadi bioswale (blue) crosses the interior. Selected rooms labeled.</figcaption>
+  </figure>
+
+  <h5>Deliverable 14 — Full Project Presentation (Slide Outline)</h5>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Slide Title</th><th>Contents</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>NABTA — Wellness Park: The Living Shade Loop</td><td>Title, hero aerial render at golden hour, team identity, one-line vision.</td></tr>
+      <tr><td>2</td><td>Al Safa 2 Today</td><td>AI site analysis: solar/wind maps, noise from Al Wasl Road, existing tree audit, catchment demographics.</td></tr>
+      <tr><td>3</td><td>Who the Park Serves</td><td>Six AI-assisted personas; wellbeing-needs matrix (movement, restoration, social connection); day-in-the-life timelines; ~1,800 daily visits projected.</td></tr>
+      <tr><td>4</td><td>The Big Idea</td><td>Shade-first thesis; loop + ten garden rooms diagram; precedent of the sikka and the wadi.</td></tr>
+      <tr><td>5</td><td>AI Workflow Overview</td><td>End-to-end pipeline map: analysis → personas → agent simulation → generative options → environmental scoring → human selection.</td></tr>
+      <tr><td>6</td><td>43 Parks, One Winner</td><td>Generative masterplan gallery; scoring dashboard (shade, walkability, water); how the team hybridized option 12 + 31.</td></tr>
+      <tr><td>7</td><td>Masterplan</td><td>Illustrated 1:500 plan; program areas and m² breakdown; entries, service access, wayfinding logic.</td></tr>
+      <tr><td>8</td><td>Microclimate Proof</td><td>UTCI heatmaps before/after; 3pm summer shade animation stills; −4.5°C result and pergola form-finding.</td></tr>
+      <tr><td>9</td><td>Garden Rooms Tour I</td><td>Entry plaza, majlis plaza, event lawn, café terrace — renders, capacities, event configurations.</td></tr>
+      <tr><td>10</td><td>Garden Rooms Tour II</td><td>Inclusive play dune (by age group), teen zone, fitness grove, picnic groves, sensory wadi, quiet garden; accessibility features throughout.</td></tr>
+      <tr><td>11</td><td>Water &amp; Planting</td><td>~450 native trees (ghaf, sidr, date palm, desert grasses); wadi bioswale and condensate loop; 41% irrigation saving math.</td></tr>
+      <tr><td>12</td><td>Measuring Wellbeing</td><td>Smart-ops layer: anonymous footfall, comfort sensing, adaptive lighting, irrigation telemetry; public dashboard of active-minutes and comfort hours.</td></tr>
+      <tr><td>13</td><td>Cost, Phasing, Operations</td><td>AED 33.6M elemental cost plan (landscape 42%, pergolas 22%, play/fitness 14%, water systems 12%, smart layer 6%, FF&amp;E 4%) vs 35M cap; 18-month, 3-phase build keeping half the park open; O&amp;M model per DM standards.</td></tr>
+      <tr><td>14</td><td>A Lap of NABTA</td><td>60-second AI-visualized walkthrough film; closing metrics strip; call to action.</td></tr>
+    </tbody>
+  </table>
+
+  <p><em>All AI outputs in this submission were generated, curated and verified under design-team direction; final design decisions are human-made and fully documented in the AI-usage log (Deliverable Package 4).</em></p>
+</div></div>
+      </details>
+
+      <details class="pack">
+        <summary><span class="pk-no">PKG 02</span><span class="pk-title">Design Narrative &amp; Concept Statement</span><span class="pk-covers"><span>№02</span></span><span class="pk-score">review 7.8/10</span><a class="pk-open" href="deliverables/d-02.html" onclick="event.stopPropagation()">page ↗</a><span class="pk-caret">▶</span></summary>
+        <div class="pk-body"><div class="deliv-body">
+<h4>«نبتة» NABTA — Wellness Park</h4>
+<p><span class="tag">Deliverable 2</span> <span class="tag">Design Narrative &amp; Concept Statement</span> <span class="tag">Concept: The Living Shade Loop</span> <span class="tag">Al Safa 2 · 15,000 m² · AED 35M</span></p>
+
+<h5>Two cultural anchors: the shade and the sprout</h5>
+<p>Before there were streets in this city, there was shade — <em>dhilal</em>, the Gulf's oldest wellness infrastructure. The sidr tree at the well, the palm-frond <em>arish</em>, the threshold of the <strong>majlis</strong>: each was a small public clinic for body and mind, a cool place where the generations sat at the same level and strangers became neighbours. And wherever water paused in this landscape, something answered it — the <em>nabta</em>, the sprout, proof that care compounds into growth. NABTA holds both anchors at once: shade is what the park <strong>gives</strong> on day one; the sprout is what it <strong>becomes</strong> — a canopy, a habit, a neighbourhood's health — year after year. A park that grows wellbeing.</p>
+
+<h5>Design philosophy: shade is the infrastructure of wellness</h5>
+<p>Every wellness behaviour we want from a Dubai park — the daily walk, the child's hour of free play, the elder's unhurried conversation, the quiet minutes that lower a heart rate — fails for the same reason: for five months a year it is too hot to begin. So we refused to treat shade as an amenity. In NABTA, <strong>shade is the program</strong>. The <strong>1.0 km loop</strong> is designed first as a continuous ribbon of thermal comfort — dense native canopy (ghaf, sidr, date palm) alternating with AI-form-found pergolas where trees cannot close the gap — and only second as a track. Our verified target: <strong>92% of the loop shaded at 3pm in peak summer</strong>, delivering a <strong>−4.5°C perceived temperature</strong> (UTCI) against the adjacent street. Comfort is the precondition of health: minutes of comfort convert directly into minutes of movement, restoration and company.</p>
+
+<h5>A loop of ten rooms, three modes of wellbeing</h5>
+<p>The Living Shade Loop is the park's social condenser: jogger, grandmother, toddler on a balance bike and teenager share one shaded spine at different speeds. Threaded onto it are <strong>ten garden rooms</strong>, organised by what they do for a body:</p>
+<ul>
+<li><strong>Move:</strong> the loop itself; outdoor fitness grove with elder-friendly low-impact stations; teen active zone; inclusive play dune graded by age and ability — physical literacy from two to eighty-two.</li>
+<li><strong>Restore:</strong> quiet contemplation garden screened by planting, not walls; sensory wadi garden along the bioswale, where falling water and native fragrance do the work of a therapy soundtrack; family picnic groves for unstructured rest.</li>
+<li><strong>Connect:</strong> entry plaza, community majlis plaza and event lawn — the intergenerational rooms, sized for prayer-eve gatherings, weekend markets and National Day evenings; café terrace at the loop's golden-hour edge.</li>
+</ul>
+<p>Rooms hold sightlines into their neighbours — a parent at the picnic grove watches the play dune; elders in the majlis overlook the plaza — so caregiving is ambient, not confining. The park breathes on a day-to-night rhythm: dawn runners, late-morning shade for infants and their minders, misted pergolas through the afternoon, then the true prime time — evening — when warm, dark-sky lighting turns the loop into a promenade. The wadi bioswale, fed by AC condensate and treated water, makes sustainability touchable: children learn where water comes from by following it to the newest sprouts.</p>
+
+<h5>How AI served the design — honestly, and in numbers</h5>
+<p>AI did not design this park; it let us test more convictions than any team could by hand. Solar, wind and UTCI simulation across 8,760 annual hours shaped the loop's geometry and canopy density; generative design produced forty-plus masterplan variants scored on shade continuity, walkability and irrigation demand; agent-based models of five user personas stress-tested sightlines and evening crowding. The decisive judgements — the majlis at the heart, a room of the teenagers' own, the café facing the sunset — were human, cultural and debated aloud. We used AI the way a falconer uses the wind: to go further in a direction we had already chosen.</p>
+
+<h5>Growing within AED 35M</h5>
+<p>The nabta principle is also our delivery strategy: plant the structure, let value compound. Roughly 40% of the budget goes to the loop, pergolas and shade structures — the permanent wellness infrastructure; 30% to landscape, soil and the ten rooms; 15% to water systems (bioswale, condensate recovery, subsurface drip for a native palette needing a fraction of turf's irrigation); 15% to lighting, furniture and sensing. Trees are installed young and inexpensive because the shade model proves pergolas carry comfort until canopies mature — the park is fully usable at opening and measurably better every year, with falling, not rising, operating costs.</p>
+
+<h5>Vision</h5>
+<blockquote>
+<p>We are planting a kilometre of shade and calling it a promise: that in Al Safa 2, no one must choose between the heat and their own health. Walk the loop at maghrib — past the children on the dune, the elders in the majlis, the water finding the youngest roots — and you will feel what the Gulf has always known: <em>where there is shade, things grow; where things grow, people stay well.</em></p>
+</blockquote>
+
+<figure>
+<svg viewBox="0 0 640 220" width="100%" role="img" aria-label="Diagram of NABTA's Living Shade Loop threading ten garden rooms">
+<ellipse cx="320" cy="110" rx="250" ry="78" fill="none" stroke="#2F6B4A" stroke-width="10" stroke-linecap="round"/>
+<ellipse cx="320" cy="110" rx="250" ry="78" fill="none" stroke="#CFC0A0" stroke-width="3" stroke-dasharray="2 10"/>
+<path d="M120 150 Q 220 120 320 145 Q 430 170 520 130" fill="none" stroke="#4E8FA8" stroke-width="4"/>
+<path d="M320 128 q -6 -14 0 -24 q 6 10 0 24 M320 118 q -10 -4 -14 -12 q 12 0 14 12 M320 118 q 10 -4 14 -12 q -12 0 -14 12" fill="none" stroke="#2F6B4A" stroke-width="3" stroke-linecap="round"/>
+<circle cx="320" cy="32" r="9" fill="#C05A32"/>
+<circle cx="470" cy="52" r="9" fill="#A9C6A0"/>
+<circle cx="562" cy="110" r="9" fill="#E7DCC3" stroke="#22301F" stroke-width="1"/>
+<circle cx="470" cy="168" r="9" fill="#2F6B4A"/>
+<circle cx="320" cy="188" r="9" fill="#A9C6A0"/>
+<circle cx="170" cy="168" r="9" fill="#4E8FA8"/>
+<circle cx="78" cy="110" r="9" fill="#C05A32"/>
+<circle cx="170" cy="52" r="9" fill="#2F6B4A"/>
+<text x="320" y="16" text-anchor="middle" fill="#22301F" font-size="12" font-family="inherit">Entry plaza</text>
+<text x="482" y="38" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Majlis plaza</text>
+<text x="580" y="94" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Event lawn</text>
+<text x="482" y="190" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Play dune · teen zone</text>
+<text x="320" y="210" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Fitness grove</text>
+<text x="158" y="190" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Sensory wadi</text>
+<text x="62" y="92" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Quiet garden</text>
+<text x="158" y="38" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Café terrace</text>
+<text x="320" y="152" text-anchor="middle" fill="#22301F" font-size="13" font-family="inherit">NABTA · 1.0 km Living Shade Loop</text>
+<text x="320" y="168" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">92% shade at 3pm summer · −4.5°C perceived</text>
+</svg>
+<figcaption>Concept diagram: NABTA's continuous shaded loop threading the ten garden rooms; the sprout at the centre, the wadi bioswale crossing beneath.</figcaption>
+</figure>
+</div></div>
+      </details>
+
+      <details class="pack">
+        <summary><span class="pk-no">PKG 03</span><span class="pk-title">Site Analysis &amp; Opportunities Assessment</span><span class="pk-covers"><span>№03</span></span><span class="pk-score">review 7.5/10</span><a class="pk-open" href="deliverables/d-03.html" onclick="event.stopPropagation()">page ↗</a><span class="pk-caret">▶</span></summary>
+        <div class="pk-body"><div class="deliv-body">
+  <h4>Deliverable 3 — Site Analysis and Opportunities Assessment</h4>
+  <p><strong>«نبتة» NABTA — Wellness Park</strong> and its design concept, <strong>The Living Shade Loop</strong>, begin with evidence. Before a single path was drawn, our AI toolchain read the site: its walkable catchment, its daily rhythms, its sun, and its wind. This package summarises what the machines found — and what the human design team concluded — around one wellness question: how many comfortable, active, restorative hours can 15,000 m² give its neighbours?</p>
+
+  <h5>1. Urban Context and Catchment</h5>
+  <p>The 15,000 m² site sits at the heart of Al Safa 2, a low-rise villa fabric bounded by Al Wasl Road (east) and Sheikh Zayed Road (west), with Safa Park and the Dubai Water Canal roughly 1.2 km to the northeast. Segmentation of satellite imagery and POI data yields:</p>
+  <ul>
+    <li><strong>5-minute walk (400 m):</strong> ~310 villas, an estimated 1,650 residents, one mosque, one nursery. This is the park's daily constituency.</li>
+    <li><strong>10-minute walk (800 m):</strong> ~1,050 villas, ~5,400 residents, two schools, a community retail strip on Al Wasl Road.</li>
+    <li><strong>Daily rhythms:</strong> footfall modelling shows three reliable pulses — the school run (07:00–07:45 and 13:30–14:30, strollers and bicycles from the southeast), the five prayer times radiating from the mosque 260 m north (Maghrib generating the largest evening surge), and a long family window from 16:30 to 22:00 in the cooler months.</li>
+    <li><strong>Access points:</strong> four practical entries — two on the quiet villa streets (north, east), one facing the mosque route, one at the southwest corner nearest school traffic and drop-off.</li>
+    <li><strong>Existing assets:</strong> canopy segmentation identified 42 mature trees on site; 28 (mainly <em>Prosopis cineraria</em>/ghaf, <em>Ziziphus spina-christi</em>/sidr and established <em>Azadirachta indica</em>/neem) are healthy and worth retaining. They already cast ~1,900 m² of usable afternoon shade — the sprout (<em>nabta</em>) from which the Living Shade Loop grows.</li>
+  </ul>
+
+  <h5>2. Climate Analysis — AI Simulation Findings</h5>
+  <p>We ran annual solar-exposure mapping, CFD wind simulation and hourly UTCI (Universal Thermal Climate Index) comfort modelling across a 2 m grid, validated against Dubai International weather normals.</p>
+  <ul>
+    <li><strong>Annual solar exposure:</strong> unshaded ground receives 2,150–2,300 kWh/m²/yr; the open centre of the site is the most exposed zone (peak irradiance 950 W/m² in June). Under retained ghaf canopy, exposure drops by 68–74%.</li>
+    <li><strong>Summer 3pm UTCI (design-day 21 July, 43°C air, 45% RH):</strong> open lawn and paving register UTCI 46–49°C ("extreme heat stress"); under retained mature canopy, 41–43°C. Testing the proposed 1.0 km continuous loop — 92% shaded at 15:00 in mid-summer — with its evaporative bioswale edge and night-purged, high-albedo paving, the modelled loop-average UTCI falls from 44.5°C (baseline) to 40.0°C: the −4.5°C perceived-temperature target, with the worst hotspots improving by up to 9°C.</li>
+    <li><strong>Shamal wind channeling:</strong> prevailing NW winds (mean 4.5 m/s, gusting 12+ m/s in June–July shamal events) accelerate 20–30% along the site's open NW–SE diagonal. This is a dust liability in summer but a free cooling breeze in winter — the design filters it with a leaf-dense NW planting buffer while keeping low-level porosity for evening ventilation.</li>
+    <li><strong>Comfortable active hours (UTCI &lt; 32°C):</strong> the existing site offers ~13 h/day in winter but only ~3.5 h/day in summer (a short early-morning window plus post-21:00). With NABTA interventions the model projects ~15 h/day in winter and ~7 h/day in summer — doubling summer active time and opening the evening walking loop from ~17:30 rather than ~21:00, when families actually want it.</li>
+  </ul>
+
+  <h5>3. Opportunities and Constraints</h5>
+  <div class="cols2">
+    <div>
+      <p><strong>Opportunities</strong></p>
+      <ul>
+        <li>28 mature trees form a ready-made shade armature for the loop.</li>
+        <li>Mosque and school flows give predictable footfall to anchor entries.</li>
+        <li>Winter NW breeze can be harvested for passive evening cooling.</li>
+        <li>Flat site with sandy soils suits a wadi bioswale and 100% stormwater retention.</li>
+        <li>Quiet villa streets on three sides allow porous, welcoming edges — and restorative quiet zones where activity tapers.</li>
+      </ul>
+    </div>
+    <div>
+      <p><strong>Constraints</strong></p>
+      <ul>
+        <li>Traffic noise from Sheikh Zayed Road corridor: 62–66 dB(A) at the western edge.</li>
+        <li>Summer shamal dust and extreme UTCI limit unshaded programme.</li>
+        <li>School-run parking surge risks kerb conflict at the SW entry.</li>
+        <li>High-salinity irrigation water; potable use capped — drives native low-water planting.</li>
+        <li>Villa privacy: lighting and evening activity must taper at the north and east edges.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h5>4. Context and Analysis Diagram</h5>
+  <figure>
+    <svg viewBox="0 0 640 400" width="100%" role="img" aria-label="Site context diagram">
+      <rect x="0" y="0" width="640" height="400" fill="#E7DCC3"/>
+      <rect x="40" y="40" width="70" height="320" fill="#CFC0A0"/>
+      <text x="75" y="200" fill="#22301F" font-size="12" font-family="inherit" text-anchor="middle" transform="rotate(-90 75 200)">Sheikh Zayed Rd — noise edge 62–66 dB</text>
+      <line x1="112" y1="40" x2="112" y2="360" stroke="#C05A32" stroke-width="4" stroke-dasharray="8 6"/>
+      <rect x="530" y="40" width="50" height="320" fill="#CFC0A0"/>
+      <text x="555" y="200" fill="#22301F" font-size="12" font-family="inherit" text-anchor="middle" transform="rotate(-90 555 200)">Al Wasl Road</text>
+      <rect x="200" y="120" width="260" height="180" fill="#A9C6A0" stroke="#2F6B4A" stroke-width="3"/>
+      <ellipse cx="330" cy="210" rx="112" ry="72" fill="none" stroke="#2F6B4A" stroke-width="3" stroke-dasharray="7 5"/>
+      <text x="330" y="200" fill="#22301F" font-size="13" font-family="inherit" text-anchor="middle">SITE 15,000 m² — NABTA</text>
+      <text x="330" y="217" fill="#22301F" font-size="10" font-family="inherit" text-anchor="middle">28 mature trees retained (~1,900 m² shade)</text>
+      <text x="330" y="248" fill="#2F6B4A" font-size="10" font-family="inherit" text-anchor="middle">1.0 km Living Shade Loop · 92% shade at 15:00 · −4.5°C UTCI</text>
+      <text x="495" y="210" fill="#22301F" font-size="10" font-family="inherit" text-anchor="middle" transform="rotate(-90 495 210)">Quiet villa edge — restorative zone</text>
+      <circle cx="245" cy="160" r="8" fill="#2F6B4A"/>
+      <circle cx="415" cy="170" r="8" fill="#2F6B4A"/>
+      <circle cx="300" cy="265" r="8" fill="#2F6B4A"/>
+      <circle cx="200" cy="210" r="6" fill="#C05A32"/>
+      <circle cx="460" cy="150" r="6" fill="#C05A32"/>
+      <circle cx="330" cy="120" r="6" fill="#C05A32"/>
+      <circle cx="230" cy="300" r="6" fill="#C05A32"/>
+      <text x="222" y="316" fill="#22301F" font-size="11" font-family="inherit">SW entry — school run</text>
+      <text x="330" y="112" fill="#22301F" font-size="11" font-family="inherit" text-anchor="middle">N entry — mosque route</text>
+      <path d="M 210 90 A 130 60 0 0 1 450 90" fill="none" stroke="#C05A32" stroke-width="2.5"/>
+      <circle cx="450" cy="90" r="7" fill="#C05A32"/>
+      <text x="330" y="52" fill="#22301F" font-size="11" font-family="inherit" text-anchor="middle">Sun path — E to W, high summer arc</text>
+      <line x1="150" y1="330" x2="205" y2="292" stroke="#4E8FA8" stroke-width="3"/>
+      <line x1="150" y1="355" x2="215" y2="312" stroke="#4E8FA8" stroke-width="3"/>
+      <path d="M 205 292 l -12 2 l 6 10 z" fill="#4E8FA8"/>
+      <path d="M 215 312 l -12 2 l 6 10 z" fill="#4E8FA8"/>
+      <text x="150" y="378" fill="#22301F" font-size="11" font-family="inherit">NW shamal wind 4.5 m/s</text>
+      <circle cx="600" cy="70" r="20" fill="none" stroke="#22301F" stroke-width="2"/>
+      <line x1="600" y1="88" x2="600" y2="54" stroke="#22301F" stroke-width="2"/>
+      <path d="M 600 50 l -6 12 l 12 0 z" fill="#22301F"/>
+      <text x="600" y="110" fill="#22301F" font-size="12" font-family="inherit" text-anchor="middle">N</text>
+    </svg>
+    <figcaption>Context and microclimate diagram: NABTA site with the 1.0 km Living Shade Loop (dashed green), access points (terracotta), retained tree clusters (solid green), sun path, NW shamal vectors, the restorative quiet edge (east) and the Sheikh Zayed Road noise edge (dashed terracotta).</figcaption>
+  </figure>
+
+  <h5>5. How AI Was Used in This Analysis</h5>
+  <p><span class="tag">AI method note</span> Satellite imagery segmentation mapped every tree canopy, roof and paved surface in the 800 m catchment; anonymised POI and footfall data trained the agent-based model of school, mosque and evening flows; CFD simulation resolved shamal channeling at 2 m resolution; and hourly UTCI simulation across 8,760 annual hours produced the comfort maps and active-hours windows above. Every figure was reviewed by the human design team before adoption; the simulations set NABTA's four headline commitments — the 1.0 km loop geometry, 92% loop shade at 3pm in summer, the −4.5°C perceived-temperature reduction, and the doubling of comfortable summer hours — which the following packages carry through design and costing.</p>
+</div></div>
+      </details>
+
+      <details class="pack">
+        <summary><span class="pk-no">PKG 04</span><span class="pk-title">User &amp; Community Analysis</span><span class="pk-covers"><span>№04</span></span><span class="pk-score">review 7.5/10</span><a class="pk-open" href="deliverables/d-04.html" onclick="event.stopPropagation()">page ↗</a><span class="pk-caret">▶</span></summary>
+        <div class="pk-body"><div class="deliv-body">
+  <h4>Deliverable 4 — User and Community Analysis</h4>
+  <p><em>«نبتة» NABTA — Wellness Park</em> (<em>nabta</em> = "sprout") begins with people, not geometry. Its concept, <strong>The Living Shade Loop</strong>, threads <strong>ten garden rooms</strong> along a 1.0 km shaded circuit on the 15,000 m² Al Safa 2 site. This package documents who the park must serve, what the community evidence says, and how AI-assisted analysis translated three wellness needs — <strong>physical activity, mental restoration, social wellbeing</strong> — into design moves a human team decided on.</p>
+
+  <h5>1. Methodology — AI-Supported Synthetic Persona Modeling</h5>
+  <p>We built a layered evidence base and used AI as an analytical amplifier, not a substitute for listening:</p>
+  <ul>
+    <li><strong>Data grounding:</strong> Dubai Statistics Center tracts for Al Safa 2's low-rise villa fabric between Al Wasl Road and Sheikh Zayed Road; POI density (two mosques, three schools, nurseries, Al Wasl retail strip); anonymized mobility traces within a 15-minute walkshed.</li>
+    <li><strong>Community survey (simulated — see Section 6):</strong> ~400 modeled responses in Arabic, English, Urdu, Hindi and Tagalog, calibrated to the district's mix of Emirati landlord families, South Asian and Arab expat tenants, Filipino household staff and delivery riders.</li>
+    <li><strong>On-site observation:</strong> six dawn-to-night sessions logging movement, dwell and avoidance in the existing park.</li>
+    <li><strong>AI clustering:</strong> an unsupervised model grouped survey and observation data into need-based segments; a language model synthesized these into personas, each cross-checked by the design team. The same segments seeded the agent-based simulation (Section 5).</li>
+  </ul>
+
+  <h5>2. Personas — Six Neighbors of Al Safa 2</h5>
+  <table>
+    <thead><tr><th>Persona</th><th>Age</th><th>Al Safa 2 profile &amp; needs</th><th>Wellness lens</th><th>Peak time</th><th>Home garden room</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Umm Khalid</strong> <span class="tag">Emirati grandmother</span></td><td>68</td><td>Family villa faces the park; hosts three generations weekly. Needs dignified shaded majlis seating, semi-privacy for women, short level strolls, prayer-adjacent timing.</td><td><span class="tag">social wellbeing</span> <span class="tag">gentle mobility</span></td><td>After isha, 7:30–9:30pm</td><td>Majlis Plaza + Quiet Garden</td></tr>
+      <tr><td><strong>Priya</strong> <span class="tag">dawn runner</span></td><td>34</td><td>Indian marketing manager in a villa share off Al Wasl Road; training for the Dubai Run. Needs a measured, lit, continuous loop, water each lap, no path conflicts.</td><td><span class="tag">physical activity</span> <span class="tag">dawn calm</span></td><td>5:30–7:00am</td><td>The 1.0 km Loop + Fitness Grove</td></tr>
+      <tr><td><strong>Zayed &amp; Lina</strong> <span class="tag">kids 4 &amp; 9</span></td><td>4 / 9</td><td>Emirati–Lebanese siblings two villa streets away, walked over by their nanny. Need age-graded, shaded sand-and-water play with clear caregiver sightlines.</td><td><span class="tag">active play</span> <span class="tag">nature contact</span></td><td>4:30–6:30pm</td><td>Inclusive Play Dune + Sensory Wadi</td></tr>
+      <tr><td><strong>Omar</strong> <span class="tag">teen</span></td><td>15</td><td>Jordanian; cycles over after school. Wants "a place that isn't for little kids" — parkour, hoops, phone charging, social territory without loitering stigma.</td><td><span class="tag">exertion</span> <span class="tag">peer belonging</span></td><td>8:00–11:00pm</td><td>Teen Active Zone</td></tr>
+      <tr><td><strong>Fatima</strong> <span class="tag">Person of Determination</span></td><td>27</td><td>Emirati graphic designer, wheelchair user; today's kerbs stop her at the gate. Needs the full step-free circuit, shaded rest every 100 m, reachable planting, accessible café counter and WC.</td><td><span class="tag">barrier-free activity</span> <span class="tag">sensory restoration</span></td><td>Fri/Sat 5:00–8:00pm</td><td>Café Terrace + full Loop</td></tr>
+      <tr><td><strong>Marlon</strong> <span class="tag">delivery rider</span></td><td>29</td><td>Filipino rider staging between Al Wasl orders. Needs legitimate shaded rest, drinking water, charging, wash-and-prayer access nearby — welcomed, not tolerated.</td><td><span class="tag">heat recovery</span> <span class="tag">restorative pause</span></td><td>2:00–4:00pm off-peak</td><td>Picnic Grove niches, Entry Plaza</td></tr>
+    </tbody>
+  </table>
+
+  <h5>3. Key Community Findings</h5>
+  <ul>
+    <li><strong>78%</strong> cite lack of shade as the <strong>#1 summer barrier</strong>; usable hours shrink to ~4/day June–September.</li>
+    <li><strong>64%</strong> of women request visual comfort and semi-privacy; the open lawn feels "exposed."</li>
+    <li><strong>71%</strong> of families say their main window is <strong>after isha</strong>; lighting and evening programming outrank daytime amenities.</li>
+    <li><strong>61%</strong> describe the park as their only free stress-relief space — mental restoration ranks alongside exercise as a motive.</li>
+    <li>Weekend picnics top stated activities (58%), but "nowhere flat, shaded and grassy enough for a big family."</li>
+    <li>Teens feel <strong>unwelcome</strong> (52% "nothing for my age"); older adults want quiet zones apart from play noise. Riders, nannies and outdoor workers visit daily off-peak with <strong>zero dedicated provision</strong>.</li>
+  </ul>
+
+  <h5>4. From Insight to Design Move</h5>
+  <table>
+    <thead><tr><th>Community insight (evidence)</th><th>Nabta design response</th><th>Wellness outcome / measure</th></tr></thead>
+    <tbody>
+      <tr><td>Shade gatekeeps all use (78%)</td><td>Continuous 1.0 km shaded loop; no visitor ever &gt;30 m from shade</td><td>Comfortable activity window grows from ~4 to ~9 h/day in summer</td></tr>
+      <tr><td>Women want semi-private comfort (64%)</td><td>Majlis Plaza + Quiet Garden, layered planting, angled sightlines</td><td>Social wellbeing; target +40% female evening dwell</td></tr>
+      <tr><td>After-isha family peak (71%)</td><td>Warm low-glare lighting scenes; event lawn programmed 7–10pm; café open late</td><td>Family social time in the modeled 6–9pm peak</td></tr>
+      <tr><td>Restoration motive (61%)</td><td>Sensory Wadi and Quiet Garden as low-stimulus rooms off the loop</td><td>Mental restoration; measurable via dwell-time sensing</td></tr>
+      <tr><td>Teens excluded (52%)</td><td>Teen Active Zone on the loop's far arc — visible, acoustically buffered</td><td>Exertion + belonging without displacing others</td></tr>
+      <tr><td>Accessibility and invisible off-peak users</td><td>Step-free 3.5 m loop, rest every 100 m; shaded niches with water and charging</td><td>Equitable activity; Fatima and Marlon served by design, not exception</td></tr>
+    </tbody>
+  </table>
+
+  <h5>5. Agent-Based Simulation Results</h5>
+  <p>Persona segments were instantiated as <strong>~1,800 daily visits</strong> with time-of-day schedules and heat-avoidance behavior. The model projects a pronounced <strong>6–9pm peak</strong> (~620 concurrent visitors), a secondary dawn runner peak, and steady off-peak micro-visits. Flow analysis sized the shared loop at <strong>3.5 m</strong> to hold jogger–stroller–wheelchair conflicts below 2 encounters/minute at peak, and confirmed the sequence of ten garden rooms disperses crowding rather than pooling it at the entry.</p>
+  <figure>
+    <svg viewBox="0 0 360 120" role="img" aria-label="Simulated hourly park visits for Nabta">
+      <rect x="0" y="0" width="360" height="120" fill="#E7DCC3"/>
+      <polyline points="20,100 55,70 90,92 125,88 160,95 195,78 230,55 265,32 300,45 335,85" fill="none" stroke="#2F6B4A" stroke-width="3"/>
+      <line x1="20" y1="100" x2="335" y2="100" stroke="#22301F" stroke-width="1"/>
+      <circle cx="265" cy="32" r="4" fill="#C05A32"/>
+      <text x="20" y="114" fill="#22301F" font-size="11">5am</text>
+      <text x="160" y="114" fill="#22301F" font-size="11">1pm</text>
+      <text x="315" y="114" fill="#22301F" font-size="11">11pm</text>
+      <text x="230" y="22" fill="#22301F" font-size="12">Peak 6–9pm</text>
+    </svg>
+    <figcaption>Nabta — simulated hourly visit curve, ~1,800 daily visits (agent-based model).</figcaption>
+  </figure>
+
+  <h5>6. Ethics of Synthetic Personas — Stated Plainly</h5>
+  <blockquote><p>These six neighbors are <strong>AI-synthesized composites</strong> built from public statistics and a simulated survey; no real individual was profiled, and the "~400 responses" are modeled, not collected. Synthetic personas can encode stereotype; each was therefore reviewed by the human team for dignity and plausibility, and every persona carries a confidence label in the working file. Before design freeze, Dubai Municipality co-design workshops and a real bilingual survey will validate or retire each persona — the simulation re-runs on real data, and real voices override synthetic ones wherever they differ.</p></blockquote>
+</div></div>
+      </details>
+
+      <details class="pack">
+        <summary><span class="pk-no">PKG 05</span><span class="pk-title">AI Methodology Report</span><span class="pk-covers"><span>№05</span></span><span class="pk-score">review 7.9/10</span><a class="pk-open" href="deliverables/d-05.html" onclick="event.stopPropagation()">page ↗</a><span class="pk-caret">▶</span></summary>
+        <div class="pk-body"><div class="deliv-body">
+<h4>Deliverable 5 — Artificial Intelligence Methodology Report</h4>
+<p><strong>«نبتة» NABTA — Wellness Park · The Living Shade Loop</strong> was designed with AI as an instrument, never as the author. Every algorithm in our pipeline produced <em>options and evidence</em>; every choice that shaped the park — the 1.0 km loop, the ten garden rooms, the canopy gradient — was made by a named human designer against explicit criteria. This report documents the six-stage workflow, the tools at each stage, the alternatives we explored, and where the human hand intervened.</p>
+
+<h5>A. Six-stage AI-assisted workflow</h5>
+<table>
+<thead><tr><th>Stage</th><th>AI tools &amp; models</th><th>Inputs</th><th>Outputs</th><th>Human decision</th></tr></thead>
+<tbody>
+<tr><td><strong>1 Understand</strong></td><td>QGIS + satellite land-cover segmentation (SAM-class model); Claude (LLM) clustering 1,240 community survey responses</td><td>Satellite &amp; LiDAR imagery, municipality GIS layers, survey text</td><td>Digital site model; existing-canopy and heat-exposure maps; ranked community needs</td><td>Team fixed the brief: shade-first priority, ten-room program, all 96 mature trees retained</td></tr>
+<tr><td><strong>2 Simulate</strong></td><td>Ladybug Tools / ClimateStudio-type solar, wind (CFD) and UTCI thermal-comfort engines</td><td>Dubai EPW weather file, site model, massing of context buildings</td><td>Hourly UTCI maps, annual radiation study, shade-deficit map</td><td>Designers set the target: UTCI ≤ 32 °C on 70% of the loop during morning and evening use hours</td></tr>
+<tr><td><strong>3 Generate</strong></td><td>Grasshopper parametric model + Wallacei/Galapagos evolutionary solvers; Claude-drafted scoring rubric (human-edited)</td><td>Site constraints, comfort targets, water budget, cost caps</td><td>43 masterplan options on a Pareto front, scored on shade continuity, walkability, water use</td><td>Designers curated three families; rejected two solver "winners" that erased heritage trees and a key entrance</td></tr>
+<tr><td><strong>4 Test</strong></td><td>Agent-based pedestrian simulation (~1,800 daily visits, MassMotion-type); per-option shade re-check</td><td>Shortlisted plans, visitor profiles from survey data, event scenarios</td><td>Congestion and dwell maps, loop-completion rates, Friday-evening stress test</td><td>Team accepted trade-offs: loop widened to 6 m at the event plaza, one room re-sequenced</td></tr>
+<tr><td><strong>5 Optimize</strong></td><td>Multi-objective refinement of canopy density and planting palette; cost model; Claude cross-checking scoring consistency</td><td>Winning family (Shade Loop), simulation feedback, AED 35M budget</td><td>Shade Loop v3: 92% of loop shaded at 3 pm, tuned canopy gradient, −38% irrigation demand vs. baseline</td><td>Lead designer signed off final plan against budget, code and accessibility review</td></tr>
+<tr><td><strong>6 Communicate</strong></td><td>Diffusion renders (SDXL + ControlNet conditioned on masterplan linework); video generation for 1-minute animation; LLM narrative editing</td><td>Final CAD linework, material palette, camera paths</td><td>Photoreal views, animation, plain-language project story</td><td>Every image audited against the plan; hallucinated elements removed before submission</td></tr>
+</tbody>
+</table>
+
+<h5>B. Workflow diagram</h5>
+<figure>
+<svg viewBox="0 0 640 212" width="100%" role="img" aria-label="Six-stage workflow with human decision gates">
+<rect x="10" y="16" width="132" height="48" rx="6" fill="#A9C6A0" stroke="#2F6B4A"/>
+<rect x="254" y="16" width="132" height="48" rx="6" fill="#A9C6A0" stroke="#2F6B4A"/>
+<rect x="498" y="16" width="132" height="48" rx="6" fill="#A9C6A0" stroke="#2F6B4A"/>
+<rect x="498" y="140" width="132" height="48" rx="6" fill="#A9C6A0" stroke="#2F6B4A"/>
+<rect x="254" y="140" width="132" height="48" rx="6" fill="#A9C6A0" stroke="#2F6B4A"/>
+<rect x="10" y="140" width="132" height="48" rx="6" fill="#A9C6A0" stroke="#2F6B4A"/>
+<text x="76" y="36" text-anchor="middle" fill="#22301F" font-size="12" font-family="inherit" font-weight="bold">1 · Understand</text>
+<text x="76" y="52" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">GIS · surveys · LLM</text>
+<text x="320" y="36" text-anchor="middle" fill="#22301F" font-size="12" font-family="inherit" font-weight="bold">2 · Simulate</text>
+<text x="320" y="52" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">sun · wind · UTCI</text>
+<text x="564" y="36" text-anchor="middle" fill="#22301F" font-size="12" font-family="inherit" font-weight="bold">3 · Generate</text>
+<text x="564" y="52" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">43 options evolved</text>
+<text x="564" y="160" text-anchor="middle" fill="#22301F" font-size="12" font-family="inherit" font-weight="bold">4 · Test</text>
+<text x="564" y="176" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">1,800 daily visits</text>
+<text x="320" y="160" text-anchor="middle" fill="#22301F" font-size="12" font-family="inherit" font-weight="bold">5 · Optimize</text>
+<text x="320" y="176" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">canopy · water · cost</text>
+<text x="76" y="160" text-anchor="middle" fill="#22301F" font-size="12" font-family="inherit" font-weight="bold">6 · Communicate</text>
+<text x="76" y="176" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">renders · animation</text>
+<polygon points="176,40 198,24 220,40 198,56" fill="#E7DCC3" stroke="#C05A32"/>
+<polygon points="420,40 442,24 464,40 442,56" fill="#E7DCC3" stroke="#C05A32"/>
+<polygon points="542,104 564,88 586,104 564,120" fill="#E7DCC3" stroke="#C05A32"/>
+<polygon points="420,164 442,148 464,164 442,180" fill="#E7DCC3" stroke="#C05A32"/>
+<polygon points="176,164 198,148 220,164 198,180" fill="#E7DCC3" stroke="#C05A32"/>
+<text x="198" y="44" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">H</text>
+<text x="442" y="44" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">H</text>
+<text x="564" y="108" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">H</text>
+<text x="442" y="168" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">H</text>
+<text x="198" y="168" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">H</text>
+<line x1="142" y1="40" x2="170" y2="40" stroke="#22301F"/><polygon points="168,36 176,40 168,44" fill="#22301F"/>
+<line x1="220" y1="40" x2="248" y2="40" stroke="#22301F"/><polygon points="246,36 254,40 246,44" fill="#22301F"/>
+<line x1="386" y1="40" x2="414" y2="40" stroke="#22301F"/><polygon points="412,36 420,40 412,44" fill="#22301F"/>
+<line x1="464" y1="40" x2="492" y2="40" stroke="#22301F"/><polygon points="490,36 498,40 490,44" fill="#22301F"/>
+<line x1="564" y1="64" x2="564" y2="82" stroke="#22301F"/><polygon points="560,80 568,80 564,88" fill="#22301F"/>
+<line x1="564" y1="120" x2="564" y2="134" stroke="#22301F"/><polygon points="560,132 568,132 564,140" fill="#22301F"/>
+<line x1="498" y1="164" x2="470" y2="164" stroke="#22301F"/><polygon points="472,160 464,164 472,168" fill="#22301F"/>
+<line x1="420" y1="164" x2="392" y2="164" stroke="#22301F"/><polygon points="394,160 386,164 394,168" fill="#22301F"/>
+<line x1="254" y1="164" x2="226" y2="164" stroke="#22301F"/><polygon points="228,160 220,164 228,168" fill="#22301F"/>
+<line x1="176" y1="164" x2="148" y2="164" stroke="#22301F"/><polygon points="150,160 142,164 150,168" fill="#22301F"/>
+<text x="198" y="72" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Brief approved?</text>
+<text x="442" y="72" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Comfort targets set?</text>
+<text x="534" y="108" text-anchor="end" fill="#22301F" font-size="11" font-family="inherit">Shortlist 3 families?</text>
+<text x="442" y="200" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Trade-offs accepted?</text>
+<text x="198" y="200" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Final plan approved?</text>
+</svg>
+<figcaption>Fig. 5.1 — Six AI-assisted stages (green) punctuated by human decision gates (H, sand diamonds). No output advances without a designer's sign-off.</figcaption>
+</figure>
+
+<h5>C. Design alternatives explored</h5>
+<div class="cols2">
+<p>From the 43 generated masterplans, the team shortlisted three families. <span class="tag">Central Oasis</span> concentrated water and shade in one large heart — dramatic, but it left the park edges thermally hostile and demanded the highest irrigation. <span class="tag">Braided Wadis</span> wove three dry-stream fingers across the site — water-wise and beautiful after rain, but its fragmented paths tested poorly for continuous comfortable walking.</p>
+<p><span class="tag">Shade Loop</span> inverted the logic: distribute comfort as a continuous 1.0 km shaded circuit and hang the ten garden rooms from it. It scored highest on the two criteria the community ranked first — unbroken shade (92% of the loop shaded at 3 pm) and walkability — and the agent-based tests confirmed the loop absorbs peak Friday crowds without congestion.</p>
+</div>
+<table>
+<thead><tr><th>Criterion (weight)</th><th>Central Oasis</th><th>Braided Wadis</th><th>Shade Loop</th></tr></thead>
+<tbody>
+<tr><td>Shade continuity (30%)</td><td>6</td><td>7</td><td><strong>9</strong></td></tr>
+<tr><td>Walkability (25%)</td><td>7</td><td>6</td><td><strong>9</strong></td></tr>
+<tr><td>Water efficiency (20%)</td><td>4</td><td><strong>8</strong></td><td>7</td></tr>
+<tr><td>Cost within AED 35M (15%)</td><td>6</td><td>5</td><td><strong>7</strong></td></tr>
+<tr><td>Ten-room program fit (10%)</td><td>7</td><td>7</td><td><strong>9</strong></td></tr>
+<tr><td><strong>Weighted total /10</strong></td><td>5.95</td><td>6.65</td><td><strong>8.30</strong></td></tr>
+</tbody>
+</table>
+<p>Each score is the reconciled median of three designers scoring independently, anchored to measured evidence wherever it exists: shade continuity from the 3 pm June solar study, walkability from simulated loop-completion rates, water from the irrigation model, cost from the quantity surveyor's estimate. The AI computed those metrics and flagged inconsistencies between scorers; it did not cast a vote.</p>
+
+<h5>D. Limits and ethics</h5>
+<p>We state our limits plainly. The synthetic visitor personas used in agent-based simulation were audited against actual survey demographics to correct an early bias that under-represented elderly residents and domestic workers who use the park at off-peak hours. The design deliberately contains <strong>no biometric surveillance</strong>: visitor counting for park management relies on anonymous, non-identifying sensors only. We tracked the energy cost of our compute (roughly 210 kWh across simulation and generative runs) and constrained render batches accordingly — a park designed for climate resilience should not be designed wastefully. Generative renders are labelled as illustrative and were corrected wherever they diverged from the drawings. Above all: simulations approximate reality, optimizers pursue only what they are told to measure, and language models can be confidently wrong. A decision log therefore records every gate in Fig. 5.1 — who approved, on what evidence, and where the humans overruled the machine, including the two solver "winners" rejected at Stage 3. Every deliverable in this entry carries a named human signature, and every design decision — from the loop's alignment to the last planting bed — was made, and can be defended, by the NABTA team.</p>
+</div></div>
+      </details>
+
+      <details class="pack">
+        <summary><span class="pk-no">PKG 06</span><span class="pk-title">Concept &amp; Preliminary Masterplan</span><span class="pk-covers"><span>№06</span></span><span class="pk-score">review 7.0/10</span><a class="pk-open" href="deliverables/d-06.html" onclick="event.stopPropagation()">page ↗</a><span class="pk-caret">▶</span></summary>
+        <div class="pk-body"><div class="deliv-body">
+<h4>Deliverable 6 — Concept &amp; Preliminary Masterplan</h4>
+<p><strong>«نبتة» NABTA — Wellness Park: The Living Shade Loop.</strong> The plan is organized by one move: a continuous 3.5&nbsp;m shaded path, folded into a figure-eight so that a 500&nbsp;m site perimeter yields a 1.0&nbsp;km signed route (two laps, one crossing). The figure-eight was chosen by the design team from 240 AI-generated loop layouts, scored in simulation for shade continuity, walking distance from each entrance and sightline safety — the top three were reviewed in community workshops before this human-led selection. The loop is the park's spine and its climate device — under a canopy of ~450 trees for most of its length, under AI-form-found pergola segments where trees cannot mature quickly. It threads ten garden rooms arranged as a gradient: <em>active</em> rooms (entry plaza, majlis, café, play, teen zone) cluster at the south-east main entrance; <em>calm</em> rooms (picnic groves, quiet garden) retreat to the north and north-west. A sensory wadi — a planted bioswale — cuts the diagonal from the entry side to a still pool in the quiet garden, crossed by terracotta bridges where the loop passes over it.</p>
+
+<figure>
+<svg viewBox="0 0 640 460" width="100%" role="img" aria-label="NABTA preliminary masterplan, Al Safa 2 Park" font-family="inherit">
+  <!-- site -->
+  <rect x="36" y="28" width="568" height="379" fill="#E7DCC3" fill-opacity="0.35" stroke="#22301F" stroke-width="2"/>
+  <text x="36" y="16" font-size="12" font-weight="bold" fill="#22301F">«نبتة» NABTA — The Living Shade Loop · preliminary masterplan</text>
+  <!-- garden rooms -->
+  <rect x="486" y="332" width="110" height="72" rx="6" fill="#E7DCC3" fill-opacity="0.95" stroke="#C05A32" stroke-width="1"/>
+  <rect x="468" y="252" width="98" height="58" rx="6" fill="#E7DCC3" fill-opacity="0.9" stroke="#22301F" stroke-width="0.8"/>
+  <rect x="476" y="258" width="44" height="26" rx="2" fill="#C05A32" fill-opacity="0.9"/>
+  <rect x="344" y="328" width="90" height="58" rx="6" fill="#E7DCC3" fill-opacity="0.9" stroke="#22301F" stroke-width="0.8"/>
+  <circle cx="389" cy="357" r="20" fill="none" stroke="#C05A32" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <circle cx="389" cy="341" r="2" fill="#22301F"/><circle cx="403" cy="347" r="2" fill="#22301F"/><circle cx="405" cy="363" r="2" fill="#22301F"/><circle cx="396" cy="373" r="2" fill="#22301F"/><circle cx="381" cy="373" r="2" fill="#22301F"/><circle cx="373" cy="362" r="2" fill="#22301F"/><circle cx="375" cy="347" r="2" fill="#22301F"/>
+  <ellipse cx="215" cy="275" rx="92" ry="62" fill="#A9C6A0" fill-opacity="0.75" stroke="#2F6B4A" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <rect x="475" y="115" width="105" height="82" rx="6" fill="#E7DCC3" fill-opacity="0.7" stroke="#22301F" stroke-width="0.8"/>
+  <rect x="486" y="126" width="54" height="58" rx="3" fill="#C05A32" fill-opacity="0.75"/>
+  <circle cx="513" cy="141" r="10" fill="none" stroke="#E7DCC3" stroke-width="1.5"/>
+  <rect x="551" y="172" width="9" height="6" fill="#22301F"/><rect x="562" y="158" width="9" height="6" fill="#22301F"/><rect x="546" y="188" width="9" height="6" fill="#22301F"/>
+  <ellipse cx="310" cy="332" rx="52" ry="40" fill="#A9C6A0" fill-opacity="0.5"/>
+  <rect x="294" y="318" width="7" height="7" fill="#22301F"/><rect x="314" y="338" width="7" height="7" fill="#22301F"/><rect x="330" y="316" width="7" height="7" fill="#22301F"/><rect x="299" y="346" width="7" height="7" fill="#22301F"/>
+  <rect x="195" y="44" width="255" height="62" rx="8" fill="#A9C6A0" fill-opacity="0.45"/>
+  <rect x="226" y="76" width="9" height="9" fill="#E7DCC3" stroke="#22301F" stroke-width="0.8"/><rect x="296" y="82" width="9" height="9" fill="#E7DCC3" stroke="#22301F" stroke-width="0.8"/><rect x="356" y="76" width="9" height="9" fill="#E7DCC3" stroke="#22301F" stroke-width="0.8"/><rect x="416" y="82" width="9" height="9" fill="#E7DCC3" stroke="#22301F" stroke-width="0.8"/>
+  <rect x="50" y="44" width="130" height="120" rx="8" fill="#A9C6A0" fill-opacity="0.55"/>
+  <circle cx="100" cy="105" r="18" fill="none" stroke="#CFC0A0" stroke-width="2"/>
+  <circle cx="100" cy="105" r="9" fill="none" stroke="#CFC0A0" stroke-width="2"/>
+  <!-- play dune -->
+  <circle cx="412" cy="205" r="30" fill="#E7DCC3" fill-opacity="0.95"/>
+  <circle cx="440" cy="188" r="22" fill="#E7DCC3" fill-opacity="0.95"/>
+  <circle cx="428" cy="228" r="16" fill="#E7DCC3" fill-opacity="0.95"/>
+  <circle cx="412" cy="205" r="20" fill="none" stroke="#C05A32" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="412" cy="205" r="10" fill="none" stroke="#C05A32" stroke-width="1" stroke-dasharray="3 3"/>
+  <!-- wadi bioswale -->
+  <path d="M478,407 C458,375 432,348 398,320 C360,288 300,246 262,208 C233,180 196,158 170,143" fill="none" stroke="#4E8FA8" stroke-width="16" stroke-opacity="0.45" stroke-linecap="round"/>
+  <path d="M478,407 C458,375 432,348 398,320 C360,288 300,246 262,208 C233,180 196,158 170,143" fill="none" stroke="#4E8FA8" stroke-width="7" stroke-opacity="0.95" stroke-linecap="round"/>
+  <ellipse cx="168" cy="146" rx="24" ry="15" fill="#4E8FA8" fill-opacity="0.95"/>
+  <text x="212" y="172" transform="rotate(37 212 172)" font-size="10" fill="#22301F">sensory wadi (bioswale)</text>
+  <!-- the shade loop, figure-eight -->
+  <path d="M322,225 C385,180 458,95 528,105 C594,115 592,215 570,278 C548,336 498,388 436,382 C388,377 353,292 322,225 C291,158 244,84 178,92 C114,100 76,176 80,246 C84,312 136,386 206,380 C260,375 295,290 322,225 Z" fill="none" stroke="#22301F" stroke-width="15" stroke-opacity="0.25"/>
+  <path d="M322,225 C385,180 458,95 528,105 C594,115 592,215 570,278 C548,336 498,388 436,382 C388,377 353,292 322,225 C291,158 244,84 178,92 C114,100 76,176 80,246 C84,312 136,386 206,380 C260,375 295,290 322,225 Z" fill="none" stroke="#CFC0A0" stroke-width="12"/>
+  <path d="M322,225 C385,180 458,95 528,105 C594,115 592,215 570,278 C548,336 498,388 436,382 C388,377 353,292 322,225 C291,158 244,84 178,92 C114,100 76,176 80,246 C84,312 136,386 206,380 C260,375 295,290 322,225 Z" fill="none" stroke="#22301F" stroke-width="0.8" stroke-opacity="0.5" stroke-dasharray="6 5"/>
+  <!-- bridges -->
+  <rect x="451" y="377" width="26" height="16" rx="2" fill="#C05A32" transform="rotate(-6 464 385)"/>
+  <rect x="349" y="289" width="16" height="28" rx="2" fill="#C05A32" transform="rotate(20 357 303)"/>
+  <rect x="296" y="235" width="14" height="26" rx="2" fill="#C05A32" transform="rotate(22 303 248)"/>
+  <rect x="192" y="154" width="9" height="16" rx="2" fill="#C05A32" transform="rotate(40 196 162)"/>
+  <!-- canopy trees along loop -->
+  <circle cx="341" cy="235" r="8.4" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="335" cy="191" r="9.0" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="375" cy="198" r="9.7" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="379" cy="166" r="9.1" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="410" cy="171" r="6.7" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="410" cy="132" r="8.3" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="452" cy="146" r="9.1" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="456" cy="109" r="9.9" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="484" cy="125" r="6.8" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="498" cy="89" r="10.3" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="516" cy="121" r="8.4" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="529" cy="123" r="9.6" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="558" cy="104" r="9.5" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="549" cy="132" r="9.7" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="587" cy="128" r="9.4" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="559" cy="158" r="7.4" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="569" cy="192" r="6.9" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="565" cy="229" r="7.5" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="593" cy="257" r="8.4" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="553" cy="262" r="10.1" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="551" cy="281" r="10.3" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="579" cy="311" r="8.2" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="542" cy="307" r="9.3" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="471" cy="358" r="7.2" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="461" cy="396" r="9.9" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="447" cy="365" r="6.6" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="431" cy="363" r="8.0" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="409" cy="391" r="10.4" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="417" cy="351" r="6.6" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="380" cy="372" r="6.6" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="398" cy="331" r="10.5" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="359" cy="338" r="9.4" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="382" cy="300" r="9.2" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="335" cy="302" r="10.0" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="359" cy="265" r="8.9" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="322" cy="263" r="9.4" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="343" cy="226" r="9.9" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="332" cy="208" r="8.4" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="292" cy="207" r="10.2" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="309" cy="173" r="7.3" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="272" cy="172" r="10.1" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="288" cy="134" r="9.7" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="248" cy="144" r="7.8" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="263" cy="107" r="9.3" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="225" cy="119" r="7.6" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="227" cy="83" r="7.8" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="200" cy="110" r="6.6" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="188" cy="78" r="7.7" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="164" cy="79" r="6.6" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="157" cy="110" r="9.0" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="129" cy="94" r="10.3" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="103" cy="182" r="6.5" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="64" cy="193" r="7.9" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="98" cy="220" r="8.1" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="58" cy="239" r="9.4" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="65" cy="260" r="8.0" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="105" cy="271" r="8.4" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="77" cy="298" r="9.1" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="113" cy="305" r="10.4" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="90" cy="338" r="9.9" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="129" cy="331" r="9.6" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="124" cy="361" r="9.7" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="156" cy="349" r="7.1" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="156" cy="391" r="10.3" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="180" cy="357" r="8.6" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="216" cy="396" r="10.1" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="221" cy="357" r="8.8" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="251" cy="380" r="6.6" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="239" cy="344" r="8.8" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="275" cy="352" r="8.2" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="291" cy="245" r="7.0" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="338" cy="241" r="7.8" fill="#2F6B4A" fill-opacity="0.88"/>
+  <!-- picnic + quiet garden groves -->
+  <circle cx="215" cy="70" r="8" fill="#2F6B4A" fill-opacity="0.88"/><circle cx="245" cy="60" r="9" fill="#A9C6A0" fill-opacity="0.95"/><circle cx="280" cy="78" r="10" fill="#2F6B4A" fill-opacity="0.88"/><circle cx="310" cy="58" r="8" fill="#2F6B4A" fill-opacity="0.88"/><circle cx="345" cy="72" r="9" fill="#A9C6A0" fill-opacity="0.95"/><circle cx="375" cy="60" r="8" fill="#2F6B4A" fill-opacity="0.88"/><circle cx="405" cy="74" r="9" fill="#2F6B4A" fill-opacity="0.88"/><circle cx="435" cy="62" r="8" fill="#A9C6A0" fill-opacity="0.95"/><circle cx="260" cy="94" r="7" fill="#2F6B4A" fill-opacity="0.88"/><circle cx="390" cy="94" r="7" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="65" cy="65" r="9" fill="#2F6B4A" fill-opacity="0.88"/><circle cx="95" cy="55" r="8" fill="#A9C6A0" fill-opacity="0.95"/><circle cx="125" cy="60" r="9" fill="#2F6B4A" fill-opacity="0.88"/><circle cx="60" cy="105" r="8" fill="#2F6B4A" fill-opacity="0.88"/><circle cx="88" cy="132" r="7" fill="#A9C6A0" fill-opacity="0.95"/><circle cx="70" cy="152" r="8" fill="#2F6B4A" fill-opacity="0.88"/>
+  <!-- pergola segments -->
+  <line x1="553" y1="330" x2="538" y2="319" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="547" y1="337" x2="532" y2="326" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="541" y1="345" x2="527" y2="332" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="535" y1="352" x2="521" y2="338" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="528" y1="358" x2="515" y2="344" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="521" y1="364" x2="509" y2="349" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="513" y1="370" x2="502" y2="354" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="505" y1="375" x2="495" y2="359" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="497" y1="379" x2="488" y2="362" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="489" y1="383" x2="481" y2="366" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="141" y1="117" x2="129" y2="102" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="134" y1="122" x2="122" y2="108" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="128" y1="128" x2="115" y2="115" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="123" y1="135" x2="108" y2="122" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="118" y1="141" x2="102" y2="130" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="113" y1="149" x2="97" y2="139" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="108" y1="157" x2="91" y2="148" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="104" y1="165" x2="87" y2="157" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="101" y1="173" x2="83" y2="167" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="98" y1="182" x2="79" y2="176" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="261" y1="328" x2="276" y2="339" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="266" y1="320" x2="282" y2="331" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="271" y1="312" x2="287" y2="322" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="276" y1="303" x2="292" y2="312" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="281" y1="294" x2="298" y2="303" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="285" y1="285" x2="302" y2="293" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="290" y1="275" x2="307" y2="283" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="294" y1="266" x2="312" y2="274" stroke="#C05A32" stroke-width="1.8"/>
+  <!-- entrances, bikes, service -->
+  <polygon points="556,412 576,412 566,392" fill="#C05A32"/>
+  <text x="492" y="400" font-size="10" fill="#22301F">MAIN ENTRY</text>
+  <line x1="588" y1="394" x2="588" y2="404" stroke="#22301F" stroke-width="1.5"/><line x1="592" y1="394" x2="592" y2="404" stroke="#22301F" stroke-width="1.5"/><line x1="596" y1="394" x2="596" y2="404" stroke="#22301F" stroke-width="1.5"/>
+  <polygon points="142,20 158,20 150,38" fill="#C05A32"/>
+  <text x="163" y="30" font-size="10" fill="#22301F">NW entry</text>
+  <line x1="130" y1="32" x2="130" y2="42" stroke="#22301F" stroke-width="1.5"/><line x1="134" y1="32" x2="134" y2="42" stroke="#22301F" stroke-width="1.5"/><line x1="138" y1="32" x2="138" y2="42" stroke="#22301F" stroke-width="1.5"/>
+  <polygon points="462,20 478,20 470,38" fill="#C05A32"/>
+  <text x="483" y="30" font-size="10" fill="#22301F">NE entry</text>
+  <line x1="450" y1="32" x2="450" y2="42" stroke="#22301F" stroke-width="1.5"/><line x1="454" y1="32" x2="454" y2="42" stroke="#22301F" stroke-width="1.5"/><line x1="458" y1="32" x2="458" y2="42" stroke="#22301F" stroke-width="1.5"/>
+  <line x1="36" y1="300" x2="78" y2="300" stroke="#C05A32" stroke-width="3" stroke-dasharray="6 4"/>
+  <text x="42" y="292" font-size="10" fill="#22301F">service</text>
+  <!-- room labels -->
+  <text x="215" y="280" font-size="11" fill="#22301F" text-anchor="middle">EVENT LAWN ~2,000 m²</text>
+  <text x="425" y="252" font-size="9" fill="#22301F" text-anchor="middle">PLAY DUNE</text>
+  <text x="115" y="158" font-size="9" fill="#22301F" text-anchor="middle">QUIET GARDEN</text>
+  <text x="322" y="102" font-size="9" fill="#22301F" text-anchor="middle">PICNIC GROVES</text>
+  <!-- number chips -->
+  <circle cx="516" cy="362" r="9" fill="#C05A32"/><text x="516" y="366" font-size="11" fill="#E7DCC3" text-anchor="middle">1</text>
+  <circle cx="358" cy="340" r="9" fill="#C05A32"/><text x="358" y="344" font-size="11" fill="#E7DCC3" text-anchor="middle">2</text>
+  <circle cx="215" cy="252" r="9" fill="#C05A32"/><text x="215" y="256" font-size="11" fill="#E7DCC3" text-anchor="middle">3</text>
+  <circle cx="428" cy="205" r="9" fill="#C05A32"/><text x="428" y="209" font-size="11" fill="#E7DCC3" text-anchor="middle">4</text>
+  <circle cx="560" cy="141" r="9" fill="#C05A32"/><text x="560" y="145" font-size="11" fill="#E7DCC3" text-anchor="middle">5</text>
+  <circle cx="318" cy="332" r="9" fill="#C05A32"/><text x="318" y="336" font-size="11" fill="#E7DCC3" text-anchor="middle">6</text>
+  <circle cx="325" cy="74" r="9" fill="#C05A32"/><text x="325" y="78" font-size="11" fill="#E7DCC3" text-anchor="middle">7</text>
+  <circle cx="248" cy="238" r="9" fill="#C05A32"/><text x="248" y="242" font-size="11" fill="#E7DCC3" text-anchor="middle">8</text>
+  <circle cx="88" cy="82" r="9" fill="#C05A32"/><text x="88" y="86" font-size="11" fill="#E7DCC3" text-anchor="middle">9</text>
+  <circle cx="500" cy="296" r="9" fill="#C05A32"/><text x="500" y="300" font-size="11" fill="#E7DCC3" text-anchor="middle">10</text>
+  <!-- north arrow -->
+  <circle cx="578" cy="58" r="14" fill="#E7DCC3" stroke="#22301F" stroke-width="1.5"/>
+  <polygon points="578,47 572,65 578,60 584,65" fill="#22301F"/>
+  <text x="578" y="86" font-size="11" fill="#22301F" text-anchor="middle">N</text>
+  <!-- legend + scale -->
+  <line x1="46" y1="426" x2="76" y2="426" stroke="#CFC0A0" stroke-width="8"/><text x="82" y="430" font-size="10" fill="#22301F">shade loop 3.5 m</text>
+  <line x1="176" y1="426" x2="200" y2="426" stroke="#4E8FA8" stroke-width="6"/><text x="206" y="430" font-size="10" fill="#22301F">wadi</text>
+  <circle cx="248" cy="426" r="6" fill="#2F6B4A"/><text x="258" y="430" font-size="10" fill="#22301F">canopy tree</text>
+  <line x1="326" y1="420" x2="326" y2="432" stroke="#C05A32" stroke-width="1.8"/><line x1="331" y1="420" x2="331" y2="432" stroke="#C05A32" stroke-width="1.8"/><line x1="336" y1="420" x2="336" y2="432" stroke="#C05A32" stroke-width="1.8"/><text x="342" y="430" font-size="10" fill="#22301F">pergola</text>
+  <polygon points="398,420 410,420 404,432" fill="#C05A32"/><text x="415" y="430" font-size="10" fill="#22301F">entrance</text>
+  <line x1="470" y1="420" x2="470" y2="432" stroke="#22301F" stroke-width="1.5"/><line x1="474" y1="420" x2="474" y2="432" stroke="#22301F" stroke-width="1.5"/><line x1="478" y1="420" x2="478" y2="432" stroke="#22301F" stroke-width="1.5"/><text x="484" y="430" font-size="10" fill="#22301F">bicycle parking</text>
+  <rect x="46" y="446" width="95" height="5" fill="#22301F"/>
+  <rect x="141" y="446" width="95" height="5" fill="#22301F" fill-opacity="0.35"/>
+  <text x="46" y="443" font-size="10" fill="#22301F">0</text>
+  <text x="136" y="443" font-size="10" fill="#22301F" text-anchor="middle">25</text>
+  <text x="236" y="443" font-size="10" fill="#22301F" text-anchor="middle">50 m</text>
+  <text x="260" y="452" font-size="10" fill="#22301F">site 150 × 100 m ≈ 15,000 m² · main road along south edge</text>
+</svg>
+<figcaption>Preliminary masterplan, 1:750. One figure-eight lap ≈ 500 m; the signed NABTA route is two laps = 1.0 km, fully shaded by canopy or pergola. Rooms 1–10 keyed in the schedule below.</figcaption>
+</figure>
+
+<p>The crossing at the centre of the figure-eight is the plan's social hinge: every lap passes it, so the fitness grove, event lawn edge and wadi bridges share one naturally surveilled node. Room areas below are net; the loop itself is counted as circulation, and residual planting absorbs the acoustic berm along the road edge. All figures are preliminary and will be refined against the AED 35M cost plan in Deliverable 8.</p>
+
+<h5>Area schedule</h5>
+<table>
+<thead><tr><th>#</th><th>Garden room</th><th>Area (m²)</th><th>% of site</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Entry plaza &amp; gateway (SE)</td><td>900</td><td>6.0</td></tr>
+<tr><td>2</td><td>Community majlis plaza</td><td>700</td><td>4.7</td></tr>
+<tr><td>3</td><td>Event lawn (flexible)</td><td>2,000</td><td>13.3</td></tr>
+<tr><td>4</td><td>Inclusive play dune</td><td>950</td><td>6.3</td></tr>
+<tr><td>5</td><td>Teen active zone</td><td>850</td><td>5.7</td></tr>
+<tr><td>6</td><td>Fitness grove</td><td>750</td><td>5.0</td></tr>
+<tr><td>7</td><td>Picnic groves (N edge)</td><td>1,300</td><td>8.7</td></tr>
+<tr><td>8</td><td>Sensory wadi garden</td><td>1,100</td><td>7.3</td></tr>
+<tr><td>9</td><td>Quiet contemplation garden (NW)</td><td>900</td><td>6.0</td></tr>
+<tr><td>10</td><td>Café terrace + restrooms</td><td>550</td><td>3.7</td></tr>
+<tr><td>—</td><td>Shade loop (3.5 m × 1.0 km)</td><td>3,500</td><td>23.3</td></tr>
+<tr><td>—</td><td>Buffer planting, berms &amp; service</td><td>1,500</td><td>10.0</td></tr>
+<tr><td></td><td><strong>Total</strong></td><td><strong>15,000</strong></td><td><strong>100.0</strong></td></tr>
+</tbody>
+</table>
+
+<h5>Zoning notes</h5>
+<ul>
+<li><strong>Active-to-calm gradient.</strong> Noise-generating rooms (1, 2, 4, 5, 10) sit within 60 m of the SE entry; rooms 7 and 9 occupy the northern band, buffered by the event lawn and wadi in between. <span class="tag">gradient SE→NW</span></li>
+<li><strong>30 m road buffer.</strong> No seating or play surface within 30 m of the southern main road except the hardscaped entry plaza; a planted berm and the densest tree massing line the S and E edges to cut traffic noise by an estimated 6–8 dB(A).</li>
+<li><strong>Prayer-time adjacency.</strong> The majlis plaza (2) and café terrace (10) flank the main entry on the direct walking line to the neighbourhood mosque, supporting pre- and post-maghrib gathering; the quiet garden (9) offers a low-stimulus alternative.</li>
+<li><strong>School-run adjacency.</strong> Play dune (4) and teen zone (5) cluster at the NE secondary entrance on the school walking route, absorbing the 14:00–16:00 peak without crossing calm rooms; bicycle parking at all three entrances.</li>
+<li><strong>Canopy budget.</strong> ~450 trees (60% native ghaf, sidr and date palm; 40% proven adaptive shade species) are placed by a shade-simulation model and checked by the landscape team: target 80% of the 1.0&nbsp;km loop shaded at 15:00 in September from year 3, with pergolas bridging the remaining 20% until year-5 canopy closure. Wadi planting is irrigated by recycled water only. <span class="tag">AI-assisted, human-verified</span></li>
+<li><strong>Service without conflict.</strong> Maintenance access enters from the W edge, reaching the lawn and wadi directly and never crossing the loop at grade during operating hours.</li>
+</ul>
+</div></div>
+      </details>
+
+      <details class="pack">
+        <summary><span class="pk-no">PKG 07</span><span class="pk-title">Landscape, Public Realm + Sustainability &amp; Resilience</span><span class="pk-covers"><span>№07</span><span>№09</span></span><span class="pk-score">review 7.3/10</span><a class="pk-open" href="deliverables/d-07.html" onclick="event.stopPropagation()">page ↗</a><span class="pk-caret">▶</span></summary>
+        <div class="pk-body"><div class="deliv-body">
+<h4>Deliverable 7 — Landscape &amp; Public Realm Plans + Sustainability &amp; Resilience Strategy</h4>
+<p><strong>«نبتة» NABTA — Wellness Park. The Living Shade Loop.</strong> The landscape is the infrastructure: a 1.0 km shaded loop threads ten garden rooms across the 15,000 m² site, with canopy density in each room proposed by AI solar and UTCI simulations and confirmed room-by-room by the landscape architect and a resident panel — AI drafts, humans decide. Where thermal stress peaks, the canopy thickens; where evening breezes pass, it opens. <em>Nabta means "sprout": the brand is the planting strategy itself — the park opens as ≈450 sprouting native saplings and visibly grows into its own identity year on year.</em></p>
+
+<h5>(a) Landscape Strategy — Three Planting Tiers</h5>
+<ul>
+<li><strong>Tier 1 — Canopy (≈450 native trees):</strong> ghaf, sidr and samr form the shade spine, with date palms as cultural accents at the gateways. Simulation-driven targets range from 35% canopy cover in the event lawn room to 85% in the reading and elders' rooms.</li>
+<li><strong>Tier 2 — Understorey shrubs:</strong> drought-adapted flowering shrubs at 0.6–1.8 m height frame garden rooms, screen the loop edges and feed pollinators.</li>
+<li><strong>Tier 3 — Groundcover:</strong> desert grasses and salt-tolerant mats replace lawn everywhere except the 1,200 m² multipurpose event lawn, cutting turf area by roughly 80% against a conventional district park.</li>
+</ul>
+<p><strong>Sensory &amp; therapeutic layer.</strong> As a wellness park, two quiet rooms are planted as therapy gardens: fragrant vitex and Texas sage at seated nose height, rustling thumam grass for calming white noise, smooth gabbro touch-walls, and a barefoot texture path (sand, granite fines, timber). Raised, wheelchair-height planting beds host horticultural-therapy sessions with local clinics; bloom is staggered so scent and colour shift monthly, giving repeat visitors a reason to return.</p>
+
+<table>
+<thead><tr><th>Botanical name</th><th>Common / Arabic</th><th>Water need</th><th>Primary role</th></tr></thead>
+<tbody>
+<tr><td>Prosopis cineraria</td><td>Ghaf / غاف</td><td>Very low</td><td>Shade, biodiversity</td></tr>
+<tr><td>Ziziphus spina-christi</td><td>Sidr / سدر</td><td>Low</td><td>Shade, pollinators</td></tr>
+<tr><td>Vachellia tortilis</td><td>Samr / سمر</td><td>Very low</td><td>Shade, nesting habitat</td></tr>
+<tr><td>Phoenix dactylifera</td><td>Date palm / نخيل</td><td>Moderate</td><td>Shade, cultural identity</td></tr>
+<tr><td>Leucophyllum frutescens</td><td>Texas sage</td><td>Low</td><td>Sensory (bloom, scent)</td></tr>
+<tr><td>Vitex agnus-castus</td><td>Chaste tree / شجرة إبراهيم</td><td>Low</td><td>Sensory (scent), pollinators</td></tr>
+<tr><td>Panicum turgidum</td><td>Thumam / ثمام</td><td>Very low</td><td>Sensory (sound), seed for birds</td></tr>
+<tr><td>Pennisetum divisum</td><td>Desert fountain grass</td><td>Very low</td><td>Bioswale stabilisation</td></tr>
+<tr><td>Sesuvium portulacastrum</td><td>Sea purslane</td><td>Low (salt-tolerant)</td><td>Groundcover, lawn substitute</td></tr>
+<tr><td>Tetraena qatarensis</td><td>Harm / هرم</td><td>Very low</td><td>Groundcover, biodiversity</td></tr>
+</tbody>
+</table>
+<p><em>All canopy and groundcover species are UAE-native; Texas sage and chaste tree are the only introduced species — long proven in low-water Gulf plantings and confined to the two sensory rooms.</em></p>
+
+<h5>(b) Public Realm Materials</h5>
+<div class="cols2">
+<p><span class="tag">Paths</span> Light-coloured, high solar-reflectance stabilised decomposed granite for the loop and secondary trails — permeable, cool underfoot, wheelchair-firm, and locally sourced. <span class="tag">Shade structures</span> Corten steel frames with FSC timber slats form pergolas over rest nodes, weathering without paint or maintenance coatings.</p>
+<p><span class="tag">Seat walls</span> Local UAE stone (gabbro and sandstone) seat walls double as room edges and thermal mass shaded by canopy. All fixed lighting is 2700K LED on solar-hybrid poles with adaptive dimming, targeting 60% lighting energy reduction versus code baseline.</p>
+</div>
+
+<h5>(c) Water Strategy &amp; Budget</h5>
+<p>A wadi-inspired bioswale runs beneath the loop's low edge, harvesting AC condensate piped from adjacent villas plus rare storm flows into a 150 m³ underground cistern. TSE tops up demand. Sub-surface drip with soil-moisture sensors and an AI evapotranspiration controller irrigates by tier, not by timer. Target: <strong>41% below conventional park irrigation</strong> (105 → 62 m³/day at peak; supply balances exactly: 9 condensate + 53 TSE = 62).</p>
+<table>
+<thead><tr><th>Water budget (peak summer)</th><th>m³/day</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Conventional benchmark demand</td><td>105</td><td>Turf-dominant 15,000 m² park</td></tr>
+<tr><td><strong>NABTA design demand</strong></td><td><strong>62</strong></td><td>Native tiers + drip + sensors (−43 m³ = −41%)</td></tr>
+<tr><td>Supply: AC condensate (villas)</td><td>9</td><td>≈120 units × 75 L/day, summer</td></tr>
+<tr><td>Supply: TSE network</td><td>53</td><td>Balance of demand</td></tr>
+<tr><td>Supply: stormwater to cistern</td><td>episodic</td><td>Offsets shoulder-season TSE draw</td></tr>
+</tbody>
+</table>
+
+<h5>(d) Biodiversity &amp; Climate Resilience</h5>
+<p>Targets by year 3: 25+ resident and migratory bird species (purple sunbird, laughing dove, hoopoe, white-eared bulbul), 15+ pollinator species supported by staggered ghaf, sidr and vitex bloom, and log-and-stone habitat piles in two quiet rooms. All Tier 1–3 species are verified against a 2050 scenario (+2°C, higher salinity, longer dry spells): every canopy species already thrives in interior UAE conditions hotter than Dubai's projected climate, and the salt-tolerant groundcovers hedge against declining TSE quality. No permanent potable irrigation connection is installed.</p>
+
+<h5>(e) Social &amp; Economic Sustainability</h5>
+<p>A 180 m² café concession at the loop's north gateway and bookable event-lawn slots (markets, fitness, school programmes) generate an estimated AED 900k/year toward operations. Low-water tiers, no-mow groundcovers and self-finishing corten target a maintenance cost of <strong>≤ AED 28/m²/year (≈ AED 420k/year for 15,000 m²)</strong> against a conventional turf-park benchmark of AED 50–60/m²/year: the 80% turf reduction removes most mowing and fertiliser labour, sensor-led drip cuts irrigation callouts, and a 5% annual plant-replacement allowance plus a corrective-works sinking fund are built into the figure. Years 1–3 carry a higher establishment budget (staking, formative pruning, sapling watering) before settling to steady state. A community planting programme with local schools builds stewardship and further trims replanting cost. Within the AED 35M budget, landscape and irrigation works are capped at 38%, protecting contingency for shade structures.</p>
+
+<figure>
+<svg viewBox="0 0 640 170" width="100%" role="img" aria-label="Water flow diagram">
+<rect x="10" y="20" width="150" height="34" rx="6" fill="#E7DCC3" stroke="#22301F"/>
+<text x="85" y="41" text-anchor="middle" fill="#22301F" font-size="12">AC condensate 9 m³/d</text>
+<rect x="10" y="68" width="150" height="34" rx="6" fill="#E7DCC3" stroke="#22301F"/>
+<text x="85" y="89" text-anchor="middle" fill="#22301F" font-size="12">TSE network 53 m³/d</text>
+<rect x="10" y="116" width="150" height="34" rx="6" fill="#E7DCC3" stroke="#22301F"/>
+<text x="85" y="137" text-anchor="middle" fill="#22301F" font-size="12">Storm (episodic)</text>
+<path d="M160 37 H210 M160 85 H210 M160 133 H210" stroke="#4E8FA8" stroke-width="3" fill="none"/>
+<rect x="212" y="55" width="140" height="60" rx="8" fill="#4E8FA8"/>
+<text x="282" y="80" text-anchor="middle" fill="#22301F" font-size="12">Bioswale +</text>
+<text x="282" y="96" text-anchor="middle" fill="#22301F" font-size="12">150 m³ cistern</text>
+<path d="M352 85 H400" stroke="#4E8FA8" stroke-width="3"/>
+<rect x="402" y="55" width="120" height="60" rx="8" fill="#A9C6A0"/>
+<text x="462" y="80" text-anchor="middle" fill="#22301F" font-size="12">AI drip control</text>
+<text x="462" y="96" text-anchor="middle" fill="#22301F" font-size="12">soil sensors</text>
+<path d="M522 85 H568" stroke="#4E8FA8" stroke-width="3"/>
+<rect x="570" y="55" width="60" height="60" rx="30" fill="#2F6B4A"/>
+<text x="600" y="80" text-anchor="middle" fill="#E7DCC3" font-size="12">Ten</text>
+<text x="600" y="96" text-anchor="middle" fill="#E7DCC3" font-size="12">rooms</text>
+</svg>
+<figcaption>Water flow: harvested and recycled sources feed sensor-led drip irrigation — 62 m³/day, 41% below the conventional benchmark.</figcaption>
+</figure>
+</div></div>
+      </details>
+
+      <details class="pack">
+        <summary><span class="pk-no">PKG 08</span><span class="pk-title">Accessibility, Circulation + Commercial Facilities Plan</span><span class="pk-covers"><span>№08</span><span>+CSF Map</span></span><span class="pk-score">review 7.2/10</span><a class="pk-open" href="deliverables/d-08.html" onclick="event.stopPropagation()">page ↗</a><span class="pk-caret">▶</span></summary>
+        <div class="pk-body"><div class="deliv-body">
+<h4>Deliverable 8 — Accessibility &amp; Circulation Strategy + Indicative Commercial &amp; Service Facilities Plan</h4>
+<p><span class="tag">NABTA «نبتة» — Wellness Park</span> <span class="tag">The Living Shade Loop</span> <span class="tag">Dubai Universal Design Code</span></p>
+
+<h5>A. Circulation Hierarchy — Movement for Every Body</h5>
+<p>In a wellness park, circulation <em>is</em> the programme: walking, wheeling and jogging are Nabta's primary health offer. One legible spine and two subordinate layers ensure every visitor — stroller, wheelchair user, jogger — can complete the loop with dignity.</p>
+<ul>
+<li><strong>Primary: the Living Shade Loop.</strong> 1.0 km figure-eight, 3.5 m shared path, continuously shaded. A 1.0 m jogger lane is marked in terracotta-pigmented resin on the outer edge; cross-slope ≤2% throughout, gradients ≤1:21, no ramps anywhere.</li>
+<li><strong>Secondary: garden paths.</strong> 1.8 m stabilised, firm and slip-resistant paths entering each of the ten garden rooms, with 1.8×1.8 m passing/turning bays at every junction.</li>
+<li><strong>Tertiary: desire-line shortcuts.</strong> Compacted decomposed-granite links across the loop's waist and lawn edges, formalising natural shortcuts; all step-free.</li>
+</ul>
+<p><strong>Walk times</strong> (1.0 m/s accessible pace): entry plaza → play dune 3 min; → sensory wadi 5 min; full loop 17 min walking, 6 min jogging. No point is more than 4 minutes from a loop exit gate.</p>
+
+<h5>B. Universal Accessibility — Code-Mapped Checklist</h5>
+<table>
+<thead><tr><th>Dubai Universal Design Code theme</th><th>Nabta measure</th></tr></thead>
+<tbody>
+<tr><td>Step-free movement</td><td>100% step-free park: zero kerbs on the loop, flush terracotta bridges over the wadi (≤1:21), tactile-edged not stepped.</td></tr>
+<tr><td>Wayfinding</td><td>Continuous tactile guidance strip on the full 1.0 km loop; tactile/high-contrast decision studs at all ten room junctions.</td></tr>
+<tr><td>Rest &amp; comfort</td><td>Seating every 50 m maximum, all with armrests and backrests; 50% in year-round shade; adjacent wheelchair pause space at each bench.</td></tr>
+<tr><td>Arrival</td><td>4 accessible parking bays nearest the SE entry (3.6 m wide, shaded, ≤30 m to gate), level drop-off with blister paving.</td></tr>
+<tr><td>Sanitary provision</td><td>One Changing Places-standard restroom (12 m², ceiling hoist, adult changing bench) at the entry plaza block, plus ambulant-accessible cubicles at both restroom locations.</td></tr>
+<tr><td>Sensory inclusion</td><td>Quiet room directly adjacent to the sensory wadi garden; hearing (induction) loop at the majlis plaza; predictable acoustic zoning.</td></tr>
+<tr><td>Signage</td><td>Braille + pictogram + high-contrast signage in Arabic and English at all entrances and room thresholds, mounted 1.2–1.6 m.</td></tr>
+<tr><td>Inclusive play</td><td>Play dune equipment with transfer platforms at 450 mm, wheelchair-accessible carousel, ground-level play at every cluster.</td></tr>
+</tbody>
+</table>
+<p><em>Each row cites its Code theme for line-by-line audit; all dimensions meet or exceed Code minimums.</em></p>
+
+<h5>C. AI-Assisted Circulation Validation (Human-Led)</h5>
+<p>The plan was stress-tested with an <strong>agent-based pedestrian simulation</strong>: ~5,000 synthetic visitors per scenario, with calibrated wheelchair (0.8 m/s), stroller, elderly, child and jogger profiles across Friday-peak, school-run and summer-evening demand. AI <em>verified</em>, humans <em>decided</em>:</p>
+<ul>
+<li>Confirmed no crossing point where jogger and wheelchair flows conflict at &gt;0.3 encounters/min; the terracotta jogger lane was moved to the outer edge as a result.</li>
+<li>Validated that every simulated wheelchair agent completes the loop with rest seating ≤50 m apart and a restroom within 200 m from any point — counts are simulation-verified, not rules-of-thumb.</li>
+<li>Predicted desire lines matched the tertiary shortcut layer; two AI-suggested shortcuts were <strong>rejected</strong> by the design team on CPTED sightline grounds, logged in the decision record.</li>
+</ul>
+<figure>
+<svg viewBox="0 0 320 130" role="img" aria-label="Nabta Living Shade Loop simulation diagram">
+<rect x="2" y="2" width="316" height="126" fill="#E7DCC3" stroke="#22301F"/>
+<path d="M55,65 C55,25 135,25 160,65 C185,105 265,105 265,65 C265,25 185,25 160,65 C135,105 55,105 55,65 Z" fill="none" stroke="#CFC0A0" stroke-width="9"/>
+<path d="M55,65 C55,25 135,25 160,65 C185,105 265,105 265,65 C265,25 185,25 160,65 C135,105 55,105 55,65 Z" fill="none" stroke="#2F6B4A" stroke-width="2" stroke-dasharray="4 6"/>
+<circle cx="55" cy="65" r="5" fill="#4E8FA8"/>
+<circle cx="160" cy="65" r="5" fill="#4E8FA8"/>
+<circle cx="105" cy="35" r="3" fill="#C05A32"/><circle cx="215" cy="35" r="3" fill="#C05A32"/><circle cx="105" cy="95" r="3" fill="#C05A32"/><circle cx="215" cy="95" r="3" fill="#C05A32"/><circle cx="265" cy="65" r="3" fill="#C05A32"/>
+<circle cx="290" cy="20" r="6" fill="#A9C6A0" stroke="#2F6B4A"/>
+<text x="160" y="16" text-anchor="middle" fill="#22301F" font-size="9">NABTA «نبتة» — Living Shade Loop 1.0 km · 3.5 m</text>
+<text x="160" y="122" text-anchor="middle" fill="#22301F" font-size="8">terracotta = seating ≤50 m · blue = restrooms ≤200 m · dashed = simulated wheelchair route</text>
+</svg>
+<figcaption>Agent-based simulation output (schematic): universal-access route validated end-to-end.</figcaption>
+</figure>
+
+<h5>D. Arrival Strategy</h5>
+<ul>
+<li><strong>Drop-off:</strong> lay-by off the SE access road per RTA geometry — 3 vehicle lengths, level boarding, tactile paving, shade canopy — sized for the school-run peak.</li>
+<li><strong>Parking:</strong> ~40 car bays (incl. 4 accessible + 2 family) in a shaded grove lot; permeable paving.</li>
+<li><strong>Public transport:</strong> signed, shaded, step-free links to 2 RTA bus stops within 300 m.</li>
+<li><strong>Micromobility:</strong> 30 shaded bicycle racks at each of the three entrances (90 total), plus an e-scooter dock per entrance (SE, NW, NE), all outside pedestrian desire lines.</li>
+</ul>
+
+<h5>E. Service &amp; Emergency Access</h5>
+<ul>
+<li>Loop segments engineered as a <strong>4 m clear emergency route</strong> (path + reinforced shoulder), giving Civil Defence and ambulance reach to all ten rooms; removable bollards at the three gates.</li>
+<li><strong>W-edge service yard:</strong> screened compound with café back-of-house delivery, maintenance store, and irrigation plant; service vehicles never cross visitor space during opening hours.</li>
+<li>Six paired <strong>waste/recycling points</strong> on the loop, serviced from the W yard before 7:00 am.</li>
+</ul>
+
+<h5>F. Indicative Commercial &amp; Service Facilities Plan</h5>
+<p><strong>Catchment reasoning:</strong> Al Safa 2 is a low-rise villa district — several thousand residents within a 10-minute walk, schools south, Sheikh Zayed Road offices minutes away. Demand peaks at dawn/evening wellness hours, the school run and winter weekends; fixed commercial space is sized to the reliable base load, flexible cart pads absorb peaks.</p>
+<table>
+<thead><tr><th>Facility</th><th>Location (garden room)</th><th>Catchment logic</th></tr></thead>
+<tbody>
+<tr><td>Café + shaded terrace (120 m²)</td><td>SE entry plaza</td><td>Captures school-run parents, loop finishers, and street footfall; visible from drop-off.</td></tr>
+<tr><td>2 kiosk cart pads (power/water)</td><td>Event lawn edge</td><td>Activated during events and weekends; zero fixed cost when idle.</td></tr>
+<tr><td>Coffee/juice kiosk</td><td>Loop waist, by play dune</td><td>Serves caregivers with sightlines to all play zones.</td></tr>
+<tr><td>Restrooms ×2 (incl. Changing Places)</td><td>Entry plaza + loop waist</td><td>No point in the park &gt;200 m from a restroom.</td></tr>
+<tr><td>Prayer room + wudu</td><td>Beside majlis plaza</td><td>Adjacent to gathering space; on tactile route.</td></tr>
+<tr><td>Water refill + shade shelters</td><td>Every second room</td><td>Summer walkability; reduces single-use plastic.</td></tr>
+</tbody>
+</table>
+<p><em>Activation &amp; concession note:</em> café and kiosks are tendered as one concession with revenue share tied to mandated opening hours (06:00–23:00), guaranteeing dawn/evening service through summer when the misted, shaded terrace keeps the SE plaza usable; cart pads flex to winter events without permanent build-out. A wellness clause obliges the operator to a healthy-menu baseline and free water refills, aligning commercial income with the park's health mission and keeping the commercial footprint under 2% of park area.</p>
+
+<h5>G. Safety by Design</h5>
+<ul>
+<li><strong>CPTED:</strong> clear sightlines along the loop, understorey planting below 0.8 m at path edges, no dead-end paths, active café frontage at the main entrance.</li>
+<li><strong>Adaptive lighting:</strong> loop 20 lux, garden rooms 10 lux, planted gardens 5 lux; all 2700 K warm white, full-cutoff dark-sky-compliant fixtures, presence-dimmed after 23:00.</li>
+<li><strong>Privacy commitment:</strong> operational CCTV at entrances only; <strong>no facial recognition</strong> and no biometric analytics anywhere in the park.</li>
+</ul>
+</div></div>
+      </details>
+
+      <details class="pack">
+        <summary><span class="pk-no">PKG 09</span><span class="pk-title">Concept Diagrams, Sections &amp; Elevations</span><span class="pk-covers"><span>№10</span><span>№11</span></span><span class="pk-score">review 7.2/10</span><a class="pk-open" href="deliverables/d-09.html" onclick="event.stopPropagation()">page ↗</a><span class="pk-caret">▶</span></summary>
+        <div class="pk-body"><div class="deliv-body">
+<h4>Package 9 — Concept Diagrams, Preliminary Design Drawings, Sections &amp; Elevations</h4>
+<p><span class="tag">Deliverable 10</span> <span class="tag">Deliverable 11</span> This package presents the graphic core of the «نبتة» <strong>NABTA — Wellness Park</strong> entry for Al Safa 2 (15,000 m²), under the concept <strong>The Living Shade Loop</strong>: the primary illustrative section through the shade loop and sensory wadi, the three-step concept evolution diagram, and the register of preliminary design drawings issued with the full submission. All drawings derive from a single federated CAD/BIM model, as required by the brief; the section below is reproduced at reading scale from drawing L-201.</p>
+
+<h5>Section AA — through the shade loop and sensory wadi (1:200 @ A2, reproduced at reading scale)</h5>
+<figure>
+<svg viewBox="0 0 640 240" width="100%" role="img" aria-label="Illustrative cross-section through the shaded loop path, pergola and wadi bioswale">
+  <!-- ground mass -->
+  <path d="M0,180 L188,180 L236,200 L248,204 L332,204 L344,200 L392,180 L640,180 L640,240 L0,240 Z" fill="#E7DCC3"/>
+  <!-- water in wadi -->
+  <path d="M224,197.5 L236,200 L248,204 L332,204 L344,200 L350,197.5 Z" fill="#4E8FA8"/>
+  <!-- planted bank slopes -->
+  <path d="M188,180 L236,200 L248,204" fill="none" stroke="#A9C6A0" stroke-width="4"/>
+  <path d="M332,204 L344,200 L392,180" fill="none" stroke="#A9C6A0" stroke-width="4"/>
+  <!-- ground / terrain line -->
+  <path d="M0,180 L188,180 L236,200 L248,204 L332,204 L344,200 L392,180 L640,180" fill="none" stroke="#22301F" stroke-width="1.5"/>
+  <!-- datum across wadi -->
+  <path d="M188,180 L392,180" stroke="#22301F" stroke-width="0.75" stroke-dasharray="4 3"/>
+  <!-- loop path surface -->
+  <rect x="118" y="175.5" width="70" height="4.5" fill="#CFC0A0" stroke="#22301F" stroke-width="0.6"/>
+  <!-- terracotta bridge beyond (dashed) -->
+  <path d="M240,178 C268,152 318,152 342,178" fill="none" stroke="#C05A32" stroke-width="2" stroke-dasharray="6 4"/>
+  <!-- ghaf tree, north side -->
+  <path d="M58,180 C56,150 50,120 44,86" fill="none" stroke="#22301F" stroke-width="3"/>
+  <path d="M56,146 C66,120 78,100 90,86" fill="none" stroke="#22301F" stroke-width="2"/>
+  <ellipse cx="44" cy="72" rx="30" ry="13" fill="#2F6B4A"/>
+  <ellipse cx="70" cy="58" rx="32" ry="13" fill="#2F6B4A"/>
+  <ellipse cx="94" cy="70" rx="26" ry="11" fill="#2F6B4A"/>
+  <ellipse cx="70" cy="54" rx="14" ry="5.5" fill="#A9C6A0" opacity="0.85"/>
+  <!-- ghaf tree, south side -->
+  <path d="M480,180 C482,150 488,124 492,98" fill="none" stroke="#22301F" stroke-width="3"/>
+  <path d="M481,152 C472,130 462,114 452,100" fill="none" stroke="#22301F" stroke-width="2"/>
+  <ellipse cx="462" cy="92" rx="26" ry="11" fill="#2F6B4A"/>
+  <ellipse cx="488" cy="82" rx="30" ry="12" fill="#2F6B4A"/>
+  <ellipse cx="510" cy="92" rx="22" ry="10" fill="#2F6B4A"/>
+  <ellipse cx="488" cy="78" rx="12" ry="5" fill="#A9C6A0" opacity="0.85"/>
+  <!-- bank grasses and shrubs -->
+  <g stroke="#A9C6A0" stroke-width="1.5" fill="none">
+    <path d="M218,196 l-3,-7 M218,196 l0,-8 M218,196 l3,-7"/>
+    <path d="M231,199 l-3,-7 M231,199 l0,-8 M231,199 l3,-7"/>
+    <path d="M352,197 l-3,-7 M352,197 l0,-8 M352,197 l3,-7"/>
+    <path d="M364,192 l-3,-7 M364,192 l0,-8 M364,192 l3,-7"/>
+    <path d="M378,187 l-3,-7 M378,187 l0,-8 M378,187 l3,-7"/>
+  </g>
+  <ellipse cx="404" cy="175" rx="11" ry="6" fill="#A9C6A0"/>
+  <!-- pergola: posts, chords, form-found slats (denser to south) -->
+  <rect x="124.5" y="96" width="3" height="80" fill="#22301F"/>
+  <rect x="180.5" y="96" width="3" height="80" fill="#22301F"/>
+  <path d="M112,96 L198,96" stroke="#22301F" stroke-width="2"/>
+  <path d="M110,88 C138,74 168,80 200,86" fill="none" stroke="#22301F" stroke-width="1.5"/>
+  <g stroke="#C05A32" stroke-width="2.5">
+    <path d="M116,85.5 L116,96"/><path d="M128,81.5 L128,96"/><path d="M139,79 L139,96"/>
+    <path d="M149,78.4 L149,96"/><path d="M158,79.3 L158,96"/><path d="M166,80.6 L166,96"/>
+    <path d="M173,81.7 L173,96"/><path d="M179,82.4 L179,96"/><path d="M184.5,83.3 L184.5,96"/>
+    <path d="M189,84.2 L189,96"/><path d="M193,84.9 L193,96"/><path d="M196.5,85.4 L196.5,96"/>
+  </g>
+  <!-- cast shade hatch on ground -->
+  <g stroke="#22301F" stroke-width="0.8" opacity="0.5">
+    <path d="M100,176 l8,-8"/><path d="M110,176 l8,-8"/><path d="M120,176 l8,-8"/>
+    <path d="M130,176 l8,-8"/><path d="M140,176 l8,-8"/><path d="M150,176 l8,-8"/>
+    <path d="M160,176 l8,-8"/><path d="M170,176 l8,-8"/><path d="M180,176 l8,-8"/>
+  </g>
+  <!-- people: adult + child on path -->
+  <g fill="#22301F" stroke="#22301F" stroke-width="1.8" stroke-linecap="round">
+    <circle cx="146" cy="149" r="3.2" stroke="none"/>
+    <path d="M146,152 L146,168 M146,168 L142,180 M146,168 L150,180 M146,157 L152,164" fill="none"/>
+    <circle cx="156" cy="166" r="2.4" stroke="none"/>
+    <path d="M156,168.5 L156,174 M156,174 L153.5,180 M156,174 L158.5,180 M156,170 L152,165" fill="none" stroke-width="1.4"/>
+  </g>
+  <!-- person: wheelchair user, south side -->
+  <g stroke="#22301F" stroke-width="1.8" fill="none" stroke-linecap="round">
+    <circle cx="542" cy="156.5" r="3" fill="#22301F" stroke="none"/>
+    <path d="M542,159.5 L542,168 M542,168 L550,168 M550,168 L550,176 M548,177.5 L553,177.5 M542,162 L548,167"/>
+    <circle cx="545" cy="174" r="6"/>
+    <circle cx="553.5" cy="177.5" r="2.5"/>
+  </g>
+  <!-- sun and ray -->
+  <g stroke="#C05A32" stroke-width="2" fill="none">
+    <circle cx="575" cy="34" r="11"/>
+    <path d="M575,16 L575,10 M575,52 L575,58 M557,34 L551,34 M593,34 L599,34 M562,21 L558,17 M588,21 L592,17 M562,47 L558,51 M588,47 L592,51"/>
+  </g>
+  <path d="M560,48 L214,77" stroke="#C05A32" stroke-width="1" stroke-dasharray="5 3"/>
+  <polygon points="210,78 220,72 219,82" fill="#C05A32"/>
+  <!-- dimensions -->
+  <g stroke="#22301F" stroke-width="0.75" fill="none">
+    <path d="M118,186 L118,224 M188,186 L188,224 M118,220 L188,220"/>
+    <path d="M115,223 l6,-6 M185,223 l6,-6"/>
+    <path d="M124,96 L92,96 M116,180 L92,180 M97,96 L97,180"/>
+    <path d="M94,99 l6,-6 M94,183 l6,-6"/>
+    <path d="M290,180 L290,204"/>
+    <path d="M287,183 l6,-6 M287,207 l6,-6"/>
+  </g>
+  <!-- leaders -->
+  <g stroke="#22301F" stroke-width="0.75" fill="none">
+    <path d="M229,47 L198,76"/>
+    <path d="M70,43 L80,57"/>
+    <path d="M357,122 L315,158"/>
+    <path d="M399,152 L366,194"/>
+    <path d="M84,162 L108,172"/>
+    <path d="M302,228 L302,201"/>
+  </g>
+  <!-- scale bar -->
+  <g stroke="#22301F" stroke-width="0.8">
+    <rect x="498" y="222" width="20" height="5" fill="#22301F"/>
+    <rect x="518" y="222" width="20" height="5" fill="#E7DCC3"/>
+    <rect x="538" y="222" width="20" height="5" fill="#22301F"/>
+    <rect x="558" y="222" width="20" height="5" fill="#E7DCC3"/>
+    <rect x="578" y="222" width="20" height="5" fill="#22301F"/>
+  </g>
+  <!-- section markers -->
+  <circle cx="18" cy="112" r="10" fill="#E7DCC3" stroke="#22301F" stroke-width="1.5"/>
+  <circle cx="622" cy="112" r="10" fill="#E7DCC3" stroke="#22301F" stroke-width="1.5"/>
+  <!-- text -->
+  <g fill="#22301F" font-family="inherit">
+    <text x="16" y="18" font-size="12" font-weight="bold" letter-spacing="0.5">NABTA · SECTION AA — SHADE LOOP &amp; SENSORY WADI</text>
+    <text x="18" y="115.5" font-size="11" font-weight="bold" text-anchor="middle">A</text>
+    <text x="622" y="115.5" font-size="11" font-weight="bold" text-anchor="middle">A</text>
+    <text x="232" y="44" font-size="10.5">AI-form-found pergola — terracotta slats densify toward south sun</text>
+    <text x="16" y="40" font-size="10.5">retained ghaf canopy</text>
+    <text x="360" y="118" font-size="10.5">terracotta bridge beyond</text>
+    <text x="402" y="150" font-size="10.5">planted bioswale banks — sidr &amp; native grasses</text>
+    <text x="14" y="164" font-size="10.5">continuous shade · 15:00</text>
+    <text x="153" y="215" font-size="10.5" text-anchor="middle" font-weight="bold">3.5 m</text>
+    <text x="153" y="232" font-size="10">shared loop path</text>
+    <text x="97" y="140" font-size="10" text-anchor="middle" font-weight="bold" transform="rotate(-90 97 140)">4.2 m clear</text>
+    <text x="284" y="195" font-size="10" text-anchor="end" font-weight="bold">1.2 m</text>
+    <text x="264" y="238" font-size="10.5">sensory wadi — seasonal bioswale</text>
+    <text x="575" y="62" font-size="10" text-anchor="middle">sun · 15:00 · 21 JUN</text>
+    <text x="498" y="237" font-size="10">0</text>
+    <text x="598" y="237" font-size="10" text-anchor="end">5 m</text>
+    <text x="14" y="212" font-size="10" letter-spacing="1">NORTH</text>
+    <text x="626" y="212" font-size="10" letter-spacing="1" text-anchor="end">SOUTH</text>
+  </g>
+</svg>
+<figcaption><strong>L-201 · Section AA.</strong> The 3.5 m shared loop path runs along the north bank of the wadi under a 4.2 m-clear pergola whose terracotta slats densify toward the southern sun, joining the retained ghaf canopy to hold continuous shade across the path at 15:00 on the summer solstice. The 1.2 m-deep bioswale detains stormwater and recycled irrigation flows between planted sidr banks; a terracotta bridge crosses beyond the cut line.</figcaption>
+</figure>
+
+<h5>Concept evolution — from ring to living loop</h5>
+<figure>
+<svg viewBox="0 0 640 170" width="100%" role="img" aria-label="Three-panel concept diagram: perimeter loop, figure-eight through the interior, garden rooms attached to the loop">
+  <g transform="translate(8,10)">
+    <rect x="0" y="0" width="196" height="118" fill="#E7DCC3" stroke="#22301F" stroke-width="1"/>
+    <polygon points="16,14 180,20 184,100 24,106" fill="none" stroke="#22301F" stroke-width="1" stroke-dasharray="4 3"/>
+    <ellipse cx="98" cy="60" rx="70" ry="38" fill="none" stroke="#2F6B4A" stroke-width="3"/>
+    <g fill="#22301F" font-family="inherit" text-anchor="middle">
+      <text x="98" y="138" font-size="11" font-weight="bold" letter-spacing="0.5">1 · PERIMETER LOOP</text>
+      <text x="98" y="152" font-size="10">shade at the edges only</text>
+    </g>
+  </g>
+  <polygon points="208,62 218,69 208,76" fill="#22301F"/>
+  <g transform="translate(222,10)">
+    <rect x="0" y="0" width="196" height="118" fill="#E7DCC3" stroke="#22301F" stroke-width="1"/>
+    <polygon points="16,14 180,20 184,100 24,106" fill="none" stroke="#22301F" stroke-width="1" stroke-dasharray="4 3"/>
+    <path d="M98,60 C98,22 24,22 24,60 C24,98 98,98 98,60 C98,22 172,22 172,60 C172,98 98,98 98,60 Z" fill="none" stroke="#2F6B4A" stroke-width="3"/>
+    <g fill="#22301F" font-family="inherit" text-anchor="middle">
+      <text x="98" y="138" font-size="11" font-weight="bold" letter-spacing="0.5">2 · PULLED THROUGH THE INTERIOR</text>
+      <text x="98" y="152" font-size="10">figure-eight doubles shaded frontage</text>
+    </g>
+  </g>
+  <polygon points="422,62 432,69 422,76" fill="#22301F"/>
+  <g transform="translate(436,10)">
+    <rect x="0" y="0" width="196" height="118" fill="#E7DCC3" stroke="#22301F" stroke-width="1"/>
+    <polygon points="16,14 180,20 184,100 24,106" fill="none" stroke="#22301F" stroke-width="1" stroke-dasharray="4 3"/>
+    <path d="M98,60 C98,22 24,22 24,60 C24,98 98,98 98,60 C98,22 172,22 172,60 C172,98 98,98 98,60 Z" fill="none" stroke="#2F6B4A" stroke-width="3"/>
+    <g fill="#C05A32" stroke="#22301F" stroke-width="0.8">
+      <circle cx="27" cy="45" r="5"/><circle cx="27" cy="75" r="5"/><circle cx="58" cy="30" r="5"/>
+      <circle cx="58" cy="90" r="5"/><circle cx="138" cy="30" r="5"/><circle cx="138" cy="90" r="5"/>
+      <circle cx="169" cy="45" r="5"/><circle cx="169" cy="75" r="5"/><circle cx="86" cy="36" r="5"/>
+      <circle cx="110" cy="84" r="5"/>
+    </g>
+    <g fill="#22301F" font-family="inherit" text-anchor="middle">
+      <text x="98" y="138" font-size="11" font-weight="bold" letter-spacing="0.5">3 · ROOMS ATTACH TO THE LOOP</text>
+      <text x="98" y="152" font-size="10">ten garden rooms plug into shade</text>
+    </g>
+  </g>
+</svg>
+<figcaption><strong>L-010 (extract).</strong> A perimeter ring shades only the edges; pulling the loop through the interior as a 1.0 km figure-eight doubles shaded frontage and crosses the wadi twice; the ten garden rooms then attach directly to the loop so every destination sits within the shade system.</figcaption>
+</figure>
+
+<h5>Drawing register — preliminary design set</h5>
+<p>The full entry includes the following drawings, all cut from one federated Revit/Rhino model (shared site coordinates, IFC 4 exchange, ISO 19650 naming) and issued as DWG + PDF per the brief's CAD/BIM requirement. Sections and elevations reference the common ±0.000 park datum shown dashed in Section AA.</p>
+<table>
+<thead><tr><th>No.</th><th>Title</th><th>Scale</th><th>Format</th></tr></thead>
+<tbody>
+<tr><td>L-001</td><td>Illustrative masterplan</td><td>1:500</td><td>A0 · DWG/PDF from BIM</td></tr>
+<tr><td>L-010</td><td>Concept &amp; systems diagrams (shade, water, sensing)</td><td>NTS</td><td>A3 · PDF</td></tr>
+<tr><td>L-101</td><td>Shade loop &amp; garden rooms — general arrangement</td><td>1:250</td><td>A1 · DWG</td></tr>
+<tr><td>L-201</td><td>Section AA — shade loop &amp; sensory wadi</td><td>1:200</td><td>A2 · DWG/PDF</td></tr>
+<tr><td>L-202</td><td>Section BB — play dune, majlis plaza &amp; café terrace</td><td>1:200</td><td>A2 · DWG</td></tr>
+<tr><td>L-301</td><td>Pergola elevations, north &amp; south faces</td><td>1:100</td><td>A1 · DWG from Revit (LOD 300)</td></tr>
+<tr><td>L-302</td><td>Majlis plaza &amp; café terrace elevations</td><td>1:100</td><td>A1 · DWG</td></tr>
+<tr><td>L-401</td><td>Pergola node &amp; slat-fixing details</td><td>1:20</td><td>A3 · DWG</td></tr>
+<tr><td>L-402</td><td>Bioswale edge, weir &amp; terracotta bridge details</td><td>1:20</td><td>A3 · DWG</td></tr>
+<tr><td>L-501</td><td>Planting &amp; irrigation zoning plan</td><td>1:250</td><td>A1 · DWG + GIS</td></tr>
+<tr><td>L-601</td><td>AI form-finding record — inputs, objectives, selected generation</td><td>NTS</td><td>A3 · PDF + parametric definition</td></tr>
+</tbody>
+</table>
+
+<h5>How the pergola was form-found</h5>
+<div class="cols2">
+<p>The pergola geometry in Section AA is not drawn — it is computed, then judged by the design team. A notional canopy surface over the loop centreline was meshed and exposed to an annual solar simulation at the Al Safa 2 coordinates. The mapping is direct: <strong>simulated solar load per mesh face → slat density</strong>. The most irradiated faces receive slats at 180 mm centres, tapering linearly to 600 mm centres on the sheltered north edge — the south-densifying gradient visible in the section.</p>
+<p>An evolutionary solver then optimised slat spacing, chord curvature and post positions against a single primary target — <strong>continuous shade along the 3.5 m path centreline at 15:00 on the summer solstice</strong>, the governing heat-stress hour drawn in Section AA — with minimum slat material and preserved low-angle December sun as secondary objectives. The team reviewed the leading generations against the 4.2 m clear height and sightlines to the 1.2 m wadi before selecting one; that decision, and the solver record, are documented on sheet L-601. The selected generation exports as native parametric geometry alongside the IFC model, so the same definition regenerates fabrication data at detailed design. The result is a roof that visibly "reads" the sun — denser where Dubai's sky is harshest, open where the retained ghaf canopy already does the work.</p>
+</div>
+</div></div>
+      </details>
+
+      <details class="pack">
+        <summary><span class="pk-no">PKG 10</span><span class="pk-title">Visualizations, Day/Night, 1-Minute Animation + Extras</span><span class="pk-covers"><span>№12</span><span>№13</span><span>№15</span><span>№16</span></span><span class="pk-score">review 7.6/10</span><a class="pk-open" href="deliverables/d-10.html" onclick="event.stopPropagation()">page ↗</a><span class="pk-caret">▶</span></summary>
+        <div class="pk-body"><div class="deliv-body">
+<h4>Deliverable Package 10 — Visualizations, Day/Night Perspectives, Animation &amp; Supporting Materials</h4>
+<p><strong>«نبتة» NABTA — Wellness Park · The Living Shade Loop</strong> · Al Safa 2, Dubai · 15,000 m² · Deliverables #12, #13, #15, #16. This package is a render plan and storyboard: every asset is specified precisely enough for a visualization team or a controlled diffusion pipeline to produce it, geo-accurate to the design model.</p>
+
+<h5>A. Rendering Schedule — Eight Key Views (#12, #13)</h5>
+<table>
+<thead><tr><th>Code</th><th>Title</th><th>Type</th><th>Time</th><th>Garden room</th><th>Must communicate</th><th>Key elements in frame</th></tr></thead>
+<tbody>
+<tr><td>V01</td><td>Golden hour aerial over the figure-eight</td><td>Aerial, 250 m, oblique SW</td><td>17:45</td><td>Whole park</td><td>Legibility of the 1.0 km loop as one continuous shaded gesture</td><td>Figure-eight loop, ghaf canopy massing, wadi bioswale crossing the waist, ten rooms readable, Sheikh Zayed Rd skyline soft in haze</td></tr>
+<tr><td>V02</td><td>Entry plaza, first light</td><td>Eye-level</td><td>06:30</td><td>Entry plaza</td><td>Welcome, orientation, morning-jog culture</td><td>Terracotta gateway pergola, wayfinding totem, two joggers entering loop, long cool shadows</td></tr>
+<tr><td>V03</td><td>Under the pergola at 3pm — deep shade, dappled light</td><td>Eye-level</td><td>15:00</td><td>Loop / picnic groves edge</td><td>The core promise: usable comfort at peak heat</td><td>Terracotta slats overhead, sharp dappled light on path, ghaf trunks, misting line, seated elderly pair, thermal contrast with sunlit lawn beyond</td></tr>
+<tr><td>V04</td><td>Majlis plaza, late afternoon <span class="tag">DAY of pair</span></td><td>Eye-level, fixed camera M-1</td><td>17:00</td><td>Majlis plaza</td><td>Social heart before sunset; material warmth</td><td>Circular majlis seating, terracotta paving, ghaf shade, karak cart, children crossing</td></tr>
+<tr><td>V05</td><td>Majlis plaza after isha — families, warm light <span class="tag">NIGHT of pair</span></td><td>Eye-level, fixed camera M-1 (identical to V04)</td><td>20:30</td><td>Majlis plaza</td><td>Required day+night pair: 2700K adaptive lighting, 20 lux loop, dark-sky discipline, night social life</td><td>Same frame as V04; warm pooled light, families on cushions, no upward spill, stars visible</td></tr>
+<tr><td>V06</td><td>Play dune and teen zone at dusk</td><td>Eye-level, slightly elevated 4 m</td><td>18:45</td><td>Inclusive play dune / teen zone</td><td>All-ages, all-abilities energy at the coolest hour</td><td>Sculpted dune with inclusive equipment, wheelchair-accessible ramp, teens at parkour edge, first warm lights waking</td></tr>
+<tr><td>V07</td><td>Wadi garden after rare rain</td><td>Eye-level, low, near water</td><td>09:00, post-storm</td><td>Sensory wadi garden</td><td>Bioswale performing; delight of ephemeral water</td><td>Flowing wadi, terracotta bridge reflections, wet sand tones, children pointing, native sedges</td></tr>
+<tr><td>V08</td><td>Night aerial — the glowing loop</td><td>Aerial, 180 m</td><td>21:30</td><td>Whole park</td><td>Dark-sky compliance seen from above: light only where feet go</td><td>Figure-eight as a faint 2700K ribbon, dark canopy masses, quiet garden fully dark, city glow at edge for contrast</td></tr>
+</tbody>
+</table>
+<p><strong>Required day+night pair (#13):</strong> V04 + V05 are the same view — camera M-1 locked in the model (position, bearing, lens 28 mm, height 1.6 m) so jurors compare light, not composition. Both boards are captioned <em>"Camera M-1 — day / night pair."</em> V01 + V08 form a secondary aerial pair.</p>
+
+<h5>B. AI Production Pipeline — Human-Led, Geo-Accurate</h5>
+<ol>
+<li><strong>Base geometry:</strong> masterplan linework and 3D massing exported per view; all eight cameras locked in the model with site coordinates.</li>
+<li><strong>AI mood frames:</strong> ControlNet (lineart + depth from the locked viewports, conditioning ≥0.8) drives diffusion for atmosphere only — geometry may not drift. Every prompt, seed and control image is logged to Annex 3.</li>
+<li><strong>Human 3D verification:</strong> the design team rebuilds each approved mood frame as a physically-lit render and checks geometry, planting counts, shade coverage and lux against the model. No view is submitted that cannot be reproduced from the geo-accurate model — AI proposes atmosphere; humans decide and verify.</li>
+</ol>
+
+<h5>C. One-Minute Concept Animation — Storyboard (#15)</h5>
+<table>
+<thead><tr><th>Timecode</th><th>Shot</th><th>Camera move</th><th>Audio / VO line</th></tr></thead>
+<tbody>
+<tr><td>0:00–0:06</td><td>Black; dawn adhan fades; a single sprout breaks sand in macro</td><td>Static macro, slow fade-in</td><td><em>"In the desert, one green sprout is a promise. We call it nabta."</em></td></tr>
+<tr><td>0:06–0:12</td><td>Sprout grows into a ghaf; aerial reveals the figure-eight (V01)</td><td>Growth timelapse to aerial dive</td><td><em>"Plant it well, and it grows into a kilometre of living shade."</em></td></tr>
+<tr><td>0:12–0:18</td><td>Runner at 6:30 am under ghaf canopy</td><td>Tracking dolly beside runner</td><td>Footsteps, birdsong. <em>"The ritual starts at dawn — the first jog under the ghaf."</em></td></tr>
+<tr><td>0:18–0:24</td><td>3pm pergola; dappled light strobes gently (V03)</td><td>Slow push-in</td><td><em>"By three, Nabta has grown a roof — and the park is still full."</em></td></tr>
+<tr><td>0:24–0:30</td><td>Children on the play dune; sensory wadi beyond</td><td>Low crane rise</td><td>Laughter. <em>"Ten rooms, one wellness loop. Every age, every ability."</em></td></tr>
+<tr><td>0:30–0:36</td><td>Rain event: wadi fills, terracotta bridge (V07)</td><td>Timelapse, static frame</td><td><em>"When rain comes, the sprout drinks — the park remembers it is a wadi."</em></td></tr>
+<tr><td>0:36–0:42</td><td>Sunset timelapse over event lawn; lights wake at 2700K</td><td>Static wide, day-to-night ramp</td><td><em>"When the sun leaves, the light stays low, warm, and kind to the sky."</em></td></tr>
+<tr><td>0:42–0:50</td><td>Majlis plaza after isha (V05); families, karak steam</td><td>Slow orbit around majlis circle</td><td><em>"After isha, the majlis blooms. Neighbours, again — the day ends where it began: together."</em></td></tr>
+<tr><td>0:50–0:56</td><td>Night aerial pull-back; glowing figure-eight (V08)</td><td>Rising reverse dolly</td><td><em>"What sprouts here shades everyone. One loop, one neighbourhood, back outside."</em></td></tr>
+<tr><td>0:56–1:00</td><td>Logotype «نبتة» NABTA on dark ground; leaf glyph unfurls</td><td>Static; fade out</td><td>Oud note. <em>"Nabta. The Living Shade Loop."</em></td></tr>
+</tbody>
+</table>
+<p>Timing check: 6+6+6+6+6+6+6+8+6+4 = <strong>60 seconds exactly</strong>. Format: 4K, 24 fps, English VO with Arabic subtitles. AI tools used for mood passes and voice temp track; final shots from the verified 3D model, per pipeline above.</p>
+
+<h5>D. Additional Supporting Materials (#16)</h5>
+<ul>
+<li><strong>Physical model 1:500</strong> — CNC sand-toned base, terracotta loop inlay, removable canopy layer.</li>
+<li><strong>Interactive shade-simulation web viewer</strong> — hourly shadow slider, 21 Jun / 21 Dec presets, per-room shaded-area percentage.</li>
+<li><strong>AI-prompt transparency appendix (Annex 3)</strong> — the differentiator: every prompt, model version, seed and ControlNet input mapped to view codes V01–V08, plus rejected outputs and the human decision that overrode each — an auditable record that AI served the design, not the reverse.</li>
+<li><strong>Community survey annex</strong> — 312 resident responses, methodology, and how findings shaped the ten rooms and the dawn-to-night wellness programme.</li>
+</ul>
+
+<h5>E. Storyboard Strip (Preview)</h5>
+<figure>
+<svg viewBox="0 0 640 130" width="100%" role="img" aria-label="Four storyboard frames">
+<rect x="4" y="4" width="150" height="96" fill="#E7DCC3" stroke="#22301F"/>
+<circle cx="79" cy="30" r="12" fill="#C05A32"/>
+<path d="M40 80 C60 55 100 55 120 80" fill="none" stroke="#CFC0A0" stroke-width="6"/>
+<path d="M79 92 v-14 M79 82 c-6 -2 -10 -7 -10 -12 c6 0 10 4 10 12 M79 78 c6 -2 10 -7 10 -12 c-6 0 -10 4 -10 12" fill="none" stroke="#2F6B4A" stroke-width="3"/>
+<text x="79" y="118" fill="#22301F" font-size="10" text-anchor="middle">0:06 nabta sprouts into the loop</text>
+<rect x="166" y="4" width="150" height="96" fill="#E7DCC3" stroke="#22301F"/>
+<rect x="176" y="14" width="130" height="12" fill="#C05A32"/>
+<path d="M186 26 v60 M226 26 v60 M266 26 v60" stroke="#2F6B4A" stroke-width="4"/>
+<rect x="176" y="86" width="130" height="10" fill="#CFC0A0"/>
+<text x="241" y="118" fill="#22301F" font-size="10" text-anchor="middle">0:18 pergola, 3pm shade</text>
+<rect x="328" y="4" width="150" height="96" fill="#E7DCC3" stroke="#22301F"/>
+<path d="M338 78 C368 60 438 60 468 78 L468 96 L338 96 Z" fill="#4E8FA8"/>
+<rect x="388" y="52" width="30" height="8" fill="#C05A32"/>
+<circle cx="358" cy="34" r="10" fill="#A9C6A0"/>
+<circle cx="448" cy="30" r="12" fill="#A9C6A0"/>
+<text x="403" y="118" fill="#22301F" font-size="10" text-anchor="middle">0:30 wadi after rain</text>
+<rect x="490" y="4" width="146" height="96" fill="#22301F"/>
+<circle cx="563" cy="60" r="16" fill="#C05A32"/>
+<circle cx="533" cy="66" r="4" fill="#E7DCC3"/>
+<circle cx="593" cy="66" r="4" fill="#E7DCC3"/>
+<circle cx="563" cy="24" r="2" fill="#E7DCC3"/>
+<circle cx="518" cy="18" r="2" fill="#E7DCC3"/>
+<circle cx="606" cy="16" r="2" fill="#E7DCC3"/>
+<text x="563" y="118" fill="#22301F" font-size="10" text-anchor="middle">0:42 night majlis, 2700K</text>
+</svg>
+<figcaption>Nabta animation key frames: sprout-to-loop dawn, pergola shade, wadi rain, night majlis.</figcaption>
+</figure>
+</div></div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ar">نبتة</div>
+    <p><span class="logo-nabta" style="font-size:1.1rem">nabta<span class="spark">✦</span>&nbsp;<span class="sub">wellness park</span></span><br>Field guide + draft competition entry · July 2026. All nabta content is an illustrative draft, not an actual submission. Verify all facts against the official brief before entering.</p>
+    <div class="srcs">
+      Sources: <a href="https://aipark.dm.gov.ae/ai-competition" target="_blank">aipark.dm.gov.ae/ai-competition</a> · <a href="https://aipark.dm.gov.ae/ai-competition/Style%20Library/assets/img/Ai%20Park%20Scope%20of%20Work%20%26%20General%20Terms%20%26%20Conditions.pdf" target="_blank">Official brief PDF</a> · <a href="https://www.mediaoffice.ae/en/news/2026/jun/28-06/dubai-municipality-launches-world-first-ai-powered-park-design-challenge" target="_blank">Dubai Media Office</a> · <a href="https://aipark.dm.gov.ae/ai-competition/Style%20Library/assets/img/Neighborhood%20Parks%20Manual.pdf" target="_blank">Park Design Manual</a> · <a href="https://aipark.dm.gov.ae/ai-competition/Style%20Library/assets/img/Ai%20Park%20-%20Master%20Plan.jpg" target="_blank">Site masterplan JPG</a> · <a href="https://aipark.dm.gov.ae/ai-competition/Style%20Library/assets/img/Al%20Safa%20Park%202%20Plan.dwg" target="_blank">As-built DWG</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in'); io.unobserve(e.target)}})},{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

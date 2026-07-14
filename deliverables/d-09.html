@@ -1,0 +1,306 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bone:#F5EFE2;--paper:#FBF7EC;--sand:#E7DCC3;--sand2:#EFE6D2;--ink:#22301F;--soft:#4A5644;--mute:#7A8272;
+--green:#2F6B4A;--leaf:#A9C6A0;--terra:#C05A32;--tdeep:#9C4525;--water:#4E8FA8;--hair:#D8CCAF;
+--serif:"Fraunces",serif;--sans:"Instrument Sans",sans-serif;--mono:"IBM Plex Mono",monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bone);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.62;
+background-image:radial-gradient(ellipse 90% 40% at 50% -5%,rgba(169,198,160,.25),transparent 60%)}
+.wrap{max-width:880px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
+nav{position:sticky;top:0;z-index:50;background:rgba(245,239,226,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair)}
+nav .wrap{display:flex;align-items:center;gap:1.3rem;height:54px;max-width:1000px}
+.logo-nabta{font-family:"Comfortaa",var(--sans);font-weight:700;color:var(--ink)}
+.logo-nabta .spark{color:#8FCB9B;font-weight:400}
+nav a{font-family:var(--mono);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--soft);text-decoration:none}
+nav a:hover{color:var(--tdeep)}
+nav .nx{margin-left:auto;display:flex;gap:1rem}
+.cover{border-bottom:1px solid var(--hair);background:var(--paper)}
+.cover .art svg{display:block;width:100%;height:auto}
+header{padding:2.6rem 0 2.2rem;border-bottom:1px solid var(--hair)}
+.kicker{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--tdeep)}
+h1{font-family:var(--serif);font-weight:900;font-size:clamp(1.9rem,4.5vw,3rem);line-height:1.08;margin:.7rem 0 1rem}
+.chips{display:flex;gap:.45rem;flex-wrap:wrap}
+.chip{font-family:var(--mono);font-size:.66rem;background:var(--sand);padding:.28rem .6rem;border:1px solid var(--hair)}
+.chip.score{color:#fff;background:linear-gradient(90deg,#5FA871,#4E9DB5);border:none}
+main{padding:2.6rem 0 4rem}
+.deliv-body{max-width:74ch}
+.deliv-body h4{font-family:var(--serif);font-weight:600;font-size:1.32rem;margin:1.8rem 0 .6rem;color:var(--green)}
+.deliv-body h4:first-child{margin-top:0}
+.deliv-body h5{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tdeep);margin:1.4rem 0 .5rem}
+.deliv-body p{margin:.6rem 0;font-size:.97rem}
+.deliv-body ul,.deliv-body ol{padding-left:1.3rem;margin:.6rem 0;font-size:.95rem}
+.deliv-body li{margin:.3rem 0}
+.deliv-body blockquote{font-family:var(--serif);font-style:italic;font-size:1.25rem;line-height:1.5;color:var(--green);border-left:3px solid var(--terra);padding:.4rem 0 .4rem 1.3rem;margin:1.5rem 0}
+.deliv-body table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}
+.deliv-body th{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;color:var(--mute);border-bottom:2px solid var(--ink);padding:.5rem .6rem .4rem}
+.deliv-body td{border-bottom:1px solid var(--hair);padding:.55rem .6rem;vertical-align:top}
+.deliv-body tr:hover td{background:rgba(169,198,160,.14)}
+.deliv-body figure{margin:1.5rem 0;background:var(--paper);border:1px solid var(--hair);padding:1.1rem}
+.deliv-body figcaption{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-top:.7rem}
+.deliv-body svg{display:block;width:100%;height:auto}
+.deliv-body .cols2{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+@media(max-width:680px){.deliv-body .cols2{grid-template-columns:1fr}}
+.deliv-body .tag{font-family:var(--mono);font-size:.64rem;background:var(--sand);border:1px solid var(--hair);padding:.16rem .5rem;display:inline-block;margin:.1rem .15rem .1rem 0}
+footer{border-top:1px solid var(--hair);padding:2rem 0 3rem;color:var(--mute);font-size:.84rem}
+.pn{display:flex;justify-content:space-between;gap:1rem;margin-top:2.6rem;border-top:1px solid var(--hair);padding-top:1.4rem}
+.pn a{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tdeep);text-decoration:none}
+</style></head><body>
+<nav><div class="wrap">
+<span class="logo-nabta">nabta<span class="spark">✦</span></span>
+<a href="../aipark-challenge.html">← All deliverables</a>
+<span class="nx"><a href="../map.html">Map &amp; frames</a><a href="../pdfs/Nabta-09-Concept-Diagrams-Sections-and-Elevations.pdf">PDF</a></span>
+</div></nav>
+<div class="cover"><div class="art"><?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="brand" x1="120" y1="0" x2="1080" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7CC98F"/><stop offset="100%" stop-color="#7BC6DD"/>
+    </linearGradient>
+    <path id="sparkle" d="M0,-20 C2.4,-6.5 6.5,-2.4 20,0 C6.5,2.4 2.4,6.5 0,20 C-2.4,6.5 -6.5,2.4 -20,0 C-6.5,-2.4 -2.4,-6.5 0,-20 Z"/>
+  </defs>
+  <rect width="1200" height="520" fill="#F5EFE2"/>
+  <rect x="20" y="20" width="1160" height="480" fill="none" stroke="#22301F" stroke-width="1.5"/>
+  <rect x="0" y="470" width="1200" height="50" fill="#E7DCC3" opacity="0.95"/>
+  <path d="M0,467 L1200,467" stroke="url(#brand)" stroke-width="3" stroke-linecap="round"/>
+  <g opacity="0.34" fill="#22301F">
+    <circle cx="38" cy="490" r="1.2"/><circle cx="67" cy="479" r="1.4"/><circle cx="96" cy="491" r="1.1"/>
+    <circle cx="1008" cy="482" r="1.2"/><circle cx="1037" cy="491" r="1.4"/><circle cx="1070" cy="478" r="1.1"/>
+  </g>
+  <g transform="translate(100 90) scale(0.88)"><use href="#sparkle" fill="#C05A32"/></g>
+  <text x="52" y="56" font-family="IBM Plex Mono, monospace" font-size="14" letter-spacing="2" fill="#22301F">09 SECTIONS &amp; DIAGRAMS</text>
+  <g transform="translate(600 270)">
+    <path d="M-260,36 L-180,36 L-140,-18 L-62,-18 L-18,36 L54,36 L102,-2 L172,-2 L222,36 L286,36" fill="none" stroke="#22301F" stroke-width="2"/>
+    <path d="M-260,36 L-180,36 L-140,-18 L-62,-18 L-18,36 L54,36 L102,-2 L172,-2 L222,36 L286,36" fill="none" stroke="#CFC0A0" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-260,36 L-180,36 L-140,-18 L-62,-18 L-18,36 L54,36 L102,-2 L172,-2 L222,36 L286,36" fill="none" stroke="#22301F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-190,36 C-174,12 -160,-4 -148,-30" fill="none" stroke="#22301F" stroke-width="1.5" stroke-dasharray="6 6"/>
+    <path d="M-90,36 C-74,8 -64,-8 -54,-30" fill="none" stroke="#22301F" stroke-width="1.5" stroke-dasharray="6 6"/>
+    <path d="M20,36 C38,8 50,-8 60,-30" fill="none" stroke="#22301F" stroke-width="1.5" stroke-dasharray="6 6"/>
+    <path d="M138,36 C156,8 170,-8 180,-30" fill="none" stroke="#22301F" stroke-width="1.5" stroke-dasharray="6 6"/>
+    <path d="M214,36 C232,14 244,-2 256,-26" fill="none" stroke="#22301F" stroke-width="1.5" stroke-dasharray="6 6"/>
+    <g fill="#A9C6A0" fill-opacity="0.36" stroke="#22301F" stroke-width="1">
+      <path d="M-212,-22 C-194,-42 -176,-42 -158,-22 C-176,-4 -194,-4 -212,-22 Z"/>
+      <path d="M-78,-40 C-58,-62 -36,-62 -16,-40 C-36,-18 -58,-18 -78,-40 Z"/>
+      <path d="M44,-8 C58,-24 76,-24 90,-8 C76,8 58,8 44,-8 Z"/>
+      <path d="M162,-34 C176,-50 194,-50 208,-34 C194,-18 176,-18 162,-34 Z"/>
+      <path d="M248,-18 C262,-34 280,-34 294,-18 C280,-2 262,-2 248,-18 Z"/>
+    </g>
+    <path d="M-104,66 C-92,52 -74,48 -60,50 C-72,66 -82,78 -100,80" fill="#4E8FA8" fill-opacity="0.16" stroke="#22301F" stroke-width="1.2"/>
+    <path d="M96,66 C108,52 126,48 140,50 C128,66 118,78 100,80" fill="#C05A32" fill-opacity="0.16" stroke="#22301F" stroke-width="1.2"/>
+  </g>
+</svg>
+</div></div>
+<header><div class="wrap">
+<p class="kicker">nabta wellness park · Draft Competition Entry · Dubai Municipality AI Park Design Challenge</p>
+<h1>D·09 — Concept Diagrams, Sections & Elevations</h1>
+<div class="chips"><span class="chip">№10 Diagrams</span><span class="chip">№11 Sections</span><span class="chip score">jury 6.4 → 7.2 /10</span></div>
+</div></header>
+<main><div class="wrap"><div class="deliv-body">
+<h4>Package 9 — Concept Diagrams, Preliminary Design Drawings, Sections &amp; Elevations</h4>
+<p><span class="tag">Deliverable 10</span> <span class="tag">Deliverable 11</span> This package presents the graphic core of the «نبتة» <strong>NABTA — Wellness Park</strong> entry for Al Safa 2 (15,000 m²), under the concept <strong>The Living Shade Loop</strong>: the primary illustrative section through the shade loop and sensory wadi, the three-step concept evolution diagram, and the register of preliminary design drawings issued with the full submission. All drawings derive from a single federated CAD/BIM model, as required by the brief; the section below is reproduced at reading scale from drawing L-201.</p>
+
+<h5>Section AA — through the shade loop and sensory wadi (1:200 @ A2, reproduced at reading scale)</h5>
+<figure>
+<svg viewBox="0 0 640 240" width="100%" role="img" aria-label="Illustrative cross-section through the shaded loop path, pergola and wadi bioswale">
+  <!-- ground mass -->
+  <path d="M0,180 L188,180 L236,200 L248,204 L332,204 L344,200 L392,180 L640,180 L640,240 L0,240 Z" fill="#E7DCC3"/>
+  <!-- water in wadi -->
+  <path d="M224,197.5 L236,200 L248,204 L332,204 L344,200 L350,197.5 Z" fill="#4E8FA8"/>
+  <!-- planted bank slopes -->
+  <path d="M188,180 L236,200 L248,204" fill="none" stroke="#A9C6A0" stroke-width="4"/>
+  <path d="M332,204 L344,200 L392,180" fill="none" stroke="#A9C6A0" stroke-width="4"/>
+  <!-- ground / terrain line -->
+  <path d="M0,180 L188,180 L236,200 L248,204 L332,204 L344,200 L392,180 L640,180" fill="none" stroke="#22301F" stroke-width="1.5"/>
+  <!-- datum across wadi -->
+  <path d="M188,180 L392,180" stroke="#22301F" stroke-width="0.75" stroke-dasharray="4 3"/>
+  <!-- loop path surface -->
+  <rect x="118" y="175.5" width="70" height="4.5" fill="#CFC0A0" stroke="#22301F" stroke-width="0.6"/>
+  <!-- terracotta bridge beyond (dashed) -->
+  <path d="M240,178 C268,152 318,152 342,178" fill="none" stroke="#C05A32" stroke-width="2" stroke-dasharray="6 4"/>
+  <!-- ghaf tree, north side -->
+  <path d="M58,180 C56,150 50,120 44,86" fill="none" stroke="#22301F" stroke-width="3"/>
+  <path d="M56,146 C66,120 78,100 90,86" fill="none" stroke="#22301F" stroke-width="2"/>
+  <ellipse cx="44" cy="72" rx="30" ry="13" fill="#2F6B4A"/>
+  <ellipse cx="70" cy="58" rx="32" ry="13" fill="#2F6B4A"/>
+  <ellipse cx="94" cy="70" rx="26" ry="11" fill="#2F6B4A"/>
+  <ellipse cx="70" cy="54" rx="14" ry="5.5" fill="#A9C6A0" opacity="0.85"/>
+  <!-- ghaf tree, south side -->
+  <path d="M480,180 C482,150 488,124 492,98" fill="none" stroke="#22301F" stroke-width="3"/>
+  <path d="M481,152 C472,130 462,114 452,100" fill="none" stroke="#22301F" stroke-width="2"/>
+  <ellipse cx="462" cy="92" rx="26" ry="11" fill="#2F6B4A"/>
+  <ellipse cx="488" cy="82" rx="30" ry="12" fill="#2F6B4A"/>
+  <ellipse cx="510" cy="92" rx="22" ry="10" fill="#2F6B4A"/>
+  <ellipse cx="488" cy="78" rx="12" ry="5" fill="#A9C6A0" opacity="0.85"/>
+  <!-- bank grasses and shrubs -->
+  <g stroke="#A9C6A0" stroke-width="1.5" fill="none">
+    <path d="M218,196 l-3,-7 M218,196 l0,-8 M218,196 l3,-7"/>
+    <path d="M231,199 l-3,-7 M231,199 l0,-8 M231,199 l3,-7"/>
+    <path d="M352,197 l-3,-7 M352,197 l0,-8 M352,197 l3,-7"/>
+    <path d="M364,192 l-3,-7 M364,192 l0,-8 M364,192 l3,-7"/>
+    <path d="M378,187 l-3,-7 M378,187 l0,-8 M378,187 l3,-7"/>
+  </g>
+  <ellipse cx="404" cy="175" rx="11" ry="6" fill="#A9C6A0"/>
+  <!-- pergola: posts, chords, form-found slats (denser to south) -->
+  <rect x="124.5" y="96" width="3" height="80" fill="#22301F"/>
+  <rect x="180.5" y="96" width="3" height="80" fill="#22301F"/>
+  <path d="M112,96 L198,96" stroke="#22301F" stroke-width="2"/>
+  <path d="M110,88 C138,74 168,80 200,86" fill="none" stroke="#22301F" stroke-width="1.5"/>
+  <g stroke="#C05A32" stroke-width="2.5">
+    <path d="M116,85.5 L116,96"/><path d="M128,81.5 L128,96"/><path d="M139,79 L139,96"/>
+    <path d="M149,78.4 L149,96"/><path d="M158,79.3 L158,96"/><path d="M166,80.6 L166,96"/>
+    <path d="M173,81.7 L173,96"/><path d="M179,82.4 L179,96"/><path d="M184.5,83.3 L184.5,96"/>
+    <path d="M189,84.2 L189,96"/><path d="M193,84.9 L193,96"/><path d="M196.5,85.4 L196.5,96"/>
+  </g>
+  <!-- cast shade hatch on ground -->
+  <g stroke="#22301F" stroke-width="0.8" opacity="0.5">
+    <path d="M100,176 l8,-8"/><path d="M110,176 l8,-8"/><path d="M120,176 l8,-8"/>
+    <path d="M130,176 l8,-8"/><path d="M140,176 l8,-8"/><path d="M150,176 l8,-8"/>
+    <path d="M160,176 l8,-8"/><path d="M170,176 l8,-8"/><path d="M180,176 l8,-8"/>
+  </g>
+  <!-- people: adult + child on path -->
+  <g fill="#22301F" stroke="#22301F" stroke-width="1.8" stroke-linecap="round">
+    <circle cx="146" cy="149" r="3.2" stroke="none"/>
+    <path d="M146,152 L146,168 M146,168 L142,180 M146,168 L150,180 M146,157 L152,164" fill="none"/>
+    <circle cx="156" cy="166" r="2.4" stroke="none"/>
+    <path d="M156,168.5 L156,174 M156,174 L153.5,180 M156,174 L158.5,180 M156,170 L152,165" fill="none" stroke-width="1.4"/>
+  </g>
+  <!-- person: wheelchair user, south side -->
+  <g stroke="#22301F" stroke-width="1.8" fill="none" stroke-linecap="round">
+    <circle cx="542" cy="156.5" r="3" fill="#22301F" stroke="none"/>
+    <path d="M542,159.5 L542,168 M542,168 L550,168 M550,168 L550,176 M548,177.5 L553,177.5 M542,162 L548,167"/>
+    <circle cx="545" cy="174" r="6"/>
+    <circle cx="553.5" cy="177.5" r="2.5"/>
+  </g>
+  <!-- sun and ray -->
+  <g stroke="#C05A32" stroke-width="2" fill="none">
+    <circle cx="575" cy="34" r="11"/>
+    <path d="M575,16 L575,10 M575,52 L575,58 M557,34 L551,34 M593,34 L599,34 M562,21 L558,17 M588,21 L592,17 M562,47 L558,51 M588,47 L592,51"/>
+  </g>
+  <path d="M560,48 L214,77" stroke="#C05A32" stroke-width="1" stroke-dasharray="5 3"/>
+  <polygon points="210,78 220,72 219,82" fill="#C05A32"/>
+  <!-- dimensions -->
+  <g stroke="#22301F" stroke-width="0.75" fill="none">
+    <path d="M118,186 L118,224 M188,186 L188,224 M118,220 L188,220"/>
+    <path d="M115,223 l6,-6 M185,223 l6,-6"/>
+    <path d="M124,96 L92,96 M116,180 L92,180 M97,96 L97,180"/>
+    <path d="M94,99 l6,-6 M94,183 l6,-6"/>
+    <path d="M290,180 L290,204"/>
+    <path d="M287,183 l6,-6 M287,207 l6,-6"/>
+  </g>
+  <!-- leaders -->
+  <g stroke="#22301F" stroke-width="0.75" fill="none">
+    <path d="M229,47 L198,76"/>
+    <path d="M70,43 L80,57"/>
+    <path d="M357,122 L315,158"/>
+    <path d="M399,152 L366,194"/>
+    <path d="M84,162 L108,172"/>
+    <path d="M302,228 L302,201"/>
+  </g>
+  <!-- scale bar -->
+  <g stroke="#22301F" stroke-width="0.8">
+    <rect x="498" y="222" width="20" height="5" fill="#22301F"/>
+    <rect x="518" y="222" width="20" height="5" fill="#E7DCC3"/>
+    <rect x="538" y="222" width="20" height="5" fill="#22301F"/>
+    <rect x="558" y="222" width="20" height="5" fill="#E7DCC3"/>
+    <rect x="578" y="222" width="20" height="5" fill="#22301F"/>
+  </g>
+  <!-- section markers -->
+  <circle cx="18" cy="112" r="10" fill="#E7DCC3" stroke="#22301F" stroke-width="1.5"/>
+  <circle cx="622" cy="112" r="10" fill="#E7DCC3" stroke="#22301F" stroke-width="1.5"/>
+  <!-- text -->
+  <g fill="#22301F" font-family="inherit">
+    <text x="16" y="18" font-size="12" font-weight="bold" letter-spacing="0.5">NABTA · SECTION AA — SHADE LOOP &amp; SENSORY WADI</text>
+    <text x="18" y="115.5" font-size="11" font-weight="bold" text-anchor="middle">A</text>
+    <text x="622" y="115.5" font-size="11" font-weight="bold" text-anchor="middle">A</text>
+    <text x="232" y="44" font-size="10.5">AI-form-found pergola — terracotta slats densify toward south sun</text>
+    <text x="16" y="40" font-size="10.5">retained ghaf canopy</text>
+    <text x="360" y="118" font-size="10.5">terracotta bridge beyond</text>
+    <text x="402" y="150" font-size="10.5">planted bioswale banks — sidr &amp; native grasses</text>
+    <text x="14" y="164" font-size="10.5">continuous shade · 15:00</text>
+    <text x="153" y="215" font-size="10.5" text-anchor="middle" font-weight="bold">3.5 m</text>
+    <text x="153" y="232" font-size="10">shared loop path</text>
+    <text x="97" y="140" font-size="10" text-anchor="middle" font-weight="bold" transform="rotate(-90 97 140)">4.2 m clear</text>
+    <text x="284" y="195" font-size="10" text-anchor="end" font-weight="bold">1.2 m</text>
+    <text x="264" y="238" font-size="10.5">sensory wadi — seasonal bioswale</text>
+    <text x="575" y="62" font-size="10" text-anchor="middle">sun · 15:00 · 21 JUN</text>
+    <text x="498" y="237" font-size="10">0</text>
+    <text x="598" y="237" font-size="10" text-anchor="end">5 m</text>
+    <text x="14" y="212" font-size="10" letter-spacing="1">NORTH</text>
+    <text x="626" y="212" font-size="10" letter-spacing="1" text-anchor="end">SOUTH</text>
+  </g>
+</svg>
+<figcaption><strong>L-201 · Section AA.</strong> The 3.5 m shared loop path runs along the north bank of the wadi under a 4.2 m-clear pergola whose terracotta slats densify toward the southern sun, joining the retained ghaf canopy to hold continuous shade across the path at 15:00 on the summer solstice. The 1.2 m-deep bioswale detains stormwater and recycled irrigation flows between planted sidr banks; a terracotta bridge crosses beyond the cut line.</figcaption>
+</figure>
+
+<h5>Concept evolution — from ring to living loop</h5>
+<figure>
+<svg viewBox="0 0 640 170" width="100%" role="img" aria-label="Three-panel concept diagram: perimeter loop, figure-eight through the interior, garden rooms attached to the loop">
+  <g transform="translate(8,10)">
+    <rect x="0" y="0" width="196" height="118" fill="#E7DCC3" stroke="#22301F" stroke-width="1"/>
+    <polygon points="16,14 180,20 184,100 24,106" fill="none" stroke="#22301F" stroke-width="1" stroke-dasharray="4 3"/>
+    <ellipse cx="98" cy="60" rx="70" ry="38" fill="none" stroke="#2F6B4A" stroke-width="3"/>
+    <g fill="#22301F" font-family="inherit" text-anchor="middle">
+      <text x="98" y="138" font-size="11" font-weight="bold" letter-spacing="0.5">1 · PERIMETER LOOP</text>
+      <text x="98" y="152" font-size="10">shade at the edges only</text>
+    </g>
+  </g>
+  <polygon points="208,62 218,69 208,76" fill="#22301F"/>
+  <g transform="translate(222,10)">
+    <rect x="0" y="0" width="196" height="118" fill="#E7DCC3" stroke="#22301F" stroke-width="1"/>
+    <polygon points="16,14 180,20 184,100 24,106" fill="none" stroke="#22301F" stroke-width="1" stroke-dasharray="4 3"/>
+    <path d="M98,60 C98,22 24,22 24,60 C24,98 98,98 98,60 C98,22 172,22 172,60 C172,98 98,98 98,60 Z" fill="none" stroke="#2F6B4A" stroke-width="3"/>
+    <g fill="#22301F" font-family="inherit" text-anchor="middle">
+      <text x="98" y="138" font-size="11" font-weight="bold" letter-spacing="0.5">2 · PULLED THROUGH THE INTERIOR</text>
+      <text x="98" y="152" font-size="10">figure-eight doubles shaded frontage</text>
+    </g>
+  </g>
+  <polygon points="422,62 432,69 422,76" fill="#22301F"/>
+  <g transform="translate(436,10)">
+    <rect x="0" y="0" width="196" height="118" fill="#E7DCC3" stroke="#22301F" stroke-width="1"/>
+    <polygon points="16,14 180,20 184,100 24,106" fill="none" stroke="#22301F" stroke-width="1" stroke-dasharray="4 3"/>
+    <path d="M98,60 C98,22 24,22 24,60 C24,98 98,98 98,60 C98,22 172,22 172,60 C172,98 98,98 98,60 Z" fill="none" stroke="#2F6B4A" stroke-width="3"/>
+    <g fill="#C05A32" stroke="#22301F" stroke-width="0.8">
+      <circle cx="27" cy="45" r="5"/><circle cx="27" cy="75" r="5"/><circle cx="58" cy="30" r="5"/>
+      <circle cx="58" cy="90" r="5"/><circle cx="138" cy="30" r="5"/><circle cx="138" cy="90" r="5"/>
+      <circle cx="169" cy="45" r="5"/><circle cx="169" cy="75" r="5"/><circle cx="86" cy="36" r="5"/>
+      <circle cx="110" cy="84" r="5"/>
+    </g>
+    <g fill="#22301F" font-family="inherit" text-anchor="middle">
+      <text x="98" y="138" font-size="11" font-weight="bold" letter-spacing="0.5">3 · ROOMS ATTACH TO THE LOOP</text>
+      <text x="98" y="152" font-size="10">ten garden rooms plug into shade</text>
+    </g>
+  </g>
+</svg>
+<figcaption><strong>L-010 (extract).</strong> A perimeter ring shades only the edges; pulling the loop through the interior as a 1.0 km figure-eight doubles shaded frontage and crosses the wadi twice; the ten garden rooms then attach directly to the loop so every destination sits within the shade system.</figcaption>
+</figure>
+
+<h5>Drawing register — preliminary design set</h5>
+<p>The full entry includes the following drawings, all cut from one federated Revit/Rhino model (shared site coordinates, IFC 4 exchange, ISO 19650 naming) and issued as DWG + PDF per the brief's CAD/BIM requirement. Sections and elevations reference the common ±0.000 park datum shown dashed in Section AA.</p>
+<table>
+<thead><tr><th>No.</th><th>Title</th><th>Scale</th><th>Format</th></tr></thead>
+<tbody>
+<tr><td>L-001</td><td>Illustrative masterplan</td><td>1:500</td><td>A0 · DWG/PDF from BIM</td></tr>
+<tr><td>L-010</td><td>Concept &amp; systems diagrams (shade, water, sensing)</td><td>NTS</td><td>A3 · PDF</td></tr>
+<tr><td>L-101</td><td>Shade loop &amp; garden rooms — general arrangement</td><td>1:250</td><td>A1 · DWG</td></tr>
+<tr><td>L-201</td><td>Section AA — shade loop &amp; sensory wadi</td><td>1:200</td><td>A2 · DWG/PDF</td></tr>
+<tr><td>L-202</td><td>Section BB — play dune, majlis plaza &amp; café terrace</td><td>1:200</td><td>A2 · DWG</td></tr>
+<tr><td>L-301</td><td>Pergola elevations, north &amp; south faces</td><td>1:100</td><td>A1 · DWG from Revit (LOD 300)</td></tr>
+<tr><td>L-302</td><td>Majlis plaza &amp; café terrace elevations</td><td>1:100</td><td>A1 · DWG</td></tr>
+<tr><td>L-401</td><td>Pergola node &amp; slat-fixing details</td><td>1:20</td><td>A3 · DWG</td></tr>
+<tr><td>L-402</td><td>Bioswale edge, weir &amp; terracotta bridge details</td><td>1:20</td><td>A3 · DWG</td></tr>
+<tr><td>L-501</td><td>Planting &amp; irrigation zoning plan</td><td>1:250</td><td>A1 · DWG + GIS</td></tr>
+<tr><td>L-601</td><td>AI form-finding record — inputs, objectives, selected generation</td><td>NTS</td><td>A3 · PDF + parametric definition</td></tr>
+</tbody>
+</table>
+
+<h5>How the pergola was form-found</h5>
+<div class="cols2">
+<p>The pergola geometry in Section AA is not drawn — it is computed, then judged by the design team. A notional canopy surface over the loop centreline was meshed and exposed to an annual solar simulation at the Al Safa 2 coordinates. The mapping is direct: <strong>simulated solar load per mesh face → slat density</strong>. The most irradiated faces receive slats at 180 mm centres, tapering linearly to 600 mm centres on the sheltered north edge — the south-densifying gradient visible in the section.</p>
+<p>An evolutionary solver then optimised slat spacing, chord curvature and post positions against a single primary target — <strong>continuous shade along the 3.5 m path centreline at 15:00 on the summer solstice</strong>, the governing heat-stress hour drawn in Section AA — with minimum slat material and preserved low-angle December sun as secondary objectives. The team reviewed the leading generations against the 4.2 m clear height and sightlines to the 1.2 m wadi before selecting one; that decision, and the solver record, are documented on sheet L-601. The selected generation exports as native parametric geometry alongside the IFC model, so the same definition regenerates fabrication data at detailed design. The result is a roof that visibly "reads" the sun — denser where Dubai's sky is harshest, open where the retained ghaf canopy already does the work.</p>
+</div>
+</div>
+<div class="pn"><a href="d-08.html">← D·08 Accessibility, Circulation & Comme</a><a href="d-10.html">D·10 Visualizations, Day/Night, Animati →</a></div>
+</div></main>
+<footer><div class="wrap"><span class="logo-nabta">nabta<span class="spark">✦</span></span> · The Living Shade Loop · Al Safa 2 Park, Jumeirah, Dubai · illustrative mock draft, July 2026</div></footer>
+</body></html>

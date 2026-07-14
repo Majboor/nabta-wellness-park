@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 210" width="100%">
+  <!-- nabta wellness park — vector lockup recreated from brand sheet; inherits color via currentColor -->
+  <g fill="currentColor">
+    <text x="320" y="118" text-anchor="middle" font-family="Comfortaa, 'Baloo 2', sans-serif" font-weight="700" font-size="112" letter-spacing="2">nabta</text>
+    <text x="320" y="180" text-anchor="middle" font-family="Comfortaa, 'Baloo 2', sans-serif" font-weight="400" font-size="34" letter-spacing="14">wellness park</text>
+  </g>
+  <!-- 4-point sparkle sitting in the "t" -->
+  <g transform="translate(409,52)">
+    <path d="M0,-20 C2.4,-6.5 6.5,-2.4 20,0 C6.5,2.4 2.4,6.5 0,20 C-2.4,6.5 -6.5,2.4 -20,0 C-6.5,-2.4 -2.4,-6.5 0,-20 Z" fill="#8FCB9B"/>
+  </g>
+</svg>

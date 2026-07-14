@@ -1,0 +1,62 @@
+{
+  "room": "01",
+  "title": "Entry Plaza & Gateway",
+  "frames": [
+    {
+      "file": "aerial.svg",
+      "code": "R01-A",
+      "title": "The Loop from Above",
+      "caption": "The shaded figure-eight loop meets the city at the southeast entry plaza, its gateway pergola and sparkle-inlaid paving marking the park's front door.",
+      "videogen_prompt": "Slow descending aerial crane shot over a desert park in Dubai at golden hour, revealing a 1 km figure-eight walking loop lined with ghaf trees, a winding bioswale, and a terracotta-slatted gateway pergola on a paved entry plaza at the southeast corner beside a main road. Warm low sun, long soft shadows, calm documentary drone footage."
+    },
+    {
+      "file": "approach.svg",
+      "code": "R01-B",
+      "title": "Arrival from the Street",
+      "caption": "From the sidewalk, the sculptural terracotta gateway frames the green heart of the park and draws visitors across sparkle-inlaid paving.",
+      "videogen_prompt": "Eye-level steadicam push-in from a Dubai street toward a monumental pergola gateway of dense hanging terracotta slats, ghaf trees flanking the entrance, striped slat shadows raking across pale stone paving with an inlaid star motif. Late afternoon warm desert light, welcoming and serene."
+    },
+    {
+      "file": "walkthrough.svg",
+      "code": "R01-C",
+      "title": "Under the Gateway Canopy",
+      "caption": "Beneath the terracotta slats the plaza comes alive: café terrace, bike racks, and the shaded loop path launching north.",
+      "videogen_prompt": "Slow walking POV through a shaded entry plaza beneath a terracotta-slat pergola, dappled stripe shadows on the paving, families strolling, a cyclist arriving, café terrace with seated guests to one side, a sand-toned path curving away into ghaf trees. Warm mid-morning light, relaxed everyday park life."
+    },
+    {
+      "file": "flythrough.svg",
+      "code": "R01-D",
+      "title": "Launching onto the Loop",
+      "caption": "An oblique drone view follows the loop as it leaves the entry plaza, crosses the wadi bioswale, and sweeps north under young ghaf canopies.",
+      "videogen_prompt": "Low oblique drone tracking shot gliding from a terracotta-pergola entry plaza along a sinuous sand-colored walking loop, over a green bioswale and between ghaf trees receding into the distance, tiny walkers dotted along the path. Golden hour, gentle forward drift with slight parallax, cinematic and airy."
+    },
+    {
+      "file": "evolution-1.svg",
+      "code": "R01-E",
+      "title": "Opening Day",
+      "caption": "Year zero: staked saplings, a freshly cut bioswale, and the gateway pergola standing proud over a sun-bright new plaza.",
+      "videogen_prompt": "Static wide locked-off shot of a brand-new desert park entry plaza on opening day: rows of young staked ghaf saplings casting tiny shadows, a bold terracotta-slat gateway pergola, raw gravel bioswale, first visitors exploring. Bright midday desert sun, hopeful and fresh."
+    },
+    {
+      "file": "evolution-2.svg",
+      "code": "R01-F",
+      "title": "Year Two — Filling In",
+      "caption": "Crowns broaden, reeds take hold in the wadi, and the first vine reaches the pergola as shade begins to gather.",
+      "videogen_prompt": "Same locked-off wide shot of the park entry plaza two years on: ghaf trees now head-height with rounding crowns, reeds establishing in the bioswale, a young vine climbing the terracotta pergola, joggers and walkers passing. Warm late-morning light, a park visibly growing."
+    },
+    {
+      "file": "evolution-3.svg",
+      "code": "R01-G",
+      "title": "Year Five — Mature Canopy",
+      "caption": "Interlocking ghaf canopies throw continuous shade over the loop, the wadi runs lush, and the vine-wrapped gateway anchors a full plaza.",
+      "videogen_prompt": "Same locked-off wide shot of the entry plaza at year five: broad interlocking ghaf canopies casting deep dappled shade over the path, a lush reed-filled bioswale with standing water, vines draping the terracotta pergola, plaza busy with strollers. Soft filtered morning light, verdant and settled."
+    },
+    {
+      "file": "night.svg",
+      "code": "R01-H",
+      "title": "Gateway After Dark",
+      "caption": "Under a deep ink sky, warm lamplight pools on the paving, festoon lights trace the pergola, and the sparkle inlay glints beneath the moon.",
+      "videogen_prompt": "Nighttime tripod shot of the park entry plaza under a terracotta pergola: warm 2700K lamp posts and festoon string lights glowing against a deep ink sky with a bright moon, uplit ghaf trees, café windows glowing, evening strollers crossing pools of amber light. Calm, intimate night-park mood with gentle ambient movement."
+    }
+  ]
+}

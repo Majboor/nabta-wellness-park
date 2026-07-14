@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <path id="sparkle" d="M0,-12 L2.8,-2.8 L12,0 L2.8,2.8 L0,12 L-2.8,2.8 L-12,0 L-2.8,-2.8 Z"/>
+  </defs>
+
+  <!-- warm late-afternoon sky glimpsed through canopy -->
+  <rect width="1280" height="720" fill="#F5EFE2"/>
+  <rect y="0" width="1280" height="200" fill="#E7DCC3" fill-opacity="0.5"/>
+  <circle cx="250" cy="120" r="80" fill="#F5EFE2"/>
+
+  <!-- distant park band beyond the seat wall -->
+  <rect y="380" width="1280" height="30" fill="#A9C6A0" fill-opacity="0.5"/>
+  <ellipse cx="120" cy="386" rx="180" ry="36" fill="#2F6B4A" fill-opacity="0.35"/>
+  <ellipse cx="1180" cy="388" rx="200" ry="38" fill="#2F6B4A" fill-opacity="0.35"/>
+  <ellipse cx="660" cy="392" rx="160" ry="26" fill="#2F6B4A" fill-opacity="0.25"/>
+
+  <!-- plaza floor -->
+  <rect y="404" width="1280" height="316" fill="#CFC0A0"/>
+  <rect y="404" width="1280" height="316" fill="#F5EFE2" fill-opacity="0.25"/>
+  <!-- paving arcs + hearing-loop inlay ring -->
+  <path d="M-40,700 a680,240 0 0 1 1360,0" fill="none" stroke="#E7DCC3" stroke-width="10" stroke-opacity="0.8"/>
+  <path d="M60,720 a580,200 0 0 1 1160,0" fill="none" stroke="#E7DCC3" stroke-width="10" stroke-opacity="0.7"/>
+  <path d="M180,650 a460,140 0 0 1 920,0" fill="none" stroke="#7BC6DD" stroke-width="4" stroke-opacity="0.7"/>
+
+  <!-- ring seat wall sweeping around (far side) -->
+  <path d="M40,470 C 240,420 440,404 640,404 C 840,404 1040,420 1240,470 L 1240,510 C 1040,462 840,446 640,446 C 440,446 240,462 40,510 Z" fill="#E7DCC3"/>
+  <path d="M40,470 C 240,420 440,404 640,404 C 840,404 1040,420 1240,470" fill="none" stroke="#22301F" stroke-opacity="0.22" stroke-width="3"/>
+  <!-- cushions -->
+  <g>
+    <rect x="150" y="446" width="52" height="16" rx="8" fill="#C05A32" transform="rotate(-6 176 454)"/>
+    <rect x="300" y="428" width="52" height="16" rx="8" fill="#A9C6A0" transform="rotate(-4 326 436)"/>
+    <rect x="470" y="416" width="52" height="16" rx="8" fill="#C05A32"/>
+    <rect x="760" y="416" width="52" height="16" rx="8" fill="#7CC98F"/>
+    <rect x="930" y="428" width="52" height="16" rx="8" fill="#C05A32" transform="rotate(4 956 436)"/>
+    <rect x="1080" y="446" width="52" height="16" rx="8" fill="#A9C6A0" transform="rotate(6 1106 454)"/>
+  </g>
+
+  <!-- central low water element -->
+  <g>
+    <ellipse cx="640" cy="580" rx="190" ry="46" fill="#E7DCC3"/>
+    <ellipse cx="640" cy="572" rx="168" ry="38" fill="#4E8FA8"/>
+    <ellipse cx="640" cy="572" rx="168" ry="38" fill="#22301F" fill-opacity="0.12"/>
+    <ellipse cx="596" cy="564" rx="56" ry="12" fill="#7BC6DD" fill-opacity="0.75"/>
+    <ellipse cx="710" cy="580" rx="36" ry="8" fill="#7BC6DD" fill-opacity="0.5"/>
+    <path d="M560,570 q20,6 44,6 M660,586 q26,4 50,0" stroke="#F5EFE2" stroke-width="3" fill="none" stroke-opacity="0.7" stroke-linecap="round"/>
+    <!-- gentle bubbler -->
+    <ellipse cx="640" cy="560" rx="14" ry="5" fill="#F5EFE2" fill-opacity="0.8"/>
+  </g>
+
+  <!-- grand ghaf trunk and dappled canopy overhead -->
+  <g>
+    <path d="M900,470 C 906,400 912,340 930,280 M900,470 C 890,410 878,360 856,318 M906,400 C 940,376 968,360 992,352"
+          fill="none" stroke="#22301F" stroke-width="14" stroke-linecap="round"/>
+    <ellipse cx="640" cy="70" rx="560" ry="130" fill="#2F6B4A" fill-opacity="0.85"/>
+    <ellipse cx="320" cy="140" rx="330" ry="110" fill="#2F6B4A" fill-opacity="0.7"/>
+    <ellipse cx="980" cy="150" rx="360" ry="120" fill="#2F6B4A" fill-opacity="0.75"/>
+    <ellipse cx="760" cy="60" rx="260" ry="90" fill="#A9C6A0" fill-opacity="0.5"/>
+    <ellipse cx="180" cy="80" rx="200" ry="80" fill="#A9C6A0" fill-opacity="0.45"/>
+    <ellipse cx="1140" cy="90" rx="200" ry="80" fill="#A9C6A0" fill-opacity="0.45"/>
+    <ellipse cx="520" cy="180" rx="140" ry="50" fill="#A9C6A0" fill-opacity="0.35"/>
+    <ellipse cx="900" cy="220" rx="120" ry="44" fill="#7CC98F" fill-opacity="0.3"/>
+    <!-- hanging leaf clusters -->
+    <ellipse cx="440" cy="250" rx="60" ry="24" fill="#2F6B4A" fill-opacity="0.6"/>
+    <ellipse cx="1060" cy="260" rx="70" ry="26" fill="#2F6B4A" fill-opacity="0.6"/>
+  </g>
+
+  <!-- pergola halo posts + slats at frame edges -->
+  <g>
+    <rect x="90" y="180" width="24" height="330" fill="#C05A32"/>
+    <rect x="1166" y="180" width="24" height="330" fill="#C05A32"/>
+    <g fill="#C05A32">
+      <path d="M114,190 L360,214 L360,230 L114,210 Z"/>
+      <path d="M114,250 L330,270 L330,284 L114,268 Z"/>
+      <path d="M1166,190 L920,214 L920,230 L1166,210 Z"/>
+      <path d="M1166,250 L950,270 L950,284 L1166,268 Z"/>
+    </g>
+    <g fill="#22301F" fill-opacity="0.12">
+      <path d="M114,210 L360,230 L360,238 L114,218 Z"/>
+      <path d="M1166,210 L920,230 L920,238 L1166,218 Z"/>
+    </g>
+  </g>
+
+  <!-- unlit lanterns hanging, ready for evening -->
+  <g>
+    <path d="M420,190 v46 M860,200 v40 M1010,236 v34" stroke="#22301F" stroke-width="2.5"/>
+    <g fill="#E7DCC3" stroke="#22301F" stroke-width="2.5">
+      <path d="M420,236 l-12,12 l0,20 l12,12 l12,-12 l0,-20 Z"/>
+      <path d="M860,240 l-11,11 l0,18 l11,11 l11,-11 l0,-18 Z"/>
+      <path d="M1010,270 l-10,10 l0,16 l10,10 l10,-10 l0,-16 Z"/>
+    </g>
+  </g>
+
+  <!-- dappled light pools on floor -->
+  <g fill="#F5EFE2" fill-opacity="0.45">
+    <ellipse cx="330" cy="620" rx="70" ry="16"/><ellipse cx="520" cy="680" rx="90" ry="18"/>
+    <ellipse cx="880" cy="640" rx="80" ry="16"/><ellipse cx="1080" cy="600" rx="60" ry="14"/>
+  </g>
+  <g fill="#22301F" fill-opacity="0.1">
+    <ellipse cx="240" cy="560" rx="60" ry="12"/><ellipse cx="740" cy="666" rx="80" ry="14"/>
+    <ellipse cx="1010" cy="540" rx="50" ry="10"/>
+  </g>
+
+  <!-- intergenerational gathering: silhouettes seated and standing -->
+  <g fill="#22301F">
+    <!-- seated on far wall, left group -->
+    <g>
+      <circle cx="330" cy="404" r="10"/><path d="M318,414 h24 l-3,34 h-18 Z"/>
+      <circle cx="368" cy="400" r="9"/><path d="M357,409 h22 l-3,32 h-16 Z"/>
+    </g>
+    <!-- seated elder + child, right -->
+    <g>
+      <circle cx="930" cy="398" r="10"/><path d="M918,408 h24 l-3,34 h-18 Z"/>
+      <circle cx="966" cy="408" r="7"/><path d="M958,415 h16 l-2,24 h-12 Z"/>
+    </g>
+    <!-- standing pair, mid-left -->
+    <g>
+      <circle cx="480" cy="470" r="11"/>
+      <path d="M480,481 C 469,489 467,522 471,552 L 477,552 L 480,516 L 484,552 L 490,552 C 493,522 491,489 480,481 Z"/>
+      <circle cx="516" cy="476" r="10"/>
+      <path d="M516,486 C 506,494 505,524 508,550 L 513,550 L 516,518 L 519,550 L 524,550 C 527,524 526,494 516,486 Z"/>
+    </g>
+    <!-- child pointing at water, right of pool -->
+    <g>
+      <circle cx="840" cy="510" r="8"/>
+      <path d="M840,518 C 833,524 832,545 835,564 L 839,564 L 840,544 L 842,564 L 846,564 C 848,545 847,524 840,518 Z"/>
+      <path d="M846,528 L 862,520" stroke="#22301F" stroke-width="4" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- foreground: near seat wall arc with cushions, bottom corners -->
+  <g>
+    <path d="M0,640 C 180,600 320,584 460,580 L 460,720 L 0,720 Z" fill="#E7DCC3"/>
+    <path d="M1280,640 C 1100,600 960,584 820,580 L 820,720 L 1280,720 Z" fill="#E7DCC3"/>
+    <path d="M0,640 C 180,600 320,584 460,580 M1280,640 C 1100,600 960,584 820,580" fill="none" stroke="#22301F" stroke-opacity="0.2" stroke-width="4"/>
+    <rect x="120" y="606" width="90" height="26" rx="13" fill="#C05A32" transform="rotate(-7 165 619)"/>
+    <rect x="300" y="586" width="90" height="26" rx="13" fill="#A9C6A0" transform="rotate(-3 345 599)"/>
+    <rect x="900" y="588" width="90" height="26" rx="13" fill="#7CC98F" transform="rotate(3 945 601)"/>
+    <rect x="1080" y="608" width="90" height="26" rx="13" fill="#C05A32" transform="rotate(7 1125 621)"/>
+  </g>
+
+  <!-- stipple -->
+  <g fill="#22301F" fill-opacity="0.12">
+    <circle cx="560" cy="640" r="3"/><circle cx="620" cy="690" r="3"/><circle cx="700" cy="650" r="3"/>
+    <circle cx="760" cy="700" r="3"/><circle cx="500" cy="700" r="3"/><circle cx="240" cy="520" r="2.5"/>
+    <circle cx="1050" cy="500" r="2.5"/><circle cx="380" cy="540" r="2.5"/>
+  </g>
+  <g fill="#F5EFE2" fill-opacity="0.6">
+    <circle cx="400" cy="140" r="3"/><circle cx="820" cy="110" r="3"/><circle cx="1100" cy="170" r="2.5"/>
+    <circle cx="600" cy="90" r="2.5"/>
+  </g>
+
+  <!-- nabta sparkles -->
+  <use href="#sparkle" x="700" y="320" fill="#7BC6DD" opacity="0.9"/>
+  <use href="#sparkle" x="230" y="300" fill="#7CC98F" opacity="0.9"/>
+</svg>

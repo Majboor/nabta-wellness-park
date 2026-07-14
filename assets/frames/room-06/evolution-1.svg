@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <!-- Fitness Grove, opening day: same composition as year 5, young staked ghaf saplings, fresh seeded lawns -->
+  <defs>
+    <linearGradient id="e1-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5EFE2"/>
+      <stop offset="1" stop-color="#E7DCC3"/>
+    </linearGradient>
+    <pattern id="e1-stipple" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="7" r="1.3" fill="#22301F" opacity="0.10"/>
+      <circle cx="17" cy="18" r="1.1" fill="#22301F" opacity="0.08"/>
+    </pattern>
+    <pattern id="e1-grass" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="6" r="1.2" fill="#2F6B4A" opacity="0.12"/>
+      <circle cx="15" cy="16" r="1" fill="#7CC98F" opacity="0.1"/>
+    </pattern>
+    <g id="e1-sparkle">
+      <path d="M0,-11 L2.6,-2.6 L11,0 L2.6,2.6 L0,11 L-2.6,2.6 L-11,0 L-2.6,-2.6 Z" fill="#F5EFE2"/>
+    </g>
+  </defs>
+
+  <rect width="1280" height="470" fill="url(#e1-sky)"/>
+  <circle cx="1060" cy="120" r="55" fill="#F5EFE2" opacity="0.85"/>
+
+  <!-- distant loop treeline, sparse young planting -->
+  <path d="M0,438 C200,424 440,436 680,424 C920,414 1120,432 1280,420 L1280,470 L0,470 Z" fill="#A9C6A0" opacity="0.35"/>
+  <path d="M0,452 C260,442 560,450 860,440 C1020,436 1160,446 1280,438 L1280,475 L0,475 Z" fill="#2F6B4A" opacity="0.18"/>
+
+  <!-- ground: mostly open sand -->
+  <rect y="450" width="1280" height="270" fill="#E7DCC3"/>
+  <rect y="450" width="1280" height="270" fill="url(#e1-stipple)"/>
+
+  <!-- loop path band, freshly laid -->
+  <path d="M-20,478 C320,460 720,470 1300,452 L1300,500 C760,520 320,508 -20,526 Z" fill="#CFC0A0"/>
+  <path d="M-20,500 C400,482 820,492 1300,474" fill="none" stroke="#F5EFE2" stroke-width="3.5" stroke-dasharray="14 20" opacity="0.85"/>
+
+  <!-- newly seeded lawn pockets, thin cover -->
+  <path d="M0,540 C160,518 340,530 470,562 C330,606 140,618 0,602 Z" fill="#A9C6A0" opacity="0.45"/>
+  <path d="M0,540 C160,518 340,530 470,562 C330,606 140,618 0,602 Z" fill="url(#e1-grass)"/>
+  <path d="M900,528 C1050,510 1190,520 1280,512 L1280,610 C1120,618 970,586 900,556 Z" fill="#A9C6A0" opacity="0.4"/>
+  <path d="M900,528 C1050,510 1190,520 1280,512 L1280,610 C1120,618 970,586 900,556 Z" fill="url(#e1-grass)"/>
+  <!-- irrigation drip lines still visible -->
+  <path d="M40,570 C180,552 320,560 430,578 M950,545 C1080,532 1190,538 1270,532" stroke="#CFC0A0" stroke-width="3" fill="none" opacity="0.8"/>
+
+  <!-- four staked ghaf saplings at the same stations -->
+  <g stroke="#22301F" fill="none" stroke-linecap="round">
+    <path d="M170,470 C168,430 164,398 160,372" stroke-width="7"/>
+    <path d="M520,462 C519,428 517,402 515,382" stroke-width="6"/>
+    <path d="M760,458 C761,428 763,404 765,386" stroke-width="5"/>
+    <path d="M1080,468 C1082,426 1086,394 1090,368" stroke-width="7"/>
+  </g>
+  <!-- support stakes -->
+  <g stroke="#C05A32" stroke-width="4" stroke-linecap="round" opacity="0.9">
+    <path d="M150,470 L164,400 M192,470 L176,400"/>
+    <path d="M504,462 L518,398 M538,462 L523,398"/>
+    <path d="M746,458 L762,400 M778,458 L766,400"/>
+    <path d="M1062,468 L1084,396 M1102,468 L1092,396"/>
+  </g>
+  <g>
+    <circle cx="158" cy="350" r="26" fill="#2F6B4A" opacity="0.85"/>
+    <circle cx="176" cy="336" r="17" fill="#A9C6A0" opacity="0.7"/>
+    <circle cx="514" cy="362" r="22" fill="#2F6B4A" opacity="0.82"/>
+    <circle cx="528" cy="350" r="14" fill="#A9C6A0" opacity="0.65"/>
+    <circle cx="766" cy="368" r="19" fill="#2F6B4A" opacity="0.8"/>
+    <circle cx="777" cy="357" r="12" fill="#A9C6A0" opacity="0.6"/>
+    <circle cx="1092" cy="346" r="27" fill="#2F6B4A" opacity="0.85"/>
+    <circle cx="1074" cy="332" r="16" fill="#A9C6A0" opacity="0.65"/>
+  </g>
+  <!-- small watering basins at each sapling -->
+  <g fill="#CFC0A0" opacity="0.9">
+    <ellipse cx="170" cy="472" rx="26" ry="7"/>
+    <ellipse cx="520" cy="464" rx="22" ry="6"/>
+    <ellipse cx="760" cy="460" rx="20" ry="6"/>
+    <ellipse cx="1080" cy="470" rx="26" ry="7"/>
+  </g>
+
+  <!-- pull-up rig, brand new, hard shadow on open sand -->
+  <g>
+    <rect x="330" y="300" width="14" height="290" rx="4" fill="#22301F"/>
+    <rect x="470" y="300" width="14" height="290" rx="4" fill="#22301F"/>
+    <rect x="322" y="292" width="170" height="12" rx="5" fill="#22301F"/>
+    <rect x="342" y="304" width="130" height="9" rx="4" fill="#C05A32"/>
+    <ellipse cx="405" cy="596" rx="90" ry="11" fill="#22301F" opacity="0.18"/>
+    <!-- first user trying the bar -->
+    <g fill="#22301F">
+      <circle cx="404" cy="348" r="12"/>
+      <path d="M394,358 c-2,22 0,44 6,62 l-10,58 10,3 12,-54 7,54 10,-2 -6,-62 c5,-20 6,-42 3,-59 z"/>
+      <path d="M392,312 l4,38 7,3 2,-36 z"/>
+      <path d="M420,312 l-2,38 -7,3 -3,-36 z"/>
+    </g>
+  </g>
+
+  <!-- parallel bars, unused and bright -->
+  <g>
+    <rect x="790" y="480" width="11" height="112" rx="4" fill="#22301F"/>
+    <rect x="920" y="480" width="11" height="112" rx="4" fill="#22301F"/>
+    <rect x="782" y="472" width="72" height="9" rx="4" fill="#C05A32"/>
+    <rect x="868" y="472" width="72" height="9" rx="4" fill="#C05A32"/>
+    <ellipse cx="860" cy="596" rx="85" ry="10" fill="#22301F" opacity="0.16"/>
+  </g>
+
+  <!-- fountain -->
+  <g>
+    <rect x="626" y="472" width="28" height="54" rx="7" fill="#22301F"/>
+    <ellipse cx="640" cy="472" rx="20" ry="8" fill="#4E8FA8"/>
+    <path d="M640,467 C637,458 643,453 640,446" stroke="#7BC6DD" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- pergola gateway at far right, slats bright new terracotta -->
+  <g>
+    <rect x="1196" y="330" width="12" height="180" fill="#22301F"/>
+    <rect x="1268" y="330" width="12" height="180" fill="#22301F"/>
+    <g fill="#C05A32">
+      <rect x="1186" y="324" width="104" height="8" rx="3"/>
+      <rect x="1190" y="342" width="96" height="7" rx="3"/>
+      <rect x="1194" y="359" width="88" height="7" rx="3"/>
+    </g>
+  </g>
+
+  <!-- opening-day visitors: couple walking the new loop, jogger -->
+  <g fill="#22301F">
+    <circle cx="580" cy="470" r="7"/>
+    <path d="M574,476 c-2,11 0,21 4,28 l-4,32 8,1 4,-28 6,28 8,-1 -5,-33 c3,-9 3,-18 1,-27 z"/>
+    <circle cx="602" cy="472" r="6.5"/>
+    <path d="M597,478 c-2,10 0,19 3,25 l-3,30 7,1 4,-26 5,26 7,-1 -4,-30 c3,-8 3,-17 1,-25 z"/>
+    <circle cx="1010" cy="466" r="8"/>
+    <path d="M1003,473 c-2,12 0,22 6,30 l-14,20 7,5 14,-19 8,20 8,-3 -8,-24 c4,-9 4,-19 1,-29 z"/>
+  </g>
+
+  <!-- celebratory sparkles, opening day -->
+  <use href="#e1-sparkle" transform="translate(640,442) scale(0.5)" opacity="0.95"/>
+  <use href="#e1-sparkle" transform="translate(940,90) scale(0.7)" opacity="0.8"/>
+  <use href="#e1-sparkle" transform="translate(320,70) scale(0.55)" opacity="0.75"/>
+  <use href="#e1-sparkle" transform="translate(407,270) scale(0.45)" opacity="0.9"/>
+  <use href="#e1-sparkle" transform="translate(1140,200) scale(0.4)" opacity="0.7"/>
+</svg>

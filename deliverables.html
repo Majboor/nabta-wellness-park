@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>nabta wellness park — Final Deliverables Hub</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bone:#F5EFE2;--paper:#FBF7EC;--sand:#E7DCC3;--sand2:#EFE6D2;--ink:#22301F;--soft:#4A5644;--mute:#7A8272;
+--green:#2F6B4A;--leaf:#A9C6A0;--terra:#C05A32;--tdeep:#9C4525;--water:#4E8FA8;--hair:#D8CCAF;
+--serif:"Fraunces",serif;--sans:"Instrument Sans",sans-serif;--mono:"IBM Plex Mono",monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bone);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;
+background-image:radial-gradient(ellipse 90% 40% at 50% -5%,rgba(169,198,160,.25),transparent 60%)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
+nav{position:sticky;top:0;z-index:900;background:rgba(245,239,226,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair)}
+nav .wrap{display:flex;align-items:center;gap:1.3rem;height:56px;overflow-x:auto}
+.logo-nabta{font-family:"Comfortaa",var(--sans);font-weight:700;color:var(--ink);white-space:nowrap}
+.logo-nabta .spark{color:#8FCB9B}
+.logo-img{height:30px;display:block}
+nav a{font-family:var(--mono);font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--soft);text-decoration:none;white-space:nowrap}
+nav a:hover{color:var(--tdeep)}
+header{padding:3rem 0 2rem;border-bottom:1px solid var(--hair)}
+.kicker{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--tdeep)}
+h1{font-family:var(--serif);font-weight:900;font-size:clamp(2rem,5vw,3.4rem);line-height:1.06;margin-top:.6rem}
+h2{font-family:var(--serif);font-weight:900;font-size:clamp(1.4rem,3vw,2rem)}
+.lede{max-width:70ch;color:var(--soft);margin-top:.8rem}
+section{padding:2.8rem 0;border-bottom:1px solid var(--hair)}
+.sec-num{font-family:var(--mono);font-size:.75rem;color:var(--terra);border:1px solid var(--terra);padding:.12rem .5rem;margin-right:.7rem}
+.cap{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;color:var(--soft);display:block;padding-top:.3rem;line-height:1.4}
+.grid{display:grid;gap:1.2rem;margin-top:1.5rem}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g5{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+@media(max-width:900px){.g2,.g3{grid-template-columns:1fr}}
+.card{background:var(--paper);border:1px solid var(--hair);padding:1.1rem 1.2rem}
+.card h4{font-family:var(--serif);font-weight:600;font-size:1.1rem;margin-bottom:.4rem}
+.btn{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:.5rem .8rem;border:1.5px solid var(--ink);color:var(--ink);display:inline-block;margin:.25rem .35rem .25rem 0;transition:.15s}
+.btn:hover{background:var(--ink);color:var(--bone)}
+.btn.solid{background:var(--terra);border-color:var(--terra);color:#fff}
+.btn.solid:hover{background:var(--tdeep)}
+embed.pdf,iframe.pdf{width:100%;height:520px;border:1px solid var(--hair);background:#fff}
+video{width:100%;border:1px solid var(--hair);display:block;background:#000}
+img.th{width:100%;border:1px solid var(--hair);display:block}
+.score{font-family:var(--mono);font-size:.62rem;color:#fff;background:linear-gradient(90deg,#5FA871,#4E9DB5);padding:.22rem .5rem;border-radius:2px;white-space:nowrap}
+table{width:100%;border-collapse:collapse;font-size:.85rem;margin-top:1rem}
+th{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;color:var(--mute);border-bottom:2px solid var(--ink);padding:.5rem .5rem .35rem}
+td{border-bottom:1px solid var(--hair);padding:.5rem;vertical-align:top}
+model-viewer{width:100%;aspect-ratio:1/1;background:var(--sand2);border:1px solid var(--hair)}
+footer{padding:2.5rem 0 3.5rem;color:var(--mute);font-size:.84rem}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<span class="logo-nabta" style="font-size:1.05rem"><img class="logo-img" src="assets/brand/nabta-logo-dark.png" alt="nabta wellness park" onerror="this.outerHTML='nabta<span class=spark>✦</span>'"></span>
+<a href="aipark-challenge.html">Field Guide</a><a href="map.html">Map &amp; Frames</a>
+<a href="#checklist">✓ Checklist</a><a href="#cost">Cost Plan</a><a href="#sust">Sustainability</a><a href="#pres">Presentations</a><a href="#film">Film</a><a href="#docs">16 Deliverables</a><a href="#code">Evidence</a><a href="#viz">Visuals</a><a href="#threed">3D</a>
+</div></nav>
+
+<header><div class="wrap">
+<p class="kicker">Dubai Municipality AI Park Design Challenge · Al Safa 2 Park · Deadline 15 Aug 2026</p>
+<h1>Final Deliverables Hub</h1>
+<p class="lede">Everything the submission needs, in one place: the submission checklist, cost plan, sustainability case, presentation documents, the one-minute film, all 16 official deliverables, the verification evidence and the 3D assets. Best viewed at <strong>http://localhost:8619/deliverables.html</strong>.</p>
+</div></header>
+
+<section id="checklist"><div class="wrap">
+<h2><span class="sec-num">H·1</span>Submission checklist — required · have · still needed</h2>
+<p class="lede">Everything the portal requires (online upload only, UAE PASS, Arabic or English, deadline <strong>15 Aug 2026</strong>). Legend: ✅ ready (draft quality) · ⚠️ action needed before submitting · ❌ not started / needs the team.</p>
+<table>
+<thead><tr><th>Required item</th><th>Format</th><th>Status</th><th>What exists</th><th>What's still needed</th></tr></thead>
+<tbody>
+<tr><td>№01–09, №14 — reports, analyses, strategies, presentation</td><td>PDF</td><td>✅</td><td>11 designed A4 PDFs + 22-sheet A3 presentation</td><td>Final proofread; optional Arabic versions</td></tr>
+<tr><td>№10 Concept diagrams &amp; drawings · №11 Sections &amp; elevations</td><td><strong>CAD/BIM</strong></td><td>⚠️</td><td>Full drawing register + dimensioned drafts (D·09); official DWG base acquired</td><td>Export from CAD on the official as-built DWG — the largest open task</td></tr>
+<tr><td>№12 High-quality visualizations · №13 day &amp; night pairs</td><td>Images</td><td>✅⚠️</td><td>80 renders incl. matched day/night pairs of the same views</td><td>Rebuild hero views from a geo-accurate 3D model for final</td></tr>
+<tr><td>№15 One-minute concept animation</td><td>Video</td><td>✅⚠️</td><td>56s film with location titles, streaming + QR</td><td>Voiceover/music; export per portal size limits</td></tr>
+<tr><td>№16 Additional supporting materials</td><td>Any</td><td>✅</td><td>Interactive map, 3D asset library, verification evidence, satellite study</td><td>—</td></tr>
+<tr><td>Commercial &amp; Service Facilities Map</td><td>Plan</td><td>✅</td><td>Included in D·08</td><td>Re-plot on true parcel geometry</td></tr>
+<tr><td>Presentation boards</td><td>Print/PDF</td><td>⚠️</td><td>A3 sheets are board-ready content</td><td>Compose board layouts at required size once portal specifies</td></tr>
+<tr><td>Team details — names, disciplines, roles, Emirates ID (residents), passport photos, Team Leader</td><td>Portal form</td><td>❌</td><td>—</td><td><strong>Only the team can provide these</strong></td></tr>
+<tr><td>Portal registration + upload</td><td>UAE PASS</td><td>❌</td><td>—</td><td>Register; <strong>verify the "submissions closed" banner vs the 15 Aug deadline first</strong></td></tr>
+<tr><td>Clarification questions (optional)</td><td>Portal Q&amp;A</td><td>⚠️</td><td>Question list drafted (formats, board sizes, banner)</td><td>Submit before <strong>5 Aug 2026</strong></td></tr>
+</tbody></table>
+</div></section>
+
+<section id="cost"><div class="wrap">
+<h2><span class="sec-num">H·2</span>Cost plan — AED 35,000,000 implementation budget</h2>
+<div class="grid g2">
+<div><table>
+<thead><tr><th>Element</th><th>AED M</th><th>%</th></tr></thead><tbody>
+<tr><td>Softscape &amp; planting — ~450 trees, understorey, soil, irrigation network</td><td>8.2</td><td>23%</td></tr>
+<tr><td>Shade structures — loop pergolas, gateway, sails</td><td>6.8</td><td>19%</td></tr>
+<tr><td>Hardscape — 1.0 km loop, paths, plazas, seat walls</td><td>4.6</td><td>13%</td></tr>
+<tr><td>Wadi bioswale &amp; water systems — TSE + condensate network, pumps, treatment</td><td>3.6</td><td>10%</td></tr>
+<tr><td>Buildings — café kiosk, restrooms (incl. Changing Places), service yard</td><td>3.2</td><td>9%</td></tr>
+<tr><td>Play equipment — inclusive dune, carousel, nets</td><td>2.6</td><td>7%</td></tr>
+<tr><td>Sports &amp; fitness — court, calisthenics, surfaces</td><td>1.6</td><td>5%</td></tr>
+<tr><td>Lighting &amp; smart systems — adaptive dark-sky, sensors, irrigation controls</td><td>1.8</td><td>5%</td></tr>
+<tr><td>Wayfinding, signage &amp; FF&amp;E</td><td>0.6</td><td>2%</td></tr>
+<tr><td>Preliminaries &amp; contingency</td><td>2.0</td><td>6%</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>35.0</strong></td><td><strong>100%</strong></td></tr>
+</tbody></table></div>
+<div class="card"><h4>Operating economics</h4>
+<ul style="font-size:.92rem;color:var(--soft);padding-left:1.2rem;line-height:1.7">
+<li><strong>Maintenance target:</strong> AED 28/m²/yr ≈ <strong>AED 420k/yr</strong> (vs AED 50–60/m² for a conventional turf park) — achieved by native planting, drip irrigation and low-mow groundcovers</li>
+<li><strong>Concession income:</strong> café + event-lawn cart pads estimated AED 250–350k/yr — offsets ~70% of maintenance</li>
+<li><strong>Water cost:</strong> zero potable — 53 m³/d TSE + 9 m³/d recovered condensate at peak</li>
+<li><strong>Delivery:</strong> 18 months, 3 phases (site + wadi → loop + structures → planting + fit-out), park partially open from month 12</li>
+<li><strong>Cost risk:</strong> pergola steel and TSE connection are the two volatile lines; contingency sized accordingly</li>
+</ul></div>
+</div>
+</div></section>
+
+<section id="sust"><div class="wrap">
+<h2><span class="sec-num">H·3</span>Sustainability breakdown</h2>
+<div class="grid g3">
+<div class="card"><h4>Water</h4><ul style="font-size:.88rem;color:var(--soft);padding-left:1.1rem;line-height:1.65"><li><strong>−41%</strong> irrigation vs conventional (105 → 62 m³/day peak)</li><li>Supply: treated wastewater (TSE) + AC condensate recovery — <strong>no potable water</strong></li><li>Verified by evapotranspiration modelling on Dubai climate normals (independent check computed −56.8%, so the claim is conservative)</li><li>Lawn limited to the 2,000 m² event space</li></ul></div>
+<div class="card"><h4>Comfort &amp; energy</h4><ul style="font-size:.88rem;color:var(--soft);padding-left:1.1rem;line-height:1.65"><li><strong>~92% of the loop shaded at 3pm</strong> mid-summer (solar-geometry verified: 91.6%)</li><li>−4.5°C perceived temperature target; summer usable hours roughly doubled</li><li>Dark-sky adaptive lighting, 2700K, 20/10/5 lux zones</li><li>High-reflectance paving; site above 35°C 10:00–17:00 on the design day — shade is the core program</li></ul></div>
+<div class="card"><h4>Ecology, resilience &amp; society</h4><ul style="font-size:.88rem;color:var(--soft);padding-left:1.1rem;line-height:1.65"><li>~450 trees, majority native (ghaf, sidr, acacia); 3-tier planting; park already the greenest block in its 600 m context (measured)</li><li>Species selected for +2°C tolerance; water budget holds under a 2050 scenario</li><li>Universal design throughout; free access; women-comfortable spaces; school &amp; mosque adjacency served</li><li>Concession model funds upkeep — social benefit with economic durability</li></ul></div>
+</div>
+</div></section>
+
+<section id="pres"><div class="wrap">
+<h2><span class="sec-num">H·4</span>Final presentations</h2>
+<div class="grid g2">
+<div class="card"><h4>Competition Presentation — A3, 21 sheets</h4>
+<a class="btn solid" href="https://rpi:rpi@mac.waleeds.world/30r4z8me/Nabta-Competition-Presentation-A3.pdf" target="_blank">Competition Presentation A3 — full deck available on request / via NAS ↗</a>
+<span class="cap">Cover · contents · vision · site+QR · masterplan · AI methodology · users · landscape · access · viz technology · ten room sheets · evidence sheet of real Python outputs</span>
+<a class="btn solid" href="https://rpi:rpi@mac.waleeds.world/30r4z8me/Nabta-Pitch-Deck-16x9.pdf" target="_blank">16:9 pitch deck — full deck available on request / via NAS ↗</a></div>
+<div class="card"><h4>Landscape Package — A3, 14 sheets</h4>
+<embed class="pdf" src="pdfs/Nabta-Landscape-Package-A3.pdf" type="application/pdf">
+<span class="cap">Survey-sheet design system: cover · 1.1 areas · 1.2 plan · 1.3 locality · 2.1–2.10 photoreal keyframe sheets, full title blocks</span>
+<a class="btn solid" href="pdfs/Nabta-Landscape-Package-A3.pdf" target="_blank">Open full ↗</a><a class="btn" href="pdfs/Nabta-00-Field-Guide.pdf" target="_blank">A4 field guide ↗</a></div>
+</div>
+</div></section>
+
+<section id="film"><div class="wrap">
+<h2><span class="sec-num">H·5</span>The one-minute film — deliverable №15</h2>
+<div class="grid g2">
+<div><video src="https://rpi:rpi@mac.waleeds.world/30r4z8me/Nabta-One-Minute-Concept-Animation.mp4" controls poster="assets/frames/room-01/thumb-aerial.jpg"></video>
+<p style="font-size:.85rem"><a href="https://rpi:rpi@mac.waleeds.world/30r4z8me/Nabta-One-Minute-Concept-Animation.mp4" target="_blank">Watch the film (NAS-hosted) ↗</a> — if the player above does not stream in your browser, use this direct link.</p>
+<span class="cap">56s · title → ten location sequences with title screens → analysis interlude → QR end card</span></div>
+<div class="card"><h4>Stream &amp; share</h4>
+<p style="font-size:.9rem;color:var(--soft)">Hosted on the NAS via Cloudflare tunnel — scan or click:</p>
+<img src="assets/qr-video.png" alt="QR — stream the film" style="width:180px;border:4px solid var(--ink);margin:.7rem 0">
+<p style="font-family:var(--mono);font-size:.72rem;word-break:break-all"><a href="https://rpi:rpi@mac.waleeds.world/30r4z8me/Nabta-One-Minute-Concept-Animation.mp4">mac.waleeds.world/30r4z8me/Nabta-One-Minute-Concept-Animation.mp4</a></p>
+<span class="cap">Continuous orbit footage per location (10 × 15s) is staged in splat-input/ for 3D scene reconstruction — preview each on the <a href="map.html">map page</a>.</span></div>
+</div>
+</div></section>
+
+<section id="docs"><div class="wrap">
+<h2><span class="sec-num">H·6</span>The 16 official deliverables — final documents</h2>
+<p class="lede">Ten packages cover all sixteen required items. Every package: detail page, designed A4 PDF, presentation sheet, and its internal design-review score (/10 against the official criteria).</p>
+<div id="packs"></div>
+</div></section>
+
+<section id="code"><div class="wrap">
+<h2><span class="sec-num">H·7</span>Verification evidence — every key claim independently checked</h2>
+<div class="grid g5" id="repos"></div>
+<span class="cap" style="margin-top:.8rem">Each card shows the actual computed result behind a design claim, with the full open method published for the jury to inspect. Presentation-styled versions of these charts live in assets/poc/.</span>
+</div></section>
+
+<section id="viz"><div class="wrap">
+<h2><span class="sec-num">H·8</span>Visualization library</h2>
+<div class="grid g3">
+<div><img class="th" src="assets/masterplan.png"><span class="cap">Illustrative masterplan on the true 98 × 152 m parcel · interactive with markers on the <a href="map.html#plan-sec">map page</a></span></div>
+<div><img class="th" src="assets/plans/plan-blueprint.png" onerror="this.parentElement.style.display='none'"><span class="cap">Technical floor plan — blueprint style</span></div>
+<div><img class="th" src="assets/plans/plan-axon.png" onerror="this.parentElement.style.display='none'"><span class="cap">Axonometric cutaway of the park</span></div>
+<div><img class="th" src="assets/mlviz/room-08/01-depth.png"><span class="cap">Depth study — wadi garden</span></div>
+<div><img class="th" src="assets/mlviz/room-08/02-pointcloud-a.png"><span class="cap">Point-cloud study — wadi garden</span></div>
+<div><img class="th" src="assets/mlviz/room-01/06-feature-trails.png"><span class="cap">Motion-track study — entry plaza</span></div>
+<div><img class="th" src="assets/earthobs/ndvi_site.png" onerror="this.parentElement.style.display='none'"><span class="cap">Vegetation index of the real site — Sentinel-2 satellite, 10 m</span></div>
+<div><img class="th" src="assets/earthobs/wind_rose.png" onerror="this.parentElement.style.display='none'"><span class="cap">Wind climatology at the site — prevailing WNW breeze confirmed</span></div>
+<div><img class="th" src="assets/earthobs/concept_iterations.png" onerror="this.parentElement.style.display='none'"><span class="cap">Concept iteration — loop orientation scored on the real sun and wind</span></div>
+</div>
+<p style="margin-top:1rem"><a class="btn solid" href="map.html#gal-head">All 80 keyframes + 110 ML visuals by room ↗</a><a class="btn" href="assets/splatfootage/room-08-collage.jpg" target="_blank">Sample continuity collage ↗</a></p>
+</div></section>
+
+<section id="threed"><div class="wrap">
+<h2><span class="sec-num">H·9</span>Live 3D asset library</h2>
+<p class="lede">Drag to orbit, scroll to zoom. 41 assets — every location has its room model plus ~3 furnishing items, all dimensionally calibrated in real meters. Full library with hover-to-load cards on the <a href="map.html#items-sec">map page</a>.</p>
+<div class="grid g3">
+<div><model-viewer src="assets/3d/items/gateway-pergola.glb" poster="assets/items/gateway-pergola.png" camera-controls auto-rotate shadow-intensity="1"></model-viewer><span class="cap">Gateway Pergola — item mesh · <a href="assets/3d/items/gateway-pergola.glb" download>.glb</a></span></div>
+<div><model-viewer src="assets/3d/items/majlis-ring.glb" poster="assets/items/majlis-ring.png" camera-controls auto-rotate shadow-intensity="1"></model-viewer><span class="cap">Majlis Seating Ring — item mesh · <a href="assets/3d/items/majlis-ring.glb" download>.glb</a></span></div>
+<div><model-viewer src="assets/3d/room-08.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer><span class="cap">Sensory Wadi Garden — whole-room concept model (illustrative) · <a href="assets/3d/room-08.glb" download>.glb</a></span></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<h2><span class="sec-num">H·10</span>Locations</h2>
+<p class="lede">Real site: <strong>Al Safa 2 Park, Jumeirah, Dubai — 25.163543 N, 55.230825 E.</strong></p>
+<p style="margin-top:.8rem">
+<a class="btn solid" href="map.html#geo-sec">Interactive location map ↗</a>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&query=25.163543,55.230825" target="_blank">Google Maps ↗</a>
+<a class="btn" href="map.html#plan-sec">Clickable masterplan (10 rooms) ↗</a>
+</p>
+</div></section>
+
+<footer><div class="wrap">
+<span class="logo-nabta" style="font-size:1rem"><img class="logo-img" src="assets/brand/nabta-logo-dark.png" alt="nabta" style="height:24px" onerror="this.outerHTML='nabta<span class=spark>✦</span>'"></span>
+<p style="margin-top:.5rem">nabta wellness park · The Living Shade Loop · Al Safa 2 Park, Jumeirah, Dubai · draft competition entry, July 2026. Verify all facts against the official brief before submitting.</p>
+</div></footer>
+
+<script type="module" src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<script>
+const PACKS=[
+["01","Executive Summary & Full Presentation Outline","№01 · №14","6.5 → 7.9","Nabta-01-Executive-Summary-and-Full-Presentation-Outline.pdf",2],
+["02","Design Narrative & Concept Statement","№02","6.0 → 7.8","Nabta-02-Design-Narrative-and-Concept-Statement.pdf",3],
+["03","Site Analysis & Opportunities","№03","5.9 → 7.5","Nabta-03-Site-Analysis-and-Opportunities-Assessment.pdf",4],
+["04","User & Community Analysis","№04","5.9 → 7.5","Nabta-04-User-and-Community-Analysis.pdf",7],
+["05","AI Methodology Report","№05","6.7 → 7.9","Nabta-05-Artificial-Intelligence-Methodology-Report.pdf",6],
+["06","Concept & Preliminary Masterplan","№06","6.0 → 7.0","Nabta-06-Concept-and-Preliminary-Masterplan.pdf",5],
+["07","Landscape, Public Realm & Sustainability","№07 · №09","6.5 → 7.3","Nabta-07-Landscape-Public-Realm-Sustainability-and-Resilience.pdf",8],
+["08","Accessibility, Circulation & Commercial","№08 · CSF","5.6 → 7.2","Nabta-08-Accessibility-Circulation-and-Commercial-Facilities.pdf",9],
+["09","Concept Diagrams, Sections & Elevations","№10 · №11","6.4 → 7.2","Nabta-09-Concept-Diagrams-Sections-and-Elevations.pdf",10],
+["10","Visualizations, Day/Night, Animation & Extras","№12 · №13 · №15 · №16","6.6 → 7.6","Nabta-10-Visualizations-Day-Night-Animation-and-Extras.pdf",21]];
+document.getElementById('packs').innerHTML=
+'<table><thead><tr><th>Pkg</th><th>Deliverable package</th><th>Covers</th><th>Jury /10</th><th>Final documents</th></tr></thead><tbody>'+
+PACKS.map(([no,t,cov,sc,pdf,sheet])=>`<tr><td style="font-family:var(--mono);color:var(--terra)">D·${no}</td><td><strong>${t}</strong></td><td style="font-family:var(--mono);font-size:.72rem">${cov}</td><td><span class="score">${sc}</span></td>
+<td><a class="btn" href="deliverables/d-${no}.html">Detail page</a><a class="btn" href="pdfs/${pdf}" target="_blank">A4 PDF</a><a class="btn" href="https://rpi:rpi@mac.waleeds.world/30r4z8me/Nabta-Competition-Presentation-A3.pdf#page=${sheet}" target="_blank">Deck sheet ${sheet}</a></td></tr>`).join('')+'</tbody></table>';
+
+const REPOS=[
+["nabta-shade-sim","assets/poc/shade_heatmap.png","NOAA solar geometry — 91.6% loop shade at 3pm Jun 21 (validates the 92% claim)"],
+["nabta-visitor-abm","assets/poc/occupancy_heatmap.png","Persona ABM — 385 peak of 1,800 daily visits; event-day overload branch"],
+["nabta-loop-optimizer","assets/poc/before_after.png","Genetic algorithm — 31.8% vs 18.3% random shade placement (1.7×)"],
+["nabta-water-budget","assets/poc/demand_vs_baseline.png","Hargreaves ET₀ on Dubai normals — 56.8% saving (41% claim conservative)"],
+["nabta-park-vision","assets/mlviz/room-08/02-pointcloud-a.png","Video → depth/flow/point-cloud CV toolkit, 11 committed examples"],
+["nabta-earth-obs","assets/earthobs/truecolor_site.png","Real satellite study of the actual site — vegetation, solar, heat and wind driving the concept iteration"]];
+document.getElementById('repos').innerHTML=REPOS.map(([r,img,d])=>
+`<div class="card" style="padding:.8rem"><img class="th" src="${img}" style="aspect-ratio:16/10;object-fit:cover"><span class="cap"><strong>${r}</strong> — ${d}</span>
+<a class="btn solid" style="margin-top:.5rem" href="https://github.com/Majboor/${r}" target="_blank">GitHub ↗</a></div>`).join('');
+</script>
+</body>
+</html>

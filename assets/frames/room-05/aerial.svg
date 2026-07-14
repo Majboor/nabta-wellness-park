@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <pattern id="stipA" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="4" r="1.2" fill="#22301F" fill-opacity="0.10"/>
+      <circle cx="11" cy="12" r="1" fill="#22301F" fill-opacity="0.08"/>
+      <circle cx="8" cy="7" r="0.8" fill="#22301F" fill-opacity="0.06"/>
+    </pattern>
+    <pattern id="stipG" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="3" r="1.3" fill="#F5EFE2" fill-opacity="0.22"/>
+      <circle cx="10" cy="10" r="1" fill="#F5EFE2" fill-opacity="0.16"/>
+    </pattern>
+  </defs>
+
+  <!-- ground -->
+  <rect width="1280" height="720" fill="#F5EFE2"/>
+  <ellipse cx="300" cy="180" rx="420" ry="240" fill="#E7DCC3" fill-opacity="0.8"/>
+  <ellipse cx="1050" cy="560" rx="460" ry="260" fill="#E7DCC3" fill-opacity="0.7"/>
+  <ellipse cx="900" cy="120" rx="320" ry="170" fill="#E7DCC3" fill-opacity="0.5"/>
+  <rect width="1280" height="720" fill="url(#stipA)"/>
+
+  <!-- wadi bioswale ribbon -->
+  <path d="M-20,640 C240,560 420,660 700,600 C960,545 1120,640 1300,580 L1300,720 L-20,720 Z" fill="#4E8FA8" fill-opacity="0.28"/>
+  <path d="M-20,660 C250,585 430,675 710,618 C965,566 1125,655 1300,600" fill="none" stroke="#4E8FA8" stroke-width="26" stroke-opacity="0.55" stroke-linecap="round"/>
+  <path d="M-20,672 C255,600 435,685 715,630" fill="none" stroke="#7BC6DD" stroke-width="5" stroke-opacity="0.6" stroke-linecap="round"/>
+  <g fill="#A9C6A0" fill-opacity="0.8">
+    <ellipse cx="180" cy="628" rx="34" ry="14"/><ellipse cx="520" cy="632" rx="40" ry="15"/>
+    <ellipse cx="860" cy="586" rx="36" ry="13"/><ellipse cx="1150" cy="612" rx="42" ry="16"/>
+  </g>
+
+  <!-- figure-eight loop segment sweeping past the room -->
+  <path d="M-30,430 C220,360 420,470 640,430 C880,385 1040,300 1310,340" fill="none" stroke="#CFC0A0" stroke-width="46" stroke-linecap="round"/>
+  <path d="M-30,430 C220,360 420,470 640,430 C880,385 1040,300 1310,340" fill="none" stroke="#F5EFE2" stroke-width="4" stroke-opacity="0.5" stroke-dasharray="2 26"/>
+  <!-- spur into the room -->
+  <path d="M600,436 C620,380 640,340 660,300" fill="none" stroke="#CFC0A0" stroke-width="26" stroke-linecap="round"/>
+
+  <!-- planting screen between court and quiet areas -->
+  <g>
+    <ellipse cx="420" cy="120" rx="150" ry="46" fill="#2F6B4A" fill-opacity="0.85"/>
+    <ellipse cx="430" cy="118" rx="150" ry="46" fill="url(#stipG)"/>
+    <ellipse cx="330" cy="330" rx="60" ry="44" fill="#2F6B4A" fill-opacity="0.9"/>
+    <ellipse cx="335" cy="325" rx="42" ry="30" fill="#A9C6A0" fill-opacity="0.5"/>
+    <ellipse cx="392" cy="260" rx="46" ry="36" fill="#2F6B4A" fill-opacity="0.85"/>
+    <ellipse cx="396" cy="255" rx="30" ry="22" fill="#A9C6A0" fill-opacity="0.5"/>
+    <ellipse cx="1050" cy="300" rx="66" ry="48" fill="#2F6B4A" fill-opacity="0.9"/>
+    <ellipse cx="1056" cy="294" rx="44" ry="32" fill="#A9C6A0" fill-opacity="0.5"/>
+    <ellipse cx="1130" cy="200" rx="52" ry="40" fill="#2F6B4A" fill-opacity="0.85"/>
+    <ellipse cx="1135" cy="196" rx="34" ry="26" fill="#A9C6A0" fill-opacity="0.5"/>
+    <ellipse cx="980" cy="150" rx="58" ry="42" fill="#2F6B4A" fill-opacity="0.8"/>
+  </g>
+  <!-- ghaf canopies dotting the loop -->
+  <g>
+    <ellipse cx="150" cy="380" rx="44" ry="34" fill="#2F6B4A" fill-opacity="0.85"/><ellipse cx="154" cy="374" rx="28" ry="20" fill="#A9C6A0" fill-opacity="0.55"/>
+    <ellipse cx="880" cy="330" rx="40" ry="30" fill="#2F6B4A" fill-opacity="0.85"/><ellipse cx="884" cy="325" rx="26" ry="18" fill="#A9C6A0" fill-opacity="0.55"/>
+    <ellipse cx="1210" cy="420" rx="48" ry="36" fill="#2F6B4A" fill-opacity="0.85"/><ellipse cx="1214" cy="414" rx="30" ry="22" fill="#A9C6A0" fill-opacity="0.55"/>
+  </g>
+
+  <!-- terracotta half-court -->
+  <g transform="translate(640,190)">
+    <rect x="-190" y="-120" width="380" height="250" rx="12" fill="#C05A32"/>
+    <rect x="-190" y="-120" width="380" height="250" rx="12" fill="url(#stipA)"/>
+    <rect x="-178" y="-108" width="356" height="226" rx="8" fill="none" stroke="#F5EFE2" stroke-width="4" stroke-opacity="0.85"/>
+    <!-- key + arc -->
+    <rect x="-55" y="-108" width="110" height="90" fill="#C05A32" stroke="#F5EFE2" stroke-width="4" stroke-opacity="0.85"/>
+    <circle cx="0" cy="-18" r="34" fill="none" stroke="#F5EFE2" stroke-width="4" stroke-opacity="0.85"/>
+    <path d="M-150,-108 C-150,20 150,20 150,-108" fill="none" stroke="#F5EFE2" stroke-width="4" stroke-opacity="0.85"/>
+    <!-- hoop -->
+    <line x1="0" y1="-112" x2="0" y2="-96" stroke="#22301F" stroke-width="5"/>
+    <circle cx="0" cy="-92" r="7" fill="none" stroke="#22301F" stroke-width="3"/>
+    <!-- nabta sparkle centre mark -->
+    <g transform="translate(0,86)">
+      <circle r="30" fill="#F5EFE2" fill-opacity="0.25"/>
+      <path d="M0,-26 L5,-5 L26,0 L5,5 L0,26 L-5,5 L-26,0 L-5,-5 Z" fill="#F5EFE2"/>
+      <path d="M0,-13 L2.6,-2.6 L13,0 L2.6,2.6 L0,13 L-2.6,2.6 L-13,0 L-2.6,-2.6 Z" fill="#7CC98F"/>
+    </g>
+    <!-- high slatted canopy shadow-lines over court -->
+    <g stroke="#C05A32" stroke-width="7" stroke-opacity="0.35">
+      <line x1="-210" y1="-96" x2="210" y2="-116"/><line x1="-210" y1="-62" x2="210" y2="-82"/>
+      <line x1="-210" y1="-28" x2="210" y2="-48"/><line x1="-210" y1="6" x2="210" y2="-14"/>
+      <line x1="-210" y1="40" x2="210" y2="20"/><line x1="-210" y1="74" x2="210" y2="54"/>
+      <line x1="-210" y1="108" x2="210" y2="88"/>
+    </g>
+    <g stroke="#22301F" stroke-width="7" stroke-opacity="0.10">
+      <line x1="-210" y1="-90" x2="210" y2="-110"/><line x1="-210" y1="-22" x2="210" y2="-42"/>
+      <line x1="-210" y1="46" x2="210" y2="26"/><line x1="-210" y1="114" x2="210" y2="94"/>
+    </g>
+    <!-- canopy posts -->
+    <g fill="#22301F" fill-opacity="0.8">
+      <circle cx="-196" cy="-118" r="6"/><circle cx="196" cy="-124" r="6"/>
+      <circle cx="-196" cy="128" r="6"/><circle cx="196" cy="118" r="6"/>
+    </g>
+    <!-- players (aerial silhouettes + shadows) -->
+    <g fill="#22301F">
+      <ellipse cx="-30" cy="-40" rx="7" ry="12" transform="rotate(20 -30 -40)"/>
+      <ellipse cx="34" cy="-64" rx="7" ry="12" transform="rotate(-30 34 -64)"/>
+      <ellipse cx="-80" cy="20" rx="7" ry="12" transform="rotate(60 -80 20)"/>
+      <ellipse cx="70" cy="40" rx="7" ry="12" transform="rotate(-15 70 40)"/>
+      <circle cx="14" cy="-78" r="6" fill="#C05A32" stroke="#22301F" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- bleacher seat steps, west edge -->
+  <g transform="translate(408,120)">
+    <rect x="0" y="0" width="26" height="210" fill="#E7DCC3" stroke="#22301F" stroke-opacity="0.25" stroke-width="2"/>
+    <rect x="-26" y="8" width="26" height="194" fill="#CFC0A0" stroke="#22301F" stroke-opacity="0.25" stroke-width="2"/>
+    <rect x="-52" y="16" width="26" height="178" fill="#E7DCC3" stroke="#22301F" stroke-opacity="0.25" stroke-width="2"/>
+    <g fill="#22301F"><ellipse cx="12" cy="60" rx="6" ry="10"/><ellipse cx="-14" cy="130" rx="6" ry="10"/><ellipse cx="-40" cy="90" rx="6" ry="10"/></g>
+  </g>
+
+  <!-- parkour block cluster, east of court -->
+  <g transform="translate(900,210)">
+    <rect x="0" y="0" width="46" height="46" rx="6" fill="#CFC0A0" stroke="#22301F" stroke-opacity="0.3" stroke-width="2"/>
+    <rect x="56" y="14" width="36" height="36" rx="6" fill="#E7DCC3" stroke="#22301F" stroke-opacity="0.3" stroke-width="2"/>
+    <rect x="18" y="60" width="56" height="30" rx="6" fill="#C05A32" fill-opacity="0.85" stroke="#22301F" stroke-opacity="0.3" stroke-width="2"/>
+    <rect x="88" y="62" width="30" height="30" rx="6" fill="#CFC0A0" stroke="#22301F" stroke-opacity="0.3" stroke-width="2"/>
+    <ellipse cx="70" cy="0" rx="7" ry="12" transform="rotate(35 70 0)" fill="#22301F"/>
+    <ellipse cx="34" cy="104" rx="7" ry="12" transform="rotate(-20 34 104)" fill="#22301F"/>
+  </g>
+
+  <!-- walkers on loop -->
+  <g fill="#22301F">
+    <ellipse cx="220" cy="404" rx="5" ry="9" transform="rotate(24 220 404)"/>
+    <ellipse cx="760" cy="410" rx="5" ry="9" transform="rotate(-18 760 410)"/>
+    <ellipse cx="1060" cy="332" rx="5" ry="9" transform="rotate(10 1060 332)"/>
+  </g>
+
+  <!-- corner sparkle accents -->
+  <g fill="#7BC6DD" fill-opacity="0.9">
+    <path d="M120,90 L123,101 L134,104 L123,107 L120,118 L117,107 L106,104 L117,101 Z"/>
+  </g>
+  <g fill="#7CC98F" fill-opacity="0.9">
+    <path d="M1190,660 L1193,671 L1204,674 L1193,677 L1190,688 L1187,677 L1176,674 L1187,671 Z"/>
+  </g>
+</svg>

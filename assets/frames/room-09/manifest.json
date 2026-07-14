@@ -1,0 +1,62 @@
+{
+  "room": "09",
+  "title": "Quiet Contemplation Garden",
+  "frames": [
+    {
+      "file": "aerial.svg",
+      "code": "R09-A",
+      "title": "Aerial — The Quiet Room from Above",
+      "caption": "Top-down view of the NW-corner garden room: a ring of vegetated earth berms wraps a bone-pale clearing, with the still reflecting basin at its heart, a single sculptural ghaf leaning over the water, fragrant planting beds, and a lone entry path threading in from the shade loop.",
+      "videogen_prompt": "Photorealistic aerial drone footage slowly descending and orbiting over a small circular contemplation garden ringed by green earth berms in a Dubai park, a single ghaf tree beside a still round reflecting pool, soft mid-morning light, serene and hushed mood."
+    },
+    {
+      "file": "approach.svg",
+      "code": "R09-B",
+      "title": "Approach — Threshold Through the Berms",
+      "caption": "Eye-level arrival at the sound-buffering earth berms: a narrow sand path slips between planted slopes and fragrant native beds toward a glimpse of the ghaf and a sliver of still water, the light dimming into deep shade at the threshold.",
+      "videogen_prompt": "Photorealistic steadicam shot walking slowly along a sand path between tall planted earth berms toward a shaded garden opening, glimpse of a ghaf tree and dark still water beyond, late afternoon golden light fading to cool shade, quiet contemplative mood."
+    },
+    {
+      "file": "walkthrough.svg",
+      "code": "R09-C",
+      "title": "Walkthrough — Beside the Still Basin",
+      "caption": "Inside the room: the sculptural ghaf spreads a deep canopy over the mirror-still basin, its trunk and crown doubled in the water, while a single visitor sits motionless on a bench with back and arm rests, wrapped in layered green and dappled shade.",
+      "videogen_prompt": "Photorealistic slow lateral dolly along the edge of a mirror-still reflecting pool beneath a large sculptural ghaf tree, one person seated motionless on a wooden bench, soft diffused midday light filtered through dense canopy, meditative and silent mood."
+    },
+    {
+      "file": "flythrough.svg",
+      "code": "R09-D",
+      "title": "Flythrough — Slow High Drift",
+      "caption": "A slow, high drift over the enclosed room: the berm ring, inner contemplation loop, sky-catching basin and lone ghaf read as one calm composition, with the shade loop and wadi bioswale sliding past toward the horizon of the park.",
+      "videogen_prompt": "Photorealistic cinematic aerial footage drifting slowly and smoothly high above a berm-enclosed contemplation garden with a round reflecting pool and single ghaf tree, wider park paths and a dry wadi channel passing below, warm early evening light, tranquil floating mood."
+    },
+    {
+      "file": "evolution-1.svg",
+      "code": "R09-E",
+      "title": "Evolution — Opening Day",
+      "caption": "Year zero: the basin is full and the benches are set, but the ghaf is a staked sapling, the berms are freshly shaped sand, and the fragrant beds are sparse plugs in open ground — the quiet room exists in outline, waiting to grow closed.",
+      "videogen_prompt": "Photorealistic slow push-in across a newly planted desert garden on opening day, a small staked ghaf sapling beside a full reflecting pool, bare sandy berms and sparse young shrubs, bright clear morning light, hopeful and expectant mood."
+    },
+    {
+      "file": "evolution-2.svg",
+      "code": "R09-F",
+      "title": "Evolution — Year Two",
+      "caption": "Year two, same view: the adolescent ghaf has lost its stakes and begun to cast real shade, the berms are greening over, and the fragrant beds are knitting together around the basin as the room starts to feel held.",
+      "videogen_prompt": "Photorealistic slow push-in across a young desert garden two years after planting, an adolescent ghaf tree casting its first broad shade over a reflecting pool, berms half-covered in native groundcover, soft late morning light, mood of steady quiet growth."
+    },
+    {
+      "file": "evolution-3.svg",
+      "code": "R09-G",
+      "title": "Evolution — Year Five, Enclosed Green",
+      "caption": "Year five, identical composition: the mature ghaf roofs the room, green walls of native planting close the sides, the berms are fully vegetated, and the basin now holds the whole canopy in its reflection — a finished, enclosed green sanctuary.",
+      "videogen_prompt": "Photorealistic slow push-in through a lush enclosed garden room five years after planting, a mature ghaf canopy roofing a still reflecting pool with dense fragrant planting walls on both sides, deep dappled shade with soft filtered light, enveloping and serene mood."
+    },
+    {
+      "file": "night.svg",
+      "code": "R09-H",
+      "title": "Night — Moon in the Basin",
+      "caption": "The walkthrough view after dark: a starfield over the silhouetted ghaf, one warm lantern glowing beside the bench where a figure still sits, and the moon laid perfectly on the black mirror of the basin.",
+      "videogen_prompt": "Photorealistic night footage with a very slow dolly beside a still reflecting pool under a starry sky, full moon mirrored on black water beneath a silhouetted ghaf tree, a single warm lantern glowing next to a bench with a seated figure, hushed and reverent nighttime mood."
+    }
+  ]
+}

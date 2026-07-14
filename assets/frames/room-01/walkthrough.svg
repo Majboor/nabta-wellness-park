@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <path id="sp" d="M0 -12 C1.6 -3.2 3.2 -1.6 12 0 C3.2 1.6 1.6 3.2 0 12 C-1.6 3.2 -3.2 1.6 -12 0 C-3.2 -1.6 -1.6 -3.2 0 -12 Z"/>
+  </defs>
+
+  <!-- sky seen from under the canopy -->
+  <rect width="1280" height="720" fill="#F5EFE2"/>
+  <rect x="0" y="0" width="1280" height="320" fill="#7BC6DD" fill-opacity="0.15"/>
+  <rect x="0" y="220" width="1280" height="100" fill="#F5EFE2" fill-opacity="0.7"/>
+
+  <!-- distant planting band, loop path vanishing north -->
+  <ellipse cx="180" cy="312" rx="170" ry="58" fill="#A9C6A0" fill-opacity="0.65"/>
+  <ellipse cx="460" cy="300" rx="140" ry="62" fill="#2F6B4A" fill-opacity="0.5"/>
+  <ellipse cx="1060" cy="305" rx="180" ry="60" fill="#A9C6A0" fill-opacity="0.65"/>
+  <ellipse cx="790" cy="315" rx="120" ry="48" fill="#2F6B4A" fill-opacity="0.4"/>
+
+  <!-- ground -->
+  <rect x="0" y="320" width="1280" height="400" fill="#E7DCC3"/>
+  <path d="M0 720 L0 500 Q640 470 1280 500 L1280 720 Z" fill="#CFC0A0" fill-opacity="0.8"/>
+  <!-- loop path launching north -->
+  <path d="M300 720 Q560 480 830 330 L900 330 Q700 480 620 720 Z" fill="#CFC0A0"/>
+  <path d="M300 720 Q560 480 830 330 L900 330 Q700 480 620 720 Z" fill="#F5EFE2" fill-opacity="0.3"/>
+  <g stroke="#22301F" stroke-opacity="0.12" stroke-width="2" fill="none">
+    <path d="M420 720 Q620 500 862 330"/>
+    <path d="M160 420 H520"/><path d="M60 520 H400"/><path d="M900 430 H1240"/><path d="M960 540 H1280"/>
+  </g>
+
+  <!-- pergola columns -->
+  <rect x="88" y="90" width="40" height="420" fill="#C05A32"/>
+  <rect x="1152" y="90" width="40" height="420" fill="#C05A32"/>
+  <rect x="620" y="160" width="22" height="180" fill="#C05A32" fill-opacity="0.6"/>
+
+  <!-- overhead terracotta slats, perspective from below -->
+  <g fill="#C05A32">
+    <path d="M0 0 H1280 V26 H0 Z"/>
+    <path d="M0 44 H1280 V78 H0 Z" fill-opacity="0.95"/>
+    <path d="M20 96 H1260 V124 H20 Z" fill-opacity="0.9"/>
+    <path d="M60 142 H1220 V166 H60 Z" fill-opacity="0.85"/>
+    <path d="M110 182 H1170 V202 H110 Z" fill-opacity="0.8"/>
+    <path d="M170 216 H1110 V232 H170 Z" fill-opacity="0.7"/>
+    <path d="M240 244 H1040 V256 H240 Z" fill-opacity="0.6"/>
+    <path d="M320 266 H960 V275 H320 Z" fill-opacity="0.5"/>
+  </g>
+
+  <!-- slat shadow stripes on plaza -->
+  <g fill="#22301F" fill-opacity="0.09">
+    <path d="M0 560 H1280 V584 H0 Z"/>
+    <path d="M0 616 H1280 V644 H0 Z"/>
+    <path d="M0 676 H1280 V708 H0 Z"/>
+    <path d="M60 512 H1220 V530 H60 Z"/>
+  </g>
+
+  <!-- cafe terrace, left -->
+  <path d="M0 340 H300 V500 H0 Z" fill="#F5EFE2"/>
+  <rect x="0" y="332" width="300" height="14" fill="#C05A32"/>
+  <rect x="18" y="366" width="70" height="58" fill="#7BC6DD" fill-opacity="0.35"/>
+  <rect x="120" y="366" width="70" height="58" fill="#7BC6DD" fill-opacity="0.35"/>
+  <rect x="222" y="366" width="60" height="90" fill="#22301F" fill-opacity="0.25"/>
+  <!-- terrace table + seated pair -->
+  <g stroke="#22301F" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M120 542 h64 M152 542 v46"/>
+  </g>
+  <g fill="#22301F">
+    <circle cx="102" cy="502" r="10"/>
+    <path d="M92 514 q10 -6 20 0 l4 34 l-8 2 l-6 -22 l-6 22 l-8 -2 Z"/>
+    <circle cx="204" cy="506" r="10"/>
+    <path d="M194 518 q10 -6 20 0 l4 32 l-8 2 l-6 -20 l-6 20 l-8 -2 Z"/>
+  </g>
+  <!-- low planter with brand-green shrubs -->
+  <rect x="0" y="500" width="310" height="26" fill="#E7DCC3"/>
+  <g fill="#2F6B4A" fill-opacity="0.85">
+    <circle cx="30" cy="496" r="14"/><circle cx="76" cy="490" r="17"/><circle cx="128" cy="496" r="13"/>
+    <circle cx="180" cy="490" r="16"/><circle cx="232" cy="494" r="13"/><circle cx="282" cy="490" r="15"/>
+  </g>
+  <g fill="#7CC98F" fill-opacity="0.7">
+    <circle cx="54" cy="486" r="7"/><circle cx="154" cy="484" r="7"/><circle cx="258" cy="484" r="6"/>
+  </g>
+
+  <!-- midground ghaf pair by the path -->
+  <g>
+    <path d="M962 470 L955 336 M956 380 L924 338 M958 366 L992 330" stroke="#22301F" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <ellipse cx="954" cy="296" rx="108" ry="62" fill="#2F6B4A"/>
+    <ellipse cx="1006" cy="276" rx="58" ry="40" fill="#A9C6A0" fill-opacity="0.75"/>
+    <ellipse cx="902" cy="312" rx="50" ry="32" fill="#A9C6A0" fill-opacity="0.55"/>
+  </g>
+  <g>
+    <path d="M418 428 L414 336 M415 366 L392 340 M416 358 L440 334" stroke="#22301F" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <ellipse cx="414" cy="308" rx="72" ry="44" fill="#2F6B4A" fill-opacity="0.9"/>
+    <ellipse cx="448" cy="294" rx="40" ry="27" fill="#A9C6A0" fill-opacity="0.7"/>
+  </g>
+
+  <!-- bike racks, right -->
+  <g stroke="#22301F" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M1010 470 a24 24 0 0 1 48 0 v24 M1010 494 v-24"/>
+    <path d="M1080 476 a24 24 0 0 1 48 0 v24 M1080 500 v-24"/>
+  </g>
+  <g stroke="#22301F" stroke-width="4" fill="none">
+    <circle cx="1210" cy="520" r="22"/><circle cx="1268" cy="520" r="22"/>
+    <path d="M1210 520 L1234 480 L1268 520 M1234 480 L1225 471 M1260 486 L1268 520"/>
+  </g>
+
+  <!-- sparkle motif inlaid in paving, centre of the room -->
+  <use href="#sp" transform="translate(560 600) scale(4.6)" fill="#C05A32"/>
+  <use href="#sp" transform="translate(452 648) scale(1.7)" fill="#7CC98F"/>
+  <use href="#sp" transform="translate(676 656) scale(1.5)" fill="#7BC6DD"/>
+  <use href="#sp" transform="translate(520 528) scale(1.1)" fill="#C05A32" fill-opacity="0.7"/>
+
+  <!-- people using the room -->
+  <g fill="#22301F">
+    <!-- strolling pair on the loop path -->
+    <path d="M690 402 q7 -16 0 -30 q-3 -8 4 -10 a9 9 0 1 1 6 1 q8 3 6 14 l-2 26 l7 34 h-8 l-7 -30 l-5 30 h-8 Z"/>
+    <path d="M726 406 q-5 -18 1 -32 q-2 -8 5 -9 a8 8 0 1 1 6 1 q7 4 5 15 l1 25 l8 30 h-8 l-8 -26 l-3 26 h-8 Z"/>
+    <!-- child running -->
+    <path d="M776 428 q5 -10 1 -18 q-2 -5 3 -6 a6 6 0 1 1 5 1 q5 2 4 10 l-1 13 l9 16 h-7 l-7 -12 l-6 13 h-7 Z"/>
+    <!-- cyclist arriving -->
+    <g>
+      <circle cx="470" cy="565" r="26" stroke="#22301F" stroke-width="5" fill="none"/>
+      <circle cx="546" cy="565" r="26" stroke="#22301F" stroke-width="5" fill="none"/>
+      <path d="M470 565 L502 512 L546 565 M502 512 L492 500 M534 522 L546 565" stroke="#22301F" stroke-width="5" fill="none"/>
+      <circle cx="500" cy="470" r="11"/>
+      <path d="M492 482 q9 -5 17 1 l14 24 l-8 6 l-13 -20 l-2 22 l-9 -2 Z"/>
+    </g>
+    <!-- person at bike racks -->
+    <path d="M1062 420 q6 -14 1 -26 q-3 -7 4 -9 a8 8 0 1 1 5 1 q7 3 5 13 l-1 22 l6 28 h-7 l-6 -24 l-4 24 h-7 Z"/>
+  </g>
+
+  <!-- warm stipple -->
+  <g fill="#C05A32" fill-opacity="0.22">
+    <circle cx="360" cy="668" r="3"/><circle cx="820" cy="640" r="3"/><circle cx="960" cy="688" r="2.5"/>
+    <circle cx="240" cy="620" r="2.5"/><circle cx="1100" cy="620" r="2.5"/><circle cx="700" cy="700" r="3"/>
+  </g>
+  <g fill="#2F6B4A" fill-opacity="0.2">
+    <circle cx="880" cy="470" r="3"/><circle cx="850" cy="452" r="2.5"/><circle cx="350" cy="450" r="2.5"/>
+    <circle cx="326" cy="470" r="2"/><circle cx="1040" cy="560" r="2.5"/>
+  </g>
+</svg>

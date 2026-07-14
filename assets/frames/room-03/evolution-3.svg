@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <pattern id="stipE3" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="6" r="1.5" fill="#2F6B4A" fill-opacity="0.18"/>
+      <circle cx="14" cy="14" r="1.1" fill="#22301F" fill-opacity="0.07"/>
+    </pattern>
+    <pattern id="stipE3S" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="5" r="1.2" fill="#22301F" fill-opacity="0.06"/>
+    </pattern>
+    <path id="sparkE3" d="M0,-10 L2.2,-2.2 L10,0 L2.2,2.2 L0,10 L-2.2,2.2 L-10,0 L-2.2,-2.2 Z"/>
+    <g id="treeE3">
+      <path d="M-6,0 L-4,-70 L4,-70 L6,0 Z" fill="#22301F"/>
+      <path d="M-4,-64 C-26,-76 -40,-68 -52,-84" stroke="#22301F" stroke-width="4" fill="none"/>
+      <path d="M4,-64 C24,-78 38,-70 50,-86" stroke="#22301F" stroke-width="4" fill="none"/>
+      <ellipse cx="0" cy="-102" rx="74" ry="25" fill="#2F6B4A"/>
+      <ellipse cx="-32" cy="-113" rx="42" ry="16" fill="#A9C6A0" fill-opacity="0.7"/>
+      <ellipse cx="34" cy="-96" rx="38" ry="14" fill="#A9C6A0" fill-opacity="0.5"/>
+      <ellipse cx="8" cy="4" rx="52" ry="10" fill="#22301F" fill-opacity="0.12"/>
+    </g>
+  </defs>
+
+  <!-- sky -->
+  <rect x="0" y="0" width="1280" height="720" fill="#F5EFE2"/>
+  <rect x="0" y="0" width="1280" height="190" fill="#7BC6DD" fill-opacity="0.13"/>
+  <rect x="0" y="170" width="1280" height="130" fill="#E7DCC3" fill-opacity="0.5"/>
+  <circle cx="1020" cy="120" r="42" fill="#F5EFE2"/>
+  <circle cx="1020" cy="120" r="32" fill="#E7DCC3" fill-opacity="0.9"/>
+
+  <!-- YEAR 5: continuous mature canopy behind the rim -->
+  <ellipse cx="120" cy="352" rx="200" ry="58" fill="#2F6B4A" fill-opacity="0.5"/>
+  <ellipse cx="400" cy="344" rx="230" ry="52" fill="#2F6B4A" fill-opacity="0.45"/>
+  <ellipse cx="700" cy="348" rx="240" ry="56" fill="#2F6B4A" fill-opacity="0.48"/>
+  <ellipse cx="1020" cy="350" rx="220" ry="54" fill="#2F6B4A" fill-opacity="0.45"/>
+  <ellipse cx="560" cy="356" rx="260" ry="30" fill="#A9C6A0" fill-opacity="0.5"/>
+  <!-- overhanging mature bough across the top of frame -->
+  <ellipse cx="240" cy="-10" rx="360" ry="90" fill="#2F6B4A" fill-opacity="0.85"/>
+  <ellipse cx="120" cy="10" rx="240" ry="60" fill="#A9C6A0" fill-opacity="0.5"/>
+  <path d="M0,60 C120,44 260,52 380,30" stroke="#22301F" stroke-width="5" fill="none" stroke-opacity="0.7"/>
+
+  <!-- rim loop path -->
+  <path d="M0,392 C300,378 980,378 1280,392 L1280,412 C980,400 300,400 0,412 Z" fill="#CFC0A0"/>
+  <path d="M0,392 C300,378 980,378 1280,392 L1280,412 C980,400 300,400 0,412 Z" fill="url(#stipE3S)"/>
+
+  <!-- pergola on the rim, right -->
+  <g>
+    <rect x="952" y="322" width="10" height="76" fill="#C05A32"/>
+    <rect x="1122" y="322" width="10" height="76" fill="#C05A32"/>
+    <rect x="938" y="312" width="208" height="9" fill="#C05A32"/>
+    <g fill="#C05A32">
+      <rect x="946" y="300" width="14" height="8"/><rect x="972" y="299" width="14" height="8"/><rect x="998" y="298" width="14" height="8"/>
+      <rect x="1024" y="298" width="14" height="8"/><rect x="1050" y="298" width="14" height="8"/><rect x="1076" y="299" width="14" height="8"/><rect x="1102" y="300" width="14" height="8"/>
+    </g>
+    <rect x="944" y="398" width="196" height="10" fill="#22301F" fill-opacity="0.14"/>
+    <!-- year-5 vine over the pergola -->
+    <path d="M940,318 C990,300 1060,306 1150,314" stroke="#2F6B4A" stroke-width="8" fill="none" stroke-opacity="0.8"/>
+    <ellipse cx="1000" cy="306" rx="30" ry="10" fill="#7CC98F" fill-opacity="0.6"/>
+    <ellipse cx="1090" cy="310" rx="26" ry="9" fill="#A9C6A0" fill-opacity="0.7"/>
+  </g>
+
+  <!-- kiosk cart pad, left rim -->
+  <g transform="translate(200,368)">
+    <rect x="-8" y="26" width="76" height="8" rx="3" fill="#CFC0A0"/>
+    <rect x="0" y="0" width="52" height="28" rx="4" fill="#C05A32"/>
+    <rect x="-6" y="-10" width="64" height="10" rx="5" fill="#E7DCC3"/>
+    <circle cx="11" cy="31" r="5" fill="#22301F"/><circle cx="41" cy="31" r="5" fill="#22301F"/>
+  </g>
+
+  <!-- bowl lawn: deep, established sward -->
+  <path d="M0,412 C300,400 980,400 1280,412 L1280,720 L0,720 Z" fill="#A9C6A0"/>
+  <path d="M0,448 C320,414 960,414 1280,448 L1280,720 L0,720 Z" fill="#2F6B4A" fill-opacity="0.5"/>
+  <path d="M0,530 C340,478 940,478 1280,530 L1280,720 L0,720 Z" fill="#2F6B4A" fill-opacity="0.35"/>
+  <path d="M0,412 C300,400 980,400 1280,412 L1280,720 L0,720 Z" fill="url(#stipE3)"/>
+  <ellipse cx="640" cy="600" rx="520" ry="140" fill="#7CC98F" fill-opacity="0.2"/>
+
+  <!-- rim trees: mature ghaf, interlocking canopies -->
+  <use href="#treeE3" transform="translate(150,404) scale(1.5)"/>
+  <use href="#treeE3" transform="translate(330,400) scale(1.3)"/>
+  <use href="#treeE3" transform="translate(560,402) scale(1.45)"/>
+  <use href="#treeE3" transform="translate(760,400) scale(1.25)"/>
+  <use href="#treeE3" transform="translate(1240,406) scale(1.55)"/>
+
+  <!-- people enjoying the shade -->
+  <g fill="#22301F">
+    <g transform="translate(470,520)">
+      <circle cx="0" cy="-46" r="8"/>
+      <path d="M-7,-38 C-9,-16 -8,0 -6,22 L-2,22 L0,-6 L2,-6 L4,22 L8,22 C9,0 8,-16 7,-38 Z"/>
+    </g>
+    <g transform="translate(700,560) scale(0.9)">
+      <circle cx="0" cy="-26" r="7"/>
+      <path d="M-8,-20 C-9,-8 -8,-2 -6,2 L14,4 L14,8 L-10,7 C-13,0 -12,-12 -8,-20 Z"/>
+    </g>
+    <g transform="translate(900,470) scale(0.6)">
+      <circle cx="0" cy="-46" r="8"/>
+      <path d="M-7,-38 C-9,-16 -8,0 -6,22 L-2,22 L0,-6 L2,-6 L4,22 L8,22 C9,0 8,-16 7,-38 Z"/>
+    </g>
+  </g>
+  <path d="M668,564 L760,556 L784,596 L688,604 Z" fill="#C05A32" fill-opacity="0.75"/>
+
+  <!-- dappled canopy shade pooling on the lawn -->
+  <g fill="#22301F" fill-opacity="0.1">
+    <ellipse cx="180" cy="480" rx="120" ry="22"/>
+    <ellipse cx="360" cy="466" rx="100" ry="18"/>
+    <ellipse cx="580" cy="472" rx="115" ry="20"/>
+    <ellipse cx="1200" cy="490" rx="130" ry="24"/>
+    <ellipse cx="240" cy="130" rx="200" ry="40"/>
+  </g>
+
+  <!-- sparkles -->
+  <use href="#sparkE3" transform="translate(880,180) scale(0.85)" fill="#7CC98F"/>
+  <use href="#sparkE3" transform="translate(420,150) scale(0.55)" fill="#7BC6DD"/>
+  <use href="#sparkE3" transform="translate(1150,600) scale(0.7)" fill="#C05A32" fill-opacity="0.85"/>
+</svg>

@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <path id="sparkle" d="M0,-12 L2.8,-2.8 L12,0 L2.8,2.8 L0,12 L-2.8,2.8 L-12,0 L-2.8,-2.8 Z"/>
+  </defs>
+
+  <!-- sky bands, warm desert light -->
+  <rect width="1280" height="720" fill="#F5EFE2"/>
+  <rect y="0" width="1280" height="150" fill="#E7DCC3" fill-opacity="0.55"/>
+  <rect y="150" width="1280" height="120" fill="#E7DCC3" fill-opacity="0.3"/>
+  <circle cx="1020" cy="130" r="70" fill="#F5EFE2"/>
+  <circle cx="1020" cy="130" r="110" fill="#F5EFE2" fill-opacity="0.5"/>
+
+  <!-- distant planting band at horizon -->
+  <rect y="392" width="1280" height="24" fill="#A9C6A0" fill-opacity="0.5"/>
+  <ellipse cx="140" cy="396" rx="180" ry="34" fill="#2F6B4A" fill-opacity="0.35"/>
+  <ellipse cx="1160" cy="398" rx="200" ry="36" fill="#2F6B4A" fill-opacity="0.35"/>
+
+  <!-- ground -->
+  <rect y="410" width="1280" height="310" fill="#E7DCC3"/>
+  <path d="M0,410 h1280 v40 H0 Z" fill="#CFC0A0" fill-opacity="0.4"/>
+
+  <!-- wadi bioswale skirting the path, left -->
+  <path d="M-20,560 C 120,520 220,540 300,500 C 360,470 380,440 400,420"
+        fill="none" stroke="#4E8FA8" stroke-width="26" stroke-linecap="round" stroke-opacity="0.7"/>
+  <path d="M-20,560 C 120,520 220,540 300,500 C 360,470 380,440 400,420"
+        fill="none" stroke="#7BC6DD" stroke-width="7" stroke-linecap="round" stroke-opacity="0.7"/>
+  <g fill="#2F6B4A" fill-opacity="0.55">
+    <ellipse cx="120" cy="536" rx="30" ry="12"/><ellipse cx="250" cy="512" rx="26" ry="10"/>
+    <path d="M180,540 q4,-26 10,-34 M192,540 q0,-22 -4,-32 M200,540 q6,-18 14,-24" stroke="#2F6B4A" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- loop path converging to the plaza -->
+  <path d="M520,720 L610,440 L680,440 L820,720 Z" fill="#CFC0A0"/>
+  <path d="M560,720 L622,470 L662,470 L740,720 Z" fill="#F5EFE2" fill-opacity="0.4"/>
+  <!-- pergola slat shadows across the path -->
+  <g fill="#22301F" fill-opacity="0.12">
+    <path d="M544,660 L790,660 L800,688 L534,688 Z"/>
+    <path d="M566,592 L762,592 L770,614 L558,614 Z"/>
+    <path d="M584,534 L740,534 L746,552 L578,552 Z"/>
+    <path d="M598,490 L722,490 L726,504 L594,504 Z"/>
+  </g>
+
+  <!-- MAJLIS PLAZA ahead: low ring seat wall -->
+  <g>
+    <path d="M470,470 a170,34 0 0 1 340,0 l0,16 a170,34 0 0 1 -340,0 Z" fill="#E7DCC3"/>
+    <path d="M470,470 a170,34 0 0 0 340,0" fill="none" stroke="#22301F" stroke-opacity="0.25" stroke-width="3"/>
+    <!-- cushions on far seat wall -->
+    <g>
+      <rect x="520" y="446" width="34" height="12" rx="6" fill="#C05A32"/>
+      <rect x="566" y="440" width="34" height="12" rx="6" fill="#A9C6A0"/>
+      <rect x="682" y="440" width="34" height="12" rx="6" fill="#C05A32"/>
+      <rect x="730" y="446" width="34" height="12" rx="6" fill="#7CC98F" fill-opacity="0.9"/>
+    </g>
+    <!-- central water glint above wall line -->
+    <ellipse cx="640" cy="474" rx="52" ry="9" fill="#4E8FA8"/>
+    <ellipse cx="628" cy="472" rx="18" ry="4" fill="#7BC6DD" fill-opacity="0.8"/>
+  </g>
+
+  <!-- grand ghaf over the plaza -->
+  <g>
+    <path d="M636,470 C 630,420 626,380 616,340 M636,470 C 646,420 660,380 682,346 M628,410 C 600,388 580,370 560,362 M652,400 C 690,376 716,362 736,356"
+          fill="none" stroke="#22301F" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="560" cy="300" rx="150" ry="72" fill="#2F6B4A" fill-opacity="0.85"/>
+    <ellipse cx="740" cy="280" rx="170" ry="80" fill="#2F6B4A" fill-opacity="0.8"/>
+    <ellipse cx="640" cy="230" rx="180" ry="70" fill="#2F6B4A" fill-opacity="0.7"/>
+    <ellipse cx="520" cy="250" rx="90" ry="42" fill="#A9C6A0" fill-opacity="0.65"/>
+    <ellipse cx="780" cy="220" rx="100" ry="44" fill="#A9C6A0" fill-opacity="0.6"/>
+    <ellipse cx="660" cy="300" rx="80" ry="36" fill="#A9C6A0" fill-opacity="0.4"/>
+    <ellipse cx="600" cy="190" rx="60" ry="28" fill="#7CC98F" fill-opacity="0.35"/>
+  </g>
+
+  <!-- pergola halo arms entering frame, left and right foreground -->
+  <g>
+    <rect x="60" y="60" width="26" height="430" fill="#C05A32"/>
+    <rect x="60" y="60" width="26" height="430" fill="#22301F" fill-opacity="0.15"/>
+    <rect x="1194" y="80" width="26" height="410" fill="#C05A32"/>
+    <g fill="#C05A32">
+      <path d="M86,70 L420,120 L420,138 L86,92 Z"/>
+      <path d="M86,140 L390,182 L390,198 L86,160 Z"/>
+      <path d="M86,208 L360,240 L360,254 L86,226 Z"/>
+      <path d="M1194,90 L880,134 L880,152 L1194,112 Z"/>
+      <path d="M1194,158 L910,196 L910,212 L1194,178 Z"/>
+      <path d="M1194,226 L940,254 L940,268 L1194,244 Z"/>
+    </g>
+    <g fill="#22301F" fill-opacity="0.12">
+      <path d="M86,92 L420,138 L420,146 L86,100 Z"/>
+      <path d="M1194,112 L880,152 L880,160 L1194,120 Z"/>
+    </g>
+  </g>
+
+  <!-- flanking young ghaf + planting, midground -->
+  <g>
+    <path d="M330,470 C 326,430 322,404 314,382" fill="none" stroke="#22301F" stroke-width="7" stroke-linecap="round"/>
+    <ellipse cx="310" cy="360" rx="70" ry="36" fill="#2F6B4A" fill-opacity="0.8"/>
+    <ellipse cx="286" cy="344" rx="36" ry="20" fill="#A9C6A0" fill-opacity="0.7"/>
+    <path d="M960,478 C 964,436 970,408 980,388" fill="none" stroke="#22301F" stroke-width="7" stroke-linecap="round"/>
+    <ellipse cx="986" cy="364" rx="76" ry="38" fill="#2F6B4A" fill-opacity="0.8"/>
+    <ellipse cx="1014" cy="348" rx="38" ry="20" fill="#A9C6A0" fill-opacity="0.7"/>
+    <ellipse cx="230" cy="500" rx="110" ry="30" fill="#A9C6A0" fill-opacity="0.5"/>
+    <ellipse cx="1080" cy="520" rx="130" ry="34" fill="#A9C6A0" fill-opacity="0.5"/>
+    <ellipse cx="1120" cy="500" rx="60" ry="20" fill="#2F6B4A" fill-opacity="0.4"/>
+  </g>
+
+  <!-- people arriving: elder with cane + child, walker -->
+  <g fill="#22301F">
+    <g>
+      <circle cx="600" cy="540" r="11"/>
+      <path d="M600,551 C 588,560 586,596 590,626 L 596,626 L 600,584 L 606,626 L 612,626 C 616,596 612,560 600,551 Z"/>
+      <path d="M612,566 L 626,626" stroke="#22301F" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    <g>
+      <circle cx="646" cy="566" r="8"/>
+      <path d="M646,574 C 638,580 637,602 640,624 L 645,624 L 646,600 L 649,624 L 653,624 C 656,602 654,580 646,574 Z"/>
+    </g>
+    <g fill-opacity="0.85">
+      <circle cx="700" cy="500" r="8"/>
+      <path d="M700,508 C 693,514 692,534 695,552 L 699,552 L 700,532 L 702,552 L 706,552 C 708,534 707,514 700,508 Z"/>
+    </g>
+  </g>
+
+  <!-- foreground detail: planting silhouettes + stipple -->
+  <g stroke="#2F6B4A" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M120,720 q10,-70 30,-96 M156,720 q0,-60 -12,-88 M186,720 q14,-52 34,-66"/>
+    <path d="M1120,720 q-10,-64 -28,-88 M1156,720 q4,-58 18,-80 M1090,720 q-2,-46 -14,-64"/>
+  </g>
+  <g fill="#22301F" fill-opacity="0.12">
+    <circle cx="470" cy="640" r="3"/><circle cx="440" cy="690" r="3.5"/><circle cx="520" cy="700" r="3"/>
+    <circle cx="840" cy="650" r="3"/><circle cx="880" cy="700" r="3.5"/><circle cx="810" cy="700" r="3"/>
+    <circle cx="300" cy="600" r="3"/><circle cx="980" cy="590" r="3"/><circle cx="360" cy="660" r="3"/>
+  </g>
+  <g fill="#F5EFE2" fill-opacity="0.6">
+    <circle cx="600" cy="300" r="3"/><circle cx="700" cy="250" r="2.5"/><circle cx="560" cy="220" r="2.5"/>
+    <circle cx="760" cy="310" r="3"/><circle cx="660" cy="180" r="2.5"/>
+  </g>
+
+  <!-- nabta sparkles -->
+  <use href="#sparkle" x="900" y="180" fill="#7CC98F"/>
+  <use href="#sparkle" x="380" y="150" fill="#7BC6DD" opacity="0.85"/>
+</svg>

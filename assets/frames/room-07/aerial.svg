@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <pattern id="stipA" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="5" r="1.2" fill="#22301F" opacity="0.07"/>
+      <circle cx="12" cy="13" r="1" fill="#22301F" opacity="0.05"/>
+    </pattern>
+    <g id="sparkA">
+      <path d="M0,-9 L2.2,-2.2 L9,0 L2.2,2.2 L0,9 L-2.2,2.2 L-9,0 L-2.2,-2.2 Z"/>
+    </g>
+    <g id="canopyTop">
+      <circle cx="6" cy="8" r="46" fill="#22301F" opacity="0.14"/>
+      <circle cx="0" cy="0" r="46" fill="#2F6B4A" opacity="0.85"/>
+      <circle cx="-12" cy="-8" r="30" fill="#A9C6A0" opacity="0.7"/>
+      <circle cx="16" cy="10" r="18" fill="#2F6B4A" opacity="0.6"/>
+    </g>
+    <g id="tableTop">
+      <rect x="-26" y="-38" width="52" height="14" rx="4" fill="#F5EFE2"/>
+      <rect x="-26" y="24" width="52" height="14" rx="4" fill="#F5EFE2"/>
+      <rect x="-30" y="-16" width="60" height="32" rx="6" fill="#C05A32"/>
+    </g>
+    <g id="majlisTop">
+      <circle r="36" fill="#C05A32" opacity="0.5"/>
+      <circle cx="-18" cy="-12" r="8" fill="#F5EFE2"/>
+      <circle cx="16" cy="-16" r="8" fill="#F5EFE2"/>
+      <circle cx="22" cy="14" r="8" fill="#F5EFE2"/>
+      <circle cx="-14" cy="20" r="8" fill="#F5EFE2"/>
+      <circle cx="0" cy="0" r="10" fill="#E7DCC3"/>
+    </g>
+    <g id="dotPair">
+      <circle cx="0" cy="0" r="4.5" fill="#22301F"/>
+      <circle cx="11" cy="4" r="4.5" fill="#22301F"/>
+    </g>
+  </defs>
+
+  <!-- base ground -->
+  <rect width="1280" height="720" fill="#E7DCC3"/>
+  <!-- lawn between groves -->
+  <path d="M0,120 C260,60 520,150 760,110 C980,75 1160,130 1280,100 L1280,560 C1040,610 760,540 520,590 C320,630 140,570 0,600 Z" fill="#A9C6A0" opacity="0.55"/>
+  <path d="M120,200 C360,160 620,240 900,190 C1080,160 1200,210 1280,190 L1280,470 C1020,520 740,450 480,500 C300,530 140,490 0,510 L0,240 Z" fill="#A9C6A0" opacity="0.4"/>
+
+  <!-- wadi bioswale ribbon along north (top) edge -->
+  <path d="M-20,64 C220,30 480,86 740,52 C980,22 1160,70 1300,44" fill="none" stroke="#A9C6A0" stroke-width="42" opacity="0.7"/>
+  <path d="M-20,64 C220,30 480,86 740,52 C980,22 1160,70 1300,44" fill="none" stroke="#4E8FA8" stroke-width="14" opacity="0.75"/>
+
+  <!-- figure-eight shaded loop segment along south -->
+  <path d="M-30,640 C220,560 420,700 640,632 C860,566 1040,700 1310,600" fill="none" stroke="#22301F" stroke-width="56" opacity="0.08"/>
+  <path d="M-30,632 C220,552 420,692 640,624 C860,558 1040,692 1310,592" fill="none" stroke="#CFC0A0" stroke-width="46"/>
+  <!-- pergola slat shadows across loop -->
+  <g stroke="#C05A32" stroke-width="5" opacity="0.55">
+    <line x1="150" y1="576" x2="146" y2="632"/><line x1="176" y1="572" x2="172" y2="628"/>
+    <line x1="202" y1="570" x2="198" y2="626"/><line x1="228" y1="570" x2="224" y2="626"/>
+    <line x1="700" y1="586" x2="696" y2="642"/><line x1="726" y1="582" x2="722" y2="638"/>
+    <line x1="752" y1="580" x2="748" y2="636"/><line x1="778" y1="580" x2="774" y2="636"/>
+  </g>
+
+  <!-- spur paths from loop to groves -->
+  <g fill="none" stroke="#CFC0A0" stroke-width="16">
+    <path d="M250,588 C260,500 240,420 260,340"/>
+    <path d="M560,640 C580,540 620,470 640,400"/>
+    <path d="M900,600 C920,510 960,440 980,380"/>
+    <path d="M640,400 C560,360 420,360 340,320"/>
+    <path d="M980,380 C1060,330 1120,300 1180,250"/>
+  </g>
+
+  <!-- grove pockets: planted rings, tables, majlis -->
+  <!-- grove 1 -->
+  <g transform="translate(260,300)">
+    <circle r="96" fill="#F5EFE2" opacity="0.7"/>
+    <g fill="#2F6B4A" opacity="0.8">
+      <circle cx="-88" cy="-20" r="18"/><circle cx="-70" cy="-62" r="15"/><circle cx="-28" cy="-88" r="17"/>
+      <circle cx="34" cy="-86" r="14"/><circle cx="80" cy="-52" r="17"/><circle cx="92" cy="6" r="15"/>
+      <circle cx="70" cy="60" r="16"/><circle cx="-64" cy="58" r="16"/>
+    </g>
+    <use href="#tableTop" transform="translate(-14,8)"/>
+    <use href="#canopyTop" transform="translate(-58,-44) scale(1.1)"/>
+    <use href="#canopyTop" transform="translate(52,-30) scale(0.9)"/>
+    <use href="#dotPair" transform="translate(24,32)"/>
+  </g>
+  <!-- grove 2 (majlis) -->
+  <g transform="translate(640,330)">
+    <circle r="102" fill="#F5EFE2" opacity="0.7"/>
+    <g fill="#2F6B4A" opacity="0.8">
+      <circle cx="-94" cy="-16" r="17"/><circle cx="-66" cy="-70" r="16"/><circle cx="-10" cy="-94" r="18"/>
+      <circle cx="52" cy="-82" r="15"/><circle cx="92" cy="-30" r="17"/><circle cx="94" cy="34" r="15"/>
+      <circle cx="52" cy="80" r="17"/><circle cx="-76" cy="52" r="15"/>
+    </g>
+    <use href="#majlisTop" transform="translate(4,4)"/>
+    <use href="#canopyTop" transform="translate(-50,-52)"/>
+    <use href="#canopyTop" transform="translate(60,44) scale(0.85)"/>
+    <use href="#dotPair" transform="translate(-30,30)"/>
+    <circle cx="86" cy="-64" r="6" fill="#4E8FA8"/><circle cx="86" cy="-64" r="10" fill="none" stroke="#F5EFE2" stroke-width="3"/>
+  </g>
+  <!-- grove 3 -->
+  <g transform="translate(990,340)">
+    <circle r="92" fill="#F5EFE2" opacity="0.7"/>
+    <g fill="#2F6B4A" opacity="0.8">
+      <circle cx="-84" cy="-8" r="16"/><circle cx="-56" cy="-62" r="15"/><circle cx="4" cy="-86" r="17"/>
+      <circle cx="60" cy="-64" r="15"/><circle cx="86" cy="-4" r="16"/><circle cx="60" cy="58" r="16"/>
+      <circle cx="-52" cy="60" r="15"/>
+    </g>
+    <use href="#tableTop" transform="translate(6,-4) rotate(18)"/>
+    <use href="#canopyTop" transform="translate(-44,40) scale(0.95)"/>
+    <use href="#canopyTop" transform="translate(48,-46) scale(0.8)"/>
+    <use href="#dotPair" transform="translate(-18,-34)"/>
+  </g>
+  <!-- grove 4 (north-east, near bioswale) -->
+  <g transform="translate(1180,190)">
+    <circle r="78" fill="#F5EFE2" opacity="0.7"/>
+    <g fill="#2F6B4A" opacity="0.8">
+      <circle cx="-70" cy="-14" r="14"/><circle cx="-36" cy="-62" r="15"/><circle cx="26" cy="-68" r="14"/>
+      <circle cx="68" cy="-24" r="15"/><circle cx="52" cy="44" r="14"/><circle cx="-40" cy="52" r="14"/>
+    </g>
+    <use href="#majlisTop" transform="translate(0,0) scale(0.85)"/>
+    <use href="#canopyTop" transform="translate(-34,-36) scale(0.8)"/>
+  </g>
+  <!-- grove 5 (west) -->
+  <g transform="translate(340,150)">
+    <circle r="80" fill="#F5EFE2" opacity="0.7"/>
+    <g fill="#2F6B4A" opacity="0.8">
+      <circle cx="-70" cy="-10" r="14"/><circle cx="-40" cy="-58" r="14"/><circle cx="22" cy="-70" r="15"/>
+      <circle cx="66" cy="-30" r="14"/><circle cx="60" cy="38" r="15"/><circle cx="-32" cy="56" r="14"/>
+    </g>
+    <use href="#tableTop" transform="translate(-4,2) rotate(-12) scale(0.9)"/>
+    <use href="#canopyTop" transform="translate(40,-30) scale(0.85)"/>
+    <use href="#dotPair" transform="translate(-30,-20)"/>
+    <circle cx="-58" cy="40" r="6" fill="#4E8FA8"/><circle cx="-58" cy="40" r="10" fill="none" stroke="#F5EFE2" stroke-width="3"/>
+  </g>
+
+  <!-- scattered lawn trees -->
+  <use href="#canopyTop" transform="translate(470,240) scale(0.7)"/>
+  <use href="#canopyTop" transform="translate(820,230) scale(0.75)"/>
+  <use href="#canopyTop" transform="translate(120,430) scale(0.8)"/>
+  <use href="#canopyTop" transform="translate(1090,500) scale(0.7)"/>
+  <use href="#canopyTop" transform="translate(450,520) scale(0.85)"/>
+
+  <!-- people on loop and lawn -->
+  <use href="#dotPair" transform="translate(420,610)"/>
+  <use href="#dotPair" transform="translate(760,600)"/>
+  <use href="#dotPair" transform="translate(560,470)"/>
+  <use href="#dotPair" transform="translate(880,470)"/>
+
+  <!-- brand sparkles -->
+  <use href="#sparkA" transform="translate(180,120)" fill="#7CC98F" opacity="0.9"/>
+  <use href="#sparkA" transform="translate(1060,90) scale(0.8)" fill="#7BC6DD" opacity="0.9"/>
+  <use href="#sparkA" transform="translate(700,470) scale(0.7)" fill="#F5EFE2"/>
+  <use href="#sparkA" transform="translate(1230,430) scale(0.6)" fill="#7CC98F"/>
+
+  <!-- texture + warm wash -->
+  <rect width="1280" height="720" fill="url(#stipA)"/>
+  <rect width="1280" height="720" fill="#C05A32" opacity="0.04"/>
+</svg>

@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <linearGradient id="ap-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5EFE2"/>
+      <stop offset="0.75" stop-color="#E7DCC3"/>
+      <stop offset="1" stop-color="#CFC0A0"/>
+    </linearGradient>
+    <pattern id="ap-stipple" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="6" r="1.3" fill="#22301F" opacity="0.10"/>
+      <circle cx="16" cy="18" r="1.1" fill="#22301F" opacity="0.08"/>
+    </pattern>
+    <pattern id="ap-leafdot" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="7" r="1.6" fill="#7CC98F" opacity="0.25"/>
+      <circle cx="16" cy="16" r="1.3" fill="#2F6B4A" opacity="0.2"/>
+    </pattern>
+    <g id="ap-sparkle">
+      <path d="M0,-11 L2.6,-2.6 L11,0 L2.6,2.6 L0,11 L-2.6,2.6 L-11,0 L-2.6,-2.6 Z" fill="#F5EFE2"/>
+    </g>
+  </defs>
+
+  <!-- warm sky -->
+  <rect width="1280" height="470" fill="url(#ap-sky)"/>
+  <circle cx="980" cy="130" r="60" fill="#F5EFE2" opacity="0.9"/>
+  <circle cx="980" cy="130" r="100" fill="#F5EFE2" opacity="0.35"/>
+
+  <!-- distant grove line -->
+  <path d="M0,430 C160,400 300,415 460,395 C640,372 820,405 1000,385 C1120,372 1220,392 1280,382 L1280,470 L0,470 Z" fill="#A9C6A0" opacity="0.55"/>
+  <path d="M0,450 C220,430 480,445 720,428 C960,412 1120,438 1280,425 L1280,475 L0,475 Z" fill="#2F6B4A" opacity="0.35"/>
+
+  <!-- ground -->
+  <rect y="460" width="1280" height="260" fill="#E7DCC3"/>
+  <rect y="460" width="1280" height="260" fill="url(#ap-stipple)"/>
+  <!-- lawn pockets flanking the entry -->
+  <path d="M0,505 C150,485 300,500 430,520 C300,560 130,575 0,560 Z" fill="#A9C6A0" opacity="0.8"/>
+  <path d="M0,505 C150,485 300,500 430,520 C300,560 130,575 0,560 Z" fill="url(#ap-leafdot)"/>
+  <path d="M880,510 C1020,492 1160,502 1280,492 L1280,585 C1120,590 980,560 880,540 Z" fill="#A9C6A0" opacity="0.75"/>
+  <path d="M880,510 C1020,492 1160,502 1280,492 L1280,585 C1120,590 980,560 880,540 Z" fill="url(#ap-leafdot)"/>
+
+  <!-- loop path converging into the grove -->
+  <path d="M420,720 C480,620 560,520 630,468 L690,468 C740,530 850,640 940,720 Z" fill="#CFC0A0"/>
+  <path d="M655,720 C652,630 655,540 660,468" fill="none" stroke="#F5EFE2" stroke-width="4" stroke-dasharray="16 22" opacity="0.7"/>
+  <!-- pergola shade stripes across the path -->
+  <g fill="#22301F" opacity="0.14">
+    <path d="M470,640 L920,640 L905,662 L455,662 Z"/>
+    <path d="M520,560 L860,560 L850,578 L510,578 Z"/>
+    <path d="M565,498 L800,498 L794,512 L558,512 Z"/>
+  </g>
+
+  <!-- ghaf trees framing the entry -->
+  <g>
+    <path d="M270,470 C265,400 250,360 235,330 M270,470 C278,410 295,370 310,345" stroke="#22301F" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <circle cx="235" cy="290" r="85" fill="#2F6B4A" opacity="0.88"/>
+    <circle cx="320" cy="300" r="70" fill="#A9C6A0" opacity="0.7"/>
+    <circle cx="280" cy="240" r="60" fill="#2F6B4A" opacity="0.6"/>
+    <circle cx="200" cy="250" r="45" fill="#7CC98F" opacity="0.3"/>
+  </g>
+  <g>
+    <path d="M1030,478 C1035,400 1048,355 1065,320 M1030,478 C1024,415 1008,370 992,345" stroke="#22301F" stroke-width="15" fill="none" stroke-linecap="round"/>
+    <circle cx="1065" cy="275" r="95" fill="#2F6B4A" opacity="0.85"/>
+    <circle cx="975" cy="290" r="72" fill="#A9C6A0" opacity="0.7"/>
+    <circle cx="1130" cy="320" r="60" fill="#A9C6A0" opacity="0.55"/>
+    <circle cx="1050" cy="215" r="52" fill="#7CC98F" opacity="0.3"/>
+  </g>
+
+  <!-- terracotta-slat pergola gateway over the path -->
+  <g>
+    <rect x="470" y="180" width="18" height="330" fill="#22301F"/>
+    <rect x="806" y="180" width="18" height="330" fill="#22301F"/>
+    <g fill="#C05A32">
+      <rect x="440" y="176" width="414" height="12" rx="4"/>
+      <rect x="448" y="202" width="398" height="10" rx="4"/>
+      <rect x="454" y="226" width="386" height="10" rx="4"/>
+      <rect x="460" y="250" width="374" height="10" rx="4"/>
+    </g>
+    <rect x="440" y="164" width="414" height="8" rx="3" fill="#22301F"/>
+  </g>
+
+  <!-- glimpse of calisthenics frames beyond the gateway -->
+  <g stroke="#22301F" stroke-width="7" fill="none" stroke-linecap="round">
+    <path d="M560,470 L560,392 M615,470 L615,392"/>
+    <path d="M700,470 L700,405 M755,470 L755,405"/>
+  </g>
+  <g stroke="#C05A32" stroke-width="6" stroke-linecap="round">
+    <path d="M560,392 L615,392"/>
+    <path d="M700,405 L755,405"/>
+    <path d="M700,438 L755,438"/>
+  </g>
+
+  <!-- shaded water fountain at right of entry -->
+  <g>
+    <rect x="872" y="452" width="26" height="46" rx="6" fill="#22301F"/>
+    <ellipse cx="885" cy="452" rx="18" ry="7" fill="#4E8FA8"/>
+    <path d="M885,448 C883,440 887,436 885,430" stroke="#7BC6DD" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- silhouettes: jogger approaching, walker with towel -->
+  <g fill="#22301F">
+    <path d="M636,560 c-4,-16 2,-26 9,-26 c7,0 11,9 9,22 l10,26 -8,3 -9,-22 -6,24 -9,-2 6,-25 z"/>
+    <circle cx="646" cy="524" r="8"/>
+    <path d="M700,585 c-3,-13 1,-22 7,-22 c6,0 9,8 8,19 l3,28 -7,1 -3,-22 -5,22 -7,-1 z"/>
+    <circle cx="708" cy="554" r="7"/>
+  </g>
+  <ellipse cx="655" cy="596" rx="42" ry="7" fill="#22301F" opacity="0.15"/>
+
+  <!-- sparkles -->
+  <use href="#ap-sparkle" transform="translate(647,140) scale(1)" opacity="0.95"/>
+  <use href="#ap-sparkle" transform="translate(160,120) scale(0.6)" opacity="0.7"/>
+  <use href="#ap-sparkle" transform="translate(1180,90) scale(0.7)" opacity="0.7"/>
+  <use href="#ap-sparkle" transform="translate(885,430) scale(0.45)" opacity="0.9"/>
+</svg>

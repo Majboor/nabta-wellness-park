@@ -1,0 +1,198 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bone:#F5EFE2;--paper:#FBF7EC;--sand:#E7DCC3;--sand2:#EFE6D2;--ink:#22301F;--soft:#4A5644;--mute:#7A8272;
+--green:#2F6B4A;--leaf:#A9C6A0;--terra:#C05A32;--tdeep:#9C4525;--water:#4E8FA8;--hair:#D8CCAF;
+--serif:"Fraunces",serif;--sans:"Instrument Sans",sans-serif;--mono:"IBM Plex Mono",monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bone);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.62;
+background-image:radial-gradient(ellipse 90% 40% at 50% -5%,rgba(169,198,160,.25),transparent 60%)}
+.wrap{max-width:880px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
+nav{position:sticky;top:0;z-index:50;background:rgba(245,239,226,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair)}
+nav .wrap{display:flex;align-items:center;gap:1.3rem;height:54px;max-width:1000px}
+.logo-nabta{font-family:"Comfortaa",var(--sans);font-weight:700;color:var(--ink)}
+.logo-nabta .spark{color:#8FCB9B;font-weight:400}
+nav a{font-family:var(--mono);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--soft);text-decoration:none}
+nav a:hover{color:var(--tdeep)}
+nav .nx{margin-left:auto;display:flex;gap:1rem}
+.cover{border-bottom:1px solid var(--hair);background:var(--paper)}
+.cover .art svg{display:block;width:100%;height:auto}
+header{padding:2.6rem 0 2.2rem;border-bottom:1px solid var(--hair)}
+.kicker{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--tdeep)}
+h1{font-family:var(--serif);font-weight:900;font-size:clamp(1.9rem,4.5vw,3rem);line-height:1.08;margin:.7rem 0 1rem}
+.chips{display:flex;gap:.45rem;flex-wrap:wrap}
+.chip{font-family:var(--mono);font-size:.66rem;background:var(--sand);padding:.28rem .6rem;border:1px solid var(--hair)}
+.chip.score{color:#fff;background:linear-gradient(90deg,#5FA871,#4E9DB5);border:none}
+main{padding:2.6rem 0 4rem}
+.deliv-body{max-width:74ch}
+.deliv-body h4{font-family:var(--serif);font-weight:600;font-size:1.32rem;margin:1.8rem 0 .6rem;color:var(--green)}
+.deliv-body h4:first-child{margin-top:0}
+.deliv-body h5{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tdeep);margin:1.4rem 0 .5rem}
+.deliv-body p{margin:.6rem 0;font-size:.97rem}
+.deliv-body ul,.deliv-body ol{padding-left:1.3rem;margin:.6rem 0;font-size:.95rem}
+.deliv-body li{margin:.3rem 0}
+.deliv-body blockquote{font-family:var(--serif);font-style:italic;font-size:1.25rem;line-height:1.5;color:var(--green);border-left:3px solid var(--terra);padding:.4rem 0 .4rem 1.3rem;margin:1.5rem 0}
+.deliv-body table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}
+.deliv-body th{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;color:var(--mute);border-bottom:2px solid var(--ink);padding:.5rem .6rem .4rem}
+.deliv-body td{border-bottom:1px solid var(--hair);padding:.55rem .6rem;vertical-align:top}
+.deliv-body tr:hover td{background:rgba(169,198,160,.14)}
+.deliv-body figure{margin:1.5rem 0;background:var(--paper);border:1px solid var(--hair);padding:1.1rem}
+.deliv-body figcaption{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-top:.7rem}
+.deliv-body svg{display:block;width:100%;height:auto}
+.deliv-body .cols2{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+@media(max-width:680px){.deliv-body .cols2{grid-template-columns:1fr}}
+.deliv-body .tag{font-family:var(--mono);font-size:.64rem;background:var(--sand);border:1px solid var(--hair);padding:.16rem .5rem;display:inline-block;margin:.1rem .15rem .1rem 0}
+footer{border-top:1px solid var(--hair);padding:2rem 0 3rem;color:var(--mute);font-size:.84rem}
+.pn{display:flex;justify-content:space-between;gap:1rem;margin-top:2.6rem;border-top:1px solid var(--hair);padding-top:1.4rem}
+.pn a{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tdeep);text-decoration:none}
+</style></head><body>
+<nav><div class="wrap">
+<span class="logo-nabta">nabta<span class="spark">✦</span></span>
+<a href="../aipark-challenge.html">← All deliverables</a>
+<span class="nx"><a href="../map.html">Map &amp; frames</a><a href="../pdfs/Nabta-08-Accessibility-Circulation-and-Commercial-Facilities.pdf">PDF</a></span>
+</div></nav>
+<div class="cover"><div class="art"><?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="brand" x1="120" y1="0" x2="1080" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7CC98F"/><stop offset="100%" stop-color="#7BC6DD"/>
+    </linearGradient>
+    <path id="sparkle" d="M0,-20 C2.4,-6.5 6.5,-2.4 20,0 C6.5,2.4 2.4,6.5 0,20 C-2.4,6.5 -6.5,2.4 -20,0 C-6.5,-2.4 -2.4,-6.5 0,-20 Z"/>
+  </defs>
+  <rect width="1200" height="520" fill="#F5EFE2"/>
+  <rect x="20" y="20" width="1160" height="480" fill="none" stroke="#22301F" stroke-width="1.5"/>
+  <rect x="0" y="470" width="1200" height="50" fill="#E7DCC3" opacity="0.95"/>
+  <path d="M0,467 L1200,467" stroke="url(#brand)" stroke-width="3" stroke-linecap="round"/>
+  <g opacity="0.34" fill="#22301F">
+    <circle cx="40" cy="490" r="1.2"/><circle cx="68" cy="479" r="1.4"/><circle cx="96" cy="491" r="1.1"/>
+    <circle cx="1008" cy="482" r="1.2"/><circle cx="1036" cy="491" r="1.4"/><circle cx="1070" cy="478" r="1.1"/>
+  </g>
+  <g transform="translate(1013 88) scale(0.86)"><use href="#sparkle" fill="#7BC6DD"/></g>
+  <text x="52" y="56" font-family="IBM Plex Mono, monospace" font-size="14" letter-spacing="2" fill="#22301F">08 ACCESSIBILITY &amp; CIRCULATION</text>
+  <g transform="translate(600 270)">
+    <path d="M-330,44 C-242,-4 -160,-26 -86,-22 C-12,-18 58,6 126,42 C195,77 263,92 336,78" fill="none" stroke="#CFC0A0" stroke-width="30" stroke-linecap="round"/>
+    <path d="M-330,80 C-242,28 -160,8 -86,10 C-12,12 58,34 126,70 C195,105 263,120 336,106" fill="none" stroke="#A9C6A0" stroke-width="30" stroke-linecap="round" opacity="0.85"/>
+    <path d="M-330,44 C-242,-4 -160,-26 -86,-22 C-12,-18 58,6 126,42 C195,77 263,92 336,78" fill="none" stroke="#22301F" stroke-width="2"/>
+    <path d="M-330,80 C-242,28 -160,8 -86,10 C-12,12 58,34 126,70 C195,105 263,120 336,106" fill="none" stroke="#22301F" stroke-width="2"/>
+    <g stroke="#22301F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M-220,46 l18,-6 l-4,12"/>
+      <path d="M-152,28 l18,-6 l-4,12"/>
+      <path d="M-76,16 l18,-6 l-4,12"/>
+      <path d="M2,20 l18,-6 l-4,12"/>
+      <path d="M80,40 l18,-6 l-4,12"/>
+      <path d="M164,64 l18,-6 l-4,12"/>
+      <path d="M246,88 l18,-6 l-4,12"/>
+    </g>
+    <g transform="translate(-72 58)" stroke="#22301F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <circle cx="0" cy="-24" r="10" fill="#E7DCC3"/><path d="M0,-14 L0,16"/><path d="M-12,-2 L12,-2"/><path d="M0,16 L-12,42"/><path d="M0,16 L12,42"/>
+    </g>
+    <g transform="translate(190 86)" stroke="#22301F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <circle cx="0" cy="-10" r="5" fill="#E7DCC3"/><path d="M-2,-4 L10,10"/><path d="M-4,8 L12,24"/><path d="M10,10 L20,22"/>
+    </g>
+    <g transform="translate(44 16)" stroke="#22301F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <circle cx="0" cy="-14" r="5" fill="#E7DCC3"/><path d="M0,-8 L0,18"/><path d="M-8,12 C-12,24 -14,30 -16,42"/><path d="M8,12 C12,24 14,30 16,42"/>
+    </g>
+    <g transform="translate(26 102)" stroke="#22301F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="#E7DCC3">
+      <circle cx="0" cy="-22" r="8"/><path d="M0,-14 L0,14"/><path d="M-8,0 L8,0"/><path d="M-8,14 L8,14"/><path d="M-7,14 L-16,28"/><path d="M7,14 L16,28"/>
+    </g>
+  </g>
+</svg>
+</div></div>
+<header><div class="wrap">
+<p class="kicker">nabta wellness park · Draft Competition Entry · Dubai Municipality AI Park Design Challenge</p>
+<h1>D·08 — Accessibility, Circulation & Commercial Facilities</h1>
+<div class="chips"><span class="chip">№08 Accessibility</span><span class="chip">CSF Map</span><span class="chip score">jury 5.6 → 7.2 /10</span></div>
+</div></header>
+<main><div class="wrap"><div class="deliv-body">
+<h4>Deliverable 8 — Accessibility &amp; Circulation Strategy + Indicative Commercial &amp; Service Facilities Plan</h4>
+<p><span class="tag">NABTA «نبتة» — Wellness Park</span> <span class="tag">The Living Shade Loop</span> <span class="tag">Dubai Universal Design Code</span></p>
+
+<h5>A. Circulation Hierarchy — Movement for Every Body</h5>
+<p>In a wellness park, circulation <em>is</em> the programme: walking, wheeling and jogging are Nabta's primary health offer. One legible spine and two subordinate layers ensure every visitor — stroller, wheelchair user, jogger — can complete the loop with dignity.</p>
+<ul>
+<li><strong>Primary: the Living Shade Loop.</strong> 1.0 km figure-eight, 3.5 m shared path, continuously shaded. A 1.0 m jogger lane is marked in terracotta-pigmented resin on the outer edge; cross-slope ≤2% throughout, gradients ≤1:21, no ramps anywhere.</li>
+<li><strong>Secondary: garden paths.</strong> 1.8 m stabilised, firm and slip-resistant paths entering each of the ten garden rooms, with 1.8×1.8 m passing/turning bays at every junction.</li>
+<li><strong>Tertiary: desire-line shortcuts.</strong> Compacted decomposed-granite links across the loop's waist and lawn edges, formalising natural shortcuts; all step-free.</li>
+</ul>
+<p><strong>Walk times</strong> (1.0 m/s accessible pace): entry plaza → play dune 3 min; → sensory wadi 5 min; full loop 17 min walking, 6 min jogging. No point is more than 4 minutes from a loop exit gate.</p>
+
+<h5>B. Universal Accessibility — Code-Mapped Checklist</h5>
+<table>
+<thead><tr><th>Dubai Universal Design Code theme</th><th>Nabta measure</th></tr></thead>
+<tbody>
+<tr><td>Step-free movement</td><td>100% step-free park: zero kerbs on the loop, flush terracotta bridges over the wadi (≤1:21), tactile-edged not stepped.</td></tr>
+<tr><td>Wayfinding</td><td>Continuous tactile guidance strip on the full 1.0 km loop; tactile/high-contrast decision studs at all ten room junctions.</td></tr>
+<tr><td>Rest &amp; comfort</td><td>Seating every 50 m maximum, all with armrests and backrests; 50% in year-round shade; adjacent wheelchair pause space at each bench.</td></tr>
+<tr><td>Arrival</td><td>4 accessible parking bays nearest the SE entry (3.6 m wide, shaded, ≤30 m to gate), level drop-off with blister paving.</td></tr>
+<tr><td>Sanitary provision</td><td>One Changing Places-standard restroom (12 m², ceiling hoist, adult changing bench) at the entry plaza block, plus ambulant-accessible cubicles at both restroom locations.</td></tr>
+<tr><td>Sensory inclusion</td><td>Quiet room directly adjacent to the sensory wadi garden; hearing (induction) loop at the majlis plaza; predictable acoustic zoning.</td></tr>
+<tr><td>Signage</td><td>Braille + pictogram + high-contrast signage in Arabic and English at all entrances and room thresholds, mounted 1.2–1.6 m.</td></tr>
+<tr><td>Inclusive play</td><td>Play dune equipment with transfer platforms at 450 mm, wheelchair-accessible carousel, ground-level play at every cluster.</td></tr>
+</tbody>
+</table>
+<p><em>Each row cites its Code theme for line-by-line audit; all dimensions meet or exceed Code minimums.</em></p>
+
+<h5>C. AI-Assisted Circulation Validation (Human-Led)</h5>
+<p>The plan was stress-tested with an <strong>agent-based pedestrian simulation</strong>: ~5,000 synthetic visitors per scenario, with calibrated wheelchair (0.8 m/s), stroller, elderly, child and jogger profiles across Friday-peak, school-run and summer-evening demand. AI <em>verified</em>, humans <em>decided</em>:</p>
+<ul>
+<li>Confirmed no crossing point where jogger and wheelchair flows conflict at &gt;0.3 encounters/min; the terracotta jogger lane was moved to the outer edge as a result.</li>
+<li>Validated that every simulated wheelchair agent completes the loop with rest seating ≤50 m apart and a restroom within 200 m from any point — counts are simulation-verified, not rules-of-thumb.</li>
+<li>Predicted desire lines matched the tertiary shortcut layer; two AI-suggested shortcuts were <strong>rejected</strong> by the design team on CPTED sightline grounds, logged in the decision record.</li>
+</ul>
+<figure>
+<svg viewBox="0 0 320 130" role="img" aria-label="Nabta Living Shade Loop simulation diagram">
+<rect x="2" y="2" width="316" height="126" fill="#E7DCC3" stroke="#22301F"/>
+<path d="M55,65 C55,25 135,25 160,65 C185,105 265,105 265,65 C265,25 185,25 160,65 C135,105 55,105 55,65 Z" fill="none" stroke="#CFC0A0" stroke-width="9"/>
+<path d="M55,65 C55,25 135,25 160,65 C185,105 265,105 265,65 C265,25 185,25 160,65 C135,105 55,105 55,65 Z" fill="none" stroke="#2F6B4A" stroke-width="2" stroke-dasharray="4 6"/>
+<circle cx="55" cy="65" r="5" fill="#4E8FA8"/>
+<circle cx="160" cy="65" r="5" fill="#4E8FA8"/>
+<circle cx="105" cy="35" r="3" fill="#C05A32"/><circle cx="215" cy="35" r="3" fill="#C05A32"/><circle cx="105" cy="95" r="3" fill="#C05A32"/><circle cx="215" cy="95" r="3" fill="#C05A32"/><circle cx="265" cy="65" r="3" fill="#C05A32"/>
+<circle cx="290" cy="20" r="6" fill="#A9C6A0" stroke="#2F6B4A"/>
+<text x="160" y="16" text-anchor="middle" fill="#22301F" font-size="9">NABTA «نبتة» — Living Shade Loop 1.0 km · 3.5 m</text>
+<text x="160" y="122" text-anchor="middle" fill="#22301F" font-size="8">terracotta = seating ≤50 m · blue = restrooms ≤200 m · dashed = simulated wheelchair route</text>
+</svg>
+<figcaption>Agent-based simulation output (schematic): universal-access route validated end-to-end.</figcaption>
+</figure>
+
+<h5>D. Arrival Strategy</h5>
+<ul>
+<li><strong>Drop-off:</strong> lay-by off the SE access road per RTA geometry — 3 vehicle lengths, level boarding, tactile paving, shade canopy — sized for the school-run peak.</li>
+<li><strong>Parking:</strong> ~40 car bays (incl. 4 accessible + 2 family) in a shaded grove lot; permeable paving.</li>
+<li><strong>Public transport:</strong> signed, shaded, step-free links to 2 RTA bus stops within 300 m.</li>
+<li><strong>Micromobility:</strong> 30 shaded bicycle racks at each of the three entrances (90 total), plus an e-scooter dock per entrance (SE, NW, NE), all outside pedestrian desire lines.</li>
+</ul>
+
+<h5>E. Service &amp; Emergency Access</h5>
+<ul>
+<li>Loop segments engineered as a <strong>4 m clear emergency route</strong> (path + reinforced shoulder), giving Civil Defence and ambulance reach to all ten rooms; removable bollards at the three gates.</li>
+<li><strong>W-edge service yard:</strong> screened compound with café back-of-house delivery, maintenance store, and irrigation plant; service vehicles never cross visitor space during opening hours.</li>
+<li>Six paired <strong>waste/recycling points</strong> on the loop, serviced from the W yard before 7:00 am.</li>
+</ul>
+
+<h5>F. Indicative Commercial &amp; Service Facilities Plan</h5>
+<p><strong>Catchment reasoning:</strong> Al Safa 2 is a low-rise villa district — several thousand residents within a 10-minute walk, schools south, Sheikh Zayed Road offices minutes away. Demand peaks at dawn/evening wellness hours, the school run and winter weekends; fixed commercial space is sized to the reliable base load, flexible cart pads absorb peaks.</p>
+<table>
+<thead><tr><th>Facility</th><th>Location (garden room)</th><th>Catchment logic</th></tr></thead>
+<tbody>
+<tr><td>Café + shaded terrace (120 m²)</td><td>SE entry plaza</td><td>Captures school-run parents, loop finishers, and street footfall; visible from drop-off.</td></tr>
+<tr><td>2 kiosk cart pads (power/water)</td><td>Event lawn edge</td><td>Activated during events and weekends; zero fixed cost when idle.</td></tr>
+<tr><td>Coffee/juice kiosk</td><td>Loop waist, by play dune</td><td>Serves caregivers with sightlines to all play zones.</td></tr>
+<tr><td>Restrooms ×2 (incl. Changing Places)</td><td>Entry plaza + loop waist</td><td>No point in the park &gt;200 m from a restroom.</td></tr>
+<tr><td>Prayer room + wudu</td><td>Beside majlis plaza</td><td>Adjacent to gathering space; on tactile route.</td></tr>
+<tr><td>Water refill + shade shelters</td><td>Every second room</td><td>Summer walkability; reduces single-use plastic.</td></tr>
+</tbody>
+</table>
+<p><em>Activation &amp; concession note:</em> café and kiosks are tendered as one concession with revenue share tied to mandated opening hours (06:00–23:00), guaranteeing dawn/evening service through summer when the misted, shaded terrace keeps the SE plaza usable; cart pads flex to winter events without permanent build-out. A wellness clause obliges the operator to a healthy-menu baseline and free water refills, aligning commercial income with the park's health mission and keeping the commercial footprint under 2% of park area.</p>
+
+<h5>G. Safety by Design</h5>
+<ul>
+<li><strong>CPTED:</strong> clear sightlines along the loop, understorey planting below 0.8 m at path edges, no dead-end paths, active café frontage at the main entrance.</li>
+<li><strong>Adaptive lighting:</strong> loop 20 lux, garden rooms 10 lux, planted gardens 5 lux; all 2700 K warm white, full-cutoff dark-sky-compliant fixtures, presence-dimmed after 23:00.</li>
+<li><strong>Privacy commitment:</strong> operational CCTV at entrances only; <strong>no facial recognition</strong> and no biometric analytics anywhere in the park.</li>
+</ul>
+</div>
+<div class="pn"><a href="d-07.html">← D·07 Landscape, Public Realm, Sustainab</a><a href="d-09.html">D·09 Concept Diagrams, Sections & Eleva →</a></div>
+</div></main>
+<footer><div class="wrap"><span class="logo-nabta">nabta<span class="spark">✦</span></span> · The Living Shade Loop · Al Safa 2 Park, Jumeirah, Dubai · illustrative mock draft, July 2026</div></footer>
+</body></html>

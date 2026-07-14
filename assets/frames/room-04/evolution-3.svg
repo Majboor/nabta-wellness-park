@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <pattern id="stip" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="5" r="1.2" fill="#22301F" fill-opacity="0.08"/>
+      <circle cx="11" cy="12" r="0.9" fill="#22301F" fill-opacity="0.06"/>
+    </pattern>
+    <path id="spark" d="M0 -11 L2.6 -2.6 L11 0 L2.6 2.6 L0 11 L-2.6 2.6 L-11 0 L-2.6 -2.6 Z"/>
+  </defs>
+
+  <!-- year five: mature canopy, softened light -->
+  <rect width="1280" height="720" fill="#F5EFE2"/>
+  <circle cx="1000" cy="140" r="84" fill="#E7DCC3" fill-opacity="0.8"/>
+  <circle cx="1000" cy="140" r="50" fill="#F5EFE2"/>
+
+  <!-- distant band now lush -->
+  <path d="M0 382 C260 364 640 376 1280 358 L1280 414 L0 414 Z" fill="#A9C6A0" fill-opacity="0.6"/>
+  <path d="M120 378 C180 350 280 350 340 376 Z" fill="#2F6B4A" fill-opacity="0.55"/>
+  <path d="M620 372 C680 346 780 346 840 370 Z" fill="#2F6B4A" fill-opacity="0.5"/>
+
+  <!-- ground -->
+  <rect x="0" y="404" width="1280" height="316" fill="#E7DCC3"/>
+  <rect x="0" y="404" width="1280" height="316" fill="url(#stip)"/>
+
+  <!-- rubber surfacing apron, sun-weathered -->
+  <path d="M200 560 C380 512 720 508 960 546 C1080 566 1100 596 1040 622 C860 656 400 658 260 624 C180 604 160 574 200 560 Z" fill="#C05A32" fill-opacity="0.4"/>
+  <path d="M200 560 C380 512 720 508 960 546 C1080 566 1100 596 1040 622 C860 656 400 658 260 624 C180 604 160 574 200 560 Z" fill="url(#stip)"/>
+
+  <!-- the play dune -->
+  <path d="M240 560 C300 430 430 340 590 332 C730 326 830 400 855 490 C872 538 862 560 850 566 L230 566 Z" fill="#E7DCC3"/>
+  <path d="M240 560 C300 430 430 340 590 332 C730 326 830 400 855 490" fill="none" stroke="#22301F" stroke-opacity="0.3" stroke-width="3"/>
+  <path d="M320 560 C365 470 460 402 575 396 C640 392 690 416 720 454 L720 560 Z" fill="#F5EFE2" fill-opacity="0.75"/>
+  <path d="M240 560 C300 430 430 340 590 332 C730 326 830 400 855 490 C872 538 862 560 850 566 L230 566 Z" fill="url(#stip)"/>
+  <!-- embedded slide -->
+  <path d="M595 344 C650 366 690 414 704 470 C712 505 706 532 690 548" fill="none" stroke="#C05A32" stroke-width="18" stroke-linecap="round"/>
+  <path d="M595 344 C650 366 690 414 704 470 C712 505 706 532 690 548" fill="none" stroke="#F5EFE2" stroke-width="4" stroke-opacity="0.5"/>
+  <!-- transfer platform -->
+  <rect x="540" y="334" width="48" height="13" rx="5" fill="#F5EFE2" stroke="#22301F" stroke-opacity="0.35" stroke-width="2"/>
+  <rect x="520" y="356" width="40" height="11" rx="5" fill="#E7DCC3" stroke="#22301F" stroke-opacity="0.3" stroke-width="2"/>
+  <!-- climbing net -->
+  <g stroke="#22301F" stroke-opacity="0.55" stroke-width="2.2" fill="none">
+    <path d="M368 560 C378 496 416 438 486 402"/>
+    <path d="M412 560 C420 504 452 452 514 414"/>
+    <path d="M364 526 L506 410 M384 484 L528 418 M414 446 L514 414"/>
+  </g>
+
+  <!-- shade sails, now woven among canopies -->
+  <path d="M300 180 L620 120 L530 330 Z" fill="#F5EFE2" fill-opacity="0.88"/>
+  <path d="M300 180 L620 120 L530 330 Z" fill="none" stroke="#22301F" stroke-opacity="0.3" stroke-width="2.4"/>
+  <path d="M580 200 L860 150 L780 350 Z" fill="#C05A32" fill-opacity="0.42"/>
+  <path d="M580 200 L860 150 L780 350 Z" fill="none" stroke="#22301F" stroke-opacity="0.25" stroke-width="2"/>
+  <g stroke="#22301F" stroke-opacity="0.6" stroke-width="4" stroke-linecap="round">
+    <line x1="302" y1="182" x2="292" y2="500"/>
+    <line x1="618" y1="122" x2="628" y2="440"/>
+    <line x1="858" y1="152" x2="866" y2="470"/>
+  </g>
+  <ellipse cx="470" cy="600" rx="180" ry="26" fill="#22301F" fill-opacity="0.09"/>
+
+  <!-- carousel, right -->
+  <g transform="translate(1060,556)">
+    <ellipse cx="0" cy="14" rx="82" ry="17" fill="#CFC0A0"/>
+    <ellipse cx="0" cy="14" rx="82" ry="17" fill="none" stroke="#22301F" stroke-opacity="0.35" stroke-width="2.4"/>
+    <ellipse cx="0" cy="9" rx="70" ry="13" fill="#4E8FA8" fill-opacity="0.4"/>
+    <line x1="0" y1="9" x2="0" y2="-72" stroke="#22301F" stroke-opacity="0.75" stroke-width="4.5"/>
+    <ellipse cx="0" cy="-74" rx="64" ry="13" fill="#C05A32" fill-opacity="0.9"/>
+    <g transform="translate(-24,4) scale(0.8)">
+      <circle cx="0" cy="-42" r="6" fill="#22301F"/>
+      <path d="M-5 -35 C4 -38 7 -30 5 -20 L5 -8 L14 -8 L14 -4 L2 -4 L-4 -18 Z" fill="#22301F"/>
+      <circle cx="0" cy="6" r="13" fill="none" stroke="#22301F" stroke-width="3"/>
+      <circle cx="15" cy="12" r="4.4" fill="none" stroke="#22301F" stroke-width="2.4"/>
+      <path d="M3 -6 L12 -1 L15 8" fill="none" stroke="#22301F" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(34,0) scale(0.5)" fill="#22301F">
+      <circle cx="0" cy="-52" r="9"/>
+      <path d="M0 -41 C9 -41 11 -28 9 -14 L6 16 H2 L0 -4 L-2 16 H-6 L-9 -14 C-11 -28 -9 -41 0 -41 Z"/>
+    </g>
+  </g>
+
+  <!-- mature ghaf trees, broad umbrella canopies -->
+  <g transform="translate(150,570)">
+    <ellipse cx="10" cy="7" rx="96" ry="17" fill="#22301F" fill-opacity="0.11"/>
+    <path d="M0 0 C-4 -46 -12 -74 -28 -100 M0 0 C4 -52 14 -84 32 -110" fill="none" stroke="#22301F" stroke-width="7" stroke-linecap="round"/>
+    <ellipse cx="-14" cy="-124" rx="92" ry="30" fill="#2F6B4A" fill-opacity="0.92"/>
+    <ellipse cx="44" cy="-140" rx="64" ry="21" fill="#A9C6A0" fill-opacity="0.85"/>
+    <ellipse cx="-70" cy="-142" rx="42" ry="15" fill="#A9C6A0" fill-opacity="0.7"/>
+  </g>
+  <g transform="translate(872,428)">
+    <ellipse cx="8" cy="6" rx="70" ry="12" fill="#22301F" fill-opacity="0.1"/>
+    <path d="M0 0 C-3 -34 -9 -54 -21 -74 M0 0 C3 -38 10 -60 24 -80" fill="none" stroke="#22301F" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="-10" cy="-92" rx="66" ry="22" fill="#2F6B4A" fill-opacity="0.92"/>
+    <ellipse cx="32" cy="-104" rx="46" ry="16" fill="#A9C6A0" fill-opacity="0.85"/>
+  </g>
+  <g transform="translate(1200,588)">
+    <ellipse cx="10" cy="7" rx="98" ry="17" fill="#22301F" fill-opacity="0.11"/>
+    <path d="M0 0 C-4 -48 -13 -76 -30 -102 M0 0 C4 -54 15 -86 34 -112" fill="none" stroke="#22301F" stroke-width="7" stroke-linecap="round"/>
+    <ellipse cx="-14" cy="-128" rx="94" ry="31" fill="#2F6B4A" fill-opacity="0.92"/>
+    <ellipse cx="46" cy="-144" rx="64" ry="21" fill="#A9C6A0" fill-opacity="0.85"/>
+  </g>
+  <!-- established groundcover drifts -->
+  <g fill="#A9C6A0" fill-opacity="0.8">
+    <path d="M215 594 C245 584 295 584 320 596 C295 606 240 606 215 594 Z"/>
+    <path d="M890 596 C920 586 975 586 1000 598 C972 608 915 608 890 596 Z"/>
+    <path d="M790 444 C812 436 850 436 868 446 C848 454 808 454 790 444 Z"/>
+  </g>
+  <g fill="#2F6B4A" fill-opacity="0.5">
+    <ellipse cx="262" cy="592" rx="14" ry="4"/>
+    <ellipse cx="948" cy="594" rx="15" ry="4"/>
+  </g>
+
+  <!-- loop path foreground -->
+  <path d="M0 640 C300 610 900 610 1280 632 L1280 720 L0 720 Z" fill="#CFC0A0"/>
+  <path d="M0 640 C300 610 900 610 1280 632" fill="none" stroke="#22301F" stroke-opacity="0.2" stroke-width="3"/>
+  <path d="M0 640 C300 610 900 610 1280 632 L1280 720 L0 720 Z" fill="url(#stip)"/>
+
+  <!-- family seating ring, well-loved -->
+  <path d="M340 654 A 380 130 0 0 1 940 646" fill="none" stroke="#C05A32" stroke-width="15" stroke-linecap="round"/>
+  <path d="M340 654 A 380 130 0 0 1 940 646" fill="none" stroke="#22301F" stroke-opacity="0.3" stroke-width="2.5"/>
+
+  <!-- full community: parents, kids everywhere -->
+  <g transform="translate(560,620)">
+    <circle cx="0" cy="-56" r="7.5" fill="#22301F"/>
+    <path d="M0 -47 C8 -47 10 -34 8 -20 L5 14 H1.8 L0 -6 L-1.8 14 H-5 L-8 -20 C-10 -34 -8 -47 0 -47 Z" fill="#22301F"/>
+  </g>
+  <g transform="translate(640,556) scale(0.55)" fill="#22301F">
+    <circle cx="4" cy="-56" r="8"/>
+    <path d="M2 -46 C11 -47 13 -34 9 -22 L18 6 L13 8 L2 -12 L-10 10 L-15 7 L-6 -22 C-9 -35 -6 -45 2 -46 Z"/>
+    <path d="M8 -38 L24 -30 M-2 -38 L-18 -26" stroke="#22301F" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(578,340) scale(0.5)" fill="#22301F">
+    <circle cx="0" cy="-52" r="9"/>
+    <path d="M0 -41 C9 -41 11 -28 9 -14 L6 16 H2 L0 -4 L-2 16 H-6 L-9 -14 C-11 -28 -9 -41 0 -41 Z"/>
+    <path d="M7 -32 L22 -40 M-7 -32 L-22 -24" stroke="#22301F" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(700,470) rotate(36) scale(0.5)" fill="#22301F">
+    <circle cx="0" cy="-50" r="9"/>
+    <path d="M0 -39 C9 -39 12 -26 10 -10 L14 18 H8 L2 -4 L-4 18 H-10 L-10 -10 C-12 -26 -9 -39 0 -39 Z"/>
+  </g>
+  <g transform="translate(452,470) rotate(-14) scale(0.48)" fill="#22301F">
+    <circle cx="0" cy="-52" r="9"/>
+    <path d="M0 -41 C9 -41 11 -28 9 -14 L8 16 H3 L0 -4 L-3 16 H-8 L-9 -14 C-11 -28 -9 -41 0 -41 Z"/>
+    <path d="M8 -34 L24 -46 M-8 -34 L-22 -20" stroke="#22301F" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(432,648)" fill="#22301F">
+    <circle cx="0" cy="-42" r="7.5"/>
+    <path d="M-8 -34 C0 -38 8 -36 9 -24 L9 -2 L21 -2 L21 3 L-8 3 Z"/>
+  </g>
+  <g transform="translate(850,644)" fill="#22301F">
+    <circle cx="0" cy="-42" r="7.5"/>
+    <path d="M8 -34 C0 -38 -8 -36 -9 -24 L-9 -2 L-21 -2 L-21 3 L8 3 Z"/>
+    <g transform="translate(-30,-12) scale(0.45)">
+      <circle cx="0" cy="-50" r="9"/>
+      <path d="M0 -39 C9 -39 11 -26 9 -12 L6 16 H2 L0 -4 L-2 16 H-6 L-9 -12 C-11 -26 -9 -39 0 -39 Z"/>
+    </g>
+  </g>
+
+  <!-- nabta sparkles -->
+  <use href="#spark" transform="translate(720,90) scale(0.8)" fill="#7CC98F"/>
+  <use href="#spark" transform="translate(180,300) scale(0.6)" fill="#7BC6DD"/>
+  <use href="#spark" transform="translate(1120,360) scale(0.55)" fill="#7CC98F"/>
+</svg>

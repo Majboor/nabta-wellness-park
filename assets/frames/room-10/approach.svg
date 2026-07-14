@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <linearGradient id="skyB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5EFE2"/>
+      <stop offset="0.75" stop-color="#E7DCC3"/>
+      <stop offset="1" stop-color="#CFC0A0"/>
+    </linearGradient>
+    <pattern id="stipB" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="5" r="1.1" fill="#22301F" opacity="0.07"/>
+      <circle cx="11" cy="12" r="0.9" fill="#22301F" opacity="0.05"/>
+    </pattern>
+    <path id="sparkB" d="M0,-9 C0.8,-2.6 2.6,-0.8 9,0 C2.6,0.8 0.8,2.6 0,9 C-0.8,2.6 -2.6,0.8 -9,0 C-2.6,-0.8 -0.8,-2.6 0,-9 Z"/>
+  </defs>
+
+  <!-- warm desert sky -->
+  <rect width="1280" height="440" fill="url(#skyB)"/>
+  <circle cx="1060" cy="130" r="52" fill="#F5EFE2" opacity="0.9"/>
+  <circle cx="1060" cy="130" r="80" fill="#F5EFE2" opacity="0.35"/>
+
+  <!-- distant event lawn band -->
+  <path d="M0,420 C180,398 380,404 520,416 L0,440 Z" fill="#A9C6A0" opacity="0.8"/>
+  <path d="M0,432 C160,414 340,418 500,428 L0,448 Z" fill="#2F6B4A" opacity="0.25"/>
+
+  <!-- ground -->
+  <rect y="430" width="1280" height="290" fill="#E7DCC3"/>
+  <rect y="430" width="1280" height="290" fill="url(#stipB)"/>
+
+  <!-- approach path from the loop -->
+  <path d="M520,720 L610,455 L760,455 L980,720 Z" fill="#CFC0A0"/>
+  <path d="M520,720 L610,455 L760,455 L980,720 Z" fill="url(#stipB)"/>
+  <path d="M566,720 L636,455 M905,720 L742,455" stroke="#F5EFE2" stroke-width="3" opacity="0.5"/>
+
+  <!-- distant ghaf trees left -->
+  <g>
+    <rect x="118" y="365" width="8" height="80" rx="3" fill="#22301F" opacity="0.85"/>
+    <circle cx="120" cy="340" r="52" fill="#A9C6A0" opacity="0.8"/>
+    <circle cx="92" cy="322" r="36" fill="#2F6B4A" opacity="0.5"/>
+    <circle cx="152" cy="322" r="32" fill="#2F6B4A" opacity="0.4"/>
+  </g>
+  <g>
+    <rect x="332" y="392" width="6" height="56" rx="3" fill="#22301F" opacity="0.8"/>
+    <circle cx="335" cy="374" r="36" fill="#A9C6A0" opacity="0.75"/>
+    <circle cx="318" cy="360" r="24" fill="#2F6B4A" opacity="0.45"/>
+  </g>
+
+  <!-- restrooms block behind cafe -->
+  <rect x="1010" y="352" width="180" height="112" rx="4" fill="#E7DCC3"/>
+  <rect x="1010" y="352" width="180" height="112" rx="4" fill="#22301F" opacity="0.08"/>
+  <line x1="1010" y1="352" x2="1190" y2="352" stroke="#22301F" stroke-width="2.5" opacity="0.7"/>
+
+  <!-- kiosk cafe, sand rammed-earth facade -->
+  <g>
+    <rect x="620" y="300" width="380" height="176" rx="4" fill="#E7DCC3"/>
+    <rect x="620" y="300" width="380" height="176" rx="4" fill="#C05A32" opacity="0.1"/>
+    <!-- rammed-earth strata -->
+    <g stroke="#22301F" opacity="0.14" stroke-width="2">
+      <line x1="622" y1="330" x2="998" y2="330"/>
+      <line x1="622" y1="362" x2="998" y2="362"/>
+      <line x1="622" y1="394" x2="998" y2="394"/>
+      <line x1="622" y1="426" x2="998" y2="426"/>
+    </g>
+    <g stroke="#C05A32" opacity="0.25" stroke-width="3">
+      <line x1="622" y1="346" x2="998" y2="346"/>
+      <line x1="622" y1="410" x2="998" y2="410"/>
+    </g>
+    <line x1="616" y1="300" x2="1004" y2="300" stroke="#22301F" stroke-width="4" opacity="0.85"/>
+    <!-- service window with barista -->
+    <rect x="660" y="344" width="128" height="84" rx="4" fill="#22301F" opacity="0.92"/>
+    <rect x="660" y="344" width="128" height="84" rx="4" fill="#C05A32" opacity="0.3"/>
+    <rect x="654" y="424" width="140" height="12" rx="3" fill="#C05A32"/>
+    <!-- barista silhouette -->
+    <g fill="#22301F">
+      <circle cx="722" cy="376" r="10"/>
+      <path d="M722,386 C736,388 740,402 740,424 L704,424 C704,402 708,388 722,386 Z"/>
+      <path d="M708,398 L694,412" stroke="#22301F" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    <!-- doorway -->
+    <rect x="852" y="360" width="72" height="116" rx="3" fill="#22301F" opacity="0.9"/>
+    <rect x="856" y="366" width="64" height="106" rx="3" fill="#C05A32" opacity="0.35"/>
+  </g>
+
+  <!-- terracotta pergola apron over terrace -->
+  <g>
+    <!-- posts -->
+    <rect x="430" y="330" width="14" height="230" fill="#C05A32"/>
+    <rect x="596" y="316" width="14" height="240" fill="#C05A32"/>
+    <rect x="430" y="330" width="14" height="230" fill="#22301F" opacity="0.12"/>
+    <!-- beam -->
+    <path d="M418,318 L1004,296 L1004,312 L418,336 Z" fill="#C05A32"/>
+    <!-- slats receding -->
+    <g fill="#C05A32">
+      <path d="M418,318 L470,296 L482,298 L430,321 Z" opacity="0.9"/>
+      <path d="M472,316 L522,294 L534,296 L484,319 Z" opacity="0.8"/>
+      <path d="M526,314 L574,293 L586,295 L538,317 Z" opacity="0.9"/>
+      <path d="M580,312 L626,291 L638,293 L592,315 Z" opacity="0.8"/>
+      <path d="M634,310 L678,290 L690,292 L646,313 Z" opacity="0.9"/>
+      <path d="M688,308 L730,289 L742,291 L700,311 Z" opacity="0.8"/>
+      <path d="M742,306 L782,288 L794,290 L754,309 Z" opacity="0.9"/>
+    </g>
+  </g>
+
+  <!-- slat shadows raking across terrace -->
+  <g fill="#22301F" opacity="0.12">
+    <path d="M430,560 L620,470 L648,472 L462,566 Z"/>
+    <path d="M500,580 L676,482 L704,484 L536,588 Z"/>
+    <path d="M578,604 L732,494 L760,496 L616,612 Z"/>
+  </g>
+
+  <!-- terrace tables spilling toward viewer -->
+  <g>
+    <ellipse cx="380" cy="580" rx="52" ry="16" fill="#F5EFE2" stroke="#22301F" stroke-width="2"/>
+    <rect x="374" y="592" width="12" height="46" fill="#22301F" opacity="0.85"/>
+    <!-- couple at the table -->
+    <g fill="#22301F">
+      <circle cx="322" cy="528" r="13"/>
+      <path d="M322,540 C340,543 346,562 346,590 L300,590 C300,562 305,543 322,540 Z"/>
+      <circle cx="446" cy="524" r="13"/>
+      <path d="M446,536 C463,539 469,558 469,588 L422,588 C422,558 429,539 446,536 Z"/>
+      <path d="M340,560 L364,572 M428,558 L404,570" stroke="#22301F" stroke-width="6" stroke-linecap="round"/>
+    </g>
+    <!-- cups -->
+    <rect x="356" y="566" width="10" height="12" rx="2" fill="#C05A32"/>
+    <rect x="392" y="564" width="10" height="12" rx="2" fill="#7CC98F"/>
+  </g>
+  <g>
+    <ellipse cx="560" cy="520" rx="34" ry="10" fill="#F5EFE2" stroke="#22301F" stroke-width="1.6"/>
+    <rect x="556" y="528" width="8" height="30" fill="#22301F" opacity="0.8"/>
+  </g>
+
+  <!-- jogger with coffee arriving on path -->
+  <g fill="#22301F">
+    <circle cx="700" cy="520" r="11"/>
+    <path d="M700,530 C712,533 715,548 713,566 L689,566 C687,548 690,533 700,530 Z"/>
+    <path d="M693,566 L682,606 M708,566 L720,602" stroke="#22301F" stroke-width="7" stroke-linecap="round"/>
+    <path d="M710,540 L726,532" stroke="#22301F" stroke-width="6" stroke-linecap="round"/>
+    <rect x="724" y="524" width="9" height="11" rx="2" fill="#C05A32"/>
+  </g>
+
+  <!-- foreground planting -->
+  <path d="M0,650 C90,616 200,624 300,660 C360,682 420,700 460,720 L0,720 Z" fill="#A9C6A0" opacity="0.85"/>
+  <path d="M0,676 C80,650 170,656 260,686 C300,700 330,710 350,720 L0,720 Z" fill="#2F6B4A" opacity="0.5"/>
+  <path d="M1090,682 C1150,650 1230,654 1280,676 L1280,720 L1040,720 Z" fill="#A9C6A0" opacity="0.8"/>
+  <path d="M1150,690 C1200,668 1256,670 1280,684 L1280,720 L1120,720 Z" fill="#2F6B4A" opacity="0.45"/>
+
+  <!-- brand accents -->
+  <circle cx="470" cy="640" r="8" fill="#7CC98F" opacity="0.8"/>
+  <circle cx="1236" cy="700" r="7" fill="#7BC6DD" opacity="0.6"/>
+
+  <!-- nabta sparkles -->
+  <use href="#sparkB" transform="translate(1000,180) scale(1.1)" fill="#C05A32" opacity="0.85"/>
+  <use href="#sparkB" transform="translate(220,240) scale(0.8)" fill="#2F6B4A" opacity="0.6"/>
+  <use href="#sparkB" transform="translate(760,268) scale(0.7)" fill="#F5EFE2" opacity="0.95"/>
+</svg>

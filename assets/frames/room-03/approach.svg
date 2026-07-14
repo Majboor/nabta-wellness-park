@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <pattern id="stipB" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="5" r="1.2" fill="#22301F" fill-opacity="0.06"/>
+      <circle cx="12" cy="12" r="1" fill="#22301F" fill-opacity="0.05"/>
+    </pattern>
+    <pattern id="stipBG" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="7" r="1.6" fill="#2F6B4A" fill-opacity="0.16"/>
+      <circle cx="15" cy="15" r="1.2" fill="#22301F" fill-opacity="0.06"/>
+    </pattern>
+    <path id="sparkB" d="M0,-10 L2.2,-2.2 L10,0 L2.2,2.2 L0,10 L-2.2,2.2 L-10,0 L-2.2,-2.2 Z"/>
+    <g id="ghafSide">
+      <path d="M-4,0 L-2,-56 L2,-56 L4,0 Z" fill="#22301F"/>
+      <path d="M-2,-56 C-20,-64 -34,-58 -40,-70" stroke="#22301F" stroke-width="3" fill="none"/>
+      <path d="M2,-56 C18,-66 30,-60 38,-72" stroke="#22301F" stroke-width="3" fill="none"/>
+      <ellipse cx="0" cy="-84" rx="58" ry="20" fill="#2F6B4A"/>
+      <ellipse cx="-24" cy="-92" rx="34" ry="13" fill="#A9C6A0" fill-opacity="0.7"/>
+      <ellipse cx="26" cy="-78" rx="30" ry="11" fill="#A9C6A0" fill-opacity="0.5"/>
+    </g>
+  </defs>
+
+  <!-- warm sky -->
+  <rect x="0" y="0" width="1280" height="720" fill="#F5EFE2"/>
+  <rect x="0" y="0" width="1280" height="200" fill="#7BC6DD" fill-opacity="0.14"/>
+  <rect x="0" y="180" width="1280" height="120" fill="#E7DCC3" fill-opacity="0.55"/>
+  <circle cx="985" cy="130" r="46" fill="#F5EFE2"/>
+  <circle cx="985" cy="130" r="36" fill="#E7DCC3" fill-opacity="0.9"/>
+
+  <!-- distant edge canopy across the lawn -->
+  <g>
+    <ellipse cx="140" cy="330" rx="140" ry="42" fill="#2F6B4A" fill-opacity="0.5"/>
+    <ellipse cx="380" cy="322" rx="150" ry="38" fill="#2F6B4A" fill-opacity="0.42"/>
+    <ellipse cx="900" cy="326" rx="170" ry="40" fill="#2F6B4A" fill-opacity="0.45"/>
+    <ellipse cx="1160" cy="334" rx="150" ry="44" fill="#2F6B4A" fill-opacity="0.5"/>
+    <ellipse cx="640" cy="336" rx="180" ry="30" fill="#A9C6A0" fill-opacity="0.5"/>
+  </g>
+
+  <!-- bowl lawn opening ahead -->
+  <rect x="0" y="352" width="1280" height="368" fill="#E7DCC3"/>
+  <path d="M0,364 C300,340 980,340 1280,364 L1280,470 C980,428 300,428 0,470 Z" fill="#A9C6A0"/>
+  <path d="M0,398 C320,368 960,368 1280,398 L1280,452 C960,416 320,416 0,452 Z" fill="#2F6B4A" fill-opacity="0.55"/>
+  <path d="M330,384 C500,372 780,372 950,384 C800,378 480,378 330,384 Z" fill="#7CC98F" fill-opacity="0.5"/>
+
+  <!-- the shaded loop path underfoot, sweeping to the lawn -->
+  <path d="M420,720 C480,600 520,520 610,452 L680,452 C620,520 600,600 580,720 Z" fill="#CFC0A0"/>
+  <path d="M420,720 C480,600 520,520 610,452 L680,452 C620,520 600,600 580,720 Z" fill="url(#stipB)"/>
+  <path d="M760,720 C880,620 1010,560 1180,520 L1280,520 L1280,610 C1080,620 940,668 860,720 Z" fill="#CFC0A0" fill-opacity="0.9"/>
+  <!-- foreground sand shoulder -->
+  <path d="M0,470 L420,720 L0,720 Z" fill="#E7DCC3"/>
+  <path d="M0,470 L420,720 L0,720 Z" fill="url(#stipB)"/>
+  <path d="M680,452 L1280,520 L1280,470 Z" fill="#E7DCC3" fill-opacity="0.7"/>
+  <path d="M580,720 L760,720 L700,470 L660,470 Z" fill="#A9C6A0" fill-opacity="0.6"/>
+
+  <!-- pergola slat shadows raking the path -->
+  <g fill="#22301F" fill-opacity="0.14">
+    <path d="M436,690 L620,690 L616,668 L444,668 Z"/>
+    <path d="M456,640 L608,640 L604,622 L462,622 Z"/>
+    <path d="M474,596 L600,596 L597,582 L480,582 Z"/>
+    <path d="M492,558 L594,558 L592,547 L497,547 Z"/>
+    <path d="M508,526 L590,526 L588,517 L512,517 Z"/>
+  </g>
+
+  <!-- overhead terracotta pergola frame -->
+  <g>
+    <rect x="150" y="0" width="26" height="470" fill="#C05A32"/>
+    <rect x="150" y="0" width="10" height="470" fill="#22301F" fill-opacity="0.18"/>
+    <rect x="1104" y="0" width="26" height="520" fill="#C05A32"/>
+    <rect x="1104" y="0" width="10" height="520" fill="#22301F" fill-opacity="0.18"/>
+    <g fill="#C05A32">
+      <path d="M0,26 L1280,10 L1280,34 L0,52 Z"/>
+      <path d="M0,86 L1280,64 L1280,86 L0,110 Z" fill-opacity="0.95"/>
+      <path d="M0,142 L1280,116 L1280,136 L0,164 Z" fill-opacity="0.9"/>
+      <path d="M0,196 L1280,166 L1280,184 L0,216 Z" fill-opacity="0.85"/>
+    </g>
+    <g fill="#22301F" fill-opacity="0.2">
+      <path d="M0,44 L1280,28 L1280,34 L0,52 Z"/>
+      <path d="M0,102 L1280,80 L1280,86 L0,110 Z"/>
+      <path d="M0,156 L1280,130 L1280,136 L0,164 Z"/>
+      <path d="M0,208 L1280,178 L1280,184 L0,216 Z"/>
+    </g>
+  </g>
+
+  <!-- flanking ghaf trees -->
+  <use href="#ghafSide" transform="translate(285,505) scale(1.7)"/>
+  <use href="#ghafSide" transform="translate(1000,480) scale(1.35)"/>
+  <use href="#ghafSide" transform="translate(80,560) scale(2.1)"/>
+
+  <!-- kiosk cart at the rim -->
+  <g transform="translate(818,428)">
+    <rect x="0" y="0" width="58" height="34" rx="4" fill="#C05A32"/>
+    <rect x="-6" y="-12" width="70" height="12" rx="5" fill="#E7DCC3"/>
+    <rect x="-6" y="-12" width="70" height="5" rx="2.5" fill="#C05A32" fill-opacity="0.6"/>
+    <circle cx="12" cy="38" r="6" fill="#22301F"/>
+    <circle cx="46" cy="38" r="6" fill="#22301F"/>
+  </g>
+
+  <!-- ink people walking toward the lawn -->
+  <g fill="#22301F">
+    <g transform="translate(560,530)">
+      <circle cx="0" cy="-46" r="8"/>
+      <path d="M-7,-38 C-9,-16 -8,0 -6,22 L-2,22 L-1,-6 L2,-6 L4,22 L8,22 C9,0 8,-16 7,-38 Z"/>
+    </g>
+    <g transform="translate(608,548) scale(1.12)">
+      <circle cx="0" cy="-46" r="8"/>
+      <path d="M-7,-38 C-10,-16 -8,0 -8,22 L-3,22 L-1,-4 L2,-4 L6,22 L10,22 C9,-2 8,-16 7,-38 Z"/>
+      <path d="M6,-34 L20,-20 L18,-14 L4,-26 Z"/>
+    </g>
+    <g transform="translate(505,492) scale(0.72)">
+      <circle cx="0" cy="-46" r="8"/>
+      <path d="M-7,-38 C-9,-16 -8,0 -6,22 L-2,22 L0,-6 L2,-6 L4,22 L8,22 C9,0 8,-16 7,-38 Z"/>
+    </g>
+    <g transform="translate(700,430) scale(0.42)">
+      <circle cx="0" cy="-46" r="8"/>
+      <path d="M-7,-38 C-9,-16 -8,0 -6,22 L-2,22 L0,-6 L2,-6 L4,22 L8,22 C9,0 8,-16 7,-38 Z"/>
+    </g>
+    <g transform="translate(760,426) scale(0.38)">
+      <circle cx="0" cy="-46" r="8"/>
+      <path d="M-7,-38 C-9,-16 -8,0 -6,22 L-2,22 L0,-6 L2,-6 L4,22 L8,22 C9,0 8,-16 7,-38 Z"/>
+    </g>
+  </g>
+
+  <!-- sparkles -->
+  <use href="#sparkB" transform="translate(910,250) scale(0.9)" fill="#7CC98F"/>
+  <use href="#sparkB" transform="translate(360,270) scale(0.6)" fill="#7BC6DD"/>
+  <use href="#sparkB" transform="translate(1200,640) scale(0.7)" fill="#C05A32" fill-opacity="0.85"/>
+</svg>

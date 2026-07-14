@@ -1,0 +1,62 @@
+{
+  "room": "02",
+  "title": "Community Majlis Plaza",
+  "frames": [
+    {
+      "file": "aerial.svg",
+      "code": "R02-A",
+      "title": "The Plaza in the Loop",
+      "caption": "High above the Living Shade Loop, the majlis plaza reads as a warm terracotta-ringed circle on the figure-eight, its grand ghaf canopy dappling the seat walls beside the wadi bioswale.",
+      "videogen_prompt": "Photorealistic aerial drone shot slowly descending over a lush Dubai neighbourhood park at golden hour, a shaded figure-eight walking loop threading past a circular gathering plaza ringed by terracotta pergolas under one great ghaf tree, warm calm documentary mood."
+    },
+    {
+      "file": "approach.svg",
+      "code": "R02-B",
+      "title": "Arrival Under the Slats",
+      "caption": "Walking the loop toward the plaza, terracotta pergola slats stripe the path with shade while the ring of cushioned seat walls and the water's glint appear ahead under the ghaf.",
+      "videogen_prompt": "Photorealistic steadicam walking shot at eye level along a shaded park path in late afternoon Dubai light, terracotta pergola slats casting rhythmic shadows, gliding toward a circular plaza with built-in cushioned seating beneath a large ghaf tree, inviting and serene."
+    },
+    {
+      "file": "walkthrough.svg",
+      "code": "R02-C",
+      "title": "Inside the Majlis Circle",
+      "caption": "Within the circle, grandparents and children share the cushioned ring wall around a low murmuring water element, the whole room cooled by one grand dappled ghaf canopy and its pergola halo.",
+      "videogen_prompt": "Photorealistic slow 180-degree orbit inside a circular majlis-style plaza where multigenerational families sit on cushioned stone seat walls around a shallow reflecting water bowl, dappled ghaf-tree light shifting overhead, warm communal late-afternoon atmosphere."
+    },
+    {
+      "file": "flythrough.svg",
+      "code": "R02-D",
+      "title": "Gliding Through the Room",
+      "caption": "An oblique sweep along the loop: the path dives under pergola ribs, brushes the wadi bioswale, and threads straight through the majlis circle with its hearing-loop ring and central water.",
+      "videogen_prompt": "Photorealistic FPV drone shot skimming low along a shaded figure-eight park loop at golden hour, banking through terracotta pergola ribs and across a circular community plaza with a central water feature, smooth continuous motion, energetic yet gentle mood."
+    },
+    {
+      "file": "evolution-1.svg",
+      "code": "R02-E",
+      "title": "Opening Day",
+      "caption": "Day one: the plaza's ring, cushions, water and pergola halo are complete, but the ghaf is a staked sapling in fresh mulch and the understory is nursery plugs waiting for their first summer.",
+      "videogen_prompt": "Photorealistic locked-off timelapse-style shot of a brand-new circular plaza in a Dubai park at bright morning, a young staked ghaf sapling beside the seat wall ring, sparse fresh planting and crisp paving, hopeful beginnings mood."
+    },
+    {
+      "file": "evolution-2.svg",
+      "code": "R02-F",
+      "title": "Year Two",
+      "caption": "Two years on, the same view: stakes removed, the ghaf's crown now leans over the water, the bioswale greens up, and the understory knits across the plaza edges.",
+      "videogen_prompt": "Photorealistic locked-off shot matching the opening-day framing, the same circular plaza two years later with an adolescent ghaf tree casting its first real shade over the seat walls, fuller green planting, soft mid-morning light, quiet growth mood."
+    },
+    {
+      "file": "evolution-3.svg",
+      "code": "R02-G",
+      "title": "Year Five, Mature",
+      "caption": "Five years in, the identical frame: the ghaf has become the room's grand ceiling, shade pooling over cushions and water, the understory lush to the horizon.",
+      "videogen_prompt": "Photorealistic locked-off shot completing the growth sequence, the same plaza five years on with a mature ghaf canopy roofing the whole majlis circle in dappled shade, dense layered planting, warm settled late-morning light, fulfilled and abundant mood."
+    },
+    {
+      "file": "night.svg",
+      "code": "R02-H",
+      "title": "Majlis After Isha",
+      "caption": "After isha the same circle glows: lanterns hang in the ghaf and sit by the dark mirror of water, families linger on the warm cushions beneath an ink sky and a sliver of moon.",
+      "videogen_prompt": "Photorealistic slow dolly-in at night inside the circular plaza after evening prayer, warm hanging lanterns glowing under a silhouetted ghaf canopy, reflections trembling on the still water bowl, families talking softly on cushioned seat walls, intimate starlit mood."
+    }
+  ]
+}

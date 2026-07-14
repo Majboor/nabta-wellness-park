@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <pattern id="stipH" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="5" r="1.2" fill="#22301F" opacity="0.1"/>
+      <circle cx="12" cy="13" r="1" fill="#22301F" opacity="0.08"/>
+    </pattern>
+    <linearGradient id="skyH" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22301F"/>
+      <stop offset="0.6" stop-color="#4E8FA8"/>
+      <stop offset="1" stop-color="#E7DCC3"/>
+    </linearGradient>
+    <radialGradient id="glowH">
+      <stop offset="0" stop-color="#F5EFE2" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#F5EFE2" stop-opacity="0"/>
+    </radialGradient>
+    <g id="sparkH">
+      <path d="M0,-9 L2.2,-2.2 L9,0 L2.2,2.2 L0,9 L-2.2,2.2 L-9,0 L-2.2,-2.2 Z"/>
+    </g>
+    <g id="sitH">
+      <circle cx="0" cy="-34" r="7.5" fill="#22301F"/>
+      <path d="M-8,-26 C-10,-14 -9,-6 -8,0 L8,0 C9,-8 9,-16 7,-26 Z" fill="#22301F"/>
+    </g>
+    <g id="gsitH">
+      <circle cx="0" cy="-30" r="7.5" fill="#22301F"/>
+      <path d="M-9,-22 C-12,-10 -14,-2 -16,2 L16,2 C13,-6 11,-14 8,-22 Z" fill="#22301F"/>
+    </g>
+    <g id="lanternH">
+      <circle cx="0" cy="-84" r="46" fill="url(#glowH)"/>
+      <rect x="-4" y="-70" width="8" height="70" rx="3" fill="#C05A32"/>
+      <rect x="-11" y="-92" width="22" height="26" rx="5" fill="#C05A32"/>
+      <rect x="-7" y="-88" width="14" height="18" rx="3" fill="#F5EFE2"/>
+      <ellipse cx="0" cy="3" rx="30" ry="7" fill="#F5EFE2" opacity="0.35"/>
+    </g>
+  </defs>
+
+  <!-- dusk sky and darkened ground -->
+  <rect width="1280" height="330" fill="url(#skyH)"/>
+  <rect y="300" width="1280" height="420" fill="#E7DCC3"/>
+  <rect y="300" width="1280" height="420" fill="#22301F" opacity="0.28"/>
+  <path d="M0,310 C340,296 820,326 1280,304 L1280,430 C880,452 420,428 0,446 Z" fill="#2F6B4A" opacity="0.4"/>
+
+  <!-- canopy overhead, dark silhouettes against afterglow -->
+  <g>
+    <ellipse cx="120" cy="60" rx="300" ry="120" fill="#22301F" opacity="0.92"/>
+    <ellipse cx="520" cy="10" rx="340" ry="130" fill="#22301F" opacity="0.88"/>
+    <ellipse cx="960" cy="50" rx="330" ry="125" fill="#22301F" opacity="0.92"/>
+    <ellipse cx="1260" cy="10" rx="240" ry="110" fill="#22301F" opacity="0.88"/>
+    <ellipse cx="320" cy="90" rx="220" ry="80" fill="#2F6B4A" opacity="0.6"/>
+    <ellipse cx="760" cy="70" rx="240" ry="85" fill="#2F6B4A" opacity="0.55"/>
+    <ellipse cx="1140" cy="110" rx="180" ry="65" fill="#2F6B4A" opacity="0.55"/>
+    <!-- sky gaps with first stars -->
+    <ellipse cx="620" cy="120" rx="60" ry="24" fill="#4E8FA8" opacity="0.6"/>
+    <ellipse cx="230" cy="150" rx="40" ry="16" fill="#4E8FA8" opacity="0.5"/>
+  </g>
+
+  <!-- trunks -->
+  <g stroke="#22301F" stroke-linecap="round" fill="none">
+    <path d="M150,470 C142,380 156,300 138,190" stroke-width="16"/>
+    <path d="M144,330 C110,290 84,260 66,220" stroke-width="9"/>
+    <path d="M1100,500 C1112,400 1092,320 1116,200" stroke-width="18"/>
+    <path d="M1104,360 C1150,320 1176,290 1196,240" stroke-width="10"/>
+    <path d="M660,360 C656,310 664,270 654,220" stroke-width="9"/>
+  </g>
+
+  <!-- string lights swagged between trunks -->
+  <path d="M150,250 C400,330 620,320 660,260" fill="none" stroke="#F5EFE2" stroke-width="2" opacity="0.6"/>
+  <path d="M660,260 C820,330 1020,330 1104,250" fill="none" stroke="#F5EFE2" stroke-width="2" opacity="0.6"/>
+  <g fill="#F5EFE2">
+    <circle cx="240" cy="284" r="4"/><circle cx="340" cy="308" r="4"/><circle cx="450" cy="318" r="4"/>
+    <circle cx="560" cy="308" r="4"/><circle cx="740" cy="296" r="4"/><circle cx="850" cy="312" r="4"/>
+    <circle cx="960" cy="308" r="4"/><circle cx="1050" cy="284" r="4"/>
+  </g>
+  <g fill="url(#glowH)">
+    <circle cx="340" cy="308" r="14"/><circle cx="560" cy="308" r="14"/>
+    <circle cx="850" cy="312" r="14"/><circle cx="1050" cy="284" r="14"/>
+  </g>
+
+  <!-- planted pocket edges, dim -->
+  <g fill="#2F6B4A" opacity="0.65">
+    <ellipse cx="80" cy="420" rx="110" ry="34"/>
+    <ellipse cx="330" cy="404" rx="90" ry="26"/>
+    <ellipse cx="1200" cy="420" rx="130" ry="36"/>
+    <ellipse cx="960" cy="400" rx="86" ry="24"/>
+  </g>
+
+  <!-- lantern light pools on the lawn -->
+  <g fill="#F5EFE2" opacity="0.28">
+    <ellipse cx="430" cy="600" rx="200" ry="40"/>
+    <ellipse cx="920" cy="630" rx="190" ry="38"/>
+    <ellipse cx="215" cy="580" rx="90" ry="20"/>
+  </g>
+
+  <!-- picnic table with family, lingering after sunset -->
+  <g transform="translate(430,540)">
+    <ellipse cx="0" cy="52" rx="180" ry="20" fill="#22301F" opacity="0.25"/>
+    <rect x="-130" y="-20" width="260" height="18" rx="8" fill="#C05A32"/>
+    <rect x="-96" y="-2" width="14" height="52" fill="#22301F"/>
+    <rect x="82" y="-2" width="14" height="52" fill="#22301F"/>
+    <rect x="-166" y="14" width="70" height="10" rx="5" fill="#C05A32" opacity="0.9"/>
+    <rect x="96" y="14" width="70" height="10" rx="5" fill="#C05A32" opacity="0.9"/>
+    <circle cx="-58" cy="-24" r="12" fill="#F5EFE2"/>
+    <circle cx="-6" cy="-26" r="14" fill="#F5EFE2"/>
+    <circle cx="52" cy="-24" r="11" fill="#F5EFE2"/>
+    <!-- table lantern -->
+    <rect x="14" y="-44" width="16" height="20" rx="4" fill="#C05A32"/>
+    <rect x="17" y="-41" width="10" height="14" rx="2" fill="#F5EFE2"/>
+    <circle cx="22" cy="-34" r="26" fill="url(#glowH)"/>
+    <use href="#sitH" transform="translate(-120,10) scale(1.15)"/>
+    <use href="#sitH" transform="translate(-70,6) scale(1.1)"/>
+    <use href="#sitH" transform="translate(120,10) scale(1.2)"/>
+    <use href="#sitH" transform="translate(66,6) scale(0.85)"/>
+  </g>
+
+  <!-- majlis pocket with tea by lantern light -->
+  <g transform="translate(920,600)">
+    <ellipse cx="0" cy="14" rx="170" ry="30" fill="#C05A32" opacity="0.55"/>
+    <ellipse cx="0" cy="14" rx="120" ry="20" fill="#E7DCC3" opacity="0.5"/>
+    <ellipse cx="-96" cy="4" rx="26" ry="12" fill="#F5EFE2" opacity="0.9"/>
+    <ellipse cx="96" cy="6" rx="26" ry="12" fill="#F5EFE2" opacity="0.9"/>
+    <ellipse cx="-30" cy="30" rx="26" ry="12" fill="#F5EFE2" opacity="0.9"/>
+    <use href="#gsitH" transform="translate(-88,0) scale(1.15)"/>
+    <use href="#gsitH" transform="translate(90,2) scale(1.1) scale(-1,1)"/>
+    <use href="#gsitH" transform="translate(10,-8) scale(0.95)"/>
+    <ellipse cx="4" cy="18" rx="20" ry="7" fill="#C05A32"/>
+    <rect x="-3" y="4" width="7" height="10" rx="2" fill="#F5EFE2"/>
+    <circle cx="2" cy="8" r="24" fill="url(#glowH)"/>
+  </g>
+
+  <!-- kids chasing fireflies of lantern light -->
+  <g transform="translate(680,500)">
+    <circle cx="0" cy="-34" r="6" fill="#22301F"/>
+    <path d="M-4,-27 C-6,-16 -4,-10 -10,-2 L-5,0 L1,-12 L8,-1 L12,-4 C6,-12 6,-20 4,-27 Z" fill="#22301F"/>
+  </g>
+  <g transform="translate(740,516) scale(-1,1)">
+    <circle cx="0" cy="-34" r="6" fill="#22301F"/>
+    <path d="M-4,-27 C-6,-16 -4,-10 -10,-2 L-5,0 L1,-12 L8,-1 L12,-4 C6,-12 6,-20 4,-27 Z" fill="#22301F"/>
+  </g>
+
+  <!-- path lanterns -->
+  <use href="#lanternH" transform="translate(215,566)"/>
+  <use href="#lanternH" transform="translate(640,520) scale(0.9)"/>
+  <use href="#lanternH" transform="translate(1180,590) scale(1.05)"/>
+
+  <!-- drinking fountain, moonlit -->
+  <g transform="translate(320,600)">
+    <rect x="-12" y="-64" width="24" height="64" rx="6" fill="#C05A32"/>
+    <ellipse cx="0" cy="-64" rx="16" ry="6" fill="#F5EFE2"/>
+    <path d="M-4,-68 C-2,-77 5,-79 8,-72" fill="none" stroke="#4E8FA8" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- sparkles as first stars -->
+  <use href="#sparkH" transform="translate(620,118)" fill="#F5EFE2"/>
+  <use href="#sparkH" transform="translate(240,146) scale(0.6)" fill="#7BC6DD"/>
+  <use href="#sparkH" transform="translate(1010,90) scale(0.7)" fill="#7CC98F"/>
+  <use href="#sparkH" transform="translate(880,180) scale(0.5)" fill="#F5EFE2"/>
+
+  <!-- texture + cool dusk wash -->
+  <rect width="1280" height="720" fill="url(#stipH)"/>
+  <rect width="1280" height="720" fill="#4E8FA8" opacity="0.07"/>
+</svg>

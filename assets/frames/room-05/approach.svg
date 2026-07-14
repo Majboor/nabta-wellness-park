@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <pattern id="stipB" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="4" r="1.2" fill="#22301F" fill-opacity="0.09"/>
+      <circle cx="11" cy="12" r="1" fill="#22301F" fill-opacity="0.07"/>
+    </pattern>
+    <pattern id="stipLeafB" width="15" height="15" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1.4" fill="#F5EFE2" fill-opacity="0.2"/>
+      <circle cx="11" cy="11" r="1.1" fill="#F5EFE2" fill-opacity="0.14"/>
+    </pattern>
+  </defs>
+
+  <!-- warm sky -->
+  <rect width="1280" height="720" fill="#F5EFE2"/>
+  <rect y="0" width="1280" height="300" fill="#E7DCC3" fill-opacity="0.55"/>
+  <circle cx="1010" cy="130" r="64" fill="#E7DCC3"/>
+  <circle cx="1010" cy="130" r="46" fill="#F5EFE2" fill-opacity="0.8"/>
+
+  <!-- distant planting screen band -->
+  <path d="M0,330 C160,300 300,320 470,306 C640,292 820,318 1000,300 C1120,290 1220,306 1280,298 L1280,420 L0,420 Z" fill="#2F6B4A" fill-opacity="0.5"/>
+
+  <!-- ground -->
+  <rect y="400" width="1280" height="320" fill="#E7DCC3"/>
+  <rect y="400" width="1280" height="320" fill="url(#stipB)"/>
+
+  <!-- path converging toward court entry -->
+  <path d="M520,720 L600,415 L690,415 L860,720 Z" fill="#CFC0A0"/>
+  <path d="M520,720 L600,415 L690,415 L860,720 Z" fill="url(#stipB)"/>
+  <path d="M645,700 L644,430" stroke="#F5EFE2" stroke-width="4" stroke-opacity="0.5" stroke-dasharray="3 24" fill="none"/>
+
+  <!-- high slatted canopy over the court, seen beyond entry -->
+  <g>
+    <rect x="330" y="180" width="640" height="16" fill="#C05A32"/>
+    <g stroke="#C05A32" stroke-width="9">
+      <line x1="352" y1="196" x2="352" y2="238"/><line x1="410" y1="196" x2="410" y2="238"/>
+      <line x1="468" y1="196" x2="468" y2="238"/><line x1="526" y1="196" x2="526" y2="238"/>
+      <line x1="584" y1="196" x2="584" y2="238"/><line x1="642" y1="196" x2="642" y2="238"/>
+      <line x1="700" y1="196" x2="700" y2="238"/><line x1="758" y1="196" x2="758" y2="238"/>
+      <line x1="816" y1="196" x2="816" y2="238"/><line x1="874" y1="196" x2="874" y2="238"/>
+      <line x1="932" y1="196" x2="932" y2="238"/>
+    </g>
+    <rect x="330" y="234" width="640" height="10" fill="#C05A32" fill-opacity="0.75"/>
+    <!-- posts -->
+    <rect x="352" y="244" width="14" height="172" fill="#C05A32"/>
+    <rect x="352" y="244" width="14" height="172" fill="#22301F" fill-opacity="0.15"/>
+    <rect x="934" y="244" width="14" height="172" fill="#C05A32"/>
+    <rect x="636" y="244" width="12" height="160" fill="#C05A32" fill-opacity="0.85"/>
+  </g>
+
+  <!-- glimpse of terracotta court through entry -->
+  <path d="M600,415 L690,415 L760,470 L540,470 Z" fill="#C05A32" fill-opacity="0.9"/>
+  <path d="M600,415 L690,415 L760,470 L540,470 Z" fill="url(#stipB)"/>
+  <path d="M556,458 C620,438 690,438 744,458" fill="none" stroke="#F5EFE2" stroke-width="3" stroke-opacity="0.8"/>
+  <!-- sparkle centre mark peeking -->
+  <g transform="translate(650,452)">
+    <path d="M0,-11 L2.2,-2.2 L11,0 L2.2,2.2 L0,11 L-2.2,2.2 L-11,0 L-2.2,-2.2 Z" fill="#F5EFE2"/>
+    <path d="M0,-5 L1,-1 L5,0 L1,1 L0,5 L-1,1 L-5,0 L-1,-1 Z" fill="#7CC98F"/>
+  </g>
+  <!-- hoop silhouette beyond -->
+  <g stroke="#22301F" stroke-width="6" fill="none">
+    <line x1="700" y1="300" x2="700" y2="418"/>
+    <rect x="672" y="288" width="56" height="40" stroke-width="5"/>
+    <line x1="686" y1="328" x2="714" y2="328" stroke-width="4"/>
+  </g>
+  <path d="M686,328 L692,344 L708,344 L714,328" fill="none" stroke="#22301F" stroke-width="2.5" stroke-opacity="0.7"/>
+
+  <!-- flanking planting screens -->
+  <g>
+    <ellipse cx="180" cy="380" rx="180" ry="120" fill="#2F6B4A"/>
+    <ellipse cx="180" cy="380" rx="180" ry="120" fill="url(#stipLeafB)"/>
+    <ellipse cx="120" cy="470" rx="130" ry="70" fill="#A9C6A0" fill-opacity="0.75"/>
+    <ellipse cx="300" cy="480" rx="90" ry="52" fill="#2F6B4A" fill-opacity="0.85"/>
+    <ellipse cx="1110" cy="370" rx="190" ry="130" fill="#2F6B4A"/>
+    <ellipse cx="1110" cy="370" rx="190" ry="130" fill="url(#stipLeafB)"/>
+    <ellipse cx="1180" cy="470" rx="140" ry="72" fill="#A9C6A0" fill-opacity="0.75"/>
+    <ellipse cx="980" cy="486" rx="86" ry="48" fill="#2F6B4A" fill-opacity="0.85"/>
+  </g>
+  <!-- ghaf tree left of entry -->
+  <g>
+    <path d="M420,470 C424,420 416,380 428,336" stroke="#22301F" stroke-width="9" fill="none" stroke-linecap="round"/>
+    <path d="M424,400 C400,380 388,360 384,338" stroke="#22301F" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <ellipse cx="420" cy="310" rx="96" ry="52" fill="#2F6B4A"/>
+    <ellipse cx="440" cy="296" rx="60" ry="32" fill="#A9C6A0" fill-opacity="0.6"/>
+    <ellipse cx="420" cy="310" rx="96" ry="52" fill="url(#stipLeafB)"/>
+  </g>
+
+  <!-- wadi bioswale edge, right foreground -->
+  <path d="M900,720 C960,640 1080,610 1280,600 L1280,720 Z" fill="#4E8FA8" fill-opacity="0.3"/>
+  <path d="M920,700 C990,636 1100,616 1280,610" fill="none" stroke="#4E8FA8" stroke-width="12" stroke-opacity="0.55" stroke-linecap="round"/>
+  <g fill="#A9C6A0"><ellipse cx="960" cy="668" rx="30" ry="12"/><ellipse cx="1120" cy="632" rx="36" ry="13"/></g>
+
+  <!-- teens approaching with a ball -->
+  <g fill="#22301F">
+    <!-- teen dribbling ahead -->
+    <g transform="translate(612,520)">
+      <circle cx="0" cy="-64" r="11"/>
+      <path d="M0,-53 C6,-38 6,-20 3,-4 L10,34 L4,36 L-2,2 L-8,36 L-14,34 L-8,-6 C-11,-24 -8,-40 0,-53 Z"/>
+      <path d="M2,-44 L22,-20" stroke="#22301F" stroke-width="6" stroke-linecap="round"/>
+      <path d="M-4,-44 L-18,-26" stroke="#22301F" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="26" cy="-4" r="9" fill="#C05A32" stroke="#22301F" stroke-width="2"/>
+    </g>
+    <!-- pair walking behind -->
+    <g transform="translate(700,560)">
+      <circle cx="0" cy="-70" r="12"/>
+      <path d="M0,-58 C7,-40 7,-18 3,0 L12,40 L5,42 L-1,6 L-9,42 L-16,40 L-8,-4 C-12,-26 -8,-44 0,-58 Z"/>
+    </g>
+    <g transform="translate(566,584)">
+      <circle cx="0" cy="-74" r="12"/>
+      <path d="M0,-62 C7,-42 7,-20 3,0 L11,44 L4,46 L-1,8 L-8,46 L-15,44 L-8,-4 C-12,-28 -8,-46 0,-62 Z"/>
+      <path d="M-3,-52 L-20,-30" stroke="#22301F" stroke-width="6" stroke-linecap="round"/>
+    </g>
+  </g>
+  <!-- long warm shadows -->
+  <g fill="#22301F" fill-opacity="0.12">
+    <ellipse cx="590" cy="560" rx="60" ry="10"/>
+    <ellipse cx="680" cy="604" rx="66" ry="11"/>
+    <ellipse cx="544" cy="632" rx="70" ry="12"/>
+  </g>
+
+  <!-- sparkle accents -->
+  <path d="M840,120 L843,131 L854,134 L843,137 L840,148 L837,137 L826,134 L837,131 Z" fill="#7BC6DD" fill-opacity="0.9"/>
+  <path d="M300,560 L303,571 L314,574 L303,577 L300,588 L297,577 L286,574 L297,571 Z" fill="#7CC98F" fill-opacity="0.9"/>
+</svg>

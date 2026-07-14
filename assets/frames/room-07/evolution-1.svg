@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <pattern id="stipE" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="5" r="1.2" fill="#22301F" opacity="0.07"/>
+      <circle cx="12" cy="13" r="1" fill="#22301F" opacity="0.05"/>
+    </pattern>
+    <linearGradient id="skyE" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5EFE2"/>
+      <stop offset="1" stop-color="#E7DCC3"/>
+    </linearGradient>
+    <g id="sparkE">
+      <path d="M0,-9 L2.2,-2.2 L9,0 L2.2,2.2 L0,9 L-2.2,2.2 L-9,0 L-2.2,-2.2 Z"/>
+    </g>
+    <g id="sitE">
+      <circle cx="0" cy="-30" r="6.5" fill="#22301F"/>
+      <path d="M-7,-23 C-9,-12 -8,-5 -7,0 L7,0 C8,-7 8,-14 6,-23 Z" fill="#22301F"/>
+    </g>
+    <g id="gsitE">
+      <circle cx="0" cy="-26" r="6.5" fill="#22301F"/>
+      <path d="M-8,-19 C-11,-8 -13,-1 -14,2 L14,2 C11,-5 10,-12 7,-19 Z" fill="#22301F"/>
+    </g>
+    <!-- opening-day sapling with terracotta stakes and mulch ring -->
+    <g id="saplingE">
+      <ellipse cx="0" cy="4" rx="34" ry="9" fill="#C05A32" opacity="0.3"/>
+      <line x1="-18" y1="4" x2="-14" y2="-52" stroke="#C05A32" stroke-width="4"/>
+      <line x1="18" y1="4" x2="14" y2="-52" stroke="#C05A32" stroke-width="4"/>
+      <path d="M0,2 C-2,-24 2,-42 -1,-64" fill="none" stroke="#22301F" stroke-width="5" stroke-linecap="round"/>
+      <line x1="-14" y1="-40" x2="-1" y2="-46" stroke="#E7DCC3" stroke-width="2.5"/>
+      <line x1="14" y1="-40" x2="0" y2="-46" stroke="#E7DCC3" stroke-width="2.5"/>
+      <ellipse cx="-8" cy="-74" rx="22" ry="12" fill="#2F6B4A" opacity="0.85"/>
+      <ellipse cx="10" cy="-84" rx="18" ry="10" fill="#A9C6A0" opacity="0.8"/>
+    </g>
+  </defs>
+
+  <!-- sky and ground: open, bright, mostly unshaded -->
+  <rect width="1280" height="360" fill="url(#skyE)"/>
+  <rect y="340" width="1280" height="380" fill="#E7DCC3"/>
+  <path d="M0,352 C340,338 840,368 1280,346 L1280,560 C860,590 420,556 0,584 Z" fill="#A9C6A0" opacity="0.3"/>
+
+  <!-- loop path band across foreground -->
+  <path d="M0,650 C320,626 760,668 1280,636 L1280,720 L0,720 Z" fill="#CFC0A0"/>
+  <path d="M0,650 C320,626 760,668 1280,636" fill="none" stroke="#22301F" stroke-width="4" opacity="0.08"/>
+
+  <!-- OPENING DAY: five staked saplings in the mature-tree positions -->
+  <use href="#saplingE" transform="translate(148,466)"/>
+  <use href="#saplingE" transform="translate(378,456) scale(0.95)"/>
+  <use href="#saplingE" transform="translate(638,446) scale(1.05)"/>
+  <use href="#saplingE" transform="translate(902,456) scale(0.95)"/>
+  <use href="#saplingE" transform="translate(1152,466)"/>
+
+  <!-- sun on open lawn: broad bright pools, no dapple yet -->
+  <g fill="#F5EFE2" opacity="0.4">
+    <ellipse cx="400" cy="540" rx="180" ry="24"/>
+    <ellipse cx="900" cy="560" rx="200" ry="26"/>
+  </g>
+
+  <!-- young shrub pockets, freshly planted -->
+  <g fill="#2F6B4A" opacity="0.65">
+    <ellipse cx="70" cy="454" rx="34" ry="11"/>
+    <ellipse cx="520" cy="444" rx="28" ry="9"/>
+    <ellipse cx="1010" cy="450" rx="30" ry="10"/>
+    <ellipse cx="1230" cy="462" rx="32" ry="11"/>
+  </g>
+  <g fill="#A9C6A0" opacity="0.6">
+    <ellipse cx="180" cy="448" rx="22" ry="7"/>
+    <ellipse cx="760" cy="444" rx="24" ry="8"/>
+    <ellipse cx="1120" cy="444" rx="20" ry="7"/>
+  </g>
+  <!-- exposed sand patches between young planting -->
+  <g fill="#E7DCC3" opacity="0.9">
+    <ellipse cx="300" cy="470" rx="60" ry="10"/>
+    <ellipse cx="840" cy="480" rx="70" ry="11"/>
+  </g>
+
+  <!-- picnic table with family (same position as year 5) -->
+  <g transform="translate(420,548)">
+    <ellipse cx="0" cy="42" rx="150" ry="16" fill="#22301F" opacity="0.1"/>
+    <rect x="-110" y="-16" width="220" height="15" rx="7" fill="#C05A32"/>
+    <rect x="-80" y="-1" width="12" height="44" fill="#22301F" opacity="0.85"/>
+    <rect x="68" y="-1" width="12" height="44" fill="#22301F" opacity="0.85"/>
+    <rect x="-140" y="12" width="58" height="9" rx="4" fill="#C05A32" opacity="0.9"/>
+    <rect x="82" y="12" width="58" height="9" rx="4" fill="#C05A32" opacity="0.9"/>
+    <circle cx="-30" cy="-21" r="10" fill="#F5EFE2"/>
+    <circle cx="26" cy="-22" r="11" fill="#F5EFE2"/>
+    <circle cx="26" cy="-22" r="5.5" fill="#7CC98F" opacity="0.8"/>
+    <use href="#sitE" transform="translate(-104,8) scale(1.1)"/>
+    <use href="#sitE" transform="translate(102,8) scale(1.1)"/>
+    <use href="#sitE" transform="translate(50,5) scale(0.8)"/>
+    <!-- shade umbrella standing in for the future canopy -->
+    <path d="M-10,-16 L-10,-96" stroke="#22301F" stroke-width="4"/>
+    <path d="M-90,-96 C-60,-124 40,-124 70,-96 Z" fill="#F5EFE2"/>
+    <path d="M-90,-96 C-60,-124 40,-124 70,-96" fill="none" stroke="#C05A32" stroke-width="4"/>
+  </g>
+
+  <!-- majlis ground seating (same position) -->
+  <g transform="translate(920,592)">
+    <ellipse cx="0" cy="12" rx="130" ry="22" fill="#C05A32" opacity="0.5"/>
+    <ellipse cx="-70" cy="4" rx="20" ry="9" fill="#F5EFE2"/>
+    <ellipse cx="72" cy="6" rx="20" ry="9" fill="#F5EFE2"/>
+    <ellipse cx="-16" cy="22" rx="20" ry="9" fill="#F5EFE2"/>
+    <use href="#gsitE" transform="translate(-64,0)"/>
+    <use href="#gsitE" transform="translate(66,2) scale(-1,1)"/>
+    <ellipse cx="4" cy="12" rx="15" ry="5.5" fill="#C05A32"/>
+    <!-- shade sail overhead -->
+    <path d="M-90,-70 L60,-86 L-6,-40 Z" fill="#7BC6DD" opacity="0.5"/>
+    <line x1="-90" y1="-70" x2="-96" y2="10" stroke="#22301F" stroke-width="3"/>
+    <line x1="60" y1="-86" x2="70" y2="8" stroke="#22301F" stroke-width="3"/>
+  </g>
+
+  <!-- drinking fountain (same position) -->
+  <g transform="translate(660,540)">
+    <rect x="-10" y="-52" width="20" height="52" rx="5" fill="#C05A32"/>
+    <ellipse cx="0" cy="-52" rx="13" ry="5" fill="#F5EFE2"/>
+    <path d="M-3,-56 C-1,-63 4,-65 7,-60" fill="none" stroke="#4E8FA8" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="2" cy="3" rx="20" ry="5" fill="#22301F" opacity="0.12"/>
+  </g>
+
+  <!-- kid on lawn (same position) -->
+  <g transform="translate(760,510)">
+    <circle cx="0" cy="-28" r="5.5" fill="#22301F"/>
+    <path d="M-4,-22 C-6,-11 -4,-6 -8,0 L-4,1 L1,-9 L6,0 L10,-2 C5,-9 5,-16 3,-22 Z" fill="#22301F"/>
+  </g>
+
+  <!-- irrigation drip lines to the saplings -->
+  <g stroke="#4E8FA8" stroke-width="2.5" stroke-dasharray="2 7" opacity="0.7" fill="none">
+    <path d="M120,480 C260,472 320,470 356,466"/>
+    <path d="M660,458 C760,462 830,462 880,464"/>
+    <path d="M930,468 C1020,472 1090,474 1130,474"/>
+  </g>
+
+  <!-- sparkles (same positions as year 5) -->
+  <use href="#sparkE" transform="translate(240,110)" fill="#7CC98F" opacity="0.9"/>
+  <use href="#sparkE" transform="translate(1060,120) scale(0.8)" fill="#7BC6DD" opacity="0.9"/>
+  <use href="#sparkE" transform="translate(650,90) scale(0.6)" fill="#F5EFE2"/>
+
+  <!-- texture + warm wash -->
+  <rect width="1280" height="720" fill="url(#stipE)"/>
+  <rect width="1280" height="720" fill="#C05A32" opacity="0.05"/>
+</svg>

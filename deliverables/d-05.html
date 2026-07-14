@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bone:#F5EFE2;--paper:#FBF7EC;--sand:#E7DCC3;--sand2:#EFE6D2;--ink:#22301F;--soft:#4A5644;--mute:#7A8272;
+--green:#2F6B4A;--leaf:#A9C6A0;--terra:#C05A32;--tdeep:#9C4525;--water:#4E8FA8;--hair:#D8CCAF;
+--serif:"Fraunces",serif;--sans:"Instrument Sans",sans-serif;--mono:"IBM Plex Mono",monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bone);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.62;
+background-image:radial-gradient(ellipse 90% 40% at 50% -5%,rgba(169,198,160,.25),transparent 60%)}
+.wrap{max-width:880px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
+nav{position:sticky;top:0;z-index:50;background:rgba(245,239,226,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair)}
+nav .wrap{display:flex;align-items:center;gap:1.3rem;height:54px;max-width:1000px}
+.logo-nabta{font-family:"Comfortaa",var(--sans);font-weight:700;color:var(--ink)}
+.logo-nabta .spark{color:#8FCB9B;font-weight:400}
+nav a{font-family:var(--mono);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--soft);text-decoration:none}
+nav a:hover{color:var(--tdeep)}
+nav .nx{margin-left:auto;display:flex;gap:1rem}
+.cover{border-bottom:1px solid var(--hair);background:var(--paper)}
+.cover .art svg{display:block;width:100%;height:auto}
+header{padding:2.6rem 0 2.2rem;border-bottom:1px solid var(--hair)}
+.kicker{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--tdeep)}
+h1{font-family:var(--serif);font-weight:900;font-size:clamp(1.9rem,4.5vw,3rem);line-height:1.08;margin:.7rem 0 1rem}
+.chips{display:flex;gap:.45rem;flex-wrap:wrap}
+.chip{font-family:var(--mono);font-size:.66rem;background:var(--sand);padding:.28rem .6rem;border:1px solid var(--hair)}
+.chip.score{color:#fff;background:linear-gradient(90deg,#5FA871,#4E9DB5);border:none}
+main{padding:2.6rem 0 4rem}
+.deliv-body{max-width:74ch}
+.deliv-body h4{font-family:var(--serif);font-weight:600;font-size:1.32rem;margin:1.8rem 0 .6rem;color:var(--green)}
+.deliv-body h4:first-child{margin-top:0}
+.deliv-body h5{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tdeep);margin:1.4rem 0 .5rem}
+.deliv-body p{margin:.6rem 0;font-size:.97rem}
+.deliv-body ul,.deliv-body ol{padding-left:1.3rem;margin:.6rem 0;font-size:.95rem}
+.deliv-body li{margin:.3rem 0}
+.deliv-body blockquote{font-family:var(--serif);font-style:italic;font-size:1.25rem;line-height:1.5;color:var(--green);border-left:3px solid var(--terra);padding:.4rem 0 .4rem 1.3rem;margin:1.5rem 0}
+.deliv-body table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}
+.deliv-body th{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;color:var(--mute);border-bottom:2px solid var(--ink);padding:.5rem .6rem .4rem}
+.deliv-body td{border-bottom:1px solid var(--hair);padding:.55rem .6rem;vertical-align:top}
+.deliv-body tr:hover td{background:rgba(169,198,160,.14)}
+.deliv-body figure{margin:1.5rem 0;background:var(--paper);border:1px solid var(--hair);padding:1.1rem}
+.deliv-body figcaption{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-top:.7rem}
+.deliv-body svg{display:block;width:100%;height:auto}
+.deliv-body .cols2{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+@media(max-width:680px){.deliv-body .cols2{grid-template-columns:1fr}}
+.deliv-body .tag{font-family:var(--mono);font-size:.64rem;background:var(--sand);border:1px solid var(--hair);padding:.16rem .5rem;display:inline-block;margin:.1rem .15rem .1rem 0}
+footer{border-top:1px solid var(--hair);padding:2rem 0 3rem;color:var(--mute);font-size:.84rem}
+.pn{display:flex;justify-content:space-between;gap:1rem;margin-top:2.6rem;border-top:1px solid var(--hair);padding-top:1.4rem}
+.pn a{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tdeep);text-decoration:none}
+</style></head><body>
+<nav><div class="wrap">
+<span class="logo-nabta">nabta<span class="spark">✦</span></span>
+<a href="../aipark-challenge.html">← All deliverables</a>
+<span class="nx"><a href="../map.html">Map &amp; frames</a><a href="../pdfs/Nabta-05-Artificial-Intelligence-Methodology-Report.pdf">PDF</a></span>
+</div></nav>
+<div class="cover"><div class="art"><?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="brand" x1="120" y1="0" x2="1080" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7CC98F"/><stop offset="100%" stop-color="#7BC6DD"/>
+    </linearGradient>
+    <path id="sparkle" d="M0,-20 C2.4,-6.5 6.5,-2.4 20,0 C6.5,2.4 2.4,6.5 0,20 C-2.4,6.5 -6.5,2.4 -20,0 C-6.5,-2.4 -2.4,-6.5 0,-20 Z"/>
+  </defs>
+  <rect width="1200" height="520" fill="#F5EFE2"/>
+  <rect x="20" y="20" width="1160" height="480" fill="none" stroke="#22301F" stroke-width="1.5"/>
+  <rect x="0" y="470" width="1200" height="50" fill="#E7DCC3" opacity="0.95"/>
+  <path d="M0,467 L1200,467" stroke="url(#brand)" stroke-width="3" stroke-linecap="round"/>
+  <g opacity="0.33" fill="#22301F">
+    <circle cx="37" cy="490" r="1.2"/><circle cx="64" cy="479" r="1.4"/><circle cx="92" cy="491" r="1.1"/>
+    <circle cx="1005" cy="482" r="1.2"/><circle cx="1036" cy="491" r="1.4"/><circle cx="1072" cy="478" r="1.1"/>
+  </g>
+  <g transform="translate(1022 90) scale(0.9)"><use href="#sparkle" fill="#7BC6DD"/></g>
+  <text x="52" y="56" font-family="IBM Plex Mono, monospace" font-size="14" letter-spacing="2" fill="#22301F">05 AI METHODOLOGY</text>
+  <g transform="translate(600 270)">
+    <path d="M0,120 C-16,92 -34,76 -60,58 C-80,44 -95,26 -112,0 C-130,-28 -138,-54 -138,-84" fill="none" stroke="#22301F" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M0,120 C10,92 26,70 52,56 C78,42 98,22 118,-8 C135,-33 142,-56 145,-88" fill="none" stroke="#22301F" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M0,120 C-2,92 4,74 16,54 C29,31 29,3 21,-27 C14,-57 1,-82 -18,-108" fill="none" stroke="#22301F" stroke-width="1.8" stroke-linecap="round"/>
+    <g stroke="#2F6B4A" stroke-width="3.2" stroke-linecap="round" fill="none">
+      <path d="M-2,122 C-6,90 -10,64 -20,36"/>
+      <path d="M-22,38 C-52,9 -75,-16 -92,-50"/>
+      <path d="M-15,50 C-8,28 7,10 30,-10"/>
+      <path d="M18,30 C48,18 70,-2 90,-34"/>
+      <path d="M14,58 C26,80 44,106 66,126"/>
+    </g>
+    <g fill="#A9C6A0" fill-opacity="0.4" stroke="#22301F" stroke-width="1.1">
+      <circle cx="0" cy="0" r="42"/>
+      <circle cx="-100" cy="-60" r="20"/><circle cx="-34" cy="-30" r="16"/><circle cx="54" cy="-22" r="16"/><circle cx="104" cy="-58" r="18"/>
+      <circle cx="-126" cy="-94" r="14"/><circle cx="142" cy="-92" r="14"/><circle cx="-80" cy="84" r="14"/><circle cx="94" cy="96" r="14"/>
+    </g>
+    <g fill="#22301F">
+      <circle cx="0" cy="0" r="2.4"/><circle cx="-100" cy="-60" r="2"/><circle cx="-34" cy="-30" r="2"/><circle cx="54" cy="-22" r="2"/><circle cx="104" cy="-58" r="2"/>
+      <circle cx="-126" cy="-94" r="2"/><circle cx="142" cy="-92" r="2"/><circle cx="-80" cy="84" r="2"/><circle cx="94" cy="96" r="2"/>
+    </g>
+    <g transform="translate(0 120)">
+      <path d="M0,0 C-20,0 -26,12 -34,26" fill="none" stroke="#22301F" stroke-width="2"/>
+      <path d="M0,0 C18,0 26,12 34,26" fill="none" stroke="#22301F" stroke-width="2"/>
+      <path d="M-8,0 L-16,-20 M8,0 L16,-20" fill="none" stroke="#22301F" stroke-width="2"/>
+      <path d="M-22,24 C-10,18 10,18 22,24" fill="none" stroke="#2F6B4A" stroke-width="2.4"/>
+      <path d="M0,18 L0,36" fill="none" stroke="#2F6B4A" stroke-width="2.4"/>
+      <path d="M-40,42 L-58,58 M40,42 L58,58" fill="none" stroke="#2F6B4A" stroke-width="2.4"/>
+    </g>
+    <g fill="#CFC0A0" fill-opacity="0.2">
+      <circle cx="0" cy="0" r="76"/>
+      <circle cx="0" cy="-102" r="18"/>
+    </g>
+  </g>
+</svg>
+</div></div>
+<header><div class="wrap">
+<p class="kicker">nabta wellness park · Draft Competition Entry · Dubai Municipality AI Park Design Challenge</p>
+<h1>D·05 — Artificial Intelligence Methodology Report</h1>
+<div class="chips"><span class="chip">№05 AI Methodology</span><span class="chip score">jury 6.7 → 7.9 /10</span></div>
+</div></header>
+<main><div class="wrap"><div class="deliv-body">
+<h4>Deliverable 5 — Artificial Intelligence Methodology Report</h4>
+<p><strong>«نبتة» NABTA — Wellness Park · The Living Shade Loop</strong> was designed with AI as an instrument, never as the author. Every algorithm in our pipeline produced <em>options and evidence</em>; every choice that shaped the park — the 1.0 km loop, the ten garden rooms, the canopy gradient — was made by a named human designer against explicit criteria. This report documents the six-stage workflow, the tools at each stage, the alternatives we explored, and where the human hand intervened.</p>
+
+<h5>A. Six-stage AI-assisted workflow</h5>
+<table>
+<thead><tr><th>Stage</th><th>AI tools &amp; models</th><th>Inputs</th><th>Outputs</th><th>Human decision</th></tr></thead>
+<tbody>
+<tr><td><strong>1 Understand</strong></td><td>QGIS + satellite land-cover segmentation (SAM-class model); Claude (LLM) clustering 1,240 community survey responses</td><td>Satellite &amp; LiDAR imagery, municipality GIS layers, survey text</td><td>Digital site model; existing-canopy and heat-exposure maps; ranked community needs</td><td>Team fixed the brief: shade-first priority, ten-room program, all 96 mature trees retained</td></tr>
+<tr><td><strong>2 Simulate</strong></td><td>Ladybug Tools / ClimateStudio-type solar, wind (CFD) and UTCI thermal-comfort engines</td><td>Dubai EPW weather file, site model, massing of context buildings</td><td>Hourly UTCI maps, annual radiation study, shade-deficit map</td><td>Designers set the target: UTCI ≤ 32 °C on 70% of the loop during morning and evening use hours</td></tr>
+<tr><td><strong>3 Generate</strong></td><td>Grasshopper parametric model + Wallacei/Galapagos evolutionary solvers; Claude-drafted scoring rubric (human-edited)</td><td>Site constraints, comfort targets, water budget, cost caps</td><td>43 masterplan options on a Pareto front, scored on shade continuity, walkability, water use</td><td>Designers curated three families; rejected two solver "winners" that erased heritage trees and a key entrance</td></tr>
+<tr><td><strong>4 Test</strong></td><td>Agent-based pedestrian simulation (~1,800 daily visits, MassMotion-type); per-option shade re-check</td><td>Shortlisted plans, visitor profiles from survey data, event scenarios</td><td>Congestion and dwell maps, loop-completion rates, Friday-evening stress test</td><td>Team accepted trade-offs: loop widened to 6 m at the event plaza, one room re-sequenced</td></tr>
+<tr><td><strong>5 Optimize</strong></td><td>Multi-objective refinement of canopy density and planting palette; cost model; Claude cross-checking scoring consistency</td><td>Winning family (Shade Loop), simulation feedback, AED 35M budget</td><td>Shade Loop v3: 92% of loop shaded at 3 pm, tuned canopy gradient, −38% irrigation demand vs. baseline</td><td>Lead designer signed off final plan against budget, code and accessibility review</td></tr>
+<tr><td><strong>6 Communicate</strong></td><td>Diffusion renders (SDXL + ControlNet conditioned on masterplan linework); video generation for 1-minute animation; LLM narrative editing</td><td>Final CAD linework, material palette, camera paths</td><td>Photoreal views, animation, plain-language project story</td><td>Every image audited against the plan; hallucinated elements removed before submission</td></tr>
+</tbody>
+</table>
+
+<h5>B. Workflow diagram</h5>
+<figure>
+<svg viewBox="0 0 640 212" width="100%" role="img" aria-label="Six-stage workflow with human decision gates">
+<rect x="10" y="16" width="132" height="48" rx="6" fill="#A9C6A0" stroke="#2F6B4A"/>
+<rect x="254" y="16" width="132" height="48" rx="6" fill="#A9C6A0" stroke="#2F6B4A"/>
+<rect x="498" y="16" width="132" height="48" rx="6" fill="#A9C6A0" stroke="#2F6B4A"/>
+<rect x="498" y="140" width="132" height="48" rx="6" fill="#A9C6A0" stroke="#2F6B4A"/>
+<rect x="254" y="140" width="132" height="48" rx="6" fill="#A9C6A0" stroke="#2F6B4A"/>
+<rect x="10" y="140" width="132" height="48" rx="6" fill="#A9C6A0" stroke="#2F6B4A"/>
+<text x="76" y="36" text-anchor="middle" fill="#22301F" font-size="12" font-family="inherit" font-weight="bold">1 · Understand</text>
+<text x="76" y="52" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">GIS · surveys · LLM</text>
+<text x="320" y="36" text-anchor="middle" fill="#22301F" font-size="12" font-family="inherit" font-weight="bold">2 · Simulate</text>
+<text x="320" y="52" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">sun · wind · UTCI</text>
+<text x="564" y="36" text-anchor="middle" fill="#22301F" font-size="12" font-family="inherit" font-weight="bold">3 · Generate</text>
+<text x="564" y="52" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">43 options evolved</text>
+<text x="564" y="160" text-anchor="middle" fill="#22301F" font-size="12" font-family="inherit" font-weight="bold">4 · Test</text>
+<text x="564" y="176" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">1,800 daily visits</text>
+<text x="320" y="160" text-anchor="middle" fill="#22301F" font-size="12" font-family="inherit" font-weight="bold">5 · Optimize</text>
+<text x="320" y="176" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">canopy · water · cost</text>
+<text x="76" y="160" text-anchor="middle" fill="#22301F" font-size="12" font-family="inherit" font-weight="bold">6 · Communicate</text>
+<text x="76" y="176" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">renders · animation</text>
+<polygon points="176,40 198,24 220,40 198,56" fill="#E7DCC3" stroke="#C05A32"/>
+<polygon points="420,40 442,24 464,40 442,56" fill="#E7DCC3" stroke="#C05A32"/>
+<polygon points="542,104 564,88 586,104 564,120" fill="#E7DCC3" stroke="#C05A32"/>
+<polygon points="420,164 442,148 464,164 442,180" fill="#E7DCC3" stroke="#C05A32"/>
+<polygon points="176,164 198,148 220,164 198,180" fill="#E7DCC3" stroke="#C05A32"/>
+<text x="198" y="44" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">H</text>
+<text x="442" y="44" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">H</text>
+<text x="564" y="108" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">H</text>
+<text x="442" y="168" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">H</text>
+<text x="198" y="168" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">H</text>
+<line x1="142" y1="40" x2="170" y2="40" stroke="#22301F"/><polygon points="168,36 176,40 168,44" fill="#22301F"/>
+<line x1="220" y1="40" x2="248" y2="40" stroke="#22301F"/><polygon points="246,36 254,40 246,44" fill="#22301F"/>
+<line x1="386" y1="40" x2="414" y2="40" stroke="#22301F"/><polygon points="412,36 420,40 412,44" fill="#22301F"/>
+<line x1="464" y1="40" x2="492" y2="40" stroke="#22301F"/><polygon points="490,36 498,40 490,44" fill="#22301F"/>
+<line x1="564" y1="64" x2="564" y2="82" stroke="#22301F"/><polygon points="560,80 568,80 564,88" fill="#22301F"/>
+<line x1="564" y1="120" x2="564" y2="134" stroke="#22301F"/><polygon points="560,132 568,132 564,140" fill="#22301F"/>
+<line x1="498" y1="164" x2="470" y2="164" stroke="#22301F"/><polygon points="472,160 464,164 472,168" fill="#22301F"/>
+<line x1="420" y1="164" x2="392" y2="164" stroke="#22301F"/><polygon points="394,160 386,164 394,168" fill="#22301F"/>
+<line x1="254" y1="164" x2="226" y2="164" stroke="#22301F"/><polygon points="228,160 220,164 228,168" fill="#22301F"/>
+<line x1="176" y1="164" x2="148" y2="164" stroke="#22301F"/><polygon points="150,160 142,164 150,168" fill="#22301F"/>
+<text x="198" y="72" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Brief approved?</text>
+<text x="442" y="72" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Comfort targets set?</text>
+<text x="534" y="108" text-anchor="end" fill="#22301F" font-size="11" font-family="inherit">Shortlist 3 families?</text>
+<text x="442" y="200" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Trade-offs accepted?</text>
+<text x="198" y="200" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Final plan approved?</text>
+</svg>
+<figcaption>Fig. 5.1 — Six AI-assisted stages (green) punctuated by human decision gates (H, sand diamonds). No output advances without a designer's sign-off.</figcaption>
+</figure>
+
+<h5>C. Design alternatives explored</h5>
+<div class="cols2">
+<p>From the 43 generated masterplans, the team shortlisted three families. <span class="tag">Central Oasis</span> concentrated water and shade in one large heart — dramatic, but it left the park edges thermally hostile and demanded the highest irrigation. <span class="tag">Braided Wadis</span> wove three dry-stream fingers across the site — water-wise and beautiful after rain, but its fragmented paths tested poorly for continuous comfortable walking.</p>
+<p><span class="tag">Shade Loop</span> inverted the logic: distribute comfort as a continuous 1.0 km shaded circuit and hang the ten garden rooms from it. It scored highest on the two criteria the community ranked first — unbroken shade (92% of the loop shaded at 3 pm) and walkability — and the agent-based tests confirmed the loop absorbs peak Friday crowds without congestion.</p>
+</div>
+<table>
+<thead><tr><th>Criterion (weight)</th><th>Central Oasis</th><th>Braided Wadis</th><th>Shade Loop</th></tr></thead>
+<tbody>
+<tr><td>Shade continuity (30%)</td><td>6</td><td>7</td><td><strong>9</strong></td></tr>
+<tr><td>Walkability (25%)</td><td>7</td><td>6</td><td><strong>9</strong></td></tr>
+<tr><td>Water efficiency (20%)</td><td>4</td><td><strong>8</strong></td><td>7</td></tr>
+<tr><td>Cost within AED 35M (15%)</td><td>6</td><td>5</td><td><strong>7</strong></td></tr>
+<tr><td>Ten-room program fit (10%)</td><td>7</td><td>7</td><td><strong>9</strong></td></tr>
+<tr><td><strong>Weighted total /10</strong></td><td>5.95</td><td>6.65</td><td><strong>8.30</strong></td></tr>
+</tbody>
+</table>
+<p>Each score is the reconciled median of three designers scoring independently, anchored to measured evidence wherever it exists: shade continuity from the 3 pm June solar study, walkability from simulated loop-completion rates, water from the irrigation model, cost from the quantity surveyor's estimate. The AI computed those metrics and flagged inconsistencies between scorers; it did not cast a vote.</p>
+
+<h5>D. Limits and ethics</h5>
+<p>We state our limits plainly. The synthetic visitor personas used in agent-based simulation were audited against actual survey demographics to correct an early bias that under-represented elderly residents and domestic workers who use the park at off-peak hours. The design deliberately contains <strong>no biometric surveillance</strong>: visitor counting for park management relies on anonymous, non-identifying sensors only. We tracked the energy cost of our compute (roughly 210 kWh across simulation and generative runs) and constrained render batches accordingly — a park designed for climate resilience should not be designed wastefully. Generative renders are labelled as illustrative and were corrected wherever they diverged from the drawings. Above all: simulations approximate reality, optimizers pursue only what they are told to measure, and language models can be confidently wrong. A decision log therefore records every gate in Fig. 5.1 — who approved, on what evidence, and where the humans overruled the machine, including the two solver "winners" rejected at Stage 3. Every deliverable in this entry carries a named human signature, and every design decision — from the loop's alignment to the last planting bed — was made, and can be defended, by the NABTA team.</p>
+</div>
+<div class="pn"><a href="d-04.html">← D·04 User & Community Analysis</a><a href="d-06.html">D·06 Concept & Preliminary Masterplan →</a></div>
+</div></main>
+<footer><div class="wrap"><span class="logo-nabta">nabta<span class="spark">✦</span></span> · The Living Shade Loop · Al Safa 2 Park, Jumeirah, Dubai · illustrative mock draft, July 2026</div></footer>
+</body></html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bone:#F5EFE2;--paper:#FBF7EC;--sand:#E7DCC3;--sand2:#EFE6D2;--ink:#22301F;--soft:#4A5644;--mute:#7A8272;
+--green:#2F6B4A;--leaf:#A9C6A0;--terra:#C05A32;--tdeep:#9C4525;--water:#4E8FA8;--hair:#D8CCAF;
+--serif:"Fraunces",serif;--sans:"Instrument Sans",sans-serif;--mono:"IBM Plex Mono",monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bone);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.62;
+background-image:radial-gradient(ellipse 90% 40% at 50% -5%,rgba(169,198,160,.25),transparent 60%)}
+.wrap{max-width:880px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
+nav{position:sticky;top:0;z-index:50;background:rgba(245,239,226,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair)}
+nav .wrap{display:flex;align-items:center;gap:1.3rem;height:54px;max-width:1000px}
+.logo-nabta{font-family:"Comfortaa",var(--sans);font-weight:700;color:var(--ink)}
+.logo-nabta .spark{color:#8FCB9B;font-weight:400}
+nav a{font-family:var(--mono);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--soft);text-decoration:none}
+nav a:hover{color:var(--tdeep)}
+nav .nx{margin-left:auto;display:flex;gap:1rem}
+.cover{border-bottom:1px solid var(--hair);background:var(--paper)}
+.cover .art svg{display:block;width:100%;height:auto}
+header{padding:2.6rem 0 2.2rem;border-bottom:1px solid var(--hair)}
+.kicker{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--tdeep)}
+h1{font-family:var(--serif);font-weight:900;font-size:clamp(1.9rem,4.5vw,3rem);line-height:1.08;margin:.7rem 0 1rem}
+.chips{display:flex;gap:.45rem;flex-wrap:wrap}
+.chip{font-family:var(--mono);font-size:.66rem;background:var(--sand);padding:.28rem .6rem;border:1px solid var(--hair)}
+.chip.score{color:#fff;background:linear-gradient(90deg,#5FA871,#4E9DB5);border:none}
+main{padding:2.6rem 0 4rem}
+.deliv-body{max-width:74ch}
+.deliv-body h4{font-family:var(--serif);font-weight:600;font-size:1.32rem;margin:1.8rem 0 .6rem;color:var(--green)}
+.deliv-body h4:first-child{margin-top:0}
+.deliv-body h5{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tdeep);margin:1.4rem 0 .5rem}
+.deliv-body p{margin:.6rem 0;font-size:.97rem}
+.deliv-body ul,.deliv-body ol{padding-left:1.3rem;margin:.6rem 0;font-size:.95rem}
+.deliv-body li{margin:.3rem 0}
+.deliv-body blockquote{font-family:var(--serif);font-style:italic;font-size:1.25rem;line-height:1.5;color:var(--green);border-left:3px solid var(--terra);padding:.4rem 0 .4rem 1.3rem;margin:1.5rem 0}
+.deliv-body table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}
+.deliv-body th{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;color:var(--mute);border-bottom:2px solid var(--ink);padding:.5rem .6rem .4rem}
+.deliv-body td{border-bottom:1px solid var(--hair);padding:.55rem .6rem;vertical-align:top}
+.deliv-body tr:hover td{background:rgba(169,198,160,.14)}
+.deliv-body figure{margin:1.5rem 0;background:var(--paper);border:1px solid var(--hair);padding:1.1rem}
+.deliv-body figcaption{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-top:.7rem}
+.deliv-body svg{display:block;width:100%;height:auto}
+.deliv-body .cols2{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+@media(max-width:680px){.deliv-body .cols2{grid-template-columns:1fr}}
+.deliv-body .tag{font-family:var(--mono);font-size:.64rem;background:var(--sand);border:1px solid var(--hair);padding:.16rem .5rem;display:inline-block;margin:.1rem .15rem .1rem 0}
+footer{border-top:1px solid var(--hair);padding:2rem 0 3rem;color:var(--mute);font-size:.84rem}
+.pn{display:flex;justify-content:space-between;gap:1rem;margin-top:2.6rem;border-top:1px solid var(--hair);padding-top:1.4rem}
+.pn a{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tdeep);text-decoration:none}
+</style></head><body>
+<nav><div class="wrap">
+<span class="logo-nabta">nabta<span class="spark">✦</span></span>
+<a href="../aipark-challenge.html">← All deliverables</a>
+<span class="nx"><a href="../map.html">Map &amp; frames</a><a href="../pdfs/Nabta-10-Visualizations-Day-Night-Animation-and-Extras.pdf">PDF</a></span>
+</div></nav>
+<div class="cover"><div class="art"><?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="brand" x1="120" y1="0" x2="1080" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7CC98F"/><stop offset="100%" stop-color="#7BC6DD"/>
+    </linearGradient>
+    <path id="sparkle" d="M0,-20 C2.4,-6.5 6.5,-2.4 20,0 C6.5,2.4 2.4,6.5 0,20 C-2.4,6.5 -6.5,2.4 -20,0 C-6.5,-2.4 -2.4,-6.5 0,-20 Z"/>
+  </defs>
+  <rect width="1200" height="520" fill="#F5EFE2"/>
+  <rect x="20" y="20" width="1160" height="480" fill="none" stroke="#22301F" stroke-width="1.5"/>
+  <rect x="0" y="470" width="1200" height="50" fill="#E7DCC3" opacity="0.95"/>
+  <path d="M0,467 L1200,467" stroke="url(#brand)" stroke-width="3" stroke-linecap="round"/>
+  <g opacity="0.34" fill="#22301F">
+    <circle cx="38" cy="490" r="1.2"/><circle cx="65" cy="479" r="1.4"/><circle cx="95" cy="491" r="1.1"/>
+    <circle cx="1007" cy="482" r="1.2"/><circle cx="1036" cy="491" r="1.4"/><circle cx="1070" cy="478" r="1.1"/>
+  </g>
+  <g transform="translate(98 90) scale(0.9)"><use href="#sparkle" fill="#7CC98F"/></g>
+  <text x="52" y="56" font-family="IBM Plex Mono, monospace" font-size="14" letter-spacing="2" fill="#22301F">10 VISUALIZATION &amp; FILM</text>
+  <g transform="translate(600 274)">
+    <rect x="-320" y="-112" width="190" height="222" fill="#E7DCC3" fill-opacity="0.55" stroke="#22301F" stroke-width="1.6"/>
+    <rect x="-88" y="-112" width="190" height="222" fill="#E7DCC3" fill-opacity="0.55" stroke="#22301F" stroke-width="1.6"/>
+    <rect x="144" y="-112" width="190" height="222" fill="#E7DCC3" fill-opacity="0.55" stroke="#22301F" stroke-width="1.6"/>
+    <rect x="-320" y="-112" width="190" height="222" fill="none" stroke="#22301F" stroke-width="2"/>
+    <rect x="-88" y="-112" width="190" height="222" fill="none" stroke="#22301F" stroke-width="2"/>
+    <rect x="144" y="-112" width="190" height="222" fill="none" stroke="#22301F" stroke-width="2"/>
+    <g transform="translate(-225 -5)">
+      <rect x="-72" y="-72" width="144" height="144" rx="10" fill="#F5EFE2"/>
+      <path d="M-60,30 C-14,4 18,-4 56,-28" fill="none" stroke="#2F6B4A" stroke-width="8" stroke-linecap="round"/>
+      <path d="M-54,14 C-22,6 10,-4 46,-24" fill="none" stroke="#A9C6A0" stroke-width="14" stroke-linecap="round" opacity="0.55"/>
+      <circle cx="-18" cy="-18" r="12" fill="#7BC6DD" fill-opacity="0.22"/><circle cx="26" cy="10" r="10" fill="#C05A32" fill-opacity="0.14"/>
+      <path d="M-60,44 L58,44" stroke="#22301F" stroke-width="1.1" opacity="0.4"/>
+    </g>
+    <g transform="translate(7 -5)">
+      <rect x="-72" y="-72" width="144" height="144" rx="10" fill="#F5EFE2"/>
+      <rect x="-72" y="-10" width="144" height="72" fill="#C05A32" fill-opacity="0.18"/>
+      <path d="M-52,28 C-18,10 8,-2 50,-30" fill="none" stroke="#22301F" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="-22" cy="-18" r="12" fill="#7CC98F" fill-opacity="0.2"/><circle cx="28" cy="8" r="10" fill="#7BC6DD" fill-opacity="0.18"/>
+      <path d="M-60,44 L58,44" stroke="#22301F" stroke-width="1.1" opacity="0.4"/>
+    </g>
+    <g transform="translate(239 -5)">
+      <rect x="-72" y="-72" width="144" height="144" rx="10" fill="#F5EFE2"/>
+      <rect x="-72" y="-72" width="144" height="144" rx="10" fill="#22301F" fill-opacity="0.92"/>
+      <circle cx="-26" cy="-18" r="12" fill="#CFC0A0" fill-opacity="0.16"/><circle cx="18" cy="2" r="10" fill="#C05A32" fill-opacity="0.26"/><circle cx="46" cy="22" r="8" fill="#7BC6DD" fill-opacity="0.18"/>
+      <path d="M-56,30 C-18,8 14,-6 54,-30" fill="none" stroke="#7CC98F" stroke-width="8" stroke-linecap="round" opacity="0.78"/>
+      <path d="M-60,44 L58,44" stroke="#F5EFE2" stroke-width="1.1" opacity="0.55"/>
+    </g>
+    <g fill="#E7DCC3" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.5">
+      <text x="-302" y="-86">DAY</text>
+      <text x="-70" y="-86">DUSK</text>
+      <text x="146" y="-86">NIGHT</text>
+    </g>
+  </g>
+</svg>
+</div></div>
+<header><div class="wrap">
+<p class="kicker">nabta wellness park · Draft Competition Entry · Dubai Municipality AI Park Design Challenge</p>
+<h1>D·10 — Visualizations, Day/Night, Animation & Extras</h1>
+<div class="chips"><span class="chip">№12 Renders</span><span class="chip">№13 Day/Night</span><span class="chip">№15 Animation</span><span class="chip">№16 Extras</span><span class="chip score">jury 6.6 → 7.6 /10</span></div>
+</div></header>
+<main><div class="wrap"><div class="deliv-body">
+<h4>Deliverable Package 10 — Visualizations, Day/Night Perspectives, Animation &amp; Supporting Materials</h4>
+<p><strong>«نبتة» NABTA — Wellness Park · The Living Shade Loop</strong> · Al Safa 2, Dubai · 15,000 m² · Deliverables #12, #13, #15, #16. This package is a render plan and storyboard: every asset is specified precisely enough for a visualization team or a controlled diffusion pipeline to produce it, geo-accurate to the design model.</p>
+
+<h5>A. Rendering Schedule — Eight Key Views (#12, #13)</h5>
+<table>
+<thead><tr><th>Code</th><th>Title</th><th>Type</th><th>Time</th><th>Garden room</th><th>Must communicate</th><th>Key elements in frame</th></tr></thead>
+<tbody>
+<tr><td>V01</td><td>Golden hour aerial over the figure-eight</td><td>Aerial, 250 m, oblique SW</td><td>17:45</td><td>Whole park</td><td>Legibility of the 1.0 km loop as one continuous shaded gesture</td><td>Figure-eight loop, ghaf canopy massing, wadi bioswale crossing the waist, ten rooms readable, Sheikh Zayed Rd skyline soft in haze</td></tr>
+<tr><td>V02</td><td>Entry plaza, first light</td><td>Eye-level</td><td>06:30</td><td>Entry plaza</td><td>Welcome, orientation, morning-jog culture</td><td>Terracotta gateway pergola, wayfinding totem, two joggers entering loop, long cool shadows</td></tr>
+<tr><td>V03</td><td>Under the pergola at 3pm — deep shade, dappled light</td><td>Eye-level</td><td>15:00</td><td>Loop / picnic groves edge</td><td>The core promise: usable comfort at peak heat</td><td>Terracotta slats overhead, sharp dappled light on path, ghaf trunks, misting line, seated elderly pair, thermal contrast with sunlit lawn beyond</td></tr>
+<tr><td>V04</td><td>Majlis plaza, late afternoon <span class="tag">DAY of pair</span></td><td>Eye-level, fixed camera M-1</td><td>17:00</td><td>Majlis plaza</td><td>Social heart before sunset; material warmth</td><td>Circular majlis seating, terracotta paving, ghaf shade, karak cart, children crossing</td></tr>
+<tr><td>V05</td><td>Majlis plaza after isha — families, warm light <span class="tag">NIGHT of pair</span></td><td>Eye-level, fixed camera M-1 (identical to V04)</td><td>20:30</td><td>Majlis plaza</td><td>Required day+night pair: 2700K adaptive lighting, 20 lux loop, dark-sky discipline, night social life</td><td>Same frame as V04; warm pooled light, families on cushions, no upward spill, stars visible</td></tr>
+<tr><td>V06</td><td>Play dune and teen zone at dusk</td><td>Eye-level, slightly elevated 4 m</td><td>18:45</td><td>Inclusive play dune / teen zone</td><td>All-ages, all-abilities energy at the coolest hour</td><td>Sculpted dune with inclusive equipment, wheelchair-accessible ramp, teens at parkour edge, first warm lights waking</td></tr>
+<tr><td>V07</td><td>Wadi garden after rare rain</td><td>Eye-level, low, near water</td><td>09:00, post-storm</td><td>Sensory wadi garden</td><td>Bioswale performing; delight of ephemeral water</td><td>Flowing wadi, terracotta bridge reflections, wet sand tones, children pointing, native sedges</td></tr>
+<tr><td>V08</td><td>Night aerial — the glowing loop</td><td>Aerial, 180 m</td><td>21:30</td><td>Whole park</td><td>Dark-sky compliance seen from above: light only where feet go</td><td>Figure-eight as a faint 2700K ribbon, dark canopy masses, quiet garden fully dark, city glow at edge for contrast</td></tr>
+</tbody>
+</table>
+<p><strong>Required day+night pair (#13):</strong> V04 + V05 are the same view — camera M-1 locked in the model (position, bearing, lens 28 mm, height 1.6 m) so jurors compare light, not composition. Both boards are captioned <em>"Camera M-1 — day / night pair."</em> V01 + V08 form a secondary aerial pair.</p>
+
+<h5>B. AI Production Pipeline — Human-Led, Geo-Accurate</h5>
+<ol>
+<li><strong>Base geometry:</strong> masterplan linework and 3D massing exported per view; all eight cameras locked in the model with site coordinates.</li>
+<li><strong>AI mood frames:</strong> ControlNet (lineart + depth from the locked viewports, conditioning ≥0.8) drives diffusion for atmosphere only — geometry may not drift. Every prompt, seed and control image is logged to Annex 3.</li>
+<li><strong>Human 3D verification:</strong> the design team rebuilds each approved mood frame as a physically-lit render and checks geometry, planting counts, shade coverage and lux against the model. No view is submitted that cannot be reproduced from the geo-accurate model — AI proposes atmosphere; humans decide and verify.</li>
+</ol>
+
+<h5>C. One-Minute Concept Animation — Storyboard (#15)</h5>
+<table>
+<thead><tr><th>Timecode</th><th>Shot</th><th>Camera move</th><th>Audio / VO line</th></tr></thead>
+<tbody>
+<tr><td>0:00–0:06</td><td>Black; dawn adhan fades; a single sprout breaks sand in macro</td><td>Static macro, slow fade-in</td><td><em>"In the desert, one green sprout is a promise. We call it nabta."</em></td></tr>
+<tr><td>0:06–0:12</td><td>Sprout grows into a ghaf; aerial reveals the figure-eight (V01)</td><td>Growth timelapse to aerial dive</td><td><em>"Plant it well, and it grows into a kilometre of living shade."</em></td></tr>
+<tr><td>0:12–0:18</td><td>Runner at 6:30 am under ghaf canopy</td><td>Tracking dolly beside runner</td><td>Footsteps, birdsong. <em>"The ritual starts at dawn — the first jog under the ghaf."</em></td></tr>
+<tr><td>0:18–0:24</td><td>3pm pergola; dappled light strobes gently (V03)</td><td>Slow push-in</td><td><em>"By three, Nabta has grown a roof — and the park is still full."</em></td></tr>
+<tr><td>0:24–0:30</td><td>Children on the play dune; sensory wadi beyond</td><td>Low crane rise</td><td>Laughter. <em>"Ten rooms, one wellness loop. Every age, every ability."</em></td></tr>
+<tr><td>0:30–0:36</td><td>Rain event: wadi fills, terracotta bridge (V07)</td><td>Timelapse, static frame</td><td><em>"When rain comes, the sprout drinks — the park remembers it is a wadi."</em></td></tr>
+<tr><td>0:36–0:42</td><td>Sunset timelapse over event lawn; lights wake at 2700K</td><td>Static wide, day-to-night ramp</td><td><em>"When the sun leaves, the light stays low, warm, and kind to the sky."</em></td></tr>
+<tr><td>0:42–0:50</td><td>Majlis plaza after isha (V05); families, karak steam</td><td>Slow orbit around majlis circle</td><td><em>"After isha, the majlis blooms. Neighbours, again — the day ends where it began: together."</em></td></tr>
+<tr><td>0:50–0:56</td><td>Night aerial pull-back; glowing figure-eight (V08)</td><td>Rising reverse dolly</td><td><em>"What sprouts here shades everyone. One loop, one neighbourhood, back outside."</em></td></tr>
+<tr><td>0:56–1:00</td><td>Logotype «نبتة» NABTA on dark ground; leaf glyph unfurls</td><td>Static; fade out</td><td>Oud note. <em>"Nabta. The Living Shade Loop."</em></td></tr>
+</tbody>
+</table>
+<p>Timing check: 6+6+6+6+6+6+6+8+6+4 = <strong>60 seconds exactly</strong>. Format: 4K, 24 fps, English VO with Arabic subtitles. AI tools used for mood passes and voice temp track; final shots from the verified 3D model, per pipeline above.</p>
+
+<h5>D. Additional Supporting Materials (#16)</h5>
+<ul>
+<li><strong>Physical model 1:500</strong> — CNC sand-toned base, terracotta loop inlay, removable canopy layer.</li>
+<li><strong>Interactive shade-simulation web viewer</strong> — hourly shadow slider, 21 Jun / 21 Dec presets, per-room shaded-area percentage.</li>
+<li><strong>AI-prompt transparency appendix (Annex 3)</strong> — the differentiator: every prompt, model version, seed and ControlNet input mapped to view codes V01–V08, plus rejected outputs and the human decision that overrode each — an auditable record that AI served the design, not the reverse.</li>
+<li><strong>Community survey annex</strong> — 312 resident responses, methodology, and how findings shaped the ten rooms and the dawn-to-night wellness programme.</li>
+</ul>
+
+<h5>E. Storyboard Strip (Preview)</h5>
+<figure>
+<svg viewBox="0 0 640 130" width="100%" role="img" aria-label="Four storyboard frames">
+<rect x="4" y="4" width="150" height="96" fill="#E7DCC3" stroke="#22301F"/>
+<circle cx="79" cy="30" r="12" fill="#C05A32"/>
+<path d="M40 80 C60 55 100 55 120 80" fill="none" stroke="#CFC0A0" stroke-width="6"/>
+<path d="M79 92 v-14 M79 82 c-6 -2 -10 -7 -10 -12 c6 0 10 4 10 12 M79 78 c6 -2 10 -7 10 -12 c-6 0 -10 4 -10 12" fill="none" stroke="#2F6B4A" stroke-width="3"/>
+<text x="79" y="118" fill="#22301F" font-size="10" text-anchor="middle">0:06 nabta sprouts into the loop</text>
+<rect x="166" y="4" width="150" height="96" fill="#E7DCC3" stroke="#22301F"/>
+<rect x="176" y="14" width="130" height="12" fill="#C05A32"/>
+<path d="M186 26 v60 M226 26 v60 M266 26 v60" stroke="#2F6B4A" stroke-width="4"/>
+<rect x="176" y="86" width="130" height="10" fill="#CFC0A0"/>
+<text x="241" y="118" fill="#22301F" font-size="10" text-anchor="middle">0:18 pergola, 3pm shade</text>
+<rect x="328" y="4" width="150" height="96" fill="#E7DCC3" stroke="#22301F"/>
+<path d="M338 78 C368 60 438 60 468 78 L468 96 L338 96 Z" fill="#4E8FA8"/>
+<rect x="388" y="52" width="30" height="8" fill="#C05A32"/>
+<circle cx="358" cy="34" r="10" fill="#A9C6A0"/>
+<circle cx="448" cy="30" r="12" fill="#A9C6A0"/>
+<text x="403" y="118" fill="#22301F" font-size="10" text-anchor="middle">0:30 wadi after rain</text>
+<rect x="490" y="4" width="146" height="96" fill="#22301F"/>
+<circle cx="563" cy="60" r="16" fill="#C05A32"/>
+<circle cx="533" cy="66" r="4" fill="#E7DCC3"/>
+<circle cx="593" cy="66" r="4" fill="#E7DCC3"/>
+<circle cx="563" cy="24" r="2" fill="#E7DCC3"/>
+<circle cx="518" cy="18" r="2" fill="#E7DCC3"/>
+<circle cx="606" cy="16" r="2" fill="#E7DCC3"/>
+<text x="563" y="118" fill="#22301F" font-size="10" text-anchor="middle">0:42 night majlis, 2700K</text>
+</svg>
+<figcaption>Nabta animation key frames: sprout-to-loop dawn, pergola shade, wadi rain, night majlis.</figcaption>
+</figure>
+</div>
+<div class="pn"><a href="d-09.html">← D·09 Concept Diagrams, Sections & Eleva</a><span></span></div>
+</div></main>
+<footer><div class="wrap"><span class="logo-nabta">nabta<span class="spark">✦</span></span> · The Living Shade Loop · Al Safa 2 Park, Jumeirah, Dubai · illustrative mock draft, July 2026</div></footer>
+</body></html>

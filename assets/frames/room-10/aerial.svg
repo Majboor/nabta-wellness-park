@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <pattern id="stipA" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="5" r="1.1" fill="#22301F" opacity="0.07"/>
+      <circle cx="11" cy="12" r="0.9" fill="#22301F" opacity="0.05"/>
+    </pattern>
+    <pattern id="stipG" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1.2" fill="#2F6B4A" opacity="0.18"/>
+      <circle cx="10" cy="10" r="1" fill="#2F6B4A" opacity="0.12"/>
+    </pattern>
+    <path id="spark" d="M0,-9 C0.8,-2.6 2.6,-0.8 9,0 C2.6,0.8 0.8,2.6 0,9 C-0.8,2.6 -2.6,0.8 -9,0 C-2.6,-0.8 -0.8,-2.6 0,-9 Z"/>
+  </defs>
+
+  <!-- desert ground -->
+  <rect width="1280" height="720" fill="#E7DCC3"/>
+  <rect width="1280" height="720" fill="#F5EFE2" opacity="0.4"/>
+  <rect width="1280" height="720" fill="url(#stipA)"/>
+
+  <!-- event lawn (upper left) -->
+  <path d="M0,60 C240,0 520,50 620,170 C700,270 570,410 380,435 C200,458 40,395 0,330 Z" fill="#A9C6A0" opacity="0.9"/>
+  <path d="M40,130 C220,60 460,105 545,195 C615,275 505,375 365,392 C225,408 85,355 40,295 Z" fill="#2F6B4A" opacity="0.22"/>
+  <path d="M0,60 C240,0 520,50 620,170 C700,270 570,410 380,435 C200,458 40,395 0,330 Z" fill="url(#stipG)"/>
+
+  <!-- wadi bioswale ribbon -->
+  <path d="M1010,-10 C955,130 1035,255 955,395 C890,515 975,635 930,730" stroke="#A9C6A0" stroke-width="56" fill="none" opacity="0.6" stroke-linecap="round"/>
+  <path d="M1010,-10 C955,130 1035,255 955,395 C890,515 975,635 930,730" stroke="#4E8FA8" stroke-width="26" fill="none" opacity="0.75" stroke-linecap="round"/>
+  <path d="M1010,-10 C955,130 1035,255 955,395 C890,515 975,635 930,730" stroke="#7BC6DD" stroke-width="6" fill="none" opacity="0.5" stroke-linecap="round" stroke-dasharray="30 46"/>
+
+  <!-- figure-eight shaded loop -->
+  <path d="M215,555 C70,470 70,255 225,205 C385,153 520,245 640,360 C765,478 905,565 1058,518 C1205,472 1205,268 1052,220 C902,172 762,242 640,360 C520,477 355,640 215,555 Z" fill="none" stroke="#CFC0A0" stroke-width="42" stroke-linejoin="round" opacity="0.95"/>
+  <path d="M215,555 C70,470 70,255 225,205 C385,153 520,245 640,360 C765,478 905,565 1058,518 C1205,472 1205,268 1052,220 C902,172 762,242 640,360 C520,477 355,640 215,555 Z" fill="none" stroke="#22301F" stroke-width="1.6" opacity="0.25" stroke-dasharray="4 18"/>
+
+  <!-- pergola shade segments over loop -->
+  <g fill="#C05A32" opacity="0.85">
+    <rect x="180" y="188" width="14" height="52" rx="3" transform="rotate(-18 187 214)"/>
+    <rect x="205" y="180" width="14" height="52" rx="3" transform="rotate(-18 212 206)"/>
+    <rect x="230" y="173" width="14" height="52" rx="3" transform="rotate(-18 237 199)"/>
+    <rect x="1035" y="188" width="14" height="52" rx="3" transform="rotate(16 1042 214)"/>
+    <rect x="1060" y="196" width="14" height="52" rx="3" transform="rotate(16 1067 222)"/>
+    <rect x="1085" y="205" width="14" height="52" rx="3" transform="rotate(16 1092 231)"/>
+  </g>
+
+  <!-- entry plaza -->
+  <ellipse cx="640" cy="620" rx="200" ry="90" fill="#F5EFE2" opacity="0.9"/>
+  <ellipse cx="640" cy="620" rx="200" ry="90" fill="url(#stipA)"/>
+  <ellipse cx="640" cy="620" rx="132" ry="58" fill="none" stroke="#CFC0A0" stroke-width="5" opacity="0.8"/>
+
+  <!-- cafe terrace room 10, beside entry plaza -->
+  <g>
+    <!-- terrace ground -->
+    <path d="M770,430 C900,405 1010,440 1030,510 C1045,570 950,615 850,610 C765,606 728,545 740,495 Z" fill="#F5EFE2" opacity="0.95"/>
+    <path d="M770,430 C900,405 1010,440 1030,510 C1045,570 950,615 850,610 C765,606 728,545 740,495 Z" fill="url(#stipA)"/>
+    <!-- restrooms block behind -->
+    <rect x="905" y="418" width="98" height="42" rx="6" fill="#E7DCC3" stroke="#22301F" stroke-width="1.4" opacity="0.95"/>
+    <!-- kiosk cafe (rammed earth) -->
+    <rect x="820" y="452" width="130" height="86" rx="8" fill="#E7DCC3" stroke="#22301F" stroke-width="2"/>
+    <rect x="820" y="452" width="130" height="86" rx="8" fill="#C05A32" opacity="0.12"/>
+    <line x1="828" y1="478" x2="942" y2="478" stroke="#22301F" stroke-width="1" opacity="0.18"/>
+    <line x1="828" y1="504" x2="942" y2="504" stroke="#22301F" stroke-width="1" opacity="0.18"/>
+    <!-- terracotta pergola apron with slats -->
+    <g fill="#C05A32">
+      <rect x="756" y="466" width="60" height="9" rx="3" opacity="0.9"/>
+      <rect x="754" y="482" width="62" height="9" rx="3" opacity="0.82"/>
+      <rect x="752" y="498" width="64" height="9" rx="3" opacity="0.9"/>
+      <rect x="754" y="514" width="62" height="9" rx="3" opacity="0.82"/>
+      <rect x="758" y="530" width="58" height="9" rx="3" opacity="0.9"/>
+    </g>
+    <rect x="750" y="460" width="8" height="86" rx="3" fill="#C05A32"/>
+    <!-- terrace tables spilling toward the loop -->
+    <g stroke="#22301F" stroke-width="1.4" fill="#F5EFE2">
+      <circle cx="778" cy="576" r="12"/>
+      <circle cx="838" cy="590" r="12"/>
+      <circle cx="900" cy="580" r="12"/>
+      <circle cx="962" cy="558" r="12"/>
+      <circle cx="736" cy="540" r="12"/>
+    </g>
+    <!-- people dots at tables (couple + guests) -->
+    <g fill="#22301F">
+      <circle cx="768" cy="566" r="4"/><circle cx="789" cy="585" r="4"/>
+      <circle cx="852" cy="583" r="4"/>
+      <circle cx="953" cy="548" r="4"/><circle cx="972" cy="566" r="4"/>
+    </g>
+    <!-- jogger with coffee on the loop, near finish -->
+    <circle cx="690" cy="500" r="4.5" fill="#22301F"/>
+    <path d="M690,505 L687,520 M690,505 L695,518" stroke="#22301F" stroke-width="2.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- ghaf tree canopies along the loop -->
+  <g>
+    <g opacity="0.9">
+      <circle cx="300" cy="530" r="34" fill="#A9C6A0" opacity="0.8"/><circle cx="322" cy="512" r="24" fill="#2F6B4A" opacity="0.55"/>
+    </g>
+    <g opacity="0.9">
+      <circle cx="470" cy="255" r="30" fill="#A9C6A0" opacity="0.8"/><circle cx="452" cy="240" r="21" fill="#2F6B4A" opacity="0.55"/>
+    </g>
+    <g opacity="0.9">
+      <circle cx="835" cy="250" r="33" fill="#A9C6A0" opacity="0.8"/><circle cx="856" cy="236" r="22" fill="#2F6B4A" opacity="0.55"/>
+    </g>
+    <g opacity="0.9">
+      <circle cx="1120" cy="420" r="30" fill="#A9C6A0" opacity="0.8"/><circle cx="1102" cy="405" r="20" fill="#2F6B4A" opacity="0.55"/>
+    </g>
+    <g opacity="0.95">
+      <circle cx="700" cy="620" r="30" fill="#A9C6A0" opacity="0.85"/><circle cx="682" cy="606" r="20" fill="#2F6B4A" opacity="0.6"/>
+    </g>
+    <g opacity="0.95">
+      <circle cx="1005" cy="595" r="27" fill="#A9C6A0" opacity="0.85"/><circle cx="1020" cy="580" r="18" fill="#2F6B4A" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- brand accents -->
+  <circle cx="540" cy="480" r="10" fill="#7CC98F" opacity="0.7"/>
+  <circle cx="1150" cy="300" r="8" fill="#7BC6DD" opacity="0.6"/>
+
+  <!-- nabta sparkles -->
+  <use href="#spark" x="0" y="0" transform="translate(640,620) scale(1.3)" fill="#C05A32" opacity="0.9"/>
+  <use href="#spark" x="0" y="0" transform="translate(885,495) scale(0.9)" fill="#F5EFE2" opacity="0.95"/>
+  <use href="#spark" x="0" y="0" transform="translate(230,180) scale(0.8)" fill="#2F6B4A" opacity="0.7"/>
+  <use href="#spark" x="0" y="0" transform="translate(1075,240) scale(0.7)" fill="#7CC98F" opacity="0.8"/>
+</svg>

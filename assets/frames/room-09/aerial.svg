@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <path id="sparkle" d="M0 -14 C2.5 -4 4 -2.5 14 0 C4 2.5 2.5 4 0 14 C-2.5 4 -4 2.5 -14 0 C-4 -2.5 -2.5 -4 0 -14 Z"/>
+    <pattern id="stipple" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="6" r="1.6" fill="#22301F" fill-opacity="0.12"/>
+      <circle cx="17" cy="14" r="1.3" fill="#22301F" fill-opacity="0.10"/>
+      <circle cx="9" cy="21" r="1.5" fill="#22301F" fill-opacity="0.08"/>
+    </pattern>
+    <pattern id="leafdots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="8" r="2.4" fill="#A9C6A0" fill-opacity="0.55"/>
+      <circle cx="20" cy="18" r="2.0" fill="#2F6B4A" fill-opacity="0.35"/>
+      <circle cx="12" cy="25" r="1.8" fill="#7CC98F" fill-opacity="0.30"/>
+    </pattern>
+  </defs>
+
+  <!-- ground: park sand, room in NW quadrant -->
+  <rect width="1280" height="720" fill="#E7DCC3"/>
+  <rect width="1280" height="720" fill="url(#stipple)"/>
+
+  <!-- hint of the living shade loop passing to the SE -->
+  <path d="M1280 560 C1080 620 960 640 900 720" fill="none" stroke="#CFC0A0" stroke-width="46" stroke-linecap="round"/>
+  <path d="M1280 560 C1080 620 960 640 900 720" fill="none" stroke="#22301F" stroke-opacity="0.06" stroke-width="46" stroke-linecap="round"/>
+  <!-- pergola slat shadows over loop -->
+  <g stroke="#C05A32" stroke-opacity="0.45" stroke-width="6">
+    <line x1="1180" y1="570" x2="1210" y2="612"/>
+    <line x1="1120" y1="588" x2="1148" y2="632"/>
+    <line x1="1060" y1="602" x2="1084" y2="648"/>
+    <line x1="1004" y1="618" x2="1024" y2="666"/>
+    <line x1="952" y1="638" x2="968" y2="688"/>
+  </g>
+  <!-- neighbouring ghaf canopies along the loop -->
+  <g>
+    <circle cx="1210" cy="500" r="46" fill="#2F6B4A" fill-opacity="0.8"/>
+    <circle cx="1198" cy="488" r="24" fill="#A9C6A0" fill-opacity="0.7"/>
+    <circle cx="1040" cy="690" r="52" fill="#2F6B4A" fill-opacity="0.8"/>
+    <circle cx="1026" cy="676" r="26" fill="#A9C6A0" fill-opacity="0.7"/>
+  </g>
+
+  <!-- outer earth berm ring: layered translucent mounds -->
+  <ellipse cx="560" cy="330" rx="470" ry="320" fill="#CFC0A0" fill-opacity="0.85"/>
+  <ellipse cx="560" cy="330" rx="470" ry="320" fill="url(#stipple)"/>
+  <ellipse cx="560" cy="330" rx="415" ry="272" fill="#A9C6A0" fill-opacity="0.55"/>
+  <ellipse cx="560" cy="330" rx="368" ry="232" fill="#2F6B4A" fill-opacity="0.45"/>
+  <ellipse cx="560" cy="330" rx="368" ry="232" fill="url(#leafdots)"/>
+
+  <!-- interior floor: quiet bone clearing -->
+  <ellipse cx="560" cy="330" rx="308" ry="182" fill="#F5EFE2"/>
+  <ellipse cx="560" cy="330" rx="308" ry="182" fill="url(#stipple)"/>
+
+  <!-- entry path threading through berm gap from SE -->
+  <path d="M900 720 C830 600 800 520 742 448 C700 396 660 380 620 372" fill="none" stroke="#CFC0A0" stroke-width="30" stroke-linecap="round"/>
+  <!-- inner contemplation loop around basin -->
+  <ellipse cx="560" cy="330" rx="196" ry="118" fill="none" stroke="#CFC0A0" stroke-width="22"/>
+
+  <!-- fragrant planting beds inside the room -->
+  <g>
+    <ellipse cx="360" cy="230" rx="96" ry="52" fill="#A9C6A0" fill-opacity="0.8"/>
+    <ellipse cx="360" cy="230" rx="96" ry="52" fill="url(#leafdots)"/>
+    <ellipse cx="748" cy="270" rx="78" ry="46" fill="#A9C6A0" fill-opacity="0.8"/>
+    <ellipse cx="748" cy="270" rx="78" ry="46" fill="url(#leafdots)"/>
+    <ellipse cx="430" cy="452" rx="88" ry="40" fill="#A9C6A0" fill-opacity="0.8"/>
+    <ellipse cx="430" cy="452" rx="88" ry="40" fill="url(#leafdots)"/>
+    <ellipse cx="700" cy="420" rx="60" ry="34" fill="#7CC98F" fill-opacity="0.4"/>
+  </g>
+
+  <!-- still reflecting basin -->
+  <ellipse cx="560" cy="330" rx="128" ry="76" fill="#CFC0A0"/>
+  <ellipse cx="560" cy="330" rx="116" ry="66" fill="#4E8FA8"/>
+  <ellipse cx="560" cy="330" rx="116" ry="66" fill="#7BC6DD" fill-opacity="0.25"/>
+  <ellipse cx="530" cy="316" rx="52" ry="20" fill="#F5EFE2" fill-opacity="0.35"/>
+
+  <!-- single sculptural ghaf: canopy from above + soft shadow over basin edge -->
+  <ellipse cx="500" cy="288" rx="122" ry="96" fill="#22301F" fill-opacity="0.18"/>
+  <g>
+    <ellipse cx="468" cy="252" rx="112" ry="88" fill="#2F6B4A"/>
+    <ellipse cx="418" cy="222" rx="56" ry="44" fill="#2F6B4A"/>
+    <ellipse cx="530" cy="212" rx="50" ry="38" fill="#2F6B4A"/>
+    <ellipse cx="446" cy="240" rx="58" ry="40" fill="#A9C6A0" fill-opacity="0.65"/>
+    <ellipse cx="512" cy="268" rx="44" ry="30" fill="#7CC98F" fill-opacity="0.45"/>
+    <ellipse cx="468" cy="252" rx="112" ry="88" fill="url(#leafdots)"/>
+  </g>
+
+  <!-- benches with back rests around the basin (plan icons) -->
+  <g fill="#22301F">
+    <rect x="678" y="322" width="14" height="46" rx="5"/>
+    <rect x="694" y="326" width="5" height="38" rx="2" fill-opacity="0.7"/>
+    <rect x="540" y="440" width="46" height="14" rx="5"/>
+    <rect x="544" y="456" width="38" height="5" rx="2" fill-opacity="0.7"/>
+    <rect x="430" y="368" width="14" height="42" rx="5" transform="rotate(38 437 389)"/>
+  </g>
+  <!-- one seated figure, still -->
+  <circle cx="563" cy="447" r="6.5" fill="#22301F"/>
+
+  <!-- deep shade wash on NW rim -->
+  <path d="M180 120 C300 60 460 50 560 70 C420 90 300 160 230 280 C200 220 180 170 180 120 Z" fill="#22301F" fill-opacity="0.10"/>
+
+  <!-- nabta sparkles, sparing -->
+  <use href="#sparkle" transform="translate(880 140) scale(1.1)" fill="#7CC98F"/>
+  <use href="#sparkle" transform="translate(602 318) scale(0.7)" fill="#F5EFE2" fill-opacity="0.9"/>
+  <use href="#sparkle" transform="translate(150 560) scale(0.8)" fill="#7BC6DD" fill-opacity="0.8"/>
+</svg>

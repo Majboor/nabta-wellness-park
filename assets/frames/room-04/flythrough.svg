@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <pattern id="stip" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="5" r="1.2" fill="#22301F" fill-opacity="0.07"/>
+      <circle cx="11" cy="12" r="0.9" fill="#22301F" fill-opacity="0.05"/>
+    </pattern>
+    <path id="spark" d="M0 -11 L2.6 -2.6 L11 0 L2.6 2.6 L0 11 L-2.6 2.6 L-11 0 L-2.6 -2.6 Z"/>
+  </defs>
+
+  <!-- hazy sky sliver -->
+  <rect width="1280" height="720" fill="#F5EFE2"/>
+  <path d="M0 150 C300 128 700 140 1280 122 L1280 0 L0 0 Z" fill="#E7DCC3" fill-opacity="0.55"/>
+
+  <!-- tilted park ground plane -->
+  <path d="M0 720 L0 190 C320 158 760 172 1280 150 L1280 720 Z" fill="#E7DCC3"/>
+  <path d="M0 720 L0 190 C320 158 760 172 1280 150 L1280 720 Z" fill="url(#stip)"/>
+  <path d="M0 260 C360 232 820 244 1280 222 L1280 150 C760 172 320 158 0 190 Z" fill="#A9C6A0" fill-opacity="0.4"/>
+
+  <!-- wadi bioswale sweeping diagonally -->
+  <path d="M-30 330 C260 280 520 340 780 300 C1010 265 1140 300 1300 268" fill="none" stroke="#4E8FA8" stroke-width="20" stroke-opacity="0.65" stroke-linecap="round"/>
+  <g fill="#A9C6A0" fill-opacity="0.85">
+    <circle cx="150" cy="308" r="7"/><circle cx="360" cy="308" r="8"/><circle cx="560" cy="322" r="7"/>
+    <circle cx="820" cy="292" r="8"/><circle cx="1060" cy="278" r="7"/>
+  </g>
+
+  <!-- the loop: figure-eight band in perspective -->
+  <path d="M-60 560 C220 470 480 600 700 520 C930 436 1060 540 1340 448" fill="none" stroke="#CFC0A0" stroke-width="52"/>
+  <path d="M-60 400 C240 490 500 420 730 512" fill="none" stroke="#CFC0A0" stroke-width="38" stroke-opacity="0.9"/>
+  <g stroke="#C05A32" stroke-width="4.5" stroke-linecap="round" opacity="0.85">
+    <line x1="66" y1="522" x2="98" y2="552"/><line x1="98" y1="512" x2="130" y2="542"/>
+    <line x1="130" y1="503" x2="162" y2="533"/><line x1="162" y1="496" x2="194" y2="526"/>
+    <line x1="1020" y1="490" x2="1056" y2="514"/><line x1="1056" y1="482" x2="1092" y2="506"/>
+    <line x1="1092" y1="475" x2="1128" y2="499"/>
+  </g>
+
+  <!-- dune landform, oblique -->
+  <ellipse cx="600" cy="430" rx="330" ry="110" fill="#22301F" fill-opacity="0.06"/>
+  <path d="M330 430 C370 340 480 290 610 292 C740 294 830 350 850 415 C862 456 830 480 760 488 C620 505 430 500 360 470 C320 452 318 442 330 430 Z" fill="#E7DCC3"/>
+  <path d="M330 430 C370 340 480 290 610 292 C740 294 830 350 850 415" fill="none" stroke="#22301F" stroke-opacity="0.25" stroke-width="2.5"/>
+  <path d="M420 420 C450 356 530 322 620 324 C700 326 760 362 775 408 C782 434 760 450 710 456 C610 466 470 462 428 442 C405 432 408 428 420 420 Z" fill="#F5EFE2" fill-opacity="0.8"/>
+  <path d="M330 430 C370 340 480 290 610 292 C740 294 830 350 850 415 C862 456 830 480 760 488 C620 505 430 500 360 470 C320 452 318 442 330 430 Z" fill="url(#stip)"/>
+
+  <!-- rubber surfacing apron -->
+  <path d="M380 480 C520 452 760 452 900 486 C960 502 962 528 900 542 C740 572 480 572 390 544 C340 528 336 496 380 480 Z" fill="#C05A32" fill-opacity="0.42"/>
+
+  <!-- slides off the crest -->
+  <path d="M600 300 C660 320 705 366 720 420 C728 450 722 468 706 480" fill="none" stroke="#C05A32" stroke-width="15" stroke-linecap="round"/>
+  <path d="M545 302 C505 330 480 372 478 420" fill="none" stroke="#C05A32" stroke-width="12" stroke-linecap="round" stroke-opacity="0.85"/>
+  <!-- climbing net -->
+  <g stroke="#22301F" stroke-opacity="0.55" stroke-width="1.8" fill="none">
+    <path d="M500 430 C512 386 545 348 592 328"/>
+    <path d="M540 436 C550 396 578 362 618 342"/>
+    <path d="M498 408 L600 334 M510 380 L616 344 M534 352 L594 328"/>
+  </g>
+  <!-- transfer platform -->
+  <rect x="562" y="292" width="40" height="11" rx="4" fill="#F5EFE2" stroke="#22301F" stroke-opacity="0.35" stroke-width="1.6"/>
+
+  <!-- carousel -->
+  <g transform="translate(890,468)">
+    <ellipse cx="0" cy="12" rx="62" ry="14" fill="#CFC0A0"/>
+    <ellipse cx="0" cy="8" rx="52" ry="11" fill="#4E8FA8" fill-opacity="0.4"/>
+    <line x1="0" y1="8" x2="0" y2="-46" stroke="#22301F" stroke-opacity="0.7" stroke-width="4"/>
+    <ellipse cx="0" cy="-48" rx="46" ry="10" fill="#C05A32" fill-opacity="0.85"/>
+    <ellipse cx="0" cy="24" rx="66" ry="10" fill="#22301F" fill-opacity="0.08"/>
+  </g>
+
+  <!-- family seating ring -->
+  <path d="M420 560 A 260 90 0 0 0 850 540" fill="none" stroke="#22301F" stroke-opacity="0.4" stroke-width="5" stroke-dasharray="16 12" stroke-linecap="round"/>
+  <g fill="#C05A32">
+    <rect x="470" y="566" width="22" height="7" rx="3.5"/>
+    <rect x="600" y="580" width="22" height="7" rx="3.5"/>
+    <rect x="740" y="566" width="22" height="7" rx="3.5"/>
+  </g>
+
+  <!-- shade sails, tilted planes with drop shadows -->
+  <ellipse cx="560" cy="470" rx="130" ry="20" fill="#22301F" fill-opacity="0.08"/>
+  <path d="M430 250 L680 200 L610 340 Z" fill="#F5EFE2" fill-opacity="0.9"/>
+  <path d="M430 250 L680 200 L610 340 Z" fill="none" stroke="#22301F" stroke-opacity="0.3" stroke-width="2"/>
+  <path d="M630 270 L840 226 L780 356 Z" fill="#C05A32" fill-opacity="0.4"/>
+  <path d="M630 270 L840 226 L780 356 Z" fill="none" stroke="#22301F" stroke-opacity="0.24" stroke-width="1.8"/>
+  <g stroke="#22301F" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round">
+    <line x1="432" y1="252" x2="426" y2="452"/>
+    <line x1="678" y1="202" x2="686" y2="420"/>
+    <line x1="838" y1="228" x2="844" y2="430"/>
+  </g>
+
+  <!-- ghaf clusters with shadows -->
+  <g transform="translate(230,470)">
+    <ellipse cx="14" cy="8" rx="70" ry="13" fill="#22301F" fill-opacity="0.1"/>
+    <path d="M0 0 C-2 -30 -7 -48 -18 -64 M0 0 C3 -34 9 -54 21 -70" fill="none" stroke="#22301F" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="-10" cy="-80" rx="58" ry="20" fill="#2F6B4A" fill-opacity="0.92"/>
+    <ellipse cx="30" cy="-90" rx="42" ry="15" fill="#A9C6A0" fill-opacity="0.85"/>
+  </g>
+  <g transform="translate(1060,380)">
+    <ellipse cx="12" cy="6" rx="56" ry="11" fill="#22301F" fill-opacity="0.1"/>
+    <path d="M0 0 C-2 -24 -6 -38 -14 -50 M0 0 C2 -27 7 -43 17 -56" fill="none" stroke="#22301F" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="-8" cy="-64" rx="46" ry="16" fill="#2F6B4A" fill-opacity="0.9"/>
+    <ellipse cx="24" cy="-72" rx="34" ry="12" fill="#A9C6A0" fill-opacity="0.85"/>
+  </g>
+  <g transform="translate(160,620)">
+    <ellipse cx="16" cy="8" rx="84" ry="15" fill="#22301F" fill-opacity="0.1"/>
+    <path d="M0 0 C-3 -36 -9 -58 -22 -78 M0 0 C4 -40 11 -64 26 -84" fill="none" stroke="#22301F" stroke-width="6" stroke-linecap="round"/>
+    <ellipse cx="-12" cy="-96" rx="70" ry="24" fill="#2F6B4A" fill-opacity="0.92"/>
+    <ellipse cx="36" cy="-108" rx="50" ry="18" fill="#A9C6A0" fill-opacity="0.85"/>
+  </g>
+
+  <!-- small figures -->
+  <g fill="#22301F">
+    <g transform="translate(612,300) scale(0.28)"><circle cx="0" cy="-52" r="9"/><path d="M0 -41 C9 -41 11 -28 9 -14 L6 16 H2 L0 -4 L-2 16 H-6 L-9 -14 C-11 -28 -9 -41 0 -41 Z"/></g>
+    <g transform="translate(710,472) scale(0.26)"><circle cx="0" cy="-52" r="9"/><path d="M0 -41 C9 -41 11 -28 9 -14 L6 16 H2 L0 -4 L-2 16 H-6 L-9 -14 C-11 -28 -9 -41 0 -41 Z"/></g>
+    <g transform="translate(492,432) scale(0.26)"><circle cx="0" cy="-52" r="9"/><path d="M0 -41 C9 -41 11 -28 9 -14 L6 16 H2 L0 -4 L-2 16 H-6 L-9 -14 C-11 -28 -9 -41 0 -41 Z"/></g>
+    <g transform="translate(560,592) scale(0.34)"><circle cx="0" cy="-52" r="9"/><path d="M0 -41 C9 -41 11 -28 9 -14 L6 16 H2 L0 -4 L-2 16 H-6 L-9 -14 C-11 -28 -9 -41 0 -41 Z"/></g>
+    <g transform="translate(596,596) scale(0.22)"><circle cx="0" cy="-52" r="9"/><path d="M0 -41 C9 -41 11 -28 9 -14 L6 16 H2 L0 -4 L-2 16 H-6 L-9 -14 C-11 -28 -9 -41 0 -41 Z"/></g>
+  </g>
+  <!-- wheelchair user heading to carousel -->
+  <g transform="translate(824,500) scale(0.5)">
+    <circle cx="0" cy="-42" r="6" fill="#22301F"/>
+    <path d="M-5 -35 C4 -38 7 -30 5 -20 L5 -8 L14 -8 L14 -4 L2 -4 L-4 -18 Z" fill="#22301F"/>
+    <circle cx="0" cy="6" r="14" fill="none" stroke="#22301F" stroke-width="3.4"/>
+    <circle cx="15" cy="13" r="4.6" fill="none" stroke="#22301F" stroke-width="2.8"/>
+    <path d="M3 -6 L12 -1 L15 8" fill="none" stroke="#22301F" stroke-width="3.4" stroke-linecap="round"/>
+  </g>
+
+  <!-- nabta sparkles -->
+  <use href="#spark" transform="translate(940,140) scale(0.8)" fill="#7CC98F"/>
+  <use href="#spark" transform="translate(280,220) scale(0.6)" fill="#7BC6DD"/>
+  <use href="#spark" transform="translate(1150,600) scale(0.55)" fill="#7CC98F"/>
+</svg>

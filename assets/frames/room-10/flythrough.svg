@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <linearGradient id="skyD" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5EFE2"/>
+      <stop offset="1" stop-color="#E7DCC3"/>
+    </linearGradient>
+    <pattern id="stipD" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="5" r="1.1" fill="#22301F" opacity="0.07"/>
+      <circle cx="11" cy="12" r="0.9" fill="#22301F" opacity="0.05"/>
+    </pattern>
+    <pattern id="stipDG" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1.2" fill="#2F6B4A" opacity="0.16"/>
+      <circle cx="10" cy="10" r="1" fill="#2F6B4A" opacity="0.11"/>
+    </pattern>
+    <path id="sparkD" d="M0,-9 C0.8,-2.6 2.6,-0.8 9,0 C2.6,0.8 0.8,2.6 0,9 C-0.8,2.6 -2.6,0.8 -9,0 C-2.6,-0.8 -0.8,-2.6 0,-9 Z"/>
+  </defs>
+
+  <!-- high horizon sky -->
+  <rect width="1280" height="150" fill="url(#skyD)"/>
+  <circle cx="200" cy="70" r="40" fill="#F5EFE2" opacity="0.9"/>
+
+  <!-- desert park ground plane -->
+  <rect y="130" width="1280" height="590" fill="#E7DCC3"/>
+  <rect y="130" width="1280" height="590" fill="#F5EFE2" opacity="0.3"/>
+  <rect y="130" width="1280" height="590" fill="url(#stipD)"/>
+  <path d="M0,130 L1280,130 L1280,170 C900,158 380,158 0,172 Z" fill="#CFC0A0" opacity="0.5"/>
+
+  <!-- event lawn sweeping across foreground -->
+  <path d="M-40,720 C60,470 320,360 700,380 C560,520 420,640 320,720 Z" fill="#A9C6A0" opacity="0.95"/>
+  <path d="M-40,720 C60,470 320,360 700,380 C560,520 420,640 320,720 Z" fill="url(#stipDG)"/>
+  <path d="M-20,700 C70,500 280,410 600,410 C500,510 400,610 320,690 Z" fill="#2F6B4A" opacity="0.2"/>
+  <!-- picnickers on lawn -->
+  <g fill="#22301F">
+    <circle cx="250" cy="560" r="7"/><path d="M250,566 C259,568 262,578 262,592 L238,592 C238,578 241,568 250,566 Z"/>
+    <circle cx="292" cy="572" r="7"/><path d="M292,578 C301,580 304,590 304,602 L280,602 C280,590 283,580 292,578 Z"/>
+  </g>
+  <ellipse cx="272" cy="600" rx="46" ry="12" fill="#F5EFE2" opacity="0.55"/>
+
+  <!-- wadi bioswale, left distance -->
+  <path d="M40,150 C120,220 90,320 170,400" stroke="#4E8FA8" stroke-width="20" fill="none" opacity="0.7" stroke-linecap="round"/>
+  <path d="M40,150 C120,220 90,320 170,400" stroke="#A9C6A0" stroke-width="38" fill="none" opacity="0.3" stroke-linecap="round"/>
+
+  <!-- loop path sweeping from lawn toward cafe -->
+  <path d="M340,720 C480,560 560,430 700,350 C830,278 1010,250 1210,262" fill="none" stroke="#CFC0A0" stroke-width="58" stroke-linecap="round"/>
+  <path d="M340,720 C480,560 560,430 700,350 C830,278 1010,250 1210,262" fill="none" stroke="#22301F" stroke-width="1.6" opacity="0.22" stroke-dasharray="5 20"/>
+  <!-- second loop arm receding -->
+  <path d="M700,350 C640,300 560,268 430,258 C320,250 200,262 100,286" fill="none" stroke="#CFC0A0" stroke-width="34" stroke-linecap="round" opacity="0.85"/>
+
+  <!-- entry plaza -->
+  <ellipse cx="1120" cy="300" rx="150" ry="52" fill="#F5EFE2" opacity="0.9"/>
+  <ellipse cx="1120" cy="300" rx="150" ry="52" fill="url(#stipD)"/>
+  <ellipse cx="1120" cy="300" rx="96" ry="32" fill="none" stroke="#CFC0A0" stroke-width="4" opacity="0.8"/>
+
+  <!-- cafe in oblique 3/4 view -->
+  <g>
+    <!-- restrooms block behind -->
+    <path d="M1010,208 L1130,200 L1136,242 L1016,252 Z" fill="#E7DCC3"/>
+    <path d="M1010,208 L1130,200 L1136,242 L1016,252 Z" fill="#22301F" opacity="0.1"/>
+    <path d="M1004,204 L1136,196 L1140,206 L1008,215 Z" fill="#CFC0A0"/>
+    <!-- kiosk roof plane -->
+    <path d="M820,214 L1010,202 L1024,256 L830,272 Z" fill="#CFC0A0"/>
+    <path d="M820,214 L1010,202 L1024,256 L830,272 Z" fill="#F5EFE2" opacity="0.5"/>
+    <!-- front wall -->
+    <path d="M830,272 L1024,256 L1026,330 L832,348 Z" fill="#E7DCC3"/>
+    <path d="M830,272 L1024,256 L1026,330 L832,348 Z" fill="#C05A32" opacity="0.14"/>
+    <g stroke="#22301F" opacity="0.16" stroke-width="1.6">
+      <path d="M831,296 L1025,280" fill="none"/>
+      <path d="M832,320 L1025,304" fill="none"/>
+    </g>
+    <!-- side wall shaded -->
+    <path d="M820,214 L830,272 L832,348 L818,336 L810,224 Z" fill="#E7DCC3"/>
+    <path d="M820,214 L830,272 L832,348 L818,336 L810,224 Z" fill="#22301F" opacity="0.22"/>
+    <!-- service window glow -->
+    <path d="M868,286 L944,280 L945,326 L869,332 Z" fill="#22301F" opacity="0.9"/>
+    <path d="M872,290 L940,284 L941,322 L873,328 Z" fill="#C05A32" opacity="0.35"/>
+    <!-- terracotta pergola apron, oblique slats -->
+    <g fill="#C05A32">
+      <path d="M700,300 L830,278 L836,288 L706,311 Z" opacity="0.95"/>
+      <path d="M694,318 L832,296 L838,306 L700,329 Z" opacity="0.82"/>
+      <path d="M688,336 L834,314 L840,324 L694,347 Z" opacity="0.95"/>
+      <path d="M684,354 L836,332 L842,342 L690,365 Z" opacity="0.82"/>
+      <path d="M680,372 L838,350 L844,360 L686,383 Z" opacity="0.95"/>
+    </g>
+    <rect x="678" y="300" width="9" height="110" rx="3" fill="#C05A32"/>
+    <rect x="770" y="290" width="9" height="112" rx="3" fill="#C05A32" opacity="0.9"/>
+    <!-- terrace with tables spilling toward the loop -->
+    <path d="M672,392 C760,376 900,368 1000,378 C1010,412 970,446 880,452 C790,458 700,440 672,414 Z" fill="#F5EFE2" opacity="0.9"/>
+    <path d="M672,392 C760,376 900,368 1000,378 C1010,412 970,446 880,452 C790,458 700,440 672,414 Z" fill="url(#stipD)"/>
+    <g stroke="#22301F" stroke-width="1.4" fill="#F5EFE2">
+      <ellipse cx="726" cy="410" rx="15" ry="7"/>
+      <ellipse cx="800" cy="424" rx="15" ry="7"/>
+      <ellipse cx="884" cy="428" rx="15" ry="7"/>
+      <ellipse cx="954" cy="412" rx="15" ry="7"/>
+    </g>
+    <g fill="#22301F">
+      <circle cx="714" cy="400" r="4.5"/><circle cx="740" cy="416" r="4.5"/>
+      <circle cx="896" cy="418" r="4.5"/>
+      <circle cx="944" cy="402" r="4.5"/><circle cx="966" cy="420" r="4.5"/>
+    </g>
+    <!-- jogger finishing on loop by terrace -->
+    <circle cx="650" cy="428" r="5.5" fill="#22301F"/>
+    <path d="M650,434 L645,454 M650,434 L657,452" stroke="#22301F" stroke-width="3.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- ghaf trees, oblique -->
+  <g>
+    <rect x="596" y="300" width="7" height="60" rx="3" fill="#22301F" opacity="0.85"/>
+    <circle cx="600" cy="284" r="40" fill="#A9C6A0" opacity="0.85"/>
+    <circle cx="580" cy="268" r="26" fill="#2F6B4A" opacity="0.5"/>
+    <circle cx="622" cy="270" r="24" fill="#2F6B4A" opacity="0.4"/>
+  </g>
+  <g>
+    <rect x="1052" y="352" width="8" height="66" rx="3" fill="#22301F" opacity="0.85"/>
+    <circle cx="1056" cy="334" r="44" fill="#A9C6A0" opacity="0.85"/>
+    <circle cx="1078" cy="316" r="28" fill="#2F6B4A" opacity="0.5"/>
+  </g>
+  <g opacity="0.8">
+    <rect x="380" y="238" width="5" height="42" rx="2" fill="#22301F"/>
+    <circle cx="382" cy="226" r="26" fill="#A9C6A0" opacity="0.8"/>
+    <circle cx="370" cy="216" r="17" fill="#2F6B4A" opacity="0.45"/>
+  </g>
+  <g opacity="0.75">
+    <rect x="180" y="210" width="4" height="34" rx="2" fill="#22301F"/>
+    <circle cx="182" cy="200" r="20" fill="#A9C6A0" opacity="0.8"/>
+  </g>
+
+  <!-- foreground ghaf canopy entering drone frame, top right -->
+  <circle cx="1250" cy="620" r="120" fill="#2F6B4A" opacity="0.5"/>
+  <circle cx="1210" cy="700" r="100" fill="#A9C6A0" opacity="0.6"/>
+
+  <!-- brand accents -->
+  <circle cx="520" cy="330" r="8" fill="#7CC98F" opacity="0.75"/>
+  <circle cx="130" cy="360" r="7" fill="#7BC6DD" opacity="0.6"/>
+
+  <!-- nabta sparkles -->
+  <use href="#sparkD" transform="translate(1120,300) scale(1.1)" fill="#C05A32" opacity="0.9"/>
+  <use href="#sparkD" transform="translate(905,240) scale(0.8)" fill="#F5EFE2" opacity="0.95"/>
+  <use href="#sparkD" transform="translate(430,470) scale(0.8)" fill="#2F6B4A" opacity="0.6"/>
+</svg>

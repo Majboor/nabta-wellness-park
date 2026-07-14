@@ -1,0 +1,337 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bone:#F5EFE2;--paper:#FBF7EC;--sand:#E7DCC3;--sand2:#EFE6D2;--ink:#22301F;--soft:#4A5644;--mute:#7A8272;
+--green:#2F6B4A;--leaf:#A9C6A0;--terra:#C05A32;--tdeep:#9C4525;--water:#4E8FA8;--hair:#D8CCAF;
+--serif:"Fraunces",serif;--sans:"Instrument Sans",sans-serif;--mono:"IBM Plex Mono",monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bone);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.62;
+background-image:radial-gradient(ellipse 90% 40% at 50% -5%,rgba(169,198,160,.25),transparent 60%)}
+.wrap{max-width:880px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
+nav{position:sticky;top:0;z-index:50;background:rgba(245,239,226,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair)}
+nav .wrap{display:flex;align-items:center;gap:1.3rem;height:54px;max-width:1000px}
+.logo-nabta{font-family:"Comfortaa",var(--sans);font-weight:700;color:var(--ink)}
+.logo-nabta .spark{color:#8FCB9B;font-weight:400}
+nav a{font-family:var(--mono);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--soft);text-decoration:none}
+nav a:hover{color:var(--tdeep)}
+nav .nx{margin-left:auto;display:flex;gap:1rem}
+.cover{border-bottom:1px solid var(--hair);background:var(--paper)}
+.cover .art svg{display:block;width:100%;height:auto}
+header{padding:2.6rem 0 2.2rem;border-bottom:1px solid var(--hair)}
+.kicker{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--tdeep)}
+h1{font-family:var(--serif);font-weight:900;font-size:clamp(1.9rem,4.5vw,3rem);line-height:1.08;margin:.7rem 0 1rem}
+.chips{display:flex;gap:.45rem;flex-wrap:wrap}
+.chip{font-family:var(--mono);font-size:.66rem;background:var(--sand);padding:.28rem .6rem;border:1px solid var(--hair)}
+.chip.score{color:#fff;background:linear-gradient(90deg,#5FA871,#4E9DB5);border:none}
+main{padding:2.6rem 0 4rem}
+.deliv-body{max-width:74ch}
+.deliv-body h4{font-family:var(--serif);font-weight:600;font-size:1.32rem;margin:1.8rem 0 .6rem;color:var(--green)}
+.deliv-body h4:first-child{margin-top:0}
+.deliv-body h5{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tdeep);margin:1.4rem 0 .5rem}
+.deliv-body p{margin:.6rem 0;font-size:.97rem}
+.deliv-body ul,.deliv-body ol{padding-left:1.3rem;margin:.6rem 0;font-size:.95rem}
+.deliv-body li{margin:.3rem 0}
+.deliv-body blockquote{font-family:var(--serif);font-style:italic;font-size:1.25rem;line-height:1.5;color:var(--green);border-left:3px solid var(--terra);padding:.4rem 0 .4rem 1.3rem;margin:1.5rem 0}
+.deliv-body table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}
+.deliv-body th{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;color:var(--mute);border-bottom:2px solid var(--ink);padding:.5rem .6rem .4rem}
+.deliv-body td{border-bottom:1px solid var(--hair);padding:.55rem .6rem;vertical-align:top}
+.deliv-body tr:hover td{background:rgba(169,198,160,.14)}
+.deliv-body figure{margin:1.5rem 0;background:var(--paper);border:1px solid var(--hair);padding:1.1rem}
+.deliv-body figcaption{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-top:.7rem}
+.deliv-body svg{display:block;width:100%;height:auto}
+.deliv-body .cols2{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+@media(max-width:680px){.deliv-body .cols2{grid-template-columns:1fr}}
+.deliv-body .tag{font-family:var(--mono);font-size:.64rem;background:var(--sand);border:1px solid var(--hair);padding:.16rem .5rem;display:inline-block;margin:.1rem .15rem .1rem 0}
+footer{border-top:1px solid var(--hair);padding:2rem 0 3rem;color:var(--mute);font-size:.84rem}
+.pn{display:flex;justify-content:space-between;gap:1rem;margin-top:2.6rem;border-top:1px solid var(--hair);padding-top:1.4rem}
+.pn a{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tdeep);text-decoration:none}
+</style></head><body>
+<nav><div class="wrap">
+<span class="logo-nabta">nabta<span class="spark">✦</span></span>
+<a href="../aipark-challenge.html">← All deliverables</a>
+<span class="nx"><a href="../map.html">Map &amp; frames</a><a href="../pdfs/Nabta-06-Concept-and-Preliminary-Masterplan.pdf">PDF</a></span>
+</div></nav>
+<div class="cover"><div class="art"><?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="brand" x1="120" y1="0" x2="1080" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7CC98F"/><stop offset="100%" stop-color="#7BC6DD"/>
+    </linearGradient>
+    <path id="sparkle" d="M0,-20 C2.4,-6.5 6.5,-2.4 20,0 C6.5,2.4 2.4,6.5 0,20 C-2.4,6.5 -6.5,2.4 -20,0 C-6.5,-2.4 -2.4,-6.5 0,-20 Z"/>
+  </defs>
+  <rect width="1200" height="520" fill="#F5EFE2"/>
+  <rect x="20" y="20" width="1160" height="480" fill="none" stroke="#22301F" stroke-width="1.5"/>
+  <rect x="0" y="470" width="1200" height="50" fill="#E7DCC3" opacity="0.95"/>
+  <path d="M0,467 L1200,467" stroke="url(#brand)" stroke-width="3" stroke-linecap="round"/>
+  <g opacity="0.34" fill="#22301F">
+    <circle cx="47" cy="490" r="1.2"/><circle cx="72" cy="479" r="1.4"/><circle cx="96" cy="491" r="1.1"/>
+    <circle cx="1008" cy="482" r="1.2"/><circle cx="1034" cy="491" r="1.4"/><circle cx="1069" cy="478" r="1.1"/>
+  </g>
+  <g transform="translate(100 92) scale(0.88)"><use href="#sparkle" fill="#C05A32"/></g>
+  <text x="52" y="56" font-family="IBM Plex Mono, monospace" font-size="14" letter-spacing="2" fill="#22301F">06 MASTERPLAN</text>
+  <g transform="translate(600 268)">
+    <path d="M-302,-22 C-230,-64 -148,-82 -72,-72 C-2,-62 56,-24 112,10 C172,46 248,58 308,40" fill="none" stroke="#2F6B4A" stroke-width="20" stroke-linecap="round"/>
+    <path d="M-302,-22 C-230,-64 -148,-82 -72,-72 C-2,-62 56,-24 112,10 C172,46 248,58 308,40" fill="none" stroke="#CFC0A0" stroke-width="8" stroke-linecap="round"/>
+    <path d="M-72,-72 C-80,4 -32,46 20,68 C58,84 100,96 128,122" fill="none" stroke="#CFC0A0" stroke-width="46" stroke-linecap="round"/>
+    <path d="M-72,-72 C-80,4 -32,46 20,68 C58,84 100,96 128,122" fill="none" stroke="#22301F" stroke-width="2"/>
+    <path d="M128,122 L188,122 L218,80" fill="none" stroke="#C05A32" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M128,122 L188,122 L218,80" fill="none" stroke="#22301F" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M218,80 C258,16 282,-24 330,-62" fill="none" stroke="#4E8FA8" stroke-width="20" stroke-linecap="round"/>
+    <path d="M218,80 C258,16 282,-24 330,-62" fill="none" stroke="#22301F" stroke-width="2" stroke-linecap="round"/>
+    <g fill="#A9C6A0" fill-opacity="0.34" stroke="#22301F" stroke-width="1.1">
+      <circle cx="-214" cy="-60" r="26"/><circle cx="-160" cy="-92" r="18"/><circle cx="-118" cy="-28" r="22"/>
+      <circle cx="-8" cy="-118" r="22"/><circle cx="54" cy="-50" r="18"/><circle cx="168" cy="-8" r="24"/>
+      <circle cx="272" cy="-92" r="22"/><circle cx="306" cy="62" r="20"/>
+    </g>
+    <g fill="#22301F" fill-opacity="0.8">
+      <circle cx="-214" cy="-60" r="2.2"/><circle cx="-160" cy="-92" r="2.2"/><circle cx="-118" cy="-28" r="2.2"/>
+      <circle cx="-8" cy="-118" r="2.2"/><circle cx="54" cy="-50" r="2.2"/><circle cx="168" cy="-8" r="2.2"/>
+      <circle cx="272" cy="-92" r="2.2"/><circle cx="306" cy="62" r="2.2"/>
+    </g>
+  </g>
+</svg>
+</div></div>
+<header><div class="wrap">
+<p class="kicker">nabta wellness park · Draft Competition Entry · Dubai Municipality AI Park Design Challenge</p>
+<h1>D·06 — Concept & Preliminary Masterplan</h1>
+<div class="chips"><span class="chip">№06 Masterplan</span><span class="chip score">jury 6.0 → 7.0 /10</span></div>
+</div></header>
+<main><div class="wrap"><div class="deliv-body">
+<h4>Deliverable 6 — Concept &amp; Preliminary Masterplan</h4>
+<p><strong>«نبتة» NABTA — Wellness Park: The Living Shade Loop.</strong> The plan is organized by one move: a continuous 3.5&nbsp;m shaded path, folded into a figure-eight so that a 500&nbsp;m site perimeter yields a 1.0&nbsp;km signed route (two laps, one crossing). The figure-eight was chosen by the design team from 240 AI-generated loop layouts, scored in simulation for shade continuity, walking distance from each entrance and sightline safety — the top three were reviewed in community workshops before this human-led selection. The loop is the park's spine and its climate device — under a canopy of ~450 trees for most of its length, under AI-form-found pergola segments where trees cannot mature quickly. It threads ten garden rooms arranged as a gradient: <em>active</em> rooms (entry plaza, majlis, café, play, teen zone) cluster at the south-east main entrance; <em>calm</em> rooms (picnic groves, quiet garden) retreat to the north and north-west. A sensory wadi — a planted bioswale — cuts the diagonal from the entry side to a still pool in the quiet garden, crossed by terracotta bridges where the loop passes over it.</p>
+
+<figure>
+<svg viewBox="0 0 640 460" width="100%" role="img" aria-label="NABTA preliminary masterplan, Al Safa 2 Park" font-family="inherit">
+  <!-- site -->
+  <rect x="36" y="28" width="568" height="379" fill="#E7DCC3" fill-opacity="0.35" stroke="#22301F" stroke-width="2"/>
+  <text x="36" y="16" font-size="12" font-weight="bold" fill="#22301F">«نبتة» NABTA — The Living Shade Loop · preliminary masterplan</text>
+  <!-- garden rooms -->
+  <rect x="486" y="332" width="110" height="72" rx="6" fill="#E7DCC3" fill-opacity="0.95" stroke="#C05A32" stroke-width="1"/>
+  <rect x="468" y="252" width="98" height="58" rx="6" fill="#E7DCC3" fill-opacity="0.9" stroke="#22301F" stroke-width="0.8"/>
+  <rect x="476" y="258" width="44" height="26" rx="2" fill="#C05A32" fill-opacity="0.9"/>
+  <rect x="344" y="328" width="90" height="58" rx="6" fill="#E7DCC3" fill-opacity="0.9" stroke="#22301F" stroke-width="0.8"/>
+  <circle cx="389" cy="357" r="20" fill="none" stroke="#C05A32" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <circle cx="389" cy="341" r="2" fill="#22301F"/><circle cx="403" cy="347" r="2" fill="#22301F"/><circle cx="405" cy="363" r="2" fill="#22301F"/><circle cx="396" cy="373" r="2" fill="#22301F"/><circle cx="381" cy="373" r="2" fill="#22301F"/><circle cx="373" cy="362" r="2" fill="#22301F"/><circle cx="375" cy="347" r="2" fill="#22301F"/>
+  <ellipse cx="215" cy="275" rx="92" ry="62" fill="#A9C6A0" fill-opacity="0.75" stroke="#2F6B4A" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <rect x="475" y="115" width="105" height="82" rx="6" fill="#E7DCC3" fill-opacity="0.7" stroke="#22301F" stroke-width="0.8"/>
+  <rect x="486" y="126" width="54" height="58" rx="3" fill="#C05A32" fill-opacity="0.75"/>
+  <circle cx="513" cy="141" r="10" fill="none" stroke="#E7DCC3" stroke-width="1.5"/>
+  <rect x="551" y="172" width="9" height="6" fill="#22301F"/><rect x="562" y="158" width="9" height="6" fill="#22301F"/><rect x="546" y="188" width="9" height="6" fill="#22301F"/>
+  <ellipse cx="310" cy="332" rx="52" ry="40" fill="#A9C6A0" fill-opacity="0.5"/>
+  <rect x="294" y="318" width="7" height="7" fill="#22301F"/><rect x="314" y="338" width="7" height="7" fill="#22301F"/><rect x="330" y="316" width="7" height="7" fill="#22301F"/><rect x="299" y="346" width="7" height="7" fill="#22301F"/>
+  <rect x="195" y="44" width="255" height="62" rx="8" fill="#A9C6A0" fill-opacity="0.45"/>
+  <rect x="226" y="76" width="9" height="9" fill="#E7DCC3" stroke="#22301F" stroke-width="0.8"/><rect x="296" y="82" width="9" height="9" fill="#E7DCC3" stroke="#22301F" stroke-width="0.8"/><rect x="356" y="76" width="9" height="9" fill="#E7DCC3" stroke="#22301F" stroke-width="0.8"/><rect x="416" y="82" width="9" height="9" fill="#E7DCC3" stroke="#22301F" stroke-width="0.8"/>
+  <rect x="50" y="44" width="130" height="120" rx="8" fill="#A9C6A0" fill-opacity="0.55"/>
+  <circle cx="100" cy="105" r="18" fill="none" stroke="#CFC0A0" stroke-width="2"/>
+  <circle cx="100" cy="105" r="9" fill="none" stroke="#CFC0A0" stroke-width="2"/>
+  <!-- play dune -->
+  <circle cx="412" cy="205" r="30" fill="#E7DCC3" fill-opacity="0.95"/>
+  <circle cx="440" cy="188" r="22" fill="#E7DCC3" fill-opacity="0.95"/>
+  <circle cx="428" cy="228" r="16" fill="#E7DCC3" fill-opacity="0.95"/>
+  <circle cx="412" cy="205" r="20" fill="none" stroke="#C05A32" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="412" cy="205" r="10" fill="none" stroke="#C05A32" stroke-width="1" stroke-dasharray="3 3"/>
+  <!-- wadi bioswale -->
+  <path d="M478,407 C458,375 432,348 398,320 C360,288 300,246 262,208 C233,180 196,158 170,143" fill="none" stroke="#4E8FA8" stroke-width="16" stroke-opacity="0.45" stroke-linecap="round"/>
+  <path d="M478,407 C458,375 432,348 398,320 C360,288 300,246 262,208 C233,180 196,158 170,143" fill="none" stroke="#4E8FA8" stroke-width="7" stroke-opacity="0.95" stroke-linecap="round"/>
+  <ellipse cx="168" cy="146" rx="24" ry="15" fill="#4E8FA8" fill-opacity="0.95"/>
+  <text x="212" y="172" transform="rotate(37 212 172)" font-size="10" fill="#22301F">sensory wadi (bioswale)</text>
+  <!-- the shade loop, figure-eight -->
+  <path d="M322,225 C385,180 458,95 528,105 C594,115 592,215 570,278 C548,336 498,388 436,382 C388,377 353,292 322,225 C291,158 244,84 178,92 C114,100 76,176 80,246 C84,312 136,386 206,380 C260,375 295,290 322,225 Z" fill="none" stroke="#22301F" stroke-width="15" stroke-opacity="0.25"/>
+  <path d="M322,225 C385,180 458,95 528,105 C594,115 592,215 570,278 C548,336 498,388 436,382 C388,377 353,292 322,225 C291,158 244,84 178,92 C114,100 76,176 80,246 C84,312 136,386 206,380 C260,375 295,290 322,225 Z" fill="none" stroke="#CFC0A0" stroke-width="12"/>
+  <path d="M322,225 C385,180 458,95 528,105 C594,115 592,215 570,278 C548,336 498,388 436,382 C388,377 353,292 322,225 C291,158 244,84 178,92 C114,100 76,176 80,246 C84,312 136,386 206,380 C260,375 295,290 322,225 Z" fill="none" stroke="#22301F" stroke-width="0.8" stroke-opacity="0.5" stroke-dasharray="6 5"/>
+  <!-- bridges -->
+  <rect x="451" y="377" width="26" height="16" rx="2" fill="#C05A32" transform="rotate(-6 464 385)"/>
+  <rect x="349" y="289" width="16" height="28" rx="2" fill="#C05A32" transform="rotate(20 357 303)"/>
+  <rect x="296" y="235" width="14" height="26" rx="2" fill="#C05A32" transform="rotate(22 303 248)"/>
+  <rect x="192" y="154" width="9" height="16" rx="2" fill="#C05A32" transform="rotate(40 196 162)"/>
+  <!-- canopy trees along loop -->
+  <circle cx="341" cy="235" r="8.4" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="335" cy="191" r="9.0" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="375" cy="198" r="9.7" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="379" cy="166" r="9.1" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="410" cy="171" r="6.7" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="410" cy="132" r="8.3" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="452" cy="146" r="9.1" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="456" cy="109" r="9.9" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="484" cy="125" r="6.8" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="498" cy="89" r="10.3" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="516" cy="121" r="8.4" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="529" cy="123" r="9.6" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="558" cy="104" r="9.5" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="549" cy="132" r="9.7" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="587" cy="128" r="9.4" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="559" cy="158" r="7.4" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="569" cy="192" r="6.9" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="565" cy="229" r="7.5" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="593" cy="257" r="8.4" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="553" cy="262" r="10.1" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="551" cy="281" r="10.3" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="579" cy="311" r="8.2" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="542" cy="307" r="9.3" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="471" cy="358" r="7.2" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="461" cy="396" r="9.9" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="447" cy="365" r="6.6" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="431" cy="363" r="8.0" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="409" cy="391" r="10.4" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="417" cy="351" r="6.6" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="380" cy="372" r="6.6" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="398" cy="331" r="10.5" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="359" cy="338" r="9.4" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="382" cy="300" r="9.2" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="335" cy="302" r="10.0" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="359" cy="265" r="8.9" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="322" cy="263" r="9.4" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="343" cy="226" r="9.9" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="332" cy="208" r="8.4" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="292" cy="207" r="10.2" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="309" cy="173" r="7.3" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="272" cy="172" r="10.1" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="288" cy="134" r="9.7" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="248" cy="144" r="7.8" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="263" cy="107" r="9.3" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="225" cy="119" r="7.6" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="227" cy="83" r="7.8" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="200" cy="110" r="6.6" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="188" cy="78" r="7.7" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="164" cy="79" r="6.6" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="157" cy="110" r="9.0" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="129" cy="94" r="10.3" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="103" cy="182" r="6.5" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="64" cy="193" r="7.9" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="98" cy="220" r="8.1" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="58" cy="239" r="9.4" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="65" cy="260" r="8.0" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="105" cy="271" r="8.4" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="77" cy="298" r="9.1" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="113" cy="305" r="10.4" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="90" cy="338" r="9.9" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="129" cy="331" r="9.6" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="124" cy="361" r="9.7" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="156" cy="349" r="7.1" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="156" cy="391" r="10.3" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="180" cy="357" r="8.6" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="216" cy="396" r="10.1" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="221" cy="357" r="8.8" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="251" cy="380" r="6.6" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="239" cy="344" r="8.8" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="275" cy="352" r="8.2" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="291" cy="245" r="7.0" fill="#2F6B4A" fill-opacity="0.88"/>
+  <circle cx="338" cy="241" r="7.8" fill="#2F6B4A" fill-opacity="0.88"/>
+  <!-- picnic + quiet garden groves -->
+  <circle cx="215" cy="70" r="8" fill="#2F6B4A" fill-opacity="0.88"/><circle cx="245" cy="60" r="9" fill="#A9C6A0" fill-opacity="0.95"/><circle cx="280" cy="78" r="10" fill="#2F6B4A" fill-opacity="0.88"/><circle cx="310" cy="58" r="8" fill="#2F6B4A" fill-opacity="0.88"/><circle cx="345" cy="72" r="9" fill="#A9C6A0" fill-opacity="0.95"/><circle cx="375" cy="60" r="8" fill="#2F6B4A" fill-opacity="0.88"/><circle cx="405" cy="74" r="9" fill="#2F6B4A" fill-opacity="0.88"/><circle cx="435" cy="62" r="8" fill="#A9C6A0" fill-opacity="0.95"/><circle cx="260" cy="94" r="7" fill="#2F6B4A" fill-opacity="0.88"/><circle cx="390" cy="94" r="7" fill="#A9C6A0" fill-opacity="0.95"/>
+  <circle cx="65" cy="65" r="9" fill="#2F6B4A" fill-opacity="0.88"/><circle cx="95" cy="55" r="8" fill="#A9C6A0" fill-opacity="0.95"/><circle cx="125" cy="60" r="9" fill="#2F6B4A" fill-opacity="0.88"/><circle cx="60" cy="105" r="8" fill="#2F6B4A" fill-opacity="0.88"/><circle cx="88" cy="132" r="7" fill="#A9C6A0" fill-opacity="0.95"/><circle cx="70" cy="152" r="8" fill="#2F6B4A" fill-opacity="0.88"/>
+  <!-- pergola segments -->
+  <line x1="553" y1="330" x2="538" y2="319" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="547" y1="337" x2="532" y2="326" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="541" y1="345" x2="527" y2="332" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="535" y1="352" x2="521" y2="338" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="528" y1="358" x2="515" y2="344" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="521" y1="364" x2="509" y2="349" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="513" y1="370" x2="502" y2="354" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="505" y1="375" x2="495" y2="359" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="497" y1="379" x2="488" y2="362" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="489" y1="383" x2="481" y2="366" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="141" y1="117" x2="129" y2="102" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="134" y1="122" x2="122" y2="108" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="128" y1="128" x2="115" y2="115" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="123" y1="135" x2="108" y2="122" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="118" y1="141" x2="102" y2="130" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="113" y1="149" x2="97" y2="139" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="108" y1="157" x2="91" y2="148" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="104" y1="165" x2="87" y2="157" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="101" y1="173" x2="83" y2="167" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="98" y1="182" x2="79" y2="176" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="261" y1="328" x2="276" y2="339" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="266" y1="320" x2="282" y2="331" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="271" y1="312" x2="287" y2="322" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="276" y1="303" x2="292" y2="312" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="281" y1="294" x2="298" y2="303" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="285" y1="285" x2="302" y2="293" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="290" y1="275" x2="307" y2="283" stroke="#C05A32" stroke-width="1.8"/>
+  <line x1="294" y1="266" x2="312" y2="274" stroke="#C05A32" stroke-width="1.8"/>
+  <!-- entrances, bikes, service -->
+  <polygon points="556,412 576,412 566,392" fill="#C05A32"/>
+  <text x="492" y="400" font-size="10" fill="#22301F">MAIN ENTRY</text>
+  <line x1="588" y1="394" x2="588" y2="404" stroke="#22301F" stroke-width="1.5"/><line x1="592" y1="394" x2="592" y2="404" stroke="#22301F" stroke-width="1.5"/><line x1="596" y1="394" x2="596" y2="404" stroke="#22301F" stroke-width="1.5"/>
+  <polygon points="142,20 158,20 150,38" fill="#C05A32"/>
+  <text x="163" y="30" font-size="10" fill="#22301F">NW entry</text>
+  <line x1="130" y1="32" x2="130" y2="42" stroke="#22301F" stroke-width="1.5"/><line x1="134" y1="32" x2="134" y2="42" stroke="#22301F" stroke-width="1.5"/><line x1="138" y1="32" x2="138" y2="42" stroke="#22301F" stroke-width="1.5"/>
+  <polygon points="462,20 478,20 470,38" fill="#C05A32"/>
+  <text x="483" y="30" font-size="10" fill="#22301F">NE entry</text>
+  <line x1="450" y1="32" x2="450" y2="42" stroke="#22301F" stroke-width="1.5"/><line x1="454" y1="32" x2="454" y2="42" stroke="#22301F" stroke-width="1.5"/><line x1="458" y1="32" x2="458" y2="42" stroke="#22301F" stroke-width="1.5"/>
+  <line x1="36" y1="300" x2="78" y2="300" stroke="#C05A32" stroke-width="3" stroke-dasharray="6 4"/>
+  <text x="42" y="292" font-size="10" fill="#22301F">service</text>
+  <!-- room labels -->
+  <text x="215" y="280" font-size="11" fill="#22301F" text-anchor="middle">EVENT LAWN ~2,000 m²</text>
+  <text x="425" y="252" font-size="9" fill="#22301F" text-anchor="middle">PLAY DUNE</text>
+  <text x="115" y="158" font-size="9" fill="#22301F" text-anchor="middle">QUIET GARDEN</text>
+  <text x="322" y="102" font-size="9" fill="#22301F" text-anchor="middle">PICNIC GROVES</text>
+  <!-- number chips -->
+  <circle cx="516" cy="362" r="9" fill="#C05A32"/><text x="516" y="366" font-size="11" fill="#E7DCC3" text-anchor="middle">1</text>
+  <circle cx="358" cy="340" r="9" fill="#C05A32"/><text x="358" y="344" font-size="11" fill="#E7DCC3" text-anchor="middle">2</text>
+  <circle cx="215" cy="252" r="9" fill="#C05A32"/><text x="215" y="256" font-size="11" fill="#E7DCC3" text-anchor="middle">3</text>
+  <circle cx="428" cy="205" r="9" fill="#C05A32"/><text x="428" y="209" font-size="11" fill="#E7DCC3" text-anchor="middle">4</text>
+  <circle cx="560" cy="141" r="9" fill="#C05A32"/><text x="560" y="145" font-size="11" fill="#E7DCC3" text-anchor="middle">5</text>
+  <circle cx="318" cy="332" r="9" fill="#C05A32"/><text x="318" y="336" font-size="11" fill="#E7DCC3" text-anchor="middle">6</text>
+  <circle cx="325" cy="74" r="9" fill="#C05A32"/><text x="325" y="78" font-size="11" fill="#E7DCC3" text-anchor="middle">7</text>
+  <circle cx="248" cy="238" r="9" fill="#C05A32"/><text x="248" y="242" font-size="11" fill="#E7DCC3" text-anchor="middle">8</text>
+  <circle cx="88" cy="82" r="9" fill="#C05A32"/><text x="88" y="86" font-size="11" fill="#E7DCC3" text-anchor="middle">9</text>
+  <circle cx="500" cy="296" r="9" fill="#C05A32"/><text x="500" y="300" font-size="11" fill="#E7DCC3" text-anchor="middle">10</text>
+  <!-- north arrow -->
+  <circle cx="578" cy="58" r="14" fill="#E7DCC3" stroke="#22301F" stroke-width="1.5"/>
+  <polygon points="578,47 572,65 578,60 584,65" fill="#22301F"/>
+  <text x="578" y="86" font-size="11" fill="#22301F" text-anchor="middle">N</text>
+  <!-- legend + scale -->
+  <line x1="46" y1="426" x2="76" y2="426" stroke="#CFC0A0" stroke-width="8"/><text x="82" y="430" font-size="10" fill="#22301F">shade loop 3.5 m</text>
+  <line x1="176" y1="426" x2="200" y2="426" stroke="#4E8FA8" stroke-width="6"/><text x="206" y="430" font-size="10" fill="#22301F">wadi</text>
+  <circle cx="248" cy="426" r="6" fill="#2F6B4A"/><text x="258" y="430" font-size="10" fill="#22301F">canopy tree</text>
+  <line x1="326" y1="420" x2="326" y2="432" stroke="#C05A32" stroke-width="1.8"/><line x1="331" y1="420" x2="331" y2="432" stroke="#C05A32" stroke-width="1.8"/><line x1="336" y1="420" x2="336" y2="432" stroke="#C05A32" stroke-width="1.8"/><text x="342" y="430" font-size="10" fill="#22301F">pergola</text>
+  <polygon points="398,420 410,420 404,432" fill="#C05A32"/><text x="415" y="430" font-size="10" fill="#22301F">entrance</text>
+  <line x1="470" y1="420" x2="470" y2="432" stroke="#22301F" stroke-width="1.5"/><line x1="474" y1="420" x2="474" y2="432" stroke="#22301F" stroke-width="1.5"/><line x1="478" y1="420" x2="478" y2="432" stroke="#22301F" stroke-width="1.5"/><text x="484" y="430" font-size="10" fill="#22301F">bicycle parking</text>
+  <rect x="46" y="446" width="95" height="5" fill="#22301F"/>
+  <rect x="141" y="446" width="95" height="5" fill="#22301F" fill-opacity="0.35"/>
+  <text x="46" y="443" font-size="10" fill="#22301F">0</text>
+  <text x="136" y="443" font-size="10" fill="#22301F" text-anchor="middle">25</text>
+  <text x="236" y="443" font-size="10" fill="#22301F" text-anchor="middle">50 m</text>
+  <text x="260" y="452" font-size="10" fill="#22301F">site 150 × 100 m ≈ 15,000 m² · main road along south edge</text>
+</svg>
+<figcaption>Preliminary masterplan, 1:750. One figure-eight lap ≈ 500 m; the signed NABTA route is two laps = 1.0 km, fully shaded by canopy or pergola. Rooms 1–10 keyed in the schedule below.</figcaption>
+</figure>
+
+<p>The crossing at the centre of the figure-eight is the plan's social hinge: every lap passes it, so the fitness grove, event lawn edge and wadi bridges share one naturally surveilled node. Room areas below are net; the loop itself is counted as circulation, and residual planting absorbs the acoustic berm along the road edge. All figures are preliminary and will be refined against the AED 35M cost plan in Deliverable 8.</p>
+
+<h5>Area schedule</h5>
+<table>
+<thead><tr><th>#</th><th>Garden room</th><th>Area (m²)</th><th>% of site</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Entry plaza &amp; gateway (SE)</td><td>900</td><td>6.0</td></tr>
+<tr><td>2</td><td>Community majlis plaza</td><td>700</td><td>4.7</td></tr>
+<tr><td>3</td><td>Event lawn (flexible)</td><td>2,000</td><td>13.3</td></tr>
+<tr><td>4</td><td>Inclusive play dune</td><td>950</td><td>6.3</td></tr>
+<tr><td>5</td><td>Teen active zone</td><td>850</td><td>5.7</td></tr>
+<tr><td>6</td><td>Fitness grove</td><td>750</td><td>5.0</td></tr>
+<tr><td>7</td><td>Picnic groves (N edge)</td><td>1,300</td><td>8.7</td></tr>
+<tr><td>8</td><td>Sensory wadi garden</td><td>1,100</td><td>7.3</td></tr>
+<tr><td>9</td><td>Quiet contemplation garden (NW)</td><td>900</td><td>6.0</td></tr>
+<tr><td>10</td><td>Café terrace + restrooms</td><td>550</td><td>3.7</td></tr>
+<tr><td>—</td><td>Shade loop (3.5 m × 1.0 km)</td><td>3,500</td><td>23.3</td></tr>
+<tr><td>—</td><td>Buffer planting, berms &amp; service</td><td>1,500</td><td>10.0</td></tr>
+<tr><td></td><td><strong>Total</strong></td><td><strong>15,000</strong></td><td><strong>100.0</strong></td></tr>
+</tbody>
+</table>
+
+<h5>Zoning notes</h5>
+<ul>
+<li><strong>Active-to-calm gradient.</strong> Noise-generating rooms (1, 2, 4, 5, 10) sit within 60 m of the SE entry; rooms 7 and 9 occupy the northern band, buffered by the event lawn and wadi in between. <span class="tag">gradient SE→NW</span></li>
+<li><strong>30 m road buffer.</strong> No seating or play surface within 30 m of the southern main road except the hardscaped entry plaza; a planted berm and the densest tree massing line the S and E edges to cut traffic noise by an estimated 6–8 dB(A).</li>
+<li><strong>Prayer-time adjacency.</strong> The majlis plaza (2) and café terrace (10) flank the main entry on the direct walking line to the neighbourhood mosque, supporting pre- and post-maghrib gathering; the quiet garden (9) offers a low-stimulus alternative.</li>
+<li><strong>School-run adjacency.</strong> Play dune (4) and teen zone (5) cluster at the NE secondary entrance on the school walking route, absorbing the 14:00–16:00 peak without crossing calm rooms; bicycle parking at all three entrances.</li>
+<li><strong>Canopy budget.</strong> ~450 trees (60% native ghaf, sidr and date palm; 40% proven adaptive shade species) are placed by a shade-simulation model and checked by the landscape team: target 80% of the 1.0&nbsp;km loop shaded at 15:00 in September from year 3, with pergolas bridging the remaining 20% until year-5 canopy closure. Wadi planting is irrigated by recycled water only. <span class="tag">AI-assisted, human-verified</span></li>
+<li><strong>Service without conflict.</strong> Maintenance access enters from the W edge, reaching the lawn and wadi directly and never crossing the loop at grade during operating hours.</li>
+</ul>
+</div>
+<div class="pn"><a href="d-05.html">← D·05 Artificial Intelligence Methodolog</a><a href="d-07.html">D·07 Landscape, Public Realm, Sustainab →</a></div>
+</div></main>
+<footer><div class="wrap"><span class="logo-nabta">nabta<span class="spark">✦</span></span> · The Living Shade Loop · Al Safa 2 Park, Jumeirah, Dubai · illustrative mock draft, July 2026</div></footer>
+</body></html>

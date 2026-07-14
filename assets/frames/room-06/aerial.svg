@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <radialGradient id="a-sun" cx="0.72" cy="0.22" r="0.9">
+      <stop offset="0" stop-color="#F5EFE2"/>
+      <stop offset="1" stop-color="#E7DCC3"/>
+    </radialGradient>
+    <pattern id="a-stipple" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="7" r="1.4" fill="#22301F" opacity="0.10"/>
+      <circle cx="17" cy="19" r="1.2" fill="#22301F" opacity="0.08"/>
+      <circle cx="21" cy="4" r="1" fill="#22301F" opacity="0.07"/>
+    </pattern>
+    <pattern id="a-grass" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="8" r="1.5" fill="#2F6B4A" opacity="0.18"/>
+      <circle cx="20" cy="22" r="1.3" fill="#2F6B4A" opacity="0.14"/>
+      <circle cx="25" cy="6" r="1.1" fill="#7CC98F" opacity="0.16"/>
+    </pattern>
+    <g id="a-sparkle">
+      <path d="M0,-11 L2.6,-2.6 L11,0 L2.6,2.6 L0,11 L-2.6,2.6 L-11,0 L-2.6,-2.6 Z" fill="#F5EFE2"/>
+    </g>
+    <g id="a-canopy">
+      <circle cx="0" cy="0" r="34" fill="#2F6B4A" opacity="0.85"/>
+      <circle cx="-16" cy="-10" r="22" fill="#A9C6A0" opacity="0.7"/>
+      <circle cx="15" cy="9" r="20" fill="#A9C6A0" opacity="0.55"/>
+      <circle cx="6" cy="-14" r="14" fill="#7CC98F" opacity="0.35"/>
+      <circle cx="0" cy="0" r="3.5" fill="#22301F" opacity="0.8"/>
+    </g>
+    <g id="a-station">
+      <rect x="-16" y="-11" width="32" height="22" rx="3" fill="#E7DCC3" opacity="0.9"/>
+      <rect x="-12" y="-2" width="24" height="4" rx="2" fill="#22301F"/>
+      <circle cx="-12" cy="0" r="3" fill="#C05A32"/>
+      <circle cx="12" cy="0" r="3" fill="#C05A32"/>
+    </g>
+  </defs>
+
+  <!-- desert ground -->
+  <rect width="1280" height="720" fill="url(#a-sun)"/>
+  <rect width="1280" height="720" fill="url(#a-stipple)"/>
+  <path d="M0,0 L1280,0 L1280,190 C960,240 640,150 320,210 C180,235 60,215 0,230 Z" fill="#E7DCC3" opacity="0.6"/>
+
+  <!-- wadi bioswale ribbon along the north edge -->
+  <path d="M-20,150 C240,110 520,190 800,140 C1020,100 1180,150 1300,120 L1300,175 C1160,205 1000,155 810,195 C540,250 250,165 -20,208 Z" fill="#4E8FA8" opacity="0.5"/>
+  <path d="M-20,168 C240,128 520,205 800,158 C1020,118 1180,166 1300,138" fill="none" stroke="#7BC6DD" stroke-width="6" opacity="0.5"/>
+  <path d="M-20,150 C240,110 520,190 800,140" fill="none" stroke="#A9C6A0" stroke-width="10" opacity="0.5"/>
+
+  <!-- stretching lawn pockets -->
+  <ellipse cx="360" cy="430" rx="180" ry="105" fill="#A9C6A0" opacity="0.85"/>
+  <ellipse cx="360" cy="430" rx="180" ry="105" fill="url(#a-grass)"/>
+  <ellipse cx="920" cy="330" rx="150" ry="90" fill="#A9C6A0" opacity="0.8"/>
+  <ellipse cx="920" cy="330" rx="150" ry="90" fill="url(#a-grass)"/>
+  <ellipse cx="700" cy="560" rx="130" ry="75" fill="#A9C6A0" opacity="0.75"/>
+  <ellipse cx="700" cy="560" rx="130" ry="75" fill="url(#a-grass)"/>
+
+  <!-- figure-eight loop segment sweeping through the grove -->
+  <path d="M-40,620 C220,520 340,300 640,360 C940,420 1020,240 1320,180" fill="none" stroke="#CFC0A0" stroke-width="46" stroke-linecap="round"/>
+  <path d="M-40,620 C220,520 340,300 640,360 C940,420 1020,240 1320,180" fill="none" stroke="#F5EFE2" stroke-width="3" stroke-dasharray="14 20" opacity="0.7"/>
+  <!-- returning arm of the eight -->
+  <path d="M-40,300 C240,340 480,560 760,600 C980,632 1140,560 1320,470" fill="none" stroke="#CFC0A0" stroke-width="40" stroke-linecap="round" opacity="0.9"/>
+  <path d="M-40,300 C240,340 480,560 760,600 C980,632 1140,560 1320,470" fill="none" stroke="#F5EFE2" stroke-width="3" stroke-dasharray="14 20" opacity="0.6"/>
+
+  <!-- terracotta pergola over crossing -->
+  <g transform="translate(560,470) rotate(-18)">
+    <rect x="-95" y="-58" width="190" height="116" fill="#22301F" opacity="0.12"/>
+    <g fill="#C05A32">
+      <rect x="-90" y="-52" width="180" height="9" rx="3"/>
+      <rect x="-90" y="-32" width="180" height="9" rx="3"/>
+      <rect x="-90" y="-12" width="180" height="9" rx="3"/>
+      <rect x="-90" y="8" width="180" height="9" rx="3"/>
+      <rect x="-90" y="28" width="180" height="9" rx="3"/>
+      <rect x="-90" y="46" width="180" height="9" rx="3"/>
+    </g>
+  </g>
+
+  <!-- calisthenics stations woven between trunks -->
+  <use href="#a-station" transform="translate(430,368) rotate(-12)"/>
+  <use href="#a-station" transform="translate(690,395) rotate(8)"/>
+  <use href="#a-station" transform="translate(850,300) rotate(-6)"/>
+  <use href="#a-station" transform="translate(300,510) rotate(14)"/>
+
+  <!-- shaded water fountain -->
+  <circle cx="600" cy="290" r="20" fill="#E7DCC3"/>
+  <circle cx="600" cy="290" r="12" fill="#4E8FA8"/>
+  <circle cx="600" cy="290" r="5" fill="#7BC6DD"/>
+
+  <!-- ghaf canopies with long warm shadows -->
+  <g>
+    <ellipse cx="480" cy="300" rx="46" ry="16" fill="#22301F" opacity="0.12"/>
+    <use href="#a-canopy" transform="translate(500,270)"/>
+    <ellipse cx="730" cy="490" rx="44" ry="15" fill="#22301F" opacity="0.12"/>
+    <use href="#a-canopy" transform="translate(750,460) scale(0.9)"/>
+    <ellipse cx="240" cy="400" rx="40" ry="14" fill="#22301F" opacity="0.12"/>
+    <use href="#a-canopy" transform="translate(260,375) scale(0.8)"/>
+    <ellipse cx="960" cy="430" rx="40" ry="14" fill="#22301F" opacity="0.12"/>
+    <use href="#a-canopy" transform="translate(980,405) scale(0.85)"/>
+    <ellipse cx="1080" cy="270" rx="36" ry="13" fill="#22301F" opacity="0.12"/>
+    <use href="#a-canopy" transform="translate(1100,245) scale(0.75)"/>
+    <ellipse cx="130" cy="560" rx="36" ry="13" fill="#22301F" opacity="0.12"/>
+    <use href="#a-canopy" transform="translate(150,535) scale(0.7)"/>
+    <use href="#a-canopy" transform="translate(560,180) scale(0.65)"/>
+    <use href="#a-canopy" transform="translate(880,560) scale(0.7)"/>
+  </g>
+
+  <!-- tiny people: joggers on loop, exercisers at stations -->
+  <g fill="#22301F">
+    <ellipse cx="200" cy="562" rx="4.5" ry="9" transform="rotate(-24 200 562)"/>
+    <ellipse cx="560" cy="352" rx="4.5" ry="9" transform="rotate(-10 560 352)"/>
+    <ellipse cx="1010" cy="266" rx="4.5" ry="9" transform="rotate(-16 1010 266)"/>
+    <ellipse cx="438" cy="360" rx="4" ry="8"/>
+    <ellipse cx="698" cy="388" rx="4" ry="8"/>
+    <ellipse cx="360" cy="440" rx="8" ry="4"/>
+    <ellipse cx="915" cy="335" rx="8" ry="4"/>
+  </g>
+
+  <!-- nabta sparkles -->
+  <use href="#a-sparkle" transform="translate(600,290) scale(0.7)" opacity="0.9"/>
+  <use href="#a-sparkle" transform="translate(1150,120) scale(0.9)" opacity="0.8"/>
+  <use href="#a-sparkle" transform="translate(120,110) scale(0.6)" opacity="0.7"/>
+  <use href="#a-sparkle" transform="translate(1220,640) scale(0.55)" opacity="0.6"/>
+</svg>

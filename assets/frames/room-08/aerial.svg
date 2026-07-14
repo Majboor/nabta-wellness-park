@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5EFE2"/>
+      <stop offset="1" stop-color="#E7DCC3"/>
+    </linearGradient>
+    <linearGradient id="waterG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4E8FA8"/>
+      <stop offset="1" stop-color="#4E8FA8" stop-opacity="0.75"/>
+    </linearGradient>
+    <pattern id="stip" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="5" r="1.2" fill="#22301F" opacity="0.10"/>
+      <circle cx="12" cy="12" r="1" fill="#22301F" opacity="0.08"/>
+    </pattern>
+    <pattern id="stipW" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="4" r="1" fill="#F5EFE2" opacity="0.25"/>
+      <circle cx="10" cy="10" r="0.9" fill="#7BC6DD" opacity="0.30"/>
+    </pattern>
+    <g id="spark">
+      <path d="M0,-10 C1.5,-3 3,-1.5 10,0 C3,1.5 1.5,3 0,10 C-1.5,3 -3,1.5 -10,0 C-3,-1.5 -1.5,-3 0,-10 Z"/>
+    </g>
+    <g id="canopy">
+      <circle cx="0" cy="0" r="22" fill="#2F6B4A"/>
+      <circle cx="14" cy="-8" r="15" fill="#A9C6A0" opacity="0.85"/>
+      <circle cx="-13" cy="9" r="13" fill="#2F6B4A" opacity="0.9"/>
+    </g>
+  </defs>
+
+  <!-- desert ground -->
+  <rect width="1280" height="720" fill="url(#ground)"/>
+  <rect width="1280" height="720" fill="url(#stip)"/>
+  <ellipse cx="220" cy="140" rx="300" ry="160" fill="#E7DCC3" opacity="0.7"/>
+  <ellipse cx="1080" cy="600" rx="340" ry="180" fill="#E7DCC3" opacity="0.6"/>
+
+  <!-- garden room clearings -->
+  <g fill="#F5EFE2" opacity="0.65">
+    <circle cx="250" cy="250" r="58"/><circle cx="430" cy="140" r="48"/>
+    <circle cx="700" cy="120" r="52"/><circle cx="980" cy="180" r="56"/>
+    <circle cx="1100" cy="380" r="60"/><circle cx="930" cy="560" r="55"/>
+    <circle cx="640" cy="600" r="50"/><circle cx="360" cy="560" r="58"/>
+    <circle cx="180" cy="430" r="52"/><circle cx="620" cy="360" r="66"/>
+  </g>
+
+  <!-- figure-eight shaded loop -->
+  <path d="M240,420 C120,300 220,150 420,170 C600,190 620,330 640,380 C660,430 700,560 900,570 C1120,580 1200,420 1080,300 C960,180 760,230 660,330 C560,430 440,560 300,540 C180,520 170,470 240,420 Z"
+        fill="none" stroke="#CFC0A0" stroke-width="30" stroke-linecap="round" opacity="0.95"/>
+  <path d="M240,420 C120,300 220,150 420,170 C600,190 620,330 640,380 C660,430 700,560 900,570 C1120,580 1200,420 1080,300 C960,180 760,230 660,330 C560,430 440,560 300,540 C180,520 170,470 240,420 Z"
+        fill="none" stroke="#22301F" stroke-width="30" stroke-linecap="round" opacity="0.06" stroke-dasharray="2 26"/>
+
+  <!-- wadi bioswale snaking across the site -->
+  <path d="M-40,600 C160,560 240,470 330,430 C450,380 420,300 520,270 C640,235 700,330 780,350 C900,380 960,300 1060,250 C1150,205 1230,190 1320,160"
+        fill="none" stroke="#4E8FA8" stroke-width="46" stroke-linecap="round" opacity="0.35"/>
+  <path d="M-40,600 C160,560 240,470 330,430 C450,380 420,300 520,270 C640,235 700,330 780,350 C900,380 960,300 1060,250 C1150,205 1230,190 1320,160"
+        fill="none" stroke="url(#waterG)" stroke-width="30" stroke-linecap="round"/>
+  <path d="M-40,600 C160,560 240,470 330,430 C450,380 420,300 520,270 C640,235 700,330 780,350 C900,380 960,300 1060,250 C1150,205 1230,190 1320,160"
+        fill="none" stroke="#7BC6DD" stroke-width="8" stroke-linecap="round" opacity="0.55" stroke-dasharray="60 90"/>
+  <path d="M-40,600 C160,560 240,470 330,430 C450,380 420,300 520,270 C640,235 700,330 780,350 C900,380 960,300 1060,250 C1150,205 1230,190 1320,160"
+        fill="none" stroke="#F5EFE2" stroke-width="3" stroke-linecap="round" opacity="0.5" stroke-dasharray="18 70"/>
+
+  <!-- reed fringes along the wadi -->
+  <g fill="#A9C6A0" opacity="0.8">
+    <ellipse cx="300" cy="455" rx="34" ry="12"/><ellipse cx="480" cy="295" rx="38" ry="12"/>
+    <ellipse cx="720" cy="345" rx="36" ry="11"/><ellipse cx="1000" cy="280" rx="34" ry="11"/>
+    <ellipse cx="150" cy="580" rx="30" ry="10"/><ellipse cx="1150" cy="215" rx="30" ry="10"/>
+  </g>
+  <g fill="#2F6B4A" opacity="0.7">
+    <ellipse cx="360" cy="415" rx="26" ry="9"/><ellipse cx="560" cy="270" rx="28" ry="9"/>
+    <ellipse cx="840" cy="365" rx="26" ry="9"/><ellipse cx="1080" cy="245" rx="24" ry="8"/>
+  </g>
+
+  <!-- terracotta bridges arcing over the wadi -->
+  <g fill="#C05A32">
+    <rect x="315" y="408" width="16" height="52" rx="6" transform="rotate(24 323 434)"/>
+    <rect x="672" y="318" width="16" height="54" rx="6" transform="rotate(-8 680 345)"/>
+    <rect x="1042" y="228" width="16" height="52" rx="6" transform="rotate(28 1050 254)"/>
+  </g>
+  <g fill="#22301F" opacity="0.25">
+    <rect x="319" y="412" width="8" height="44" rx="4" transform="rotate(24 323 434)"/>
+    <rect x="676" y="322" width="8" height="46" rx="4" transform="rotate(-8 680 345)"/>
+    <rect x="1046" y="232" width="8" height="44" rx="4" transform="rotate(28 1050 254)"/>
+  </g>
+
+  <!-- pergola slat runs along the loop -->
+  <g stroke="#C05A32" stroke-width="4" opacity="0.75" stroke-linecap="round">
+    <path d="M410,150 l0,22 M430,150 l0,22 M450,152 l0,22 M470,156 l0,22 M490,160 l0,22"/>
+    <path d="M880,552 l0,22 M900,554 l0,22 M920,554 l0,22 M940,552 l0,22 M960,548 l0,22"/>
+    <path d="M160,400 l22,8 M156,420 l22,8 M154,440 l22,8"/>
+  </g>
+
+  <!-- ghaf canopies -->
+  <g transform="translate(380,200)"><use href="#canopy"/></g>
+  <g transform="translate(540,180) scale(0.8)"><use href="#canopy"/></g>
+  <g transform="translate(250,330) scale(0.9)"><use href="#canopy"/></g>
+  <g transform="translate(760,270) scale(1.05)"><use href="#canopy"/></g>
+  <g transform="translate(900,470) scale(0.95)"><use href="#canopy"/></g>
+  <g transform="translate(1080,330) scale(0.85)"><use href="#canopy"/></g>
+  <g transform="translate(500,470) scale(0.9)"><use href="#canopy"/></g>
+  <g transform="translate(660,540) scale(0.75)"><use href="#canopy"/></g>
+  <g transform="translate(180,520) scale(0.7)"><use href="#canopy"/></g>
+  <g transform="translate(1150,150) scale(0.8)"><use href="#canopy"/></g>
+  <g transform="translate(830,150) scale(0.7)"><use href="#canopy"/></g>
+
+  <!-- boulders -->
+  <g fill="#E7DCC3" stroke="#22301F" stroke-opacity="0.18" stroke-width="2">
+    <ellipse cx="420" cy="330" rx="14" ry="9"/>
+    <ellipse cx="620" cy="300" rx="12" ry="8"/><ellipse cx="930" cy="330" rx="13" ry="8"/>
+  </g>
+
+  <!-- tiny figures on the central bridge -->
+  <g fill="#22301F">
+    <circle cx="676" cy="340" r="4"/><circle cx="688" cy="346" r="3.4"/>
+  </g>
+
+  <!-- water stipple + dragonflies -->
+  <path d="M-40,600 C160,560 240,470 330,430 C450,380 420,300 520,270 C640,235 700,330 780,350 C900,380 960,300 1060,250 C1150,205 1230,190 1320,160"
+        fill="none" stroke="url(#stipW)" stroke-width="26" stroke-linecap="round"/>
+  <g stroke="#7BC6DD" stroke-width="3" stroke-linecap="round" opacity="0.9">
+    <path d="M470,250 h14 M477,243 v14"/>
+    <path d="M860,320 h12 M866,314 v12"/>
+  </g>
+
+  <!-- nabta sparkles -->
+  <g fill="#7CC98F">
+    <g transform="translate(560,220) scale(0.9)"><use href="#spark"/></g>
+    <g transform="translate(1010,210) scale(0.7)"><use href="#spark"/></g>
+  </g>
+  <g fill="#7BC6DD">
+    <g transform="translate(240,470) scale(0.7)"><use href="#spark"/></g>
+    <g transform="translate(760,390) scale(0.55)"><use href="#spark"/></g>
+  </g>
+</svg>

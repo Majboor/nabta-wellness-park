@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <path id="sparkle" d="M0 -14 C2.5 -4 4 -2.5 14 0 C4 2.5 2.5 4 0 14 C-2.5 4 -4 2.5 -14 0 C-4 -2.5 -2.5 -4 0 -14 Z"/>
+    <pattern id="stipple" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="6" r="1.6" fill="#F5EFE2" fill-opacity="0.05"/>
+      <circle cx="17" cy="14" r="1.3" fill="#F5EFE2" fill-opacity="0.04"/>
+      <circle cx="9" cy="21" r="1.5" fill="#F5EFE2" fill-opacity="0.03"/>
+    </pattern>
+    <pattern id="leafdots-n" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="8" r="2.4" fill="#A9C6A0" fill-opacity="0.18"/>
+      <circle cx="20" cy="18" r="2.0" fill="#22301F" fill-opacity="0.35"/>
+      <circle cx="12" cy="25" r="1.8" fill="#7CC98F" fill-opacity="0.10"/>
+    </pattern>
+  </defs>
+
+  <!-- night sky -->
+  <rect width="1280" height="720" fill="#22301F"/>
+  <rect y="300" width="1280" height="140" fill="#2F6B4A" fill-opacity="0.25"/>
+
+  <!-- starfield -->
+  <g fill="#F5EFE2">
+    <circle cx="90" cy="80" r="2"/>
+    <circle cx="210" cy="150" r="1.4"/>
+    <circle cx="330" cy="60" r="1.8"/>
+    <circle cx="470" cy="120" r="1.3"/>
+    <circle cx="600" cy="50" r="2"/>
+    <circle cx="720" cy="140" r="1.4"/>
+    <circle cx="840" cy="70" r="1.7"/>
+    <circle cx="930" cy="180" r="1.2"/>
+    <circle cx="1160" cy="90" r="1.8"/>
+    <circle cx="1240" cy="200" r="1.3"/>
+    <circle cx="150" cy="250" r="1.2" fill-opacity="0.8"/>
+    <circle cx="540" cy="210" r="1.2" fill-opacity="0.8"/>
+    <circle cx="760" cy="260" r="1.1" fill-opacity="0.7"/>
+    <circle cx="1120" cy="300" r="1.2" fill-opacity="0.7"/>
+  </g>
+  <use href="#sparkle" transform="translate(260 110) scale(0.9)" fill="#7BC6DD" fill-opacity="0.9"/>
+  <use href="#sparkle" transform="translate(890 120) scale(0.7)" fill="#F5EFE2"/>
+
+  <!-- moon -->
+  <circle cx="1010" cy="120" r="46" fill="#F5EFE2"/>
+  <circle cx="1010" cy="120" r="66" fill="#F5EFE2" fill-opacity="0.12"/>
+  <circle cx="994" cy="110" r="9" fill="#E7DCC3" fill-opacity="0.8"/>
+  <circle cx="1026" cy="136" r="6" fill="#E7DCC3" fill-opacity="0.7"/>
+
+  <!-- enclosing earth berm behind the basin -->
+  <path d="M-20 470 C160 380 420 356 640 362 C880 368 1120 396 1300 470 L1300 720 L-20 720 Z" fill="#22301F"/>
+  <path d="M-20 470 C200 396 480 372 720 380 C960 388 1160 420 1300 470 L1300 540 L-20 540 Z" fill="#2F6B4A" fill-opacity="0.45"/>
+  <path d="M-20 486 C240 420 560 400 840 410 C1020 418 1180 444 1300 486 L1300 540 L-20 540 Z" fill="#2F6B4A" fill-opacity="0.3"/>
+  <path d="M-20 470 C160 380 420 356 640 362 C880 368 1120 396 1300 470 L1300 540 L-20 540 Z" fill="url(#leafdots-n)"/>
+
+  <!-- ground -->
+  <rect y="530" width="1280" height="190" fill="#22301F"/>
+  <rect y="530" width="1280" height="190" fill="#E7DCC3" fill-opacity="0.10"/>
+  <rect y="530" width="1280" height="190" fill="url(#stipple)"/>
+  <!-- path beside the basin -->
+  <path d="M-20 720 L1300 720 L1300 648 C1000 616 300 616 -20 648 Z" fill="#CFC0A0" fill-opacity="0.22"/>
+
+  <!-- the single sculptural ghaf, near-silhouette -->
+  <g>
+    <path d="M420 620 C416 540 408 470 386 400 C372 356 348 320 310 292 M420 620 C428 540 442 470 470 408 C488 368 516 336 556 312 M400 480 C372 452 340 436 300 430 M448 452 C480 428 516 416 558 414" stroke="#22301F" stroke-width="13" fill="none" stroke-linecap="round"/>
+    <ellipse cx="400" cy="240" rx="230" ry="98" fill="#2F6B4A" fill-opacity="0.75"/>
+    <ellipse cx="250" cy="286" rx="110" ry="52" fill="#2F6B4A" fill-opacity="0.7"/>
+    <ellipse cx="560" cy="290" rx="120" ry="54" fill="#2F6B4A" fill-opacity="0.7"/>
+    <ellipse cx="400" cy="240" rx="230" ry="98" fill="#22301F" fill-opacity="0.45"/>
+    <ellipse cx="330" cy="216" rx="110" ry="50" fill="#A9C6A0" fill-opacity="0.12"/>
+    <ellipse cx="400" cy="240" rx="230" ry="98" fill="url(#leafdots-n)"/>
+  </g>
+
+  <!-- still basin: moon and stars mirrored -->
+  <ellipse cx="560" cy="590" rx="410" ry="62" fill="#CFC0A0" fill-opacity="0.25"/>
+  <ellipse cx="560" cy="588" rx="392" ry="52" fill="#4E8FA8" fill-opacity="0.6"/>
+  <ellipse cx="560" cy="588" rx="392" ry="52" fill="#22301F" fill-opacity="0.35"/>
+  <g opacity="0.3">
+    <ellipse cx="420" cy="606" rx="180" ry="30" fill="#22301F"/>
+    <path d="M420 566 C418 582 416 596 412 610" stroke="#22301F" stroke-width="8" fill="none" stroke-linecap="round"/>
+  </g>
+  <!-- moon in the basin -->
+  <ellipse cx="820" cy="592" rx="40" ry="13" fill="#F5EFE2" fill-opacity="0.85"/>
+  <ellipse cx="820" cy="592" rx="58" ry="19" fill="#F5EFE2" fill-opacity="0.15"/>
+  <path d="M740 610 L900 610 M760 622 L880 622" stroke="#F5EFE2" stroke-opacity="0.15" stroke-width="3" stroke-linecap="round"/>
+  <g fill="#F5EFE2" fill-opacity="0.4">
+    <circle cx="360" cy="580" r="1.4"/>
+    <circle cx="480" cy="598" r="1.2"/>
+    <circle cx="620" cy="576" r="1.4"/>
+  </g>
+
+  <!-- fragrant planting at basin edge, darkened -->
+  <g>
+    <ellipse cx="120" cy="560" rx="110" ry="44" fill="#2F6B4A" fill-opacity="0.55"/>
+    <ellipse cx="120" cy="560" rx="110" ry="44" fill="url(#leafdots-n)"/>
+    <circle cx="70" cy="528" r="3.4" fill="#F5EFE2" fill-opacity="0.4"/>
+  </g>
+  <g>
+    <ellipse cx="1190" cy="556" rx="120" ry="46" fill="#2F6B4A" fill-opacity="0.55"/>
+    <ellipse cx="1190" cy="556" rx="120" ry="46" fill="url(#leafdots-n)"/>
+    <circle cx="1152" cy="522" r="3.4" fill="#F5EFE2" fill-opacity="0.4"/>
+  </g>
+
+  <!-- single warm lantern beside the bench -->
+  <g>
+    <circle cx="912" cy="486" r="86" fill="#C05A32" fill-opacity="0.14"/>
+    <circle cx="912" cy="486" r="46" fill="#C05A32" fill-opacity="0.22"/>
+    <line x1="912" y1="616" x2="912" y2="508" stroke="#22301F" stroke-width="8" stroke-linecap="round"/>
+    <rect x="898" y="466" width="28" height="42" rx="8" fill="#22301F"/>
+    <rect x="904" y="474" width="16" height="26" rx="5" fill="#F5EFE2"/>
+    <rect x="904" y="474" width="16" height="26" rx="5" fill="#C05A32" fill-opacity="0.55"/>
+  </g>
+  <!-- lantern glow pooling on path and water -->
+  <ellipse cx="912" cy="630" rx="120" ry="20" fill="#C05A32" fill-opacity="0.15"/>
+  <ellipse cx="920" cy="596" rx="60" ry="10" fill="#C05A32" fill-opacity="0.25"/>
+
+  <!-- bench with back and arm rests, one seated figure -->
+  <g>
+    <rect x="948" y="560" width="176" height="12" rx="5" fill="#22301F"/>
+    <rect x="948" y="500" width="10" height="66" rx="4" fill="#22301F"/>
+    <rect x="1114" y="500" width="10" height="66" rx="4" fill="#22301F"/>
+    <rect x="952" y="500" width="168" height="9" rx="4" fill="#22301F"/>
+    <rect x="956" y="572" width="8" height="42" fill="#22301F"/>
+    <rect x="1108" y="572" width="8" height="42" fill="#22301F"/>
+    <rect x="948" y="524" width="176" height="7" rx="3" fill="#C05A32" fill-opacity="0.5"/>
+  </g>
+  <g fill="#22301F">
+    <path d="M1022 560 L1022 496 C1022 482 1042 478 1048 490 L1052 560 Z"/>
+    <circle cx="1035" cy="470" r="13"/>
+    <path d="M1024 560 L1024 596 L1032 596 L1034 566 L1044 566 L1046 596 L1054 596 L1052 560 Z"/>
+    <!-- lantern light rim on the figure -->
+    <path d="M1023 500 C1022 520 1022 540 1022 558" stroke="#C05A32" stroke-opacity="0.6" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- deep night shade in the foreground -->
+  <ellipse cx="380" cy="670" rx="300" ry="30" fill="#22301F" fill-opacity="0.5"/>
+  <ellipse cx="180" cy="700" rx="140" ry="18" fill="#22301F" fill-opacity="0.4"/>
+
+  <!-- nabta sparkle on the water, sparing -->
+  <use href="#sparkle" transform="translate(700 560) scale(0.7)" fill="#7BC6DD" fill-opacity="0.8"/>
+</svg>

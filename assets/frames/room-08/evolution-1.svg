@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5EFE2"/>
+      <stop offset="1" stop-color="#E7DCC3"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7BC6DD" stop-opacity="0.5"/>
+      <stop offset="0.3" stop-color="#4E8FA8"/>
+      <stop offset="1" stop-color="#4E8FA8"/>
+    </linearGradient>
+    <pattern id="stip" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="5" r="1.2" fill="#22301F" opacity="0.10"/>
+      <circle cx="12" cy="12" r="1" fill="#22301F" opacity="0.08"/>
+    </pattern>
+    <pattern id="gravel" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="6" r="1.8" fill="#22301F" opacity="0.14"/>
+      <circle cx="13" cy="13" r="1.4" fill="#22301F" opacity="0.10"/>
+      <circle cx="10" cy="3" r="1.2" fill="#F5EFE2" opacity="0.5"/>
+    </pattern>
+    <g id="spark">
+      <path d="M0,-10 C1.5,-3 3,-1.5 10,0 C3,1.5 1.5,3 0,10 C-1.5,3 -3,1.5 -10,0 C-3,-1.5 -1.5,-3 0,-10 Z"/>
+    </g>
+    <g id="reed">
+      <path d="M0,0 C-2,-20 -6,-34 -10,-46 M2,0 C3,-24 6,-40 12,-52 M-4,0 C-6,-18 -12,-28 -18,-36 M6,0 C9,-20 14,-30 20,-40"
+            stroke="#2F6B4A" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M-1,0 C0,-22 2,-38 4,-50 M4,0 C6,-16 10,-24 16,-32"
+            stroke="#A9C6A0" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="-10" cy="-48" rx="2.5" ry="6" fill="#22301F" opacity="0.7"/>
+      <ellipse cx="12" cy="-54" rx="2.5" ry="6" fill="#22301F" opacity="0.7"/>
+    </g>
+  </defs>
+
+  <!-- sky -->
+  <rect width="1280" height="720" fill="url(#sky)"/>
+  <circle cx="1060" cy="120" r="60" fill="#F5EFE2" opacity="0.9"/>
+  <circle cx="1060" cy="120" r="96" fill="#F5EFE2" opacity="0.3"/>
+
+  <!-- distant tree line: sparse at opening day -->
+  <ellipse cx="250" cy="336" rx="260" ry="30" fill="#A9C6A0" opacity="0.30"/>
+  <ellipse cx="900" cy="340" rx="300" ry="26" fill="#A9C6A0" opacity="0.25"/>
+
+  <!-- ground -->
+  <rect x="0" y="345" width="1280" height="375" fill="#E7DCC3"/>
+  <rect x="0" y="345" width="1280" height="375" fill="url(#stip)"/>
+
+  <!-- far bank loop path under pergola -->
+  <path d="M0,398 L1280,392 L1280,428 L0,436 Z" fill="#CFC0A0"/>
+  <path d="M0,398 L1280,392 L1280,428 L0,436 Z" fill="url(#stip)"/>
+
+  <!-- pergola along the far bank -->
+  <g stroke="#C05A32" stroke-width="9" stroke-linecap="round">
+    <line x1="170" y1="404" x2="170" y2="300"/>
+    <line x1="400" y1="402" x2="400" y2="298"/>
+    <line x1="630" y1="400" x2="630" y2="296"/>
+    <line x1="860" y1="398" x2="860" y2="294"/>
+  </g>
+  <g stroke="#C05A32" stroke-width="6" stroke-linecap="round" opacity="0.9">
+    <line x1="130" y1="302" x2="900" y2="294"/>
+    <line x1="140" y1="316" x2="910" y2="308"/>
+  </g>
+  <g stroke="#C05A32" stroke-width="4" stroke-linecap="round" opacity="0.6">
+    <line x1="180" y1="292" x2="192" y2="322"/><line x1="240" y1="291" x2="252" y2="321"/>
+    <line x1="300" y1="290" x2="312" y2="320"/><line x1="360" y1="290" x2="372" y2="320"/>
+    <line x1="420" y1="289" x2="432" y2="319"/><line x1="480" y1="288" x2="492" y2="318"/>
+    <line x1="540" y1="288" x2="552" y2="318"/><line x1="600" y1="287" x2="612" y2="317"/>
+    <line x1="660" y1="286" x2="672" y2="316"/><line x1="720" y1="286" x2="732" y2="316"/>
+    <line x1="780" y1="285" x2="792" y2="315"/><line x1="840" y1="284" x2="852" y2="314"/>
+  </g>
+
+  <!-- two young ghaf trees, freshly planted with stakes -->
+  <g stroke="#22301F" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M350,400 C348,372 342,352 334,336 M350,400 C354,374 362,356 372,342"/>
+    <path d="M820,395 C818,370 812,352 804,338 M820,395 C824,372 832,356 842,344"/>
+  </g>
+  <g stroke="#CFC0A0" stroke-width="4" stroke-linecap="round">
+    <line x1="336" y1="400" x2="330" y2="352"/>
+    <line x1="834" y1="395" x2="840" y2="350"/>
+  </g>
+  <g fill="#2F6B4A">
+    <ellipse cx="340" cy="330" rx="38" ry="13"/>
+    <ellipse cx="368" cy="340" rx="26" ry="9" fill="#A9C6A0" opacity="0.9"/>
+    <ellipse cx="812" cy="332" rx="34" ry="12"/>
+    <ellipse cx="840" cy="342" rx="24" ry="8" fill="#A9C6A0" opacity="0.9"/>
+  </g>
+
+  <!-- fresh channel: wide exposed gravel banks, 1.2 m deep cut -->
+  <path d="M0,436 C220,430 500,442 760,438 C1000,434 1160,428 1280,432 L1280,492 C1100,486 900,498 640,500 C420,502 180,494 0,500 Z"
+        fill="#CFC0A0" opacity="0.85"/>
+  <path d="M0,436 C220,430 500,442 760,438 C1000,434 1160,428 1280,432 L1280,492 C1100,486 900,498 640,500 C420,502 180,494 0,500 Z"
+        fill="url(#gravel)"/>
+  <path d="M0,560 C240,552 520,566 800,562 C1040,558 1180,552 1280,556 L1280,634 C1080,628 860,642 600,644 C380,646 160,638 0,644 Z"
+        fill="#CFC0A0" opacity="0.85"/>
+  <path d="M0,560 C240,552 520,566 800,562 C1040,558 1180,552 1280,556 L1280,634 C1080,628 860,642 600,644 C380,646 160,638 0,644 Z"
+        fill="url(#gravel)"/>
+
+  <!-- water: a modest first flow -->
+  <path d="M0,500 C180,494 420,502 640,500 C900,498 1100,486 1280,492 L1280,556 C1180,552 1040,558 800,562 C520,566 240,552 0,560 Z"
+        fill="url(#water)"/>
+  <g stroke="#7BC6DD" stroke-width="3.5" stroke-linecap="round" opacity="0.55">
+    <path d="M180,530 h70 M520,536 h60 M860,528 h64"/>
+  </g>
+  <g stroke="#F5EFE2" stroke-width="2" stroke-linecap="round" opacity="0.5">
+    <path d="M340,522 h48 M700,540 h44 M1060,524 h40"/>
+  </g>
+
+  <!-- terracotta bridge on the right -->
+  <path d="M950,470 C1030,414 1150,414 1230,470 L1230,506 C1150,448 1030,448 950,506 Z" fill="#C05A32"/>
+  <path d="M950,470 C1030,414 1150,414 1230,470" fill="none" stroke="#22301F" stroke-width="4" opacity="0.3"/>
+  <g stroke="#C05A32" stroke-width="4" stroke-linecap="round">
+    <line x1="980" y1="452" x2="980" y2="424"/><line x1="1020" y1="440" x2="1020" y2="412"/>
+    <line x1="1062" y1="432" x2="1062" y2="405"/><line x1="1104" y1="430" x2="1104" y2="403"/>
+    <line x1="1146" y1="434" x2="1146" y2="407"/><line x1="1188" y1="444" x2="1188" y2="416"/>
+  </g>
+  <path d="M962,420 C1040,376 1140,376 1218,420" fill="none" stroke="#C05A32" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- boulders placed on opening day -->
+  <g fill="#E7DCC3" stroke="#22301F" stroke-opacity="0.25" stroke-width="3">
+    <ellipse cx="280" cy="585" rx="54" ry="26"/>
+    <ellipse cx="760" cy="455" rx="40" ry="16"/>
+    <ellipse cx="1100" cy="600" rx="60" ry="28"/>
+  </g>
+  <ellipse cx="280" cy="585" rx="54" ry="26" fill="url(#stip)"/>
+  <ellipse cx="1100" cy="600" rx="60" ry="28" fill="url(#stip)"/>
+
+  <!-- young reeds, small and sparse -->
+  <g transform="translate(150,505) scale(0.55)"><use href="#reed"/></g>
+  <g transform="translate(430,512) scale(0.5)"><use href="#reed"/></g>
+  <g transform="translate(690,506) scale(0.55)"><use href="#reed"/></g>
+  <g transform="translate(940,512) scale(0.45)"><use href="#reed"/></g>
+  <g transform="translate(360,600) scale(0.6)"><use href="#reed"/></g>
+  <g transform="translate(600,610) scale(0.55)"><use href="#reed"/></g>
+  <g transform="translate(880,606) scale(0.5)"><use href="#reed"/></g>
+  <g transform="translate(1180,650) scale(0.6)"><use href="#reed"/></g>
+  <g transform="translate(80,660) scale(0.65)"><use href="#reed"/></g>
+
+  <!-- elder on bench on the far path -->
+  <g>
+    <rect x="516" y="372" width="96" height="8" rx="4" fill="#C05A32"/>
+    <line x1="530" y1="380" x2="530" y2="402" stroke="#C05A32" stroke-width="6"/>
+    <line x1="600" y1="380" x2="600" y2="402" stroke="#C05A32" stroke-width="6"/>
+    <path d="M548,372 C546,356 548,344 556,338 C566,332 574,334 578,341 C582,349 580,362 578,372" fill="#22301F"/>
+    <circle cx="561" cy="328" r="9" fill="#22301F"/>
+    <line x1="581" y1="348" x2="590" y2="374" stroke="#22301F" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- child on the near bank pointing at the first water -->
+  <g stroke="#22301F" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M620,690 C618,664 618,648 620,634 M620,634 L592,616 M620,640 L640,656 M620,690 L606,720 M620,690 L634,720"/>
+  </g>
+  <circle cx="621" cy="621" r="11" fill="#22301F"/>
+
+  <!-- nabta sparkles -->
+  <g fill="#7CC98F">
+    <g transform="translate(470,260) scale(0.8)"><use href="#spark"/></g>
+    <g transform="translate(1010,330) scale(0.55)"><use href="#spark"/></g>
+  </g>
+  <g fill="#7BC6DD">
+    <g transform="translate(300,528) scale(0.55)"><use href="#spark"/></g>
+    <g transform="translate(800,530) scale(0.45)"><use href="#spark"/></g>
+  </g>
+</svg>

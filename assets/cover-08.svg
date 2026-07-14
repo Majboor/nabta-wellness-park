@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="brand" x1="120" y1="0" x2="1080" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7CC98F"/><stop offset="100%" stop-color="#7BC6DD"/>
+    </linearGradient>
+    <path id="sparkle" d="M0,-20 C2.4,-6.5 6.5,-2.4 20,0 C6.5,2.4 2.4,6.5 0,20 C-2.4,6.5 -6.5,2.4 -20,0 C-6.5,-2.4 -2.4,-6.5 0,-20 Z"/>
+  </defs>
+  <rect width="1200" height="520" fill="#F5EFE2"/>
+  <rect x="20" y="20" width="1160" height="480" fill="none" stroke="#22301F" stroke-width="1.5"/>
+  <rect x="0" y="470" width="1200" height="50" fill="#E7DCC3" opacity="0.95"/>
+  <path d="M0,467 L1200,467" stroke="url(#brand)" stroke-width="3" stroke-linecap="round"/>
+  <g opacity="0.34" fill="#22301F">
+    <circle cx="40" cy="490" r="1.2"/><circle cx="68" cy="479" r="1.4"/><circle cx="96" cy="491" r="1.1"/>
+    <circle cx="1008" cy="482" r="1.2"/><circle cx="1036" cy="491" r="1.4"/><circle cx="1070" cy="478" r="1.1"/>
+  </g>
+  <g transform="translate(1013 88) scale(0.86)"><use href="#sparkle" fill="#7BC6DD"/></g>
+  <text x="52" y="56" font-family="IBM Plex Mono, monospace" font-size="14" letter-spacing="2" fill="#22301F">08 ACCESSIBILITY &amp; CIRCULATION</text>
+  <g transform="translate(600 270)">
+    <path d="M-330,44 C-242,-4 -160,-26 -86,-22 C-12,-18 58,6 126,42 C195,77 263,92 336,78" fill="none" stroke="#CFC0A0" stroke-width="30" stroke-linecap="round"/>
+    <path d="M-330,80 C-242,28 -160,8 -86,10 C-12,12 58,34 126,70 C195,105 263,120 336,106" fill="none" stroke="#A9C6A0" stroke-width="30" stroke-linecap="round" opacity="0.85"/>
+    <path d="M-330,44 C-242,-4 -160,-26 -86,-22 C-12,-18 58,6 126,42 C195,77 263,92 336,78" fill="none" stroke="#22301F" stroke-width="2"/>
+    <path d="M-330,80 C-242,28 -160,8 -86,10 C-12,12 58,34 126,70 C195,105 263,120 336,106" fill="none" stroke="#22301F" stroke-width="2"/>
+    <g stroke="#22301F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M-220,46 l18,-6 l-4,12"/>
+      <path d="M-152,28 l18,-6 l-4,12"/>
+      <path d="M-76,16 l18,-6 l-4,12"/>
+      <path d="M2,20 l18,-6 l-4,12"/>
+      <path d="M80,40 l18,-6 l-4,12"/>
+      <path d="M164,64 l18,-6 l-4,12"/>
+      <path d="M246,88 l18,-6 l-4,12"/>
+    </g>
+    <g transform="translate(-72 58)" stroke="#22301F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <circle cx="0" cy="-24" r="10" fill="#E7DCC3"/><path d="M0,-14 L0,16"/><path d="M-12,-2 L12,-2"/><path d="M0,16 L-12,42"/><path d="M0,16 L12,42"/>
+    </g>
+    <g transform="translate(190 86)" stroke="#22301F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <circle cx="0" cy="-10" r="5" fill="#E7DCC3"/><path d="M-2,-4 L10,10"/><path d="M-4,8 L12,24"/><path d="M10,10 L20,22"/>
+    </g>
+    <g transform="translate(44 16)" stroke="#22301F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <circle cx="0" cy="-14" r="5" fill="#E7DCC3"/><path d="M0,-8 L0,18"/><path d="M-8,12 C-12,24 -14,30 -16,42"/><path d="M8,12 C12,24 14,30 16,42"/>
+    </g>
+    <g transform="translate(26 102)" stroke="#22301F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="#E7DCC3">
+      <circle cx="0" cy="-22" r="8"/><path d="M0,-14 L0,14"/><path d="M-8,0 L8,0"/><path d="M-8,14 L8,14"/><path d="M-7,14 L-16,28"/><path d="M7,14 L16,28"/>
+    </g>
+  </g>
+</svg>

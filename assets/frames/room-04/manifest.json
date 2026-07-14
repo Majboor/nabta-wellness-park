@@ -1,0 +1,62 @@
+{
+  "room": "04",
+  "title": "Inclusive Play Dune",
+  "frames": [
+    {
+      "file": "aerial.svg",
+      "code": "R04-A",
+      "title": "Aerial Plan",
+      "caption": "Top-down view of the sculpted play dune: terraced landform with embedded slides and net, wheelchair-accessible carousel with ramp, family seating ring, shade sails and ghaf clusters, the shaded loop sweeping past and the wadi bioswale along the northern edge.",
+      "videogen_prompt": "Photorealistic top-down drone shot slowly descending over a sculpted dune playground in a desert park, terracotta rubber surfacing and cream shade sails glowing in warm late-morning light; the camera gently rotates as families move along a shaded figure-eight path below, serene and inviting."
+    },
+    {
+      "file": "approach.svg",
+      "code": "R04-B",
+      "title": "Approach from the Loop",
+      "caption": "Eye-level arrival under the terracotta pergola slats: the loop path opens onto the play dune, shade sails and ghaf trees framing the entry, with a wheelchair user, a parent and children heading in.",
+      "videogen_prompt": "Photorealistic steadicam walking shot along a shaded pergola path toward a dune-shaped playground, terracotta slat shadows raking across the walkway in golden morning light; a family and a wheelchair user move ahead of camera as shade sails and desert trees come into view, warm and welcoming."
+    },
+    {
+      "file": "walkthrough.svg",
+      "code": "R04-C",
+      "title": "Mid-Room Walkthrough",
+      "caption": "Inside the room at play hour: children climb the net and ride the embedded slide, a wheelchair user and a child spin on the accessible carousel, parents watch from the terracotta seating ring beneath overlapping shade sails.",
+      "videogen_prompt": "Photorealistic slow lateral tracking shot through a lively inclusive playground at midday, children sliding down a dune-embedded slide and climbing nets while a wheelchair user rides a ground-level carousel; dappled light through cream and terracotta shade sails, joyful documentary mood."
+    },
+    {
+      "file": "flythrough.svg",
+      "code": "R04-D",
+      "title": "Oblique Flythrough",
+      "caption": "Drone oblique across the room: the dune landform, tilted shade sails and carousel read against the figure-eight loop, wadi bioswale and ghaf groves of the wider park.",
+      "videogen_prompt": "Photorealistic cinematic drone flythrough arcing obliquely over a dune playground within a green desert park, shade sails casting long shadows in low afternoon sun; the camera sweeps along the figure-eight loop path and over a glinting bioswale, expansive and uplifting."
+    },
+    {
+      "file": "evolution-1.svg",
+      "code": "R04-E1",
+      "title": "Evolution — Opening Day",
+      "caption": "Year zero: the freshly sculpted dune, crisp new rubber surfacing and sails, staked ghaf saplings in mulch rings, and the first parent and child discovering the room.",
+      "videogen_prompt": "Photorealistic locked-off wide shot of a brand-new dune playground on opening day, bright unweathered surfacing and young staked saplings under strong clear desert light; a single parent and child explore the empty room, hopeful and pristine."
+    },
+    {
+      "file": "evolution-2.svg",
+      "code": "R04-E2",
+      "title": "Evolution — Year Two",
+      "caption": "Year two, same view: stakes are off, ghaf canopies are filling out, groundcover tufts appear, and more families arrive — a wheelchair user now rides the carousel.",
+      "videogen_prompt": "Photorealistic locked-off wide shot of the same dune playground two years on, young trees leafing out and small groundcover softening the edges in warm mid-morning light; more families play across the frame, a gentle time-lapse feeling of growth."
+    },
+    {
+      "file": "evolution-3.svg",
+      "code": "R04-E3",
+      "title": "Evolution — Year Five",
+      "caption": "Year five, identical framing: mature umbrella ghaf canopies shade the dune, groundcover drifts are established, surfacing is sun-softened, and the room is full of children, parents and carousel riders.",
+      "videogen_prompt": "Photorealistic locked-off wide shot of the mature dune playground five years after opening, broad umbrella-shaped ghaf canopies casting deep cool shade over a busy, well-loved play landscape in soft afternoon light; abundant, settled and full of life."
+    },
+    {
+      "file": "night.svg",
+      "code": "R04-N",
+      "title": "Evening Play",
+      "caption": "The walkthrough view at dusk: festoon lights swing beneath the sails, bollards pool warm light on the surfacing, the slide edge and carousel canopy glow, and families linger on the seating ring under the first stars.",
+      "videogen_prompt": "Photorealistic slow dolly-in through a dune playground at blue-hour dusk, warm festoon and bollard lighting pooling on terracotta surfacing while children take last rides on a glowing carousel; deep green-ink sky with early stars, cozy and magical evening mood."
+    }
+  ]
+}

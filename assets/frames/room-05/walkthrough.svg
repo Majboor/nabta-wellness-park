@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%">
+  <defs>
+    <pattern id="stipC" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="4" r="1.2" fill="#22301F" fill-opacity="0.09"/>
+      <circle cx="11" cy="12" r="1" fill="#22301F" fill-opacity="0.07"/>
+    </pattern>
+    <pattern id="stipLeafC" width="15" height="15" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1.4" fill="#F5EFE2" fill-opacity="0.2"/>
+      <circle cx="11" cy="11" r="1.1" fill="#F5EFE2" fill-opacity="0.14"/>
+    </pattern>
+  </defs>
+
+  <!-- warm afternoon sky -->
+  <rect width="1280" height="720" fill="#F5EFE2"/>
+  <rect width="1280" height="260" fill="#E7DCC3" fill-opacity="0.45"/>
+
+  <!-- high slatted canopy overhead -->
+  <g>
+    <rect x="0" y="0" width="1280" height="26" fill="#C05A32"/>
+    <g stroke="#C05A32" stroke-width="16" stroke-opacity="0.9">
+      <line x1="40" y1="26" x2="10" y2="120"/><line x1="160" y1="26" x2="136" y2="120"/>
+      <line x1="280" y1="26" x2="262" y2="120"/><line x1="400" y1="26" x2="388" y2="120"/>
+      <line x1="520" y1="26" x2="514" y2="120"/><line x1="640" y1="26" x2="640" y2="120"/>
+      <line x1="760" y1="26" x2="766" y2="120"/><line x1="880" y1="26" x2="892" y2="120"/>
+      <line x1="1000" y1="26" x2="1018" y2="120"/><line x1="1120" y1="26" x2="1144" y2="120"/>
+      <line x1="1240" y1="26" x2="1270" y2="120"/>
+    </g>
+    <rect x="0" y="112" width="1280" height="14" fill="#C05A32" fill-opacity="0.8"/>
+    <!-- evening-friendly light fittings hung from beam -->
+    <g>
+      <line x1="320" y1="126" x2="320" y2="158" stroke="#22301F" stroke-width="4"/>
+      <circle cx="320" cy="168" r="12" fill="#F5EFE2" stroke="#22301F" stroke-width="3"/>
+      <line x1="960" y1="126" x2="960" y2="158" stroke="#22301F" stroke-width="4"/>
+      <circle cx="960" cy="168" r="12" fill="#F5EFE2" stroke="#22301F" stroke-width="3"/>
+    </g>
+  </g>
+
+  <!-- planting screen behind court -->
+  <path d="M0,300 C120,268 260,290 400,274 C560,256 700,286 860,268 C1000,252 1160,276 1280,262 L1280,380 L0,380 Z" fill="#2F6B4A"/>
+  <path d="M0,300 C120,268 260,290 400,274 C560,256 700,286 860,268 C1000,252 1160,276 1280,262 L1280,380 L0,380 Z" fill="url(#stipLeafC)"/>
+  <path d="M0,330 C160,306 340,326 520,312 C720,298 900,322 1280,300 L1280,380 L0,380 Z" fill="#A9C6A0" fill-opacity="0.45"/>
+  <!-- ghaf tree beyond screen, left -->
+  <path d="M118,300 C120,268 114,240 122,214" stroke="#22301F" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <ellipse cx="120" cy="196" rx="86" ry="42" fill="#2F6B4A"/>
+  <ellipse cx="138" cy="186" rx="52" ry="26" fill="#A9C6A0" fill-opacity="0.6"/>
+
+  <!-- parkour blocks, left mid-ground -->
+  <g>
+    <rect x="60" y="330" width="120" height="66" rx="8" fill="#CFC0A0" stroke="#22301F" stroke-opacity="0.3" stroke-width="3"/>
+    <rect x="150" y="300" width="90" height="96" rx="8" fill="#E7DCC3" stroke="#22301F" stroke-opacity="0.3" stroke-width="3"/>
+    <rect x="228" y="346" width="110" height="50" rx="8" fill="#C05A32" fill-opacity="0.9" stroke="#22301F" stroke-opacity="0.3" stroke-width="3"/>
+    <rect x="60" y="330" width="278" height="66" fill="url(#stipC)"/>
+    <!-- teen vaulting the blocks -->
+    <g fill="#22301F" transform="translate(196,270)">
+      <circle cx="0" cy="0" r="11"/>
+      <path d="M8,6 C26,10 40,20 52,34 L44,42 C32,30 20,22 4,18 C-14,22 -30,16 -42,4 L-34,-4 C-24,4 -12,8 8,6 Z"/>
+      <path d="M46,38 L64,60" stroke="#22301F" stroke-width="7" stroke-linecap="round"/>
+      <path d="M-38,0 L-56,18" stroke="#22301F" stroke-width="7" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- bleacher seat steps, right -->
+  <g>
+    <rect x="1020" y="368" width="260" height="30" fill="#E7DCC3" stroke="#22301F" stroke-opacity="0.25" stroke-width="2"/>
+    <rect x="1054" y="340" width="226" height="30" fill="#CFC0A0" stroke="#22301F" stroke-opacity="0.25" stroke-width="2"/>
+    <rect x="1090" y="312" width="190" height="30" fill="#E7DCC3" stroke="#22301F" stroke-opacity="0.25" stroke-width="2"/>
+    <rect x="1020" y="312" width="260" height="86" fill="url(#stipC)"/>
+    <!-- seated teens -->
+    <g fill="#22301F">
+      <g transform="translate(1120,312)"><circle cx="0" cy="-26" r="9"/><path d="M-8,-18 L8,-18 L10,2 L-10,2 Z"/></g>
+      <g transform="translate(1200,340)"><circle cx="0" cy="-26" r="9"/><path d="M-8,-18 L8,-18 L10,2 L-10,2 Z"/><path d="M6,-14 L20,-24" stroke="#22301F" stroke-width="5" stroke-linecap="round"/></g>
+      <g transform="translate(1064,368)"><circle cx="0" cy="-26" r="9"/><path d="M-8,-18 L8,-18 L10,2 L-10,2 Z"/></g>
+    </g>
+  </g>
+
+  <!-- terracotta court -->
+  <rect y="396" width="1280" height="324" fill="#C05A32"/>
+  <rect y="396" width="1280" height="324" fill="url(#stipC)"/>
+  <rect y="396" width="1280" height="10" fill="#F5EFE2" fill-opacity="0.5"/>
+  <!-- court markings in perspective -->
+  <path d="M120,700 C420,560 860,560 1160,700" fill="none" stroke="#F5EFE2" stroke-width="7" stroke-opacity="0.85"/>
+  <path d="M760,432 L1060,432 L1140,560 L820,560 Z" fill="none" stroke="#F5EFE2" stroke-width="6" stroke-opacity="0.85"/>
+  <ellipse cx="980" cy="560" rx="90" ry="26" fill="none" stroke="#F5EFE2" stroke-width="6" stroke-opacity="0.85"/>
+  <!-- nabta sparkle centre mark -->
+  <g transform="translate(330,600)">
+    <ellipse rx="72" ry="22" fill="#F5EFE2" fill-opacity="0.2"/>
+    <path d="M0,-20 L14,-4 L60,0 L14,4 L0,20 L-14,4 L-60,0 L-14,-4 Z" fill="#F5EFE2"/>
+    <path d="M0,-10 L7,-2 L30,0 L7,2 L0,10 L-7,2 L-30,0 L-7,-2 Z" fill="#7CC98F"/>
+  </g>
+  <!-- canopy slat shadows raking across court -->
+  <g stroke="#22301F" stroke-opacity="0.10" stroke-width="16">
+    <line x1="-40" y1="440" x2="1320" y2="500"/><line x1="-40" y1="520" x2="1320" y2="580"/>
+    <line x1="-40" y1="600" x2="1320" y2="660"/><line x1="-40" y1="680" x2="1320" y2="740"/>
+  </g>
+
+  <!-- hoop, right -->
+  <g>
+    <path d="M1176,396 C1186,320 1160,262 1108,238" fill="none" stroke="#22301F" stroke-width="12" stroke-linecap="round"/>
+    <rect x="1028" y="180" width="96" height="72" fill="#F5EFE2" stroke="#22301F" stroke-width="6"/>
+    <rect x="1056" y="206" width="40" height="30" fill="none" stroke="#22301F" stroke-width="4"/>
+    <line x1="1042" y1="252" x2="1102" y2="252" stroke="#22301F" stroke-width="7"/>
+    <path d="M1046,252 L1056,286 L1090,286 L1098,252" fill="none" stroke="#22301F" stroke-width="3"/>
+    <line x1="1052" y1="252" x2="1068" y2="286" stroke="#22301F" stroke-width="2" stroke-opacity="0.7"/>
+    <line x1="1092" y1="252" x2="1078" y2="286" stroke="#22301F" stroke-width="2" stroke-opacity="0.7"/>
+  </g>
+
+  <!-- game in progress: shooter, defender, rebounder -->
+  <g fill="#22301F">
+    <!-- shooter mid-jump -->
+    <g transform="translate(880,420)">
+      <circle cx="0" cy="-118" r="15"/>
+      <path d="M-4,-104 C6,-84 8,-58 2,-34 L18,6 L8,12 L-4,-22 L-22,8 L-32,2 L-12,-38 C-18,-62 -14,-86 -4,-104 Z"/>
+      <path d="M4,-98 L44,-134" stroke="#22301F" stroke-width="9" stroke-linecap="round"/>
+      <path d="M-8,-96 L-36,-72" stroke="#22301F" stroke-width="9" stroke-linecap="round"/>
+    </g>
+    <circle cx="984" cy="308" r="15" fill="#C05A32" stroke="#22301F" stroke-width="3"/>
+    <path d="M932,286 C952,278 968,286 984,304" fill="none" stroke="#22301F" stroke-width="2.5" stroke-dasharray="3 8" stroke-opacity="0.6"/>
+    <!-- defender reaching -->
+    <g transform="translate(760,470)">
+      <circle cx="0" cy="-124" r="15"/>
+      <path d="M0,-110 C10,-88 10,-58 4,-30 L20,20 L8,24 L-2,-16 L-16,24 L-28,20 L-12,-34 C-18,-62 -12,-90 0,-110 Z"/>
+      <path d="M6,-104 L40,-146" stroke="#22301F" stroke-width="9" stroke-linecap="round"/>
+      <path d="M-6,-100 L-34,-84" stroke="#22301F" stroke-width="9" stroke-linecap="round"/>
+    </g>
+    <!-- rebounder crouched near key -->
+    <g transform="translate(1120,520)">
+      <circle cx="0" cy="-92" r="15"/>
+      <path d="M0,-78 C12,-62 14,-40 8,-18 L26,18 L14,24 L0,-6 L-18,22 L-30,16 L-10,-22 C-16,-46 -10,-64 0,-78 Z"/>
+      <path d="M8,-70 L36,-56" stroke="#22301F" stroke-width="9" stroke-linecap="round"/>
+    </g>
+    <!-- teen waiting courtside, foreground left -->
+    <g transform="translate(150,560)">
+      <circle cx="0" cy="-140" r="17"/>
+      <path d="M0,-124 C12,-100 12,-66 6,-34 L20,26 L6,30 L-2,-18 L-14,30 L-28,26 L-12,-38 C-20,-70 -14,-102 0,-124 Z"/>
+      <path d="M8,-112 L34,-92" stroke="#22301F" stroke-width="10" stroke-linecap="round"/>
+      <circle cx="44" cy="-80" r="13" fill="#C05A32" stroke="#22301F" stroke-width="3"/>
+    </g>
+  </g>
+  <!-- player shadows -->
+  <g fill="#22301F" fill-opacity="0.14">
+    <ellipse cx="884" cy="446" rx="56" ry="12"/>
+    <ellipse cx="760" cy="496" rx="58" ry="12"/>
+    <ellipse cx="1122" cy="548" rx="54" ry="12"/>
+    <ellipse cx="152" cy="596" rx="66" ry="14"/>
+  </g>
+
+  <!-- sparkle accents -->
+  <path d="M560,160 L563,171 L574,174 L563,177 L560,188 L557,177 L546,174 L557,171 Z" fill="#7BC6DD" fill-opacity="0.9"/>
+  <path d="M470,672 L473,683 L484,686 L473,689 L470,700 L467,689 L456,686 L467,683 Z" fill="#7CC98F" fill-opacity="0.85"/>
+</svg>

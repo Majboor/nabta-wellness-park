@@ -1,0 +1,62 @@
+{
+  "room": "06",
+  "title": "Fitness Grove",
+  "frames": [
+    {
+      "file": "aerial.svg",
+      "code": "R06-A",
+      "title": "Aerial — Grove Between the Arms of the Eight",
+      "caption": "Top-down view of the Fitness Grove where both arms of the Living Shade Loop sweep past: ghaf canopies shelter calisthenics stations, lawn pockets and the wadi bioswale trace the northern edge.",
+      "videogen_prompt": "Photorealistic top-down drone shot slowly descending over a desert park fitness grove in Dubai, where a shaded figure-eight jogging loop weaves between ghaf tree canopies, outdoor gym frames and green lawn pockets. Late morning warm light, long soft shadows, calm documentary mood."
+    },
+    {
+      "file": "approach.svg",
+      "code": "R06-B",
+      "title": "Approach — Terracotta Gateway",
+      "caption": "Arriving on the loop, a terracotta-slat pergola gateway frames the grove ahead; slatted shade stripes the path, ghaf trees flank the entry and a jogger heads in for a circuit.",
+      "videogen_prompt": "Photorealistic steadicam shot walking along a sand-toned park path toward a terracotta-slatted pergola gateway, banded shade rippling underfoot, outdoor gym frames and ghaf trees visible beyond. Golden hour desert light, inviting and energetic mood."
+    },
+    {
+      "file": "walkthrough.svg",
+      "code": "R06-C",
+      "title": "Walkthrough — Training Under the Ghaf",
+      "caption": "Inside the room: an athlete mid pull-up on the ink-steel rig, another holding a dip on terracotta-gripped parallel bars, a stretcher on the lawn pocket and a jogger passing on the loop behind.",
+      "videogen_prompt": "Photorealistic slow dolly moving between outdoor calisthenics stations under mature ghaf trees, people doing pull-ups and dips with terracotta grip bars, a jogger blurring past in the background. Dappled midday shade, warm desert light, active communal mood."
+    },
+    {
+      "file": "flythrough.svg",
+      "code": "R06-D",
+      "title": "Flythrough — Along the Loop",
+      "caption": "Oblique drone view riding the figure-eight loop as it dives through the grove: pergola band, stations threaded between trunks, lawn pockets inside the curve and runners strung along the path.",
+      "videogen_prompt": "Photorealistic FPV drone gliding low along a curving shaded jogging loop through a desert fitness grove, banking past pergola slats, ghaf trees and outdoor gym stations as runners pass beneath. Late afternoon amber light, dynamic exhilarating mood."
+    },
+    {
+      "file": "evolution-1.svg",
+      "code": "R06-E",
+      "title": "Evolution — Opening Day",
+      "caption": "Day one: staked ghaf saplings in fresh watering basins, newly seeded lawn pockets with drip lines still visible, bright untouched equipment and the first visitors trying the bars.",
+      "videogen_prompt": "Photorealistic locked-off wide shot of a brand-new desert park fitness area on opening day, young staked saplings, fresh gym equipment and first visitors on a new path. Bright clear morning light, hopeful beginnings mood."
+    },
+    {
+      "file": "evolution-2.svg",
+      "code": "R06-F",
+      "title": "Evolution — Year Two",
+      "caption": "Two years in, from the same viewpoint: adolescent ghaf crowns start to knit together, lawns thicken, the first real shade patches reach the stations and regulars settle into their circuits.",
+      "videogen_prompt": "Photorealistic timelapse-style wide shot of the same fitness grove two years on, ghaf trees now head-high and leafing out, lawns filling in, joggers and exercisers using the stations. Soft mid-morning light, steady-growth optimistic mood."
+    },
+    {
+      "file": "evolution-3.svg",
+      "code": "R06-G",
+      "title": "Evolution — Year Five",
+      "caption": "Year five, identical framing: a continuous ghaf canopy roofs the room, deep dappled shade pools over thick lawns and the outdoor gym sits fully woven into a mature grove.",
+      "videogen_prompt": "Photorealistic wide shot of a mature desert fitness grove, broad ghaf canopies casting deep dappled shade over lush lawns and busy calisthenics stations, camera slowly pushing in. Warm filtered afternoon light, thriving established-park mood."
+    },
+    {
+      "file": "night.svg",
+      "code": "R06-H",
+      "title": "Night — Pre-Dawn Circuit",
+      "caption": "Before sunrise: the sky still ink with a terracotta glow on the horizon, warm low bollard lights pooling on the loop, equipment in silhouette and the first joggers already running their circuit.",
+      "videogen_prompt": "Photorealistic tracking shot following pre-dawn joggers along a dimly lit park loop, warm low bollard lights pooling on the path, gym frames and ghaf trees silhouetted against a deep night sky just warming orange at the horizon. Quiet, disciplined early-morning mood."
+    }
+  ]
+}

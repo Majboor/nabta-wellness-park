@@ -1,0 +1,62 @@
+{
+  "room": "05",
+  "title": "Teen Active Zone",
+  "frames": [
+    {
+      "file": "aerial.svg",
+      "code": "R05-A",
+      "title": "Aerial — Court in the Loop",
+      "caption": "Top-down view of the terracotta half-court and parkour cluster tucked into the shaded figure-eight loop, screened from quiet rooms by ghaf planting with the wadi bioswale curling past below.",
+      "videogen_prompt": "Photorealistic slow top-down drone descent over a terracotta basketball half-court with a pale four-point star center mark, set in a lush desert park beside a winding shaded path and green bioswale, late golden-hour light, teens playing below, warm and energetic mood."
+    },
+    {
+      "file": "approach.svg",
+      "code": "R05-B",
+      "title": "Approach — Through the Green Screen",
+      "caption": "Arriving along the loop path between dense planting screens, the high terracotta-slat canopy and a glimpse of the court and hoop pull teens in from the walk.",
+      "videogen_prompt": "Photorealistic steadicam walking shot along a sandy park path between dense green hedges toward a high terracotta-slatted pergola sheltering a basketball court, teenagers ahead dribbling a ball, warm late-afternoon desert light, anticipatory upbeat mood."
+    },
+    {
+      "file": "walkthrough.svg",
+      "code": "R05-C",
+      "title": "Courtside — Game in Progress",
+      "caption": "Courtside under the high slatted canopy: a jump shot arcs toward the hoop, a defender stretches, spectators fill the bleacher steps, and parkour blocks wait at the edge.",
+      "videogen_prompt": "Photorealistic low courtside tracking shot gliding past teenagers playing three-on-three basketball on a terracotta court under a tall slatted timber canopy, slat shadows raking the surface, friends cheering from concrete seat steps, golden-hour light, lively competitive mood."
+    },
+    {
+      "file": "flythrough.svg",
+      "code": "R05-D",
+      "title": "Flythrough — Oblique Drone",
+      "caption": "An oblique drone pass reveals the whole room at once: floating slatted canopy, sparkle center mark, parkour cluster, bleacher edge, and the loop and bioswale threading around it.",
+      "videogen_prompt": "Photorealistic cinematic drone orbit at oblique angle around a shaded basketball half-court and parkour blocks in a green desert park, a figure-eight path and vegetated swale weaving past, long shadows at golden hour, sweeping confident mood."
+    },
+    {
+      "file": "evolution-1.svg",
+      "code": "R05-E1",
+      "title": "Evolution — Opening Day",
+      "caption": "Day one: the canopy, court, bleachers and blocks are complete while staked ghaf saplings and shrub plugs mark out the future screen, and the first teens test the surface.",
+      "videogen_prompt": "Photorealistic slow push-in on a brand-new terracotta basketball court under a fresh timber slat canopy, young staked trees and tiny shrubs in raw sand beds behind, first teenagers shooting hoops, bright morning desert light, fresh optimistic mood."
+    },
+    {
+      "file": "evolution-2.svg",
+      "code": "R05-E2",
+      "title": "Evolution — Year Two",
+      "caption": "Two years on: the ghaf trees stand free of their stakes, the shrub screen knits toward hip height, and pickup games and parkour sessions have become routine.",
+      "videogen_prompt": "Photorealistic slow push-in on the same shaded basketball court two years on, adolescent trees casting light shade and a knee-high green hedge filling in behind, teenagers mid pickup game and one vaulting parkour blocks, warm afternoon light, settled thriving mood."
+    },
+    {
+      "file": "evolution-3.svg",
+      "code": "R05-E3",
+      "title": "Evolution — Year Five",
+      "caption": "Year five: broad ghaf canopies and a continuous shoulder-high screen wrap the court in green, tree shade mingles with the slats, and bleachers fill for full games.",
+      "videogen_prompt": "Photorealistic slow push-in on a mature shaded basketball court embraced by broad umbrella-like ghaf trees and a dense green screen, dappled canopy and slat shadows across worn terracotta, a full teen game with crowded seat steps, rich golden-hour light, flourishing communal mood."
+    },
+    {
+      "file": "night.svg",
+      "code": "R05-N",
+      "title": "Night — Under the Court Lights",
+      "caption": "The same courtside view after dusk: warm fittings under the slats pool light on the terracotta, the sparkle center mark glows, and the evening game keeps its energy without spilling glare into the quiet rooms.",
+      "videogen_prompt": "Photorealistic nighttime courtside tracking shot of teenagers playing basketball under warm downlights hung from a slatted canopy, pools of light on terracotta with a softly glowing star center mark, deep blue-green dusk sky and dark planting beyond, energetic intimate evening mood."
+    }
+  ]
+}

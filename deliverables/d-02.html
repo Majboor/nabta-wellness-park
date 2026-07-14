@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bone:#F5EFE2;--paper:#FBF7EC;--sand:#E7DCC3;--sand2:#EFE6D2;--ink:#22301F;--soft:#4A5644;--mute:#7A8272;
+--green:#2F6B4A;--leaf:#A9C6A0;--terra:#C05A32;--tdeep:#9C4525;--water:#4E8FA8;--hair:#D8CCAF;
+--serif:"Fraunces",serif;--sans:"Instrument Sans",sans-serif;--mono:"IBM Plex Mono",monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bone);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.62;
+background-image:radial-gradient(ellipse 90% 40% at 50% -5%,rgba(169,198,160,.25),transparent 60%)}
+.wrap{max-width:880px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
+nav{position:sticky;top:0;z-index:50;background:rgba(245,239,226,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair)}
+nav .wrap{display:flex;align-items:center;gap:1.3rem;height:54px;max-width:1000px}
+.logo-nabta{font-family:"Comfortaa",var(--sans);font-weight:700;color:var(--ink)}
+.logo-nabta .spark{color:#8FCB9B;font-weight:400}
+nav a{font-family:var(--mono);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--soft);text-decoration:none}
+nav a:hover{color:var(--tdeep)}
+nav .nx{margin-left:auto;display:flex;gap:1rem}
+.cover{border-bottom:1px solid var(--hair);background:var(--paper)}
+.cover .art svg{display:block;width:100%;height:auto}
+header{padding:2.6rem 0 2.2rem;border-bottom:1px solid var(--hair)}
+.kicker{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--tdeep)}
+h1{font-family:var(--serif);font-weight:900;font-size:clamp(1.9rem,4.5vw,3rem);line-height:1.08;margin:.7rem 0 1rem}
+.chips{display:flex;gap:.45rem;flex-wrap:wrap}
+.chip{font-family:var(--mono);font-size:.66rem;background:var(--sand);padding:.28rem .6rem;border:1px solid var(--hair)}
+.chip.score{color:#fff;background:linear-gradient(90deg,#5FA871,#4E9DB5);border:none}
+main{padding:2.6rem 0 4rem}
+.deliv-body{max-width:74ch}
+.deliv-body h4{font-family:var(--serif);font-weight:600;font-size:1.32rem;margin:1.8rem 0 .6rem;color:var(--green)}
+.deliv-body h4:first-child{margin-top:0}
+.deliv-body h5{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tdeep);margin:1.4rem 0 .5rem}
+.deliv-body p{margin:.6rem 0;font-size:.97rem}
+.deliv-body ul,.deliv-body ol{padding-left:1.3rem;margin:.6rem 0;font-size:.95rem}
+.deliv-body li{margin:.3rem 0}
+.deliv-body blockquote{font-family:var(--serif);font-style:italic;font-size:1.25rem;line-height:1.5;color:var(--green);border-left:3px solid var(--terra);padding:.4rem 0 .4rem 1.3rem;margin:1.5rem 0}
+.deliv-body table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}
+.deliv-body th{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;color:var(--mute);border-bottom:2px solid var(--ink);padding:.5rem .6rem .4rem}
+.deliv-body td{border-bottom:1px solid var(--hair);padding:.55rem .6rem;vertical-align:top}
+.deliv-body tr:hover td{background:rgba(169,198,160,.14)}
+.deliv-body figure{margin:1.5rem 0;background:var(--paper);border:1px solid var(--hair);padding:1.1rem}
+.deliv-body figcaption{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-top:.7rem}
+.deliv-body svg{display:block;width:100%;height:auto}
+.deliv-body .cols2{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+@media(max-width:680px){.deliv-body .cols2{grid-template-columns:1fr}}
+.deliv-body .tag{font-family:var(--mono);font-size:.64rem;background:var(--sand);border:1px solid var(--hair);padding:.16rem .5rem;display:inline-block;margin:.1rem .15rem .1rem 0}
+footer{border-top:1px solid var(--hair);padding:2rem 0 3rem;color:var(--mute);font-size:.84rem}
+.pn{display:flex;justify-content:space-between;gap:1rem;margin-top:2.6rem;border-top:1px solid var(--hair);padding-top:1.4rem}
+.pn a{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tdeep);text-decoration:none}
+</style></head><body>
+<nav><div class="wrap">
+<span class="logo-nabta">nabta<span class="spark">✦</span></span>
+<a href="../aipark-challenge.html">← All deliverables</a>
+<span class="nx"><a href="../map.html">Map &amp; frames</a><a href="../pdfs/Nabta-02-Design-Narrative-and-Concept-Statement.pdf">PDF</a></span>
+</div></nav>
+<div class="cover"><div class="art"><?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="brand" x1="120" y1="0" x2="1080" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7CC98F"/><stop offset="100%" stop-color="#7BC6DD"/>
+    </linearGradient>
+    <path id="sparkle" d="M0,-20 C2.4,-6.5 6.5,-2.4 20,0 C6.5,2.4 2.4,6.5 0,20 C-2.4,6.5 -6.5,2.4 -20,0 C-6.5,-2.4 -2.4,-6.5 0,-20 Z"/>
+  </defs>
+  <rect width="1200" height="520" fill="#F5EFE2"/>
+  <rect x="20" y="20" width="1160" height="480" fill="none" stroke="#22301F" stroke-width="1.5"/>
+  <rect x="0" y="470" width="1200" height="50" fill="#E7DCC3" opacity="0.95"/>
+  <path d="M0,467 L1200,467" stroke="url(#brand)" stroke-width="3" stroke-linecap="round"/>
+  <g opacity="0.34" fill="#22301F">
+    <circle cx="34" cy="488" r="1.2"/><circle cx="57" cy="479" r="1.5"/><circle cx="83" cy="491" r="1.1"/><circle cx="119" cy="482" r="1.4"/>
+    <circle cx="991" cy="490" r="1.1"/><circle cx="1022" cy="480" r="1.6"/><circle cx="1051" cy="492" r="1.2"/><circle cx="1086" cy="478" r="1.4"/>
+  </g>
+  <g transform="translate(104 86) scale(0.88)"><use href="#sparkle" fill="#7BC6DD"/></g>
+  <text x="52" y="56" font-family="IBM Plex Mono, monospace" font-size="14" letter-spacing="2" fill="#22301F">02 DESIGN NARRATIVE</text>
+  <g transform="translate(600 270)">
+    <circle cx="0" cy="56" r="116" fill="#CFC0A0" fill-opacity="0.18"/>
+    <circle cx="0" cy="56" r="94" fill="none" stroke="#22301F" stroke-width="1.4" stroke-dasharray="2 8" opacity="0.55"/>
+    <path d="M0,60 C6,12 14,-18 22,-58 C29,-93 37,-114 62,-150" fill="none" stroke="#2F6B4A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M0,60 C-4,24 -8,-2 -16,-44 C-24,-88 -34,-114 -60,-148" fill="none" stroke="#2F6B4A" stroke-width="2.2" stroke-linecap="round" opacity="0.9"/>
+    <path d="M6,-96 C20,-114 39,-124 60,-128" fill="none" stroke="#A9C6A0" stroke-width="2"/>
+    <ellipse cx="0" cy="80" rx="125" ry="70" fill="#E7DCC3" fill-opacity="0.7"/>
+    <g fill="#CFC0A0" fill-opacity="0.92" stroke="#22301F" stroke-width="1.1">
+      <ellipse cx="-90" cy="120" rx="20" ry="12"/><ellipse cx="-56" cy="132" rx="21" ry="12"/><ellipse cx="-18" cy="138" rx="22" ry="13"/>
+      <ellipse cx="22" cy="138" rx="22" ry="13"/><ellipse cx="60" cy="132" rx="21" ry="12"/><ellipse cx="94" cy="120" rx="20" ry="12"/>
+    </g>
+    <g fill="#22301F" fill-opacity="0.24">
+      <circle cx="-98" cy="84" r="1.2"/><circle cx="-85" cy="71" r="1.4"/><circle cx="-71" cy="92" r="1.1"/><circle cx="-58" cy="77" r="1.3"/>
+      <circle cx="-42" cy="88" r="1.2"/><circle cx="-26" cy="71" r="1.4"/><circle cx="-13" cy="93" r="1.1"/><circle cx="0" cy="76" r="1.3"/>
+      <circle cx="15" cy="88" r="1.2"/><circle cx="31" cy="72" r="1.4"/><circle cx="45" cy="93" r="1.1"/><circle cx="60" cy="79" r="1.3"/>
+      <circle cx="76" cy="90" r="1.2"/><circle cx="92" cy="74" r="1.4"/>
+    </g>
+  </g>
+</svg>
+</div></div>
+<header><div class="wrap">
+<p class="kicker">nabta wellness park · Draft Competition Entry · Dubai Municipality AI Park Design Challenge</p>
+<h1>D·02 — Design Narrative & Concept Statement</h1>
+<div class="chips"><span class="chip">№02 Design Narrative</span><span class="chip score">jury 6.0 → 7.8 /10</span></div>
+</div></header>
+<main><div class="wrap"><div class="deliv-body">
+<h4>«نبتة» NABTA — Wellness Park</h4>
+<p><span class="tag">Deliverable 2</span> <span class="tag">Design Narrative &amp; Concept Statement</span> <span class="tag">Concept: The Living Shade Loop</span> <span class="tag">Al Safa 2 · 15,000 m² · AED 35M</span></p>
+
+<h5>Two cultural anchors: the shade and the sprout</h5>
+<p>Before there were streets in this city, there was shade — <em>dhilal</em>, the Gulf's oldest wellness infrastructure. The sidr tree at the well, the palm-frond <em>arish</em>, the threshold of the <strong>majlis</strong>: each was a small public clinic for body and mind, a cool place where the generations sat at the same level and strangers became neighbours. And wherever water paused in this landscape, something answered it — the <em>nabta</em>, the sprout, proof that care compounds into growth. NABTA holds both anchors at once: shade is what the park <strong>gives</strong> on day one; the sprout is what it <strong>becomes</strong> — a canopy, a habit, a neighbourhood's health — year after year. A park that grows wellbeing.</p>
+
+<h5>Design philosophy: shade is the infrastructure of wellness</h5>
+<p>Every wellness behaviour we want from a Dubai park — the daily walk, the child's hour of free play, the elder's unhurried conversation, the quiet minutes that lower a heart rate — fails for the same reason: for five months a year it is too hot to begin. So we refused to treat shade as an amenity. In NABTA, <strong>shade is the program</strong>. The <strong>1.0 km loop</strong> is designed first as a continuous ribbon of thermal comfort — dense native canopy (ghaf, sidr, date palm) alternating with AI-form-found pergolas where trees cannot close the gap — and only second as a track. Our verified target: <strong>92% of the loop shaded at 3pm in peak summer</strong>, delivering a <strong>−4.5°C perceived temperature</strong> (UTCI) against the adjacent street. Comfort is the precondition of health: minutes of comfort convert directly into minutes of movement, restoration and company.</p>
+
+<h5>A loop of ten rooms, three modes of wellbeing</h5>
+<p>The Living Shade Loop is the park's social condenser: jogger, grandmother, toddler on a balance bike and teenager share one shaded spine at different speeds. Threaded onto it are <strong>ten garden rooms</strong>, organised by what they do for a body:</p>
+<ul>
+<li><strong>Move:</strong> the loop itself; outdoor fitness grove with elder-friendly low-impact stations; teen active zone; inclusive play dune graded by age and ability — physical literacy from two to eighty-two.</li>
+<li><strong>Restore:</strong> quiet contemplation garden screened by planting, not walls; sensory wadi garden along the bioswale, where falling water and native fragrance do the work of a therapy soundtrack; family picnic groves for unstructured rest.</li>
+<li><strong>Connect:</strong> entry plaza, community majlis plaza and event lawn — the intergenerational rooms, sized for prayer-eve gatherings, weekend markets and National Day evenings; café terrace at the loop's golden-hour edge.</li>
+</ul>
+<p>Rooms hold sightlines into their neighbours — a parent at the picnic grove watches the play dune; elders in the majlis overlook the plaza — so caregiving is ambient, not confining. The park breathes on a day-to-night rhythm: dawn runners, late-morning shade for infants and their minders, misted pergolas through the afternoon, then the true prime time — evening — when warm, dark-sky lighting turns the loop into a promenade. The wadi bioswale, fed by AC condensate and treated water, makes sustainability touchable: children learn where water comes from by following it to the newest sprouts.</p>
+
+<h5>How AI served the design — honestly, and in numbers</h5>
+<p>AI did not design this park; it let us test more convictions than any team could by hand. Solar, wind and UTCI simulation across 8,760 annual hours shaped the loop's geometry and canopy density; generative design produced forty-plus masterplan variants scored on shade continuity, walkability and irrigation demand; agent-based models of five user personas stress-tested sightlines and evening crowding. The decisive judgements — the majlis at the heart, a room of the teenagers' own, the café facing the sunset — were human, cultural and debated aloud. We used AI the way a falconer uses the wind: to go further in a direction we had already chosen.</p>
+
+<h5>Growing within AED 35M</h5>
+<p>The nabta principle is also our delivery strategy: plant the structure, let value compound. Roughly 40% of the budget goes to the loop, pergolas and shade structures — the permanent wellness infrastructure; 30% to landscape, soil and the ten rooms; 15% to water systems (bioswale, condensate recovery, subsurface drip for a native palette needing a fraction of turf's irrigation); 15% to lighting, furniture and sensing. Trees are installed young and inexpensive because the shade model proves pergolas carry comfort until canopies mature — the park is fully usable at opening and measurably better every year, with falling, not rising, operating costs.</p>
+
+<h5>Vision</h5>
+<blockquote>
+<p>We are planting a kilometre of shade and calling it a promise: that in Al Safa 2, no one must choose between the heat and their own health. Walk the loop at maghrib — past the children on the dune, the elders in the majlis, the water finding the youngest roots — and you will feel what the Gulf has always known: <em>where there is shade, things grow; where things grow, people stay well.</em></p>
+</blockquote>
+
+<figure>
+<svg viewBox="0 0 640 220" width="100%" role="img" aria-label="Diagram of NABTA's Living Shade Loop threading ten garden rooms">
+<ellipse cx="320" cy="110" rx="250" ry="78" fill="none" stroke="#2F6B4A" stroke-width="10" stroke-linecap="round"/>
+<ellipse cx="320" cy="110" rx="250" ry="78" fill="none" stroke="#CFC0A0" stroke-width="3" stroke-dasharray="2 10"/>
+<path d="M120 150 Q 220 120 320 145 Q 430 170 520 130" fill="none" stroke="#4E8FA8" stroke-width="4"/>
+<path d="M320 128 q -6 -14 0 -24 q 6 10 0 24 M320 118 q -10 -4 -14 -12 q 12 0 14 12 M320 118 q 10 -4 14 -12 q -12 0 -14 12" fill="none" stroke="#2F6B4A" stroke-width="3" stroke-linecap="round"/>
+<circle cx="320" cy="32" r="9" fill="#C05A32"/>
+<circle cx="470" cy="52" r="9" fill="#A9C6A0"/>
+<circle cx="562" cy="110" r="9" fill="#E7DCC3" stroke="#22301F" stroke-width="1"/>
+<circle cx="470" cy="168" r="9" fill="#2F6B4A"/>
+<circle cx="320" cy="188" r="9" fill="#A9C6A0"/>
+<circle cx="170" cy="168" r="9" fill="#4E8FA8"/>
+<circle cx="78" cy="110" r="9" fill="#C05A32"/>
+<circle cx="170" cy="52" r="9" fill="#2F6B4A"/>
+<text x="320" y="16" text-anchor="middle" fill="#22301F" font-size="12" font-family="inherit">Entry plaza</text>
+<text x="482" y="38" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Majlis plaza</text>
+<text x="580" y="94" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Event lawn</text>
+<text x="482" y="190" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Play dune · teen zone</text>
+<text x="320" y="210" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Fitness grove</text>
+<text x="158" y="190" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Sensory wadi</text>
+<text x="62" y="92" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Quiet garden</text>
+<text x="158" y="38" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">Café terrace</text>
+<text x="320" y="152" text-anchor="middle" fill="#22301F" font-size="13" font-family="inherit">NABTA · 1.0 km Living Shade Loop</text>
+<text x="320" y="168" text-anchor="middle" fill="#22301F" font-size="11" font-family="inherit">92% shade at 3pm summer · −4.5°C perceived</text>
+</svg>
+<figcaption>Concept diagram: NABTA's continuous shaded loop threading the ten garden rooms; the sprout at the centre, the wadi bioswale crossing beneath.</figcaption>
+</figure>
+</div>
+<div class="pn"><a href="d-01.html">← D·01 Executive Summary & Full Presentat</a><a href="d-03.html">D·03 Site Analysis & Opportunities Asse →</a></div>
+</div></main>
+<footer><div class="wrap"><span class="logo-nabta">nabta<span class="spark">✦</span></span> · The Living Shade Loop · Al Safa 2 Park, Jumeirah, Dubai · illustrative mock draft, July 2026</div></footer>
+</body></html>
