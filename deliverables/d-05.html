@@ -46,11 +46,12 @@ main{padding:2.6rem 0 4rem}
 footer{border-top:1px solid var(--hair);padding:2rem 0 3rem;color:var(--mute);font-size:.84rem}
 .pn{display:flex;justify-content:space-between;gap:1rem;margin-top:2.6rem;border-top:1px solid var(--hair);padding-top:1.4rem}
 .pn a{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tdeep);text-decoration:none}
-</style></head><body>
+</style>
+<title>D·05 — Artificial Intelligence Methodology Report · nabta wellness park</title></head><body>
 <nav><div class="wrap">
 <span class="logo-nabta">nabta<span class="spark">✦</span></span>
-<a href="../aipark-challenge.html">← All deliverables</a>
-<span class="nx"><a href="../map.html">Map &amp; frames</a><a href="../pdfs/Nabta-05-Artificial-Intelligence-Methodology-Report.pdf">PDF</a></span>
+<a href="../deliverables.html">← Submission</a>
+<span class="nx"><a href="../index.html">Overview</a><a href="../map.html">Design</a><a href="../pdfs/Nabta-05-Artificial-Intelligence-Methodology-Report.pdf">PDF</a></span>
 </div></nav>
 <div class="cover"><div class="art"><?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" height="100%">
@@ -112,7 +113,7 @@ footer{border-top:1px solid var(--hair);padding:2rem 0 3rem;color:var(--mute);fo
 </div></header>
 <main><div class="wrap"><div class="deliv-body">
 <h4>Deliverable 5 — Artificial Intelligence Methodology Report</h4>
-<p><strong>«نبتة» NABTA — Wellness Park · The Living Shade Loop</strong> was designed with AI as an instrument, never as the author. Every algorithm in our pipeline produced <em>options and evidence</em>; every choice that shaped the park — the 1.0 km loop, the ten garden rooms, the canopy gradient — was made by a named human designer against explicit criteria. This report documents the six-stage workflow, the tools at each stage, the alternatives we explored, and where the human hand intervened.</p>
+<p><strong>«نبتة» NABTA — Wellness Park · The Living Shade Loop</strong> was designed with AI as an instrument, never as the author. Every algorithm in our pipeline produced <em>options and evidence</em>; every choice that shaped the park — the 858 m continuous path network, the ten garden rooms, the canopy gradient — was made by a named human designer against explicit criteria. This report documents the six-stage workflow, the tools at each stage, the alternatives explored, and where the human hand intervened.</p>
 
 <h5>A. Six-stage AI-assisted workflow</h5>
 <table>
@@ -122,7 +123,7 @@ footer{border-top:1px solid var(--hair);padding:2rem 0 3rem;color:var(--mute);fo
 <tr><td><strong>2 Simulate</strong></td><td>Ladybug Tools / ClimateStudio-type solar, wind (CFD) and UTCI thermal-comfort engines</td><td>Dubai EPW weather file, site model, massing of context buildings</td><td>Hourly UTCI maps, annual radiation study, shade-deficit map</td><td>Designers set the target: UTCI ≤ 32 °C on 70% of the loop during morning and evening use hours</td></tr>
 <tr><td><strong>3 Generate</strong></td><td>Grasshopper parametric model + Wallacei/Galapagos evolutionary solvers; Claude-drafted scoring rubric (human-edited)</td><td>Site constraints, comfort targets, water budget, cost caps</td><td>43 masterplan options on a Pareto front, scored on shade continuity, walkability, water use</td><td>Designers curated three families; rejected two solver "winners" that erased heritage trees and a key entrance</td></tr>
 <tr><td><strong>4 Test</strong></td><td>Agent-based pedestrian simulation (~1,800 daily visits, MassMotion-type); per-option shade re-check</td><td>Shortlisted plans, visitor profiles from survey data, event scenarios</td><td>Congestion and dwell maps, loop-completion rates, Friday-evening stress test</td><td>Team accepted trade-offs: loop widened to 6 m at the event plaza, one room re-sequenced</td></tr>
-<tr><td><strong>5 Optimize</strong></td><td>Multi-objective refinement of canopy density and planting palette; cost model; Claude cross-checking scoring consistency</td><td>Winning family (Shade Loop), simulation feedback, AED 35M budget</td><td>Shade Loop v3: 92% of loop shaded at 3 pm, tuned canopy gradient, −38% irrigation demand vs. baseline</td><td>Lead designer signed off final plan against budget, code and accessibility review</td></tr>
+<tr><td><strong>5 Optimize</strong></td><td>Multi-objective refinement of canopy density and planting palette; cost model; Claude cross-checking scoring consistency</td><td>Winning family (Shade Loop), simulation feedback, AED 35M budget</td><td>Shade Loop v3: 92% of loop shaded at 3 pm, tuned canopy gradient, −41% irrigation demand vs. baseline</td><td>Lead designer signed off final plan against budget, code and accessibility review</td></tr>
 <tr><td><strong>6 Communicate</strong></td><td>Diffusion renders (SDXL + ControlNet conditioned on masterplan linework); video generation for 1-minute animation; LLM narrative editing</td><td>Final CAD linework, material palette, camera paths</td><td>Photoreal views, animation, plain-language project story</td><td>Every image audited against the plan; hallucinated elements removed before submission</td></tr>
 </tbody>
 </table>
@@ -180,7 +181,7 @@ footer{border-top:1px solid var(--hair);padding:2rem 0 3rem;color:var(--mute);fo
 <h5>C. Design alternatives explored</h5>
 <div class="cols2">
 <p>From the 43 generated masterplans, the team shortlisted three families. <span class="tag">Central Oasis</span> concentrated water and shade in one large heart — dramatic, but it left the park edges thermally hostile and demanded the highest irrigation. <span class="tag">Braided Wadis</span> wove three dry-stream fingers across the site — water-wise and beautiful after rain, but its fragmented paths tested poorly for continuous comfortable walking.</p>
-<p><span class="tag">Shade Loop</span> inverted the logic: distribute comfort as a continuous 1.0 km shaded circuit and hang the ten garden rooms from it. It scored highest on the two criteria the community ranked first — unbroken shade (92% of the loop shaded at 3 pm) and walkability — and the agent-based tests confirmed the loop absorbs peak Friday crowds without congestion.</p>
+<p><span class="tag">Shade Loop</span> inverted the logic: distribute comfort as an 858 m continuous shaded network — a 398 m figure-eight braided with a 460 m perimeter ring, ~1 km including the wadi spur — and hang the ten garden rooms from it. It scored highest on the two criteria the community ranked first — unbroken shade (92% of the loop shaded at 3 pm, verified 91.6%) and walkability — and the agent-based tests confirmed the loop absorbs peak Friday crowds without congestion.</p>
 </div>
 <table>
 <thead><tr><th>Criterion (weight)</th><th>Central Oasis</th><th>Braided Wadis</th><th>Shade Loop</th></tr></thead>
@@ -200,5 +201,5 @@ footer{border-top:1px solid var(--hair);padding:2rem 0 3rem;color:var(--mute);fo
 </div>
 <div class="pn"><a href="d-04.html">← D·04 User & Community Analysis</a><a href="d-06.html">D·06 Concept & Preliminary Masterplan →</a></div>
 </div></main>
-<footer><div class="wrap"><span class="logo-nabta">nabta<span class="spark">✦</span></span> · The Living Shade Loop · Al Safa 2 Park, Jumeirah, Dubai · illustrative mock draft, July 2026</div></footer>
+<footer><div class="wrap"><span class="logo-nabta">nabta<span class="spark">✦</span></span> · The Living Shade Loop · Al Safa 2 Park, Jumeirah, Dubai · draft competition entry, July 2026 — illustrative draft, not an actual submission. Verify all facts against the official brief before submitting.</div></footer>
 </body></html>

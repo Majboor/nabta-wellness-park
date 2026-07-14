@@ -57,6 +57,12 @@
       "title": "Gateway After Dark",
       "caption": "Under a deep ink sky, warm lamplight pools on the paving, festoon lights trace the pergola, and the sparkle inlay glints beneath the moon.",
       "videogen_prompt": "Nighttime tripod shot of the park entry plaza under a terracotta pergola: warm 2700K lamp posts and festoon string lights glowing against a deep ink sky with a bright moon, uplit ghaf trees, café windows glowing, evening strollers crossing pools of amber light. Calm, intimate night-park mood with gentle ambient movement."
+    },
+    {
+      "file": "detail-flux.png",
+      "code": "R01-X",
+      "title": "Detail Study",
+      "caption": "golden-hour material and planting detail"
     }
   ]
 }

@@ -57,6 +57,12 @@
       "title": "Night — Moon in the Basin",
       "caption": "The walkthrough view after dark: a starfield over the silhouetted ghaf, one warm lantern glowing beside the bench where a figure still sits, and the moon laid perfectly on the black mirror of the basin.",
       "videogen_prompt": "Photorealistic night footage with a very slow dolly beside a still reflecting pool under a starry sky, full moon mirrored on black water beneath a silhouetted ghaf tree, a single warm lantern glowing next to a bench with a seated figure, hushed and reverent nighttime mood."
+    },
+    {
+      "file": "detail-flux.png",
+      "code": "R09-X",
+      "title": "Detail Study",
+      "caption": "golden-hour material and planting detail"
     }
   ]
 }

@@ -57,6 +57,12 @@
       "title": "Night — Warm Glow and String Lights",
       "caption": "The walkthrough view after dark: the kiosk counter glows warm terracotta, string lights swing between the pergola posts, a candle flickers on the couple's table, and the bioswale catches the last blue of the sky beyond the terrace.",
       "videogen_prompt": "Photorealistic slow dolly through a café terrace at night, string lights glowing under a terracotta pergola and warm light spilling from the kiosk counter across the tables, a couple by candlelight and a runner arriving with coffee, deep blue dusk sky, intimate glowing mood."
+    },
+    {
+      "file": "detail-flux.png",
+      "code": "R10-X",
+      "title": "Detail Study",
+      "caption": "golden-hour material and planting detail"
     }
   ]
 }

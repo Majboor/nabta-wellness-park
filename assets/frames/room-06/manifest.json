@@ -57,6 +57,12 @@
       "title": "Night — Pre-Dawn Circuit",
       "caption": "Before sunrise: the sky still ink with a terracotta glow on the horizon, warm low bollard lights pooling on the loop, equipment in silhouette and the first joggers already running their circuit.",
       "videogen_prompt": "Photorealistic tracking shot following pre-dawn joggers along a dimly lit park loop, warm low bollard lights pooling on the path, gym frames and ghaf trees silhouetted against a deep night sky just warming orange at the horizon. Quiet, disciplined early-morning mood."
+    },
+    {
+      "file": "detail-flux.png",
+      "code": "R06-X",
+      "title": "Detail Study",
+      "caption": "golden-hour material and planting detail"
     }
   ]
 }

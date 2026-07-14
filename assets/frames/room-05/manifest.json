@@ -57,6 +57,12 @@
       "title": "Night — Under the Court Lights",
       "caption": "The same courtside view after dusk: warm fittings under the slats pool light on the terracotta, the sparkle center mark glows, and the evening game keeps its energy without spilling glare into the quiet rooms.",
       "videogen_prompt": "Photorealistic nighttime courtside tracking shot of teenagers playing basketball under warm downlights hung from a slatted canopy, pools of light on terracotta with a softly glowing star center mark, deep blue-green dusk sky and dark planting beyond, energetic intimate evening mood."
+    },
+    {
+      "file": "detail-flux.png",
+      "code": "R05-X",
+      "title": "Detail Study",
+      "caption": "golden-hour material and planting detail"
     }
   ]
 }

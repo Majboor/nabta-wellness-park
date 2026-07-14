@@ -57,6 +57,12 @@
       "title": "Evening Play",
       "caption": "The walkthrough view at dusk: festoon lights swing beneath the sails, bollards pool warm light on the surfacing, the slide edge and carousel canopy glow, and families linger on the seating ring under the first stars.",
       "videogen_prompt": "Photorealistic slow dolly-in through a dune playground at blue-hour dusk, warm festoon and bollard lighting pooling on terracotta surfacing while children take last rides on a glowing carousel; deep green-ink sky with early stars, cozy and magical evening mood."
+    },
+    {
+      "file": "detail-flux.png",
+      "code": "R04-X",
+      "title": "Detail Study",
+      "caption": "golden-hour material and planting detail"
     }
   ]
 }

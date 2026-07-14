@@ -57,6 +57,12 @@
       "title": "Night — Moonlit Water, Warm Lights",
       "caption": "The same bank path after dark: moonlight silvers the wadi, low bollards pool warm light on the gravel, and the pergola slats turn to dark lacework.",
       "videogen_prompt": "Photorealistic slow dolly shot along a wadi bank path at night, full moon reflecting a silver trail on dark water, warm low bollard lights pooling on the gravel path, reed silhouettes, an elder resting on a bench. Hushed, safe, magical."
+    },
+    {
+      "file": "detail-flux.png",
+      "code": "R08-X",
+      "title": "Detail Study",
+      "caption": "golden-hour material and planting detail"
     }
   ]
 }

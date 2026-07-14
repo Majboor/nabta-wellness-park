@@ -57,6 +57,12 @@
       "title": "Night — Lantern Groves",
       "caption": "The walkthrough scene at early evening: terracotta lanterns and string lights swagged between the trunks, the family lingering over tea in warm pools of light as the dusk sky deepens beyond the canopy.",
       "videogen_prompt": "Photorealistic slow push-in on a picnic grove at blue hour, string lights glowing between ghaf trunks and terracotta lanterns pooling warm light over a family finishing dinner and tea on ground cushions, deep teal dusk sky behind the canopy. Intimate, magical, calm."
+    },
+    {
+      "file": "detail-flux.png",
+      "code": "R07-X",
+      "title": "Detail Study",
+      "caption": "golden-hour material and planting detail"
     }
   ]
 }

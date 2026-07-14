@@ -57,6 +57,12 @@
       "title": "Cinema Night",
       "caption": "The same lawn after dark: an outdoor cinema screen glows on the far rim, string lights swoop over blanket-seated crowds, kiosk carts flicker, ink sky salted with stars.",
       "videogen_prompt": "Photorealistic slow push-in at night across a park lawn full of people on blankets watching a glowing outdoor cinema screen, string lights swaying overhead, food kiosks glowing at the rim under a starry sky, cosy festive mood."
+    },
+    {
+      "file": "detail-flux.png",
+      "code": "R03-X",
+      "title": "Detail Study",
+      "caption": "golden-hour material and planting detail"
     }
   ]
 }

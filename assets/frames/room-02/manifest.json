@@ -57,6 +57,12 @@
       "title": "Majlis After Isha",
       "caption": "After isha the same circle glows: lanterns hang in the ghaf and sit by the dark mirror of water, families linger on the warm cushions beneath an ink sky and a sliver of moon.",
       "videogen_prompt": "Photorealistic slow dolly-in at night inside the circular plaza after evening prayer, warm hanging lanterns glowing under a silhouetted ghaf canopy, reflections trembling on the still water bowl, families talking softly on cushioned seat walls, intimate starlit mood."
+    },
+    {
+      "file": "detail-flux.png",
+      "code": "R02-X",
+      "title": "Detail Study",
+      "caption": "golden-hour material and planting detail"
     }
   ]
 }
