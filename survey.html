@@ -9,7 +9,7 @@
 :root{--bone:#F5EFE2;--paper:#FBF7EC;--sand:#E7DCC3;--ink:#22301F;--soft:#4A5644;--mute:#7A8272;
 --green:#2F6B4A;--terra:#C05A32;--tdeep:#9C4525;--hair:#D8CCAF}
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bone);color:var(--ink);font-family:"Instrument Sans",sans-serif;font-size:16px;line-height:1.55}
+body{background:var(--bone);color:var(--ink);font-family:"Instrument Sans","IBM Plex Sans Arabic",sans-serif;font-size:16px;line-height:1.55}
 .wrap{max-width:880px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
 nav{position:sticky;top:0;z-index:50;background:rgba(245,239,226,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair)}
 nav .wrap{display:flex;align-items:center;gap:1.4rem;height:52px}
@@ -29,6 +29,7 @@ main{padding:1.8rem 0 3rem}
 .q .en{font-weight:600}
 .q .aa{font-family:"IBM Plex Sans Arabic",sans-serif;direction:rtl;text-align:right;font-weight:600}
 .q .opts{grid-column:1/-1;font-size:.85rem;color:var(--soft);border-top:1px dashed var(--hair);padding-top:.5rem}
+.arfix{letter-spacing:0 !important;font-family:"IBM Plex Sans Arabic",sans-serif}
 .q .opts .box{display:inline-block;width:.85em;height:.85em;border:1.5px solid var(--soft);margin:0 .35em -0.08em .8em;border-radius:2px}
 .note{background:var(--sand);border:1px solid var(--hair);padding:1rem 1.2rem;font-size:.88rem;color:var(--soft);margin:1.2rem 0}
 .note b{color:var(--ink)}
@@ -44,10 +45,10 @@ main{padding:1.8rem 0 3rem}
 </div></nav>
 
 <header><div class="wrap">
-<p class="kicker">Al Safa 2 Park · Community Survey · استبيان المجتمع · 2 minutes · دقيقتان</p>
+<p class="kicker">Al Safa 2 Park · Community Survey · <span class="arfix">استبيان المجتمع</span> · 2 minutes · <span class="arfix">دقيقتان</span></p>
 <h1>Help design your neighborhood park<br><span class="ar" style="font-weight:600">ساعدنا في تصميم حديقة حيّك</span></h1>
 <p class="lede">Dubai Municipality is redeveloping Al Safa 2 Park. Your answers directly shape the design — anonymous, no personal data. &nbsp;<span class="ar">بلدية دبي تعيد تطوير حديقة الصفا ٢. إجاباتك تشكّل التصميم مباشرة — الاستبيان مجهول ولا يجمع بيانات شخصية.</span></p>
-<p class="no-print" style="margin-top:.9rem"><button class="btn" onclick="print()">🖨 Print / اطبع</button></p>
+<p class="no-print" style="margin-top:.9rem"><button class="btn" onclick="print()">🖨 Print / <span class="arfix">اطبع</span></button></p>
 </div></header>
 
 <main><div class="wrap" id="qs"></div>
