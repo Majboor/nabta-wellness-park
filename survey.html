@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>nabta wellness park — Community Survey / استبيان المجتمع</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Comfortaa:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bone:#F5EFE2;--paper:#FBF7EC;--sand:#E7DCC3;--ink:#22301F;--soft:#4A5644;--mute:#7A8272;
+--green:#2F6B4A;--terra:#C05A32;--tdeep:#9C4525;--hair:#D8CCAF}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bone);color:var(--ink);font-family:"Instrument Sans",sans-serif;font-size:16px;line-height:1.55}
+.wrap{max-width:880px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
+nav{position:sticky;top:0;z-index:50;background:rgba(245,239,226,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair)}
+nav .wrap{display:flex;align-items:center;gap:1.4rem;height:52px}
+.logo{font-family:Comfortaa,sans-serif;font-weight:700;font-size:1rem}
+.logo span{color:#8FCB9B}
+nav a{font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);text-decoration:none}
+nav a:hover{color:var(--tdeep)}
+header{padding:2.4rem 0 1.6rem;border-bottom:1px solid var(--hair)}
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--tdeep)}
+h1{font-family:Fraunces,serif;font-weight:900;font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.1;margin:.5rem 0}
+.ar{font-family:"IBM Plex Sans Arabic",sans-serif;direction:rtl}
+.lede{color:var(--soft);max-width:64ch}
+main{padding:1.8rem 0 3rem}
+.q{background:var(--paper);border:1px solid var(--hair);padding:1rem 1.2rem;margin:.7rem 0;display:grid;grid-template-columns:1.1fr 1.1fr;gap:1rem}
+@media(max-width:640px){.q{grid-template-columns:1fr}}
+.q .no{font-family:"IBM Plex Mono",monospace;color:var(--terra);font-size:.72rem}
+.q .en{font-weight:600}
+.q .aa{font-family:"IBM Plex Sans Arabic",sans-serif;direction:rtl;text-align:right;font-weight:600}
+.q .opts{grid-column:1/-1;font-size:.85rem;color:var(--soft);border-top:1px dashed var(--hair);padding-top:.5rem}
+.q .opts .box{display:inline-block;width:.85em;height:.85em;border:1.5px solid var(--soft);margin:0 .35em -0.08em .8em;border-radius:2px}
+.note{background:var(--sand);border:1px solid var(--hair);padding:1rem 1.2rem;font-size:.88rem;color:var(--soft);margin:1.2rem 0}
+.note b{color:var(--ink)}
+@media print{nav,.no-print{display:none}body{background:#fff}.q{break-inside:avoid}}
+.btn{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:.5rem .85rem;border:1.5px solid var(--ink);color:var(--ink);display:inline-block;margin-right:.5rem;cursor:pointer;background:none}
+.btn:hover{background:var(--ink);color:var(--bone)}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<span class="logo">nabta<span>&#10022;</span></span>
+<a href="index.html">Overview</a><a href="map.html">Design</a><a href="deliverables.html">Submission</a>
+</div></nav>
+
+<header><div class="wrap">
+<p class="kicker">Al Safa 2 Park · Community Survey · استبيان المجتمع · 2 minutes · دقيقتان</p>
+<h1>Help design your neighborhood park<br><span class="ar" style="font-weight:600">ساعدنا في تصميم حديقة حيّك</span></h1>
+<p class="lede">Dubai Municipality is redeveloping Al Safa 2 Park. Your answers directly shape the design — anonymous, no personal data. &nbsp;<span class="ar">بلدية دبي تعيد تطوير حديقة الصفا ٢. إجاباتك تشكّل التصميم مباشرة — الاستبيان مجهول ولا يجمع بيانات شخصية.</span></p>
+<p class="no-print" style="margin-top:.9rem"><button class="btn" onclick="print()">🖨 Print / اطبع</button></p>
+</div></header>
+
+<main><div class="wrap" id="qs"></div>
+<div class="wrap">
+<div class="note"><b>For the field team · لفريق العمل الميداني:</b> two-week window; morning school-run, post-maghrib and Friday sessions; paper + QR duplicate; target n ≥ 200. Tally anonymously and return to the design team — results validate the six personas and the visitor simulation re-runs on real distributions.</div>
+</div></main>
+
+<script>
+const QS=[
+["How often do you visit Al Safa 2 Park today?","كم مرة تزور حديقة الصفا ٢ حالياً؟",["Never · أبداً","Few times a year · مرات قليلة سنوياً","Monthly · شهرياً","Weekly · أسبوعياً","Daily · يومياً"]],
+["In summer, at what times would you actually use the park?","في الصيف، في أي الأوقات ستستخدم الحديقة فعلاً؟",["Early morning · الصباح الباكر","Morning · الصباح","Late afternoon · العصر","Evening · المساء","Night · الليل"]],
+["What most stops you from using parks in summer?","ما الذي يمنعك غالباً من استخدام الحدائق في الصيف؟",["Heat · الحرارة","Lack of shade · قلة الظل","No comfortable seating · لا توجد جلسات مريحة","Facilities · المرافق","Other · أخرى"]],
+["Who do you usually visit parks with?","مع من تزور الحدائق عادةً؟",["Alone · بمفردي","With children · مع الأطفال","Family · العائلة","Friends · الأصدقاء"]],
+["Pick your top three activities.","اختر أهم ثلاثة أنشطة بالنسبة لك.",["Shaded walking/jogging · مشي مظلل","Children's play · ألعاب أطفال","Sports court · ملعب رياضي","Outdoor fitness · لياقة بدنية","Picnic · نزهة","Quiet garden · حديقة هادئة","Community events · فعاليات","Café · مقهى"]],
+["How important is a comfortable, dedicated women-and-family area?","ما مدى أهمية وجود منطقة مريحة مخصصة للنساء والعائلات؟",["1","2","3","4","5"]],
+["How important are restrooms and a prayer room?","ما مدى أهمية دورات المياه والمصلى؟",["1","2","3","4","5"]],
+["Would a fully shaded walking loop make you visit more often?","هل ستزور الحديقة أكثر لو وُجد مسار مشي مظلّل بالكامل؟",["Yes · نعم","Maybe · ربما","No · لا"]],
+["What should the new design keep from the current park?","ما الذي يجب أن يحافظ عليه التصميم الجديد من الحديقة الحالية؟",["____________________________________________"]],
+["Your age group, and your connection to the area.","فئتك العمرية وعلاقتك بالمنطقة.",["<18","18–35","36–60","60+","Resident · ساكن","Work nearby · أعمل قريباً","Visitor · زائر"]]];
+document.getElementById('qs').innerHTML=QS.map((q,i)=>`<div class="q">
+<div><span class="no">Q${i+1}</span><div class="en">${q[0]}</div></div>
+<div class="aa">${q[1]}</div>
+<div class="opts">${q[2].map(o=>`<span class="box"></span>${o}`).join(' ')}</div></div>`).join('');
+</script>
+</body>
+</html>
